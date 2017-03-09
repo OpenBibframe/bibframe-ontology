@@ -44,10 +44,14 @@ ObjectProperty: bf:absorbed
     
     InverseOf: 
         bf:absorbedBy
+        
 ```
+
 ### Functional Style Syntax - [bibframe-protege.ofn](ontology/src/main/resources/bibframe-protege.ofn)
  
-```# Object Property: bf:absorbed (Absorption of)
+```
+
+# Object Property: bf:absorbed (Absorption of)
    
    AnnotationAssertion(dcterms:modified bf:absorbed "2016-04-21 (New)")
    AnnotationAssertion(dcterms:modified bf:absorbed "2016-04-29 (added inverse, updated range)")
@@ -58,6 +62,7 @@ ObjectProperty: bf:absorbed
    SubObjectPropertyOf(bf:absorbed bf:precededBy)
    InverseObjectProperties(bf:absorbed bf:absorbedBy)
 ```
+
 ### Turtle - [bibframe-protege.ttl](ontology/src/main/resources/bibframe-protege.ttl) 
  
 ```
