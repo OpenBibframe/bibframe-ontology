@@ -24,7 +24,7 @@ This file is now legal OWL.
 
 ##Renderings
 
-The modified file has been rendered in a variety of formats, OWLAPI/Protégé.
+The modified file has been rendered in a variety of formats, using OWLAPI/Protégé.
 
 ### Manchester OWL Syntax  - [bibframe-protege.omn](ontology/src/main/resources/bibframe-protege.omn) 
 
