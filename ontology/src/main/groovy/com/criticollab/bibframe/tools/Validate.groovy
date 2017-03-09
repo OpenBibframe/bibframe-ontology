@@ -64,7 +64,7 @@ class Validate {
             for (OWLProfileViolation violation : report.violations) {
                 logger.error("Violation: {}",violation)
             }
-            return false
+            return false 
         }
         return report.inProfile
     }
