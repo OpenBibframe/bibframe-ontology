@@ -5,6 +5,8 @@ import org.junit.Test
 import org.semanticweb.owlapi.formats.RDFXMLDocumentFormat
 import org.semanticweb.owlapi.profiles.OWL2DLProfile
 
+import static org.junit.Assert.assertTrue
+
 class TestValidate {
     private resource
 
@@ -16,11 +18,11 @@ class TestValidate {
     @Test
     void testValidateBibframeRFDXML() {
         boolean isValid = Validate.loadStrictly(this.resource,new RDFXMLDocumentFormat())
-        org.junit.Assert.assertTrue("bibframe should parse",isValid)
+        assertTrue("bibframe should parse",isValid)
     }
 
     @Test
     void testBibframeIsDL() {
-        Validate.validateAgainstProfile(new OWL2DLProfile(),resource,new RDFXMLDocumentFormat())
+        assertTrue(Validate.validateAgainstProfile(new OWL2DLProfile(),resource,new RDFXMLDocumentFormat()))
     }
 }
