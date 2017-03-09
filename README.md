@@ -20,31 +20,14 @@ Known Syntax errors not yet fixed:
 
 Current Profile Violations
 --------------------------
-
- * Violation: Use of undeclared class: <http://id.loc.gov/ontologies/bibframe/ContentAccessability> [ObjectPropertyRange(<http://id.loc.gov/ontologies/bibframe/contentAccessibility> <http://id.loc.gov/ontologies/bibframe/ContentAccessability>) in OntologyID(OntologyIRI(<http://id.loc.gov/ontologies/bibframe/>) VersionIRI(<null>))]
-
- * Violation: Use of undeclared class: <http://xmlns.com/foaf/0.1/Agent> [SubClassOf(<http://id.loc.gov/ontologies/bibframe/Agent> <http://xmlns.com/foaf/0.1/Agent>) in OntologyID(OntologyIRI(<http://id.loc.gov/ontologies/bibframe/>) VersionIRI(<null>))]
-
-
- * Violation: Use of reserved vocabulary for class IRI: rdfs:Resource [ObjectPropertyDomain(<http://id.loc.gov/ontologies/bibframe/relatedTo> rdfs:Resource) in OntologyID(OntologyIRI(<http://id.loc.gov/ontologies/bibframe/>) VersionIRI(<null>))]
- 
- * Violation: Use of undeclared class: rdfs:Resource [ObjectPropertyDomain(<http://id.loc.gov/ontologies/bibframe/relatedTo> rdfs:Resource) in OntologyID(OntologyIRI(<http://id.loc.gov/ontologies/bibframe/>) VersionIRI(<null>))]
-
- * Violation: Use of reserved vocabulary for class IRI: rdfs:Resource [ObjectPropertyRange(<http://id.loc.gov/ontologies/bibframe/relatedTo> rdfs:Resource) in OntologyID(OntologyIRI(<http://id.loc.gov/ontologies/bibframe/>) VersionIRI(<null>))]
- 
- * Violation: Use of undeclared class: rdfs:Resource [ObjectPropertyRange(<http://id.loc.gov/ontologies/bibframe/relatedTo> rdfs:Resource) in OntologyID(OntologyIRI(<http://id.loc.gov/ontologies/bibframe/>) VersionIRI(<null>))]
-
-
- * Violation: Use of reserved vocabulary for class IRI: rdfs:Resource [ObjectPropertyRange(<http://id.loc.gov/ontologies/bibframe/identifies> rdfs:Resource) in OntologyID(OntologyIRI(<http://id.loc.gov/ontologies/bibframe/>) VersionIRI(<null>))]
-
- * Violation: Use of undeclared class: rdfs:Resource [ObjectPropertyRange(<http://id.loc.gov/ontologies/bibframe/identifies> rdfs:Resource) in OntologyID(OntologyIRI(<http://id.loc.gov/ontologies/bibframe/>) VersionIRI(<null>))]
-
- * Violation: Use of undeclared class: rdfs:Resource [ObjectPropertyRange(<http://id.loc.gov/ontologies/bibframe/subject> rdfs:Resource) in OntologyID(OntologyIRI(<http://id.loc.gov/ontologies/bibframe/>) VersionIRI(<null>))]
-
- * Violation: Use of reserved vocabulary for class IRI: rdfs:Resource [ObjectPropertyRange(<http://id.loc.gov/ontologies/bibframe/subject> rdfs:Resource) in OntologyID(OntologyIRI(<http://id.loc.gov/ontologies/bibframe/>) VersionIRI(<null>))]
-
- * Violation: Use of undeclared class: rdfs:Resource [ObjectPropertyRange(<http://id.loc.gov/ontologies/bibframe/electronicLocator> rdfs:Resource) in OntologyID(OntologyIRI(<http://id.loc.gov/ontologies/bibframe/>) VersionIRI(<null>))]
- 
- * Violation: Use of reserved vocabulary for class IRI: rdfs:Resource [ObjectPropertyRange(<http://id.loc.gov/ontologies/bibframe/electronicLocator> rdfs:Resource) in OntologyID(OntologyIRI(<http://id.loc.gov/ontologies/bibframe/>) VersionIRI(<null>))]
-
-
+* Use of reserved vocabulary for class IRI: rdfs:Resource [ObjectPropertyDomain(<http://id.loc.gov/ontologies/bibframe/relatedTo> rdfs:Resource) in OntologyID(OntologyIRI(<http://id.loc.gov/ontologies/bibframe/>) VersionIRI(<null>))]
+ * Use of undeclared class: <http://id.loc.gov/ontologies/bibframe/ContentAccessability> [ObjectPropertyRange(<http://id.loc.gov/ontologies/bibframe/contentAccessibility> <http://id.loc.gov/ontologies/bibframe/ContentAccessability>) in OntologyID(OntologyIRI(<http://id.loc.gov/ontologies/bibframe/>) VersionIRI(<null>))]
+ * Use of undeclared class: rdfs:Resource [ObjectPropertyDomain(<http://id.loc.gov/ontologies/bibframe/relatedTo> rdfs:Resource) in OntologyID(OntologyIRI(<http://id.loc.gov/ontologies/bibframe/>) VersionIRI(<null>))]
+ * Use of reserved vocabulary for class IRI: rdfs:Resource [ObjectPropertyRange(<http://id.loc.gov/ontologies/bibframe/identifies> rdfs:Resource) in OntologyID(OntologyIRI(<http://id.loc.gov/ontologies/bibframe/>) VersionIRI(<null>))]
+ * Use of undeclared class: rdfs:Resource [ObjectPropertyRange(<http://id.loc.gov/ontologies/bibframe/identifies> rdfs:Resource) in OntologyID(OntologyIRI(<http://id.loc.gov/ontologies/bibframe/>) VersionIRI(<null>))]
+ * Use of undeclared class: rdfs:Resource [ObjectPropertyRange(<http://id.loc.gov/ontologies/bibframe/electronicLocator> rdfs:Resource) in OntologyID(OntologyIRI(<http://id.loc.gov/ontologies/bibframe/>) VersionIRI(<null>))]
+ * Use of reserved vocabulary for class IRI: rdfs:Resource [ObjectPropertyRange(<http://id.loc.gov/ontologies/bibframe/subject> rdfs:Resource) in OntologyID(OntologyIRI(<http://id.loc.gov/ontologies/bibframe/>) VersionIRI(<null>))]
+ * Use of undeclared class: rdfs:Resource [ObjectPropertyRange(<http://id.loc.gov/ontologies/bibframe/subject> rdfs:Resource) in OntologyID(OntologyIRI(<http://id.loc.gov/ontologies/bibframe/>) VersionIRI(<null>))]
+ * Use of reserved vocabulary for class IRI: rdfs:Resource [ObjectPropertyRange(<http://id.loc.gov/ontologies/bibframe/relatedTo> rdfs:Resource) in OntologyID(OntologyIRI(<http://id.loc.gov/ontologies/bibframe/>) VersionIRI(<null>))]
+ * Use of undeclared class: rdfs:Resource [ObjectPropertyRange(<http://id.loc.gov/ontologies/bibframe/relatedTo> rdfs:Resource) in OntologyID(OntologyIRI(<http://id.loc.gov/ontologies/bibframe/>) VersionIRI(<null>))]
+ * Use of reserved vocabulary for class IRI: rdfs:Resource [ObjectPropertyRange(<http://id.loc.gov/ontologies/bibframe/electronicLocator> rdfs:Resource) in OntologyID(OntologyIRI(<http://id.loc.gov/ontologies/bibframe/>) VersionIRI(<null>))]

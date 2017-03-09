@@ -14,6 +14,7 @@
   <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
   <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
   <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
 
   <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/Work">
     <rdfs:label>Work</rdfs:label>
