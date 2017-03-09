@@ -5,6 +5,7 @@ import org.semanticweb.owlapi.io.*
 import org.semanticweb.owlapi.model.*
 import org.semanticweb.owlapi.profiles.OWLProfile
 import org.semanticweb.owlapi.profiles.OWLProfileReport
+import org.semanticweb.owlapi.profiles.OWLProfileViolation
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
@@ -40,8 +41,8 @@ class Validate {
             OWLOntologyLoaderMetaData metaData = data.get()
             if (metaData.unparsedTriples.count() != 0) {
                 metaData.unparsedTriples.forEach { x -> logger.error("unparsed triple, {} ", x) }
+                throw new OWLParserException("unparsed triples in document");
             }
-            throw new OWLParserException("unparsed triples in document");
         }
 
         return ontology
@@ -60,7 +61,10 @@ class Validate {
         OWLProfileReport report = profile.checkOntology(ontology)
 
         if (!report.violations.isEmpty()) {
-            logger.error("Profile violations: {}", report.violations)
+            for (OWLProfileViolation violation : report.violations) {
+                logger.error("Violation: {}",violation)
+            }
+            return false
         }
         return report.inProfile
     }
