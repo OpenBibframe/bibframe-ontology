@@ -1,0 +1,4 @@
+rootProject.name = 'bibframe-ontology'
+include 'tools'
+include 'ontology'
+
