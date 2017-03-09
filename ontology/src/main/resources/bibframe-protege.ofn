@@ -1,0 +1,3406 @@
+Prefix(:=<http://id.loc.gov/ontologies/bibframe/>)
+Prefix(bf:=<http://id.loc.gov/ontologies/bibframe/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
+Prefix(dcterms:=<http://purl.org/dc/terms/>)
+
+
+Ontology(<http://id.loc.gov/ontologies/bibframe/>
+Annotation(dcterms:modified "2017-03-06T16:29:26.076-05:00")
+Annotation(rdfs:label "BIBFRAME vocabulary")
+Annotation(owl:versionInfo "2017-03-06T16:29:26.076-05:00"^^xsd:string)
+
+Declaration(Class(bf:AbbreviatedTitle))
+Declaration(Class(bf:AccessPolicy))
+Declaration(Class(bf:AcquisitionSource))
+Declaration(Class(bf:AdminMetadata))
+Declaration(Class(bf:Agent))
+Declaration(Class(bf:Ansi))
+Declaration(Class(bf:AppliedMaterial))
+Declaration(Class(bf:Archival))
+Declaration(Class(bf:Arrangement))
+Declaration(Class(bf:AspectRatio))
+Declaration(Class(bf:Audio))
+Declaration(Class(bf:AudioIssueNumber))
+Declaration(Class(bf:AudioTake))
+Declaration(Class(bf:Barcode))
+Declaration(Class(bf:BaseMaterial))
+Declaration(Class(bf:BookFormat))
+Declaration(Class(bf:BroadcastStandard))
+Declaration(Class(bf:Capture))
+Declaration(Class(bf:Carrier))
+Declaration(Class(bf:Cartographic))
+Declaration(Class(bf:CartographicDataType))
+Declaration(Class(bf:CartographicObjectType))
+Declaration(Class(bf:Cartography))
+Declaration(Class(bf:Chronology))
+Declaration(Class(bf:Classification))
+Declaration(Class(bf:ClassificationDdc))
+Declaration(Class(bf:ClassificationLcc))
+Declaration(Class(bf:ClassificationNlm))
+Declaration(Class(bf:ClassificationUdc))
+Declaration(Class(bf:Coden))
+Declaration(Class(bf:Collection))
+Declaration(Class(bf:CollectiveTitle))
+Declaration(Class(bf:ColorContent))
+Declaration(Class(bf:Content))
+Declaration(Class(bf:ContentAccessibility))
+Declaration(Class(bf:Contribution))
+Declaration(Class(bf:CopyrightNumber))
+Declaration(Class(bf:CopyrightRegistration))
+Declaration(Class(bf:CoverArt))
+Declaration(Class(bf:Dataset))
+Declaration(Class(bf:DescriptionAuthentication))
+Declaration(Class(bf:DescriptionConventions))
+Declaration(Class(bf:DigitalCharacteristic))
+Declaration(Class(bf:Dissertation))
+Declaration(Class(bf:DissertationIdentifier))
+Declaration(Class(bf:Distribution))
+Declaration(Class(bf:Doi))
+Declaration(Class(bf:Ean))
+Declaration(Class(bf:Electronic))
+Declaration(Class(bf:Emulsion))
+Declaration(Class(bf:EncodedBitrate))
+Declaration(Class(bf:EncodingFormat))
+Declaration(Class(bf:Enumeration))
+Declaration(Class(bf:EnumerationAndChronology))
+Declaration(Class(bf:Event))
+Declaration(Class(bf:Extent))
+Declaration(Class(bf:Family))
+Declaration(Class(bf:FileSize))
+Declaration(Class(bf:FileType))
+Declaration(Class(bf:Fingerprint))
+Declaration(Class(bf:FontSize))
+Declaration(Class(bf:Frequency))
+Declaration(Class(bf:Generation))
+Declaration(Class(bf:GenerationProcess))
+Declaration(Class(bf:GenreForm))
+Declaration(Class(bf:GeographicCoverage))
+Declaration(Class(bf:GrooveCharacteristic))
+Declaration(Class(bf:Gtin14Number))
+Declaration(Class(bf:Hdl))
+Declaration(Class(bf:Identifier))
+Declaration(Class(bf:Illustration))
+Declaration(Class(bf:ImmediateAcquisition))
+Declaration(Class(bf:Instance))
+Declaration(Class(bf:InstanceTitle))
+Declaration(Class(bf:IntendedAudience))
+Declaration(Class(bf:Isan))
+Declaration(Class(bf:Isbn))
+Declaration(Class(bf:Ismn))
+Declaration(Class(bf:Isni))
+Declaration(Class(bf:Iso))
+Declaration(Class(bf:Isrc))
+Declaration(Class(bf:Issn))
+Declaration(Class(bf:IssnL))
+Declaration(Class(bf:Issuance))
+Declaration(Class(bf:Istc))
+Declaration(Class(bf:Iswc))
+Declaration(Class(bf:Item))
+Declaration(Class(bf:Jurisdiction))
+Declaration(Class(bf:KeyTitle))
+Declaration(Class(bf:Language))
+Declaration(Class(bf:Layout))
+Declaration(Class(bf:LcOverseasAcq))
+Declaration(Class(bf:Lccn))
+Declaration(Class(bf:Local))
+Declaration(Class(bf:Manufacture))
+Declaration(Class(bf:Manuscript))
+Declaration(Class(bf:MatrixNumber))
+Declaration(Class(bf:Media))
+Declaration(Class(bf:Meeting))
+Declaration(Class(bf:MixedMaterial))
+Declaration(Class(bf:Mount))
+Declaration(Class(bf:MovementNotation))
+Declaration(Class(bf:MovingImage))
+Declaration(Class(bf:Multimedia))
+Declaration(Class(bf:MusicDistributorNumber))
+Declaration(Class(bf:MusicEnsemble))
+Declaration(Class(bf:MusicFormat))
+Declaration(Class(bf:MusicInstrument))
+Declaration(Class(bf:MusicMedium))
+Declaration(Class(bf:MusicNotation))
+Declaration(Class(bf:MusicPlate))
+Declaration(Class(bf:MusicPublisherNumber))
+Declaration(Class(bf:MusicVoice))
+Declaration(Class(bf:Nbn))
+Declaration(Class(bf:NotatedMovement))
+Declaration(Class(bf:NotatedMusic))
+Declaration(Class(bf:Notation))
+Declaration(Class(bf:Note))
+Declaration(Class(bf:Object))
+Declaration(Class(bf:ObjectCount))
+Declaration(Class(bf:Organization))
+Declaration(Class(bf:ParallelTitle))
+Declaration(Class(bf:Person))
+Declaration(Class(bf:Place))
+Declaration(Class(bf:PlaybackChannels))
+Declaration(Class(bf:PlaybackCharacteristic))
+Declaration(Class(bf:PlayingSpeed))
+Declaration(Class(bf:Polarity))
+Declaration(Class(bf:PostalRegistration))
+Declaration(Class(bf:PresentationFormat))
+Declaration(Class(bf:Print))
+Declaration(Class(bf:Production))
+Declaration(Class(bf:ProductionMethod))
+Declaration(Class(bf:Projection))
+Declaration(Class(bf:ProjectionCharacteristic))
+Declaration(Class(bf:ProjectionSpeed))
+Declaration(Class(bf:ProvisionActivity))
+Declaration(Class(bf:Publication))
+Declaration(Class(bf:PublisherNumber))
+Declaration(Class(bf:RecordingMedium))
+Declaration(Class(bf:RecordingMethod))
+Declaration(Class(bf:ReductionRatio))
+Declaration(Class(bf:RegionalEncoding))
+Declaration(Class(bf:ReportNumber))
+Declaration(Class(bf:Resolution))
+Declaration(Class(bf:RetentionPolicy))
+Declaration(Class(bf:Review))
+Declaration(Class(bf:Role))
+Declaration(Class(bf:Scale))
+Declaration(Class(bf:Script))
+Declaration(Class(bf:ShelfMark))
+Declaration(Class(bf:ShelfMarkDdc))
+Declaration(Class(bf:ShelfMarkLcc))
+Declaration(Class(bf:ShelfMarkNlm))
+Declaration(Class(bf:ShelfMarkUdc))
+Declaration(Class(bf:Sici))
+Declaration(Class(bf:SoundCharacteristic))
+Declaration(Class(bf:SoundContent))
+Declaration(Class(bf:Source))
+Declaration(Class(bf:Status))
+Declaration(Class(bf:StillImage))
+Declaration(Class(bf:StockNumber))
+Declaration(Class(bf:Strn))
+Declaration(Class(bf:StudyNumber))
+Declaration(Class(bf:Sublocation))
+Declaration(Class(bf:Summary))
+Declaration(Class(bf:SupplementaryContent))
+Declaration(Class(bf:SystemRequirement))
+Declaration(Class(bf:TableOfContents))
+Declaration(Class(bf:Tactile))
+Declaration(Class(bf:TactileNotation))
+Declaration(Class(bf:TapeConfig))
+Declaration(Class(bf:Temporal))
+Declaration(Class(bf:Text))
+Declaration(Class(bf:Title))
+Declaration(Class(bf:Topic))
+Declaration(Class(bf:TrackConfig))
+Declaration(Class(bf:Unit))
+Declaration(Class(bf:Upc))
+Declaration(Class(bf:Urn))
+Declaration(Class(bf:UsageAndAccessPolicy))
+Declaration(Class(bf:UsePolicy))
+Declaration(Class(bf:VariantTitle))
+Declaration(Class(bf:VideoCharacteristic))
+Declaration(Class(bf:VideoFormat))
+Declaration(Class(bf:VideoRecordingNumber))
+Declaration(Class(bf:Work))
+Declaration(Class(bf:WorkTitle))
+Declaration(Class(<http://xmlns.com/foaf/0.1/Agent>))
+Declaration(Class(<http://xmlns.com/foaf/0.1/Person>))
+Declaration(ObjectProperty(bf:absorbed))
+Declaration(ObjectProperty(bf:absorbedBy))
+Declaration(ObjectProperty(bf:accompaniedBy))
+Declaration(ObjectProperty(bf:accompanies))
+Declaration(ObjectProperty(bf:acquisitionSource))
+Declaration(ObjectProperty(bf:adminMetadata))
+Declaration(ObjectProperty(bf:agent))
+Declaration(ObjectProperty(bf:appliedMaterial))
+Declaration(ObjectProperty(bf:arrangement))
+Declaration(ObjectProperty(bf:aspectRatio))
+Declaration(ObjectProperty(bf:assigner))
+Declaration(ObjectProperty(bf:barcode))
+Declaration(ObjectProperty(bf:baseMaterial))
+Declaration(ObjectProperty(bf:bookFormat))
+Declaration(ObjectProperty(bf:capture))
+Declaration(ObjectProperty(bf:carrier))
+Declaration(ObjectProperty(bf:cartographicAttributes))
+Declaration(ObjectProperty(bf:classification))
+Declaration(ObjectProperty(bf:colorContent))
+Declaration(ObjectProperty(bf:content))
+Declaration(ObjectProperty(bf:contentAccessibility))
+Declaration(ObjectProperty(bf:continuedBy))
+Declaration(ObjectProperty(bf:continuedInPartBy))
+Declaration(ObjectProperty(bf:continues))
+Declaration(ObjectProperty(bf:continuesInPart))
+Declaration(ObjectProperty(bf:contribution))
+Declaration(ObjectProperty(bf:copyrightRegistration))
+Declaration(ObjectProperty(bf:coverArt))
+Declaration(ObjectProperty(bf:dataSource))
+Declaration(ObjectProperty(bf:derivativeOf))
+Declaration(ObjectProperty(bf:descriptionAuthentication))
+Declaration(ObjectProperty(bf:descriptionConventions))
+Declaration(ObjectProperty(bf:descriptionLanguage))
+Declaration(ObjectProperty(bf:descriptionModifier))
+Declaration(ObjectProperty(bf:digitalCharacteristic))
+Declaration(ObjectProperty(bf:dissertation))
+Declaration(ObjectProperty(bf:electronicLocator))
+Declaration(ObjectProperty(bf:emulsion))
+Declaration(ObjectProperty(bf:ensemble))
+Declaration(ObjectProperty(bf:enumerationAndChronology))
+Declaration(ObjectProperty(bf:eventContent))
+Declaration(ObjectProperty(bf:eventContentOf))
+Declaration(ObjectProperty(bf:expressionOf))
+Declaration(ObjectProperty(bf:extent))
+Declaration(ObjectProperty(bf:findingAid))
+Declaration(ObjectProperty(bf:findingAidOf))
+Declaration(ObjectProperty(bf:fontSize))
+Declaration(ObjectProperty(bf:frequency))
+Declaration(ObjectProperty(bf:generation))
+Declaration(ObjectProperty(bf:generationProcess))
+Declaration(ObjectProperty(bf:genreForm))
+Declaration(ObjectProperty(bf:geographicCoverage))
+Declaration(ObjectProperty(bf:grantingInstitution))
+Declaration(ObjectProperty(bf:hasDerivative))
+Declaration(ObjectProperty(bf:hasEquivalent))
+Declaration(ObjectProperty(bf:hasExpression))
+Declaration(ObjectProperty(bf:hasInstance))
+Declaration(ObjectProperty(bf:hasItem))
+Declaration(ObjectProperty(bf:hasPart))
+Declaration(ObjectProperty(bf:hasReproduction))
+Declaration(ObjectProperty(bf:hasSeries))
+Declaration(ObjectProperty(bf:hasSubseries))
+Declaration(ObjectProperty(bf:heldBy))
+Declaration(ObjectProperty(bf:identifiedBy))
+Declaration(ObjectProperty(bf:identifies))
+Declaration(ObjectProperty(bf:illustrativeContent))
+Declaration(ObjectProperty(bf:immediateAcquisition))
+Declaration(ObjectProperty(bf:index))
+Declaration(ObjectProperty(bf:indexOf))
+Declaration(ObjectProperty(bf:instanceOf))
+Declaration(ObjectProperty(bf:instrument))
+Declaration(ObjectProperty(bf:intendedAudience))
+Declaration(ObjectProperty(bf:issuance))
+Declaration(ObjectProperty(bf:issuedWith))
+Declaration(ObjectProperty(bf:itemOf))
+Declaration(ObjectProperty(bf:language))
+Declaration(ObjectProperty(bf:layout))
+Declaration(ObjectProperty(bf:media))
+Declaration(ObjectProperty(bf:mergedToForm))
+Declaration(ObjectProperty(bf:mergerOf))
+Declaration(ObjectProperty(bf:mount))
+Declaration(ObjectProperty(bf:musicFormat))
+Declaration(ObjectProperty(bf:musicMedium))
+Declaration(ObjectProperty(bf:notation))
+Declaration(ObjectProperty(bf:note))
+Declaration(ObjectProperty(bf:originPlace))
+Declaration(ObjectProperty(bf:originalVersion))
+Declaration(ObjectProperty(bf:originalVersionOf))
+Declaration(ObjectProperty(bf:otherEdition))
+Declaration(ObjectProperty(bf:otherPhysicalFormat))
+Declaration(ObjectProperty(bf:partOf))
+Declaration(ObjectProperty(bf:place))
+Declaration(ObjectProperty(bf:polarity))
+Declaration(ObjectProperty(bf:precededBy))
+Declaration(ObjectProperty(bf:productionMethod))
+Declaration(ObjectProperty(bf:projection))
+Declaration(ObjectProperty(bf:projectionCharacteristic))
+Declaration(ObjectProperty(bf:provisionActivity))
+Declaration(ObjectProperty(bf:reductionRatio))
+Declaration(ObjectProperty(bf:referencedBy))
+Declaration(ObjectProperty(bf:references))
+Declaration(ObjectProperty(bf:relatedTo))
+Declaration(ObjectProperty(bf:replacedBy))
+Declaration(ObjectProperty(bf:replacementOf))
+Declaration(ObjectProperty(bf:reproductionOf))
+Declaration(ObjectProperty(bf:review))
+Declaration(ObjectProperty(bf:role))
+Declaration(ObjectProperty(bf:scale))
+Declaration(ObjectProperty(bf:separatedFrom))
+Declaration(ObjectProperty(bf:seriesOf))
+Declaration(ObjectProperty(bf:shelfMark))
+Declaration(ObjectProperty(bf:soundCharacteristic))
+Declaration(ObjectProperty(bf:soundContent))
+Declaration(ObjectProperty(bf:source))
+Declaration(ObjectProperty(bf:splitInto))
+Declaration(ObjectProperty(bf:status))
+Declaration(ObjectProperty(bf:subject))
+Declaration(ObjectProperty(bf:sublocation))
+Declaration(ObjectProperty(bf:subseriesOf))
+Declaration(ObjectProperty(bf:succeededBy))
+Declaration(ObjectProperty(bf:summary))
+Declaration(ObjectProperty(bf:supplement))
+Declaration(ObjectProperty(bf:supplementTo))
+Declaration(ObjectProperty(bf:supplementaryContent))
+Declaration(ObjectProperty(bf:systemRequirement))
+Declaration(ObjectProperty(bf:tableOfContents))
+Declaration(ObjectProperty(bf:title))
+Declaration(ObjectProperty(bf:translation))
+Declaration(ObjectProperty(bf:translationOf))
+Declaration(ObjectProperty(bf:unit))
+Declaration(ObjectProperty(bf:usageAndAccessPolicy))
+Declaration(ObjectProperty(bf:videoCharacteristic))
+Declaration(ObjectProperty(bf:voice))
+Declaration(DataProperty(bf:acquisitionTerms))
+Declaration(DataProperty(bf:ascensionAndDeclination))
+Declaration(DataProperty(bf:awards))
+Declaration(DataProperty(bf:changeDate))
+Declaration(DataProperty(bf:classificationPortion))
+Declaration(DataProperty(bf:code))
+Declaration(DataProperty(bf:coordinates))
+Declaration(DataProperty(bf:copyrightDate))
+Declaration(DataProperty(bf:count))
+Declaration(DataProperty(bf:creationDate))
+Declaration(DataProperty(bf:credits))
+Declaration(DataProperty(bf:custodialHistory))
+Declaration(DataProperty(bf:date))
+Declaration(DataProperty(bf:degree))
+Declaration(DataProperty(bf:derivedFrom))
+Declaration(DataProperty(bf:dimensions))
+Declaration(DataProperty(bf:duration))
+Declaration(DataProperty(bf:edition))
+Declaration(DataProperty(bf:editionEnumeration))
+Declaration(DataProperty(bf:editionStatement))
+Declaration(DataProperty(bf:ensembleType))
+Declaration(DataProperty(bf:equinox))
+Declaration(DataProperty(bf:exclusionGRing))
+Declaration(DataProperty(bf:firstIssue))
+Declaration(DataProperty(bf:generationDate))
+Declaration(DataProperty(bf:hierarchicalLevel))
+Declaration(DataProperty(bf:historyOfWork))
+Declaration(DataProperty(bf:instrumentalType))
+Declaration(DataProperty(bf:itemPortion))
+Declaration(DataProperty(bf:lastIssue))
+Declaration(DataProperty(bf:legalDate))
+Declaration(DataProperty(bf:mainTitle))
+Declaration(DataProperty(bf:musicKey))
+Declaration(DataProperty(bf:musicOpusNumber))
+Declaration(DataProperty(bf:musicSerialNumber))
+Declaration(DataProperty(bf:musicThematicNumber))
+Declaration(DataProperty(bf:natureOfContent))
+Declaration(DataProperty(bf:noteType))
+Declaration(DataProperty(bf:organization))
+Declaration(DataProperty(bf:originDate))
+Declaration(DataProperty(bf:outerGRing))
+Declaration(DataProperty(bf:part))
+Declaration(DataProperty(bf:partName))
+Declaration(DataProperty(bf:partNumber))
+Declaration(DataProperty(bf:pattern))
+Declaration(DataProperty(bf:physicalLocation))
+Declaration(DataProperty(bf:preferredCitation))
+Declaration(DataProperty(bf:provisionActivityStatement))
+Declaration(DataProperty(bf:qualifier))
+Declaration(DataProperty(bf:responsibilityStatement))
+Declaration(DataProperty(bf:schedulePart))
+Declaration(DataProperty(bf:seriesEnumeration))
+Declaration(DataProperty(bf:seriesStatement))
+Declaration(DataProperty(bf:spanEnd))
+Declaration(DataProperty(bf:subseriesEnumeration))
+Declaration(DataProperty(bf:subseriesStatement))
+Declaration(DataProperty(bf:subtitle))
+Declaration(DataProperty(bf:table))
+Declaration(DataProperty(bf:tableSeq))
+Declaration(DataProperty(bf:temporalCoverage))
+Declaration(DataProperty(bf:variantType))
+Declaration(DataProperty(bf:version))
+Declaration(DataProperty(bf:voiceType))
+Declaration(AnnotationProperty(dcterms:modified))
+Declaration(AnnotationProperty(skos:definition))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: bf:absorbed (Absorption of)
+
+AnnotationAssertion(dcterms:modified bf:absorbed "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:absorbed "2016-04-29 (added inverse, updated range)")
+AnnotationAssertion(rdfs:comment bf:absorbed "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:absorbed "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:absorbed "Absorption of")
+AnnotationAssertion(skos:definition bf:absorbed "Resource that has been incorporated into another resource.")
+SubObjectPropertyOf(bf:absorbed bf:precededBy)
+InverseObjectProperties(bf:absorbed bf:absorbedBy)
+
+# Object Property: bf:absorbedBy (Absorbed by)
+
+AnnotationAssertion(dcterms:modified bf:absorbedBy "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:absorbedBy "2016-04-29 (added inverse, updated range)")
+AnnotationAssertion(rdfs:comment bf:absorbedBy "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:absorbedBy "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:absorbedBy "Absorbed by")
+AnnotationAssertion(skos:definition bf:absorbedBy "Resource that incorporates another resource.")
+SubObjectPropertyOf(bf:absorbedBy bf:succeededBy)
+
+# Object Property: bf:accompaniedBy (Accompanied by)
+
+AnnotationAssertion(dcterms:modified bf:accompaniedBy "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:accompaniedBy "2016-04-29 (added inverse)")
+AnnotationAssertion(rdfs:comment bf:accompaniedBy "Expected value Work, Instance or Item")
+AnnotationAssertion(rdfs:comment bf:accompaniedBy "Used with Work, Instance or Item")
+AnnotationAssertion(rdfs:label bf:accompaniedBy "Accompanied by")
+AnnotationAssertion(skos:definition bf:accompaniedBy "Resource that accompanies the described resource.")
+SubObjectPropertyOf(bf:accompaniedBy bf:relatedTo)
+InverseObjectProperties(bf:accompaniedBy bf:accompanies)
+
+# Object Property: bf:accompanies (Accompanies)
+
+AnnotationAssertion(dcterms:modified bf:accompanies "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:accompanies "2016-04-29 (added inverse)")
+AnnotationAssertion(rdfs:comment bf:accompanies "Expected value Work, Instance or Item")
+AnnotationAssertion(rdfs:comment bf:accompanies "Used with Work, Instance or Item")
+AnnotationAssertion(rdfs:label bf:accompanies "Accompanies")
+AnnotationAssertion(skos:definition bf:accompanies "Resource that adds to or is issued with the described resource.")
+SubObjectPropertyOf(bf:accompanies bf:relatedTo)
+
+# Object Property: bf:acquisitionSource (Source of acquisition)
+
+AnnotationAssertion(dcterms:modified bf:acquisitionSource "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:acquisitionSource "2017-02-06 (Changed from data to object property")
+AnnotationAssertion(dcterms:modified bf:acquisitionSource "slight change to definition)")
+AnnotationAssertion(rdfs:comment bf:acquisitionSource "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:acquisitionSource "Source of acquisition")
+AnnotationAssertion(skos:definition bf:acquisitionSource "Information about an organization, person, etc., from which a resource may be obtained.")
+ObjectPropertyRange(bf:acquisitionSource bf:AcquisitionSource)
+
+# Object Property: bf:adminMetadata (Administrative metadata)
+
+AnnotationAssertion(dcterms:modified bf:adminMetadata "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:adminMetadata "Used with Unspecified")
+AnnotationAssertion(rdfs:label bf:adminMetadata "Administrative metadata")
+AnnotationAssertion(skos:definition bf:adminMetadata "Metadata about the metadata, especially provenance information.")
+ObjectPropertyRange(bf:adminMetadata bf:AdminMetadata)
+
+# Object Property: bf:agent (Associated agent)
+
+AnnotationAssertion(dcterms:modified bf:agent "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:agent "Used with Unspecified")
+AnnotationAssertion(rdfs:label bf:agent "Associated agent")
+AnnotationAssertion(skos:definition bf:agent "Entity associated with a resource or element of description, such as the name of the entity responsible for the content or of the publication, printing, distribution, issue, release or production of a resource.")
+ObjectPropertyRange(bf:agent bf:Agent)
+
+# Object Property: bf:appliedMaterial (Applied material)
+
+AnnotationAssertion(dcterms:modified bf:appliedMaterial "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:appliedMaterial "Applied material")
+AnnotationAssertion(skos:definition bf:appliedMaterial "Physical or chemical substance applied to a base material of a resource.")
+ObjectPropertyDomain(bf:appliedMaterial bf:Instance)
+ObjectPropertyRange(bf:appliedMaterial bf:AppliedMaterial)
+
+# Object Property: bf:arrangement (Organization and arrangement)
+
+AnnotationAssertion(dcterms:modified bf:arrangement "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:arrangement "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:arrangement "Organization and arrangement")
+AnnotationAssertion(skos:definition bf:arrangement "Information about the organization and arrangement of a collection of resources.")
+ObjectPropertyRange(bf:arrangement bf:Arrangement)
+
+# Object Property: bf:aspectRatio (Aspect ratio)
+
+AnnotationAssertion(dcterms:modified bf:aspectRatio "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:aspectRatio "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:aspectRatio "Aspect ratio")
+AnnotationAssertion(skos:definition bf:aspectRatio "Proportional relationship between an image's width and its height.")
+ObjectPropertyRange(bf:aspectRatio bf:AspectRatio)
+
+# Object Property: bf:assigner (Assigner)
+
+AnnotationAssertion(dcterms:modified bf:assigner "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:assigner "Assigner")
+AnnotationAssertion(skos:definition bf:assigner "Entity that assigned the metadata, such as the entity that assigned a classification number, entity that assigned a name, entity that assigned an identifier.")
+ObjectPropertyDomain(bf:assigner bf:AdminMetadata)
+ObjectPropertyRange(bf:assigner bf:Agent)
+
+# Object Property: bf:barcode (Barcode)
+
+AnnotationAssertion(dcterms:modified bf:barcode "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:barcode "2017-02-03 (Removed as property, added as Class)")
+AnnotationAssertion(rdfs:label bf:barcode "Barcode")
+AnnotationAssertion(skos:definition bf:barcode "Optical machine-readable representation of data relating to the item, to which it is attached.")
+ObjectPropertyDomain(bf:barcode bf:Item)
+ObjectPropertyRange(bf:barcode bf:Barcode)
+
+# Object Property: bf:baseMaterial (Base material)
+
+AnnotationAssertion(dcterms:modified bf:baseMaterial "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:baseMaterial "Base material")
+AnnotationAssertion(skos:definition bf:baseMaterial "Underlying physical material of a resource.")
+ObjectPropertyDomain(bf:baseMaterial bf:Instance)
+ObjectPropertyRange(bf:baseMaterial bf:BaseMaterial)
+
+# Object Property: bf:bookFormat (Book format)
+
+AnnotationAssertion(dcterms:modified bf:bookFormat "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:bookFormat "Book format")
+AnnotationAssertion(skos:definition bf:bookFormat "Result of folding a printed sheet to form a gathering of leaves.")
+ObjectPropertyDomain(bf:bookFormat bf:Instance)
+ObjectPropertyRange(bf:bookFormat bf:BookFormat)
+
+# Object Property: bf:capture (Capture of content)
+
+AnnotationAssertion(dcterms:modified bf:capture "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:capture "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:capture "Capture of content")
+AnnotationAssertion(skos:definition bf:capture "Information about place and date associated with the capture (e.g., recording, filming) of the content of a resource.")
+ObjectPropertyRange(bf:capture bf:Capture)
+
+# Object Property: bf:carrier (Carrier type)
+
+AnnotationAssertion(dcterms:modified bf:carrier "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:carrier "Carrier type")
+AnnotationAssertion(skos:definition bf:carrier "Categorization reflecting the format of the storage medium and housing of a carrier.")
+ObjectPropertyDomain(bf:carrier bf:Instance)
+ObjectPropertyRange(bf:carrier bf:Carrier)
+
+# Object Property: bf:cartographicAttributes (Cartographic data)
+
+AnnotationAssertion(dcterms:modified bf:cartographicAttributes "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:cartographicAttributes "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:cartographicAttributes "Cartographic data")
+AnnotationAssertion(skos:definition bf:cartographicAttributes "Cartographic data that identifies characteristics of the resource, such as coordinates, projection, etc.")
+ObjectPropertyRange(bf:cartographicAttributes bf:Cartographic)
+
+# Object Property: bf:classification (Classification)
+
+AnnotationAssertion(dcterms:modified bf:classification "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:classification "Used with Work, Instance or Item")
+AnnotationAssertion(rdfs:label bf:classification "Classification")
+AnnotationAssertion(skos:definition bf:classification "Classification number in any scheme.")
+ObjectPropertyRange(bf:classification bf:Classification)
+
+# Object Property: bf:colorContent (Color content)
+
+AnnotationAssertion(dcterms:modified bf:colorContent "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:colorContent "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:colorContent "Color content")
+AnnotationAssertion(skos:definition bf:colorContent "Color characteristics, e.g., black and white, multicolored.")
+ObjectPropertyRange(bf:colorContent bf:ColorContent)
+
+# Object Property: bf:content (Content type)
+
+AnnotationAssertion(dcterms:modified bf:content "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:content "Content type")
+AnnotationAssertion(skos:definition bf:content "Categorization reflecting the fundamental form of communication in which the content is expressed and the human sense through which it is intended to be perceived.")
+ObjectPropertyDomain(bf:content bf:Work)
+ObjectPropertyRange(bf:content bf:Content)
+
+# Object Property: bf:contentAccessibility (Content accessibility information)
+
+AnnotationAssertion(dcterms:modified bf:contentAccessibility "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:contentAccessibility "2017-02-03 (changed from data to object property)")
+AnnotationAssertion(rdfs:comment bf:contentAccessibility "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:contentAccessibility "Content accessibility information")
+AnnotationAssertion(skos:definition bf:contentAccessibility "Information that assists those with a sensory impairment for greater understanding of content, e.g., captions.")
+ObjectPropertyRange(bf:contentAccessibility bf:ContentAccessibility)
+
+# Object Property: bf:continuedBy (Continued by)
+
+AnnotationAssertion(dcterms:modified bf:continuedBy "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:continuedBy "2016-04-29 (added inverse, updated range)")
+AnnotationAssertion(rdfs:comment bf:continuedBy "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:continuedBy "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:continuedBy "Continued by")
+AnnotationAssertion(skos:definition bf:continuedBy "Resource whose content continues an earlier resource under a new title.")
+SubObjectPropertyOf(bf:continuedBy bf:succeededBy)
+InverseObjectProperties(bf:continuedBy bf:continues)
+
+# Object Property: bf:continuedInPartBy (Continued in part by)
+
+AnnotationAssertion(dcterms:modified bf:continuedInPartBy "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:continuedInPartBy "2016-04-29 (added inverse, updated range)")
+AnnotationAssertion(rdfs:comment bf:continuedInPartBy "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:continuedInPartBy "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:continuedInPartBy "Continued in part by")
+AnnotationAssertion(skos:definition bf:continuedInPartBy "Resource part of whose content separated from an earlier resource to form a new resource.")
+SubObjectPropertyOf(bf:continuedInPartBy bf:succeededBy)
+InverseObjectProperties(bf:continuedInPartBy bf:separatedFrom)
+
+# Object Property: bf:continues (Continuation of)
+
+AnnotationAssertion(dcterms:modified bf:continues "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:continues "2016-04-29 (added inverse, updated range)")
+AnnotationAssertion(rdfs:comment bf:continues "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:continues "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:continues "Continuation of")
+AnnotationAssertion(skos:definition bf:continues "Resource that is continued by the content of a later resource under a new title.")
+SubObjectPropertyOf(bf:continues bf:precededBy)
+
+# Object Property: bf:continuesInPart (Continuation in part of)
+
+AnnotationAssertion(dcterms:modified bf:continuesInPart "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:continuesInPart "2016-04-29 (added inverse, updated range)")
+AnnotationAssertion(rdfs:comment bf:continuesInPart "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:continuesInPart "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:continuesInPart "Continuation in part of")
+AnnotationAssertion(skos:definition bf:continuesInPart "Resource that split into two or more separate resources with new titles.")
+SubObjectPropertyOf(bf:continuesInPart bf:precededBy)
+InverseObjectProperties(bf:continuesInPart bf:splitInto)
+
+# Object Property: bf:contribution (Contributor and role)
+
+AnnotationAssertion(dcterms:modified bf:contribution "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:contribution "2017-02-03 (Corrected label)")
+AnnotationAssertion(rdfs:comment bf:contribution "Used with Work, Instance or Item")
+AnnotationAssertion(rdfs:label bf:contribution "Contributor and role")
+AnnotationAssertion(skos:definition bf:contribution "Agent and its role in relation to the resource.")
+ObjectPropertyRange(bf:contribution bf:Contribution)
+
+# Object Property: bf:copyrightRegistration (Copyright registration information)
+
+AnnotationAssertion(dcterms:modified bf:copyrightRegistration "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:copyrightRegistration "2016-05-04 (Corrected expected value)")
+AnnotationAssertion(rdfs:comment bf:copyrightRegistration "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:copyrightRegistration "Copyright registration information")
+AnnotationAssertion(skos:definition bf:copyrightRegistration "Copyright and Legal Deposit registration information")
+ObjectPropertyRange(bf:copyrightRegistration bf:CopyrightRegistration)
+
+# Object Property: bf:coverArt (Cover art)
+
+AnnotationAssertion(dcterms:modified bf:coverArt "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:coverArt "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:coverArt "Cover art")
+AnnotationAssertion(skos:definition bf:coverArt "Cover art image of a resource.")
+ObjectPropertyRange(bf:coverArt bf:CoverArt)
+
+# Object Property: bf:dataSource (Data source)
+
+AnnotationAssertion(dcterms:modified bf:dataSource "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:dataSource "2016-04-29 (updated range)")
+AnnotationAssertion(rdfs:comment bf:dataSource "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:dataSource "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:dataSource "Data source")
+AnnotationAssertion(skos:definition bf:dataSource "Resource that is a data source to which the described resource is related. It may contain information about other files, printed sources, or collection procedures.")
+SubObjectPropertyOf(bf:dataSource bf:relatedTo)
+
+# Object Property: bf:derivativeOf (Is derivative of)
+
+AnnotationAssertion(dcterms:modified bf:derivativeOf "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:derivativeOf "2016-04-29 (added inverse)")
+AnnotationAssertion(rdfs:comment bf:derivativeOf "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:derivativeOf "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:derivativeOf "Is derivative of")
+AnnotationAssertion(skos:definition bf:derivativeOf "Source work from which the described resource is derived.")
+SubObjectPropertyOf(bf:derivativeOf bf:relatedTo)
+InverseObjectProperties(bf:derivativeOf bf:hasDerivative)
+
+# Object Property: bf:descriptionAuthentication (Description authentication)
+
+AnnotationAssertion(dcterms:modified bf:descriptionAuthentication "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:descriptionAuthentication "Description authentication")
+AnnotationAssertion(skos:definition bf:descriptionAuthentication "Indication of specific types of reviews that have been carried out on the description information.")
+ObjectPropertyDomain(bf:descriptionAuthentication bf:AdminMetadata)
+ObjectPropertyRange(bf:descriptionAuthentication bf:DescriptionAuthentication)
+
+# Object Property: bf:descriptionConventions (Description conventions)
+
+AnnotationAssertion(dcterms:modified bf:descriptionConventions "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:descriptionConventions "2016-04-24 (fixed domain name)")
+AnnotationAssertion(rdfs:label bf:descriptionConventions "Description conventions")
+AnnotationAssertion(skos:definition bf:descriptionConventions "Rules used for the descriptive content of the resource description.")
+ObjectPropertyDomain(bf:descriptionConventions bf:AdminMetadata)
+ObjectPropertyRange(bf:descriptionConventions bf:DescriptionConventions)
+
+# Object Property: bf:descriptionLanguage (Description language)
+
+AnnotationAssertion(dcterms:modified bf:descriptionLanguage "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:descriptionLanguage "Description language")
+AnnotationAssertion(skos:definition bf:descriptionLanguage "Language used for the metadata.")
+ObjectPropertyDomain(bf:descriptionLanguage bf:AdminMetadata)
+ObjectPropertyRange(bf:descriptionLanguage bf:Language)
+
+# Object Property: bf:descriptionModifier (Description modifier)
+
+AnnotationAssertion(dcterms:modified bf:descriptionModifier "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:descriptionModifier "Description modifier")
+AnnotationAssertion(skos:definition bf:descriptionModifier "Agency that modified a description.")
+ObjectPropertyDomain(bf:descriptionModifier bf:AdminMetadata)
+ObjectPropertyRange(bf:descriptionModifier bf:Agent)
+
+# Object Property: bf:digitalCharacteristic (Digital characteristic)
+
+AnnotationAssertion(dcterms:modified bf:digitalCharacteristic "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:digitalCharacteristic "Digital characteristic")
+AnnotationAssertion(skos:definition bf:digitalCharacteristic "Technical specification relating to the digital encoding of text, image, audio, video, and other types of data in a resource.")
+ObjectPropertyDomain(bf:digitalCharacteristic bf:Instance)
+ObjectPropertyRange(bf:digitalCharacteristic bf:DigitalCharacteristic)
+
+# Object Property: bf:dissertation (Dissertation Information)
+
+AnnotationAssertion(dcterms:modified bf:dissertation "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:dissertation "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:dissertation "Dissertation Information")
+AnnotationAssertion(skos:definition bf:dissertation "Work presented as part of the formal requirements for an academic degree.")
+ObjectPropertyRange(bf:dissertation bf:Dissertation)
+
+# Object Property: bf:electronicLocator (Electronic location)
+
+AnnotationAssertion(dcterms:modified bf:electronicLocator "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:electronicLocator "Electronic location")
+AnnotationAssertion(skos:definition bf:electronicLocator "Electronic location from which the resource is available.")
+ObjectPropertyDomain(bf:electronicLocator bf:Item)
+ObjectPropertyRange(bf:electronicLocator owl:Thing)
+
+# Object Property: bf:emulsion (Emulsion)
+
+AnnotationAssertion(dcterms:modified bf:emulsion "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:emulsion "Emulsion")
+AnnotationAssertion(skos:definition bf:emulsion "Suspension of light-sensitive chemicals used as a coating on a microfilm or microfiche, e.g., silver halide.")
+ObjectPropertyDomain(bf:emulsion bf:Instance)
+ObjectPropertyRange(bf:emulsion bf:Emulsion)
+
+# Object Property: bf:ensemble (Ensemble)
+
+AnnotationAssertion(dcterms:modified bf:ensemble "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:ensemble "Ensemble")
+AnnotationAssertion(skos:definition bf:ensemble "Ensemble for which a musical work is appropriate.")
+ObjectPropertyDomain(bf:ensemble bf:Work)
+ObjectPropertyRange(bf:ensemble bf:MusicEnsemble)
+
+# Object Property: bf:enumerationAndChronology (Numbering or other enumeration and dates associated with issues or items held.)
+
+AnnotationAssertion(dcterms:modified bf:enumerationAndChronology "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:enumerationAndChronology "Numbering or other enumeration and dates associated with issues or items held.")
+AnnotationAssertion(skos:definition bf:enumerationAndChronology "Numbering and dates of issues or items held.")
+ObjectPropertyDomain(bf:enumerationAndChronology bf:Item)
+ObjectPropertyRange(bf:enumerationAndChronology bf:EnumerationAndChronology)
+
+# Object Property: bf:eventContent (Event content)
+
+AnnotationAssertion(dcterms:modified bf:eventContent "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:eventContent "2016-04-29 (added inverse)")
+AnnotationAssertion(rdfs:label bf:eventContent "Event content")
+AnnotationAssertion(skos:definition bf:eventContent "Work whose content is the described event.")
+SubObjectPropertyOf(bf:eventContent bf:relatedTo)
+InverseObjectProperties(bf:eventContent bf:eventContentOf)
+ObjectPropertyDomain(bf:eventContent bf:Event)
+ObjectPropertyRange(bf:eventContent bf:Work)
+
+# Object Property: bf:eventContentOf (Has event content)
+
+AnnotationAssertion(dcterms:modified bf:eventContentOf "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:eventContentOf "2016-04-29 (added inverse)")
+AnnotationAssertion(rdfs:label bf:eventContentOf "Has event content")
+AnnotationAssertion(skos:definition bf:eventContentOf "Event that is the content of the described work.")
+SubObjectPropertyOf(bf:eventContentOf bf:relatedTo)
+ObjectPropertyDomain(bf:eventContentOf bf:Work)
+ObjectPropertyRange(bf:eventContentOf bf:Event)
+
+# Object Property: bf:expressionOf (Expression of)
+
+AnnotationAssertion(dcterms:modified bf:expressionOf "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:expressionOf "2016-04-29 (added inverse)")
+AnnotationAssertion(rdfs:label bf:expressionOf "Expression of")
+AnnotationAssertion(skos:definition bf:expressionOf "Work that the described Work is an expression of. For use to connect Works under FRBR/RDA rules.")
+SubObjectPropertyOf(bf:expressionOf bf:relatedTo)
+InverseObjectProperties(bf:expressionOf bf:hasExpression)
+ObjectPropertyDomain(bf:expressionOf bf:Work)
+ObjectPropertyRange(bf:expressionOf bf:Work)
+
+# Object Property: bf:extent (Extent)
+
+AnnotationAssertion(dcterms:modified bf:extent "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:extent "Extent")
+AnnotationAssertion(skos:definition bf:extent "Number and type of units and/or subunits making up a resource.")
+ObjectPropertyDomain(bf:extent bf:Instance)
+ObjectPropertyRange(bf:extent bf:Extent)
+
+# Object Property: bf:findingAid (Finding aid)
+
+AnnotationAssertion(dcterms:modified bf:findingAid "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:findingAid "2016-04-29 (added inverse, updated range)")
+AnnotationAssertion(rdfs:comment bf:findingAid "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:findingAid "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:findingAid "Finding aid")
+AnnotationAssertion(skos:definition bf:findingAid "Relationship for archival, visual, and manuscript resources to a finding aid or similar control materials.")
+SubObjectPropertyOf(bf:findingAid bf:accompaniedBy)
+InverseObjectProperties(bf:findingAid bf:findingAidOf)
+
+# Object Property: bf:findingAidOf (Finding aid for)
+
+AnnotationAssertion(dcterms:modified bf:findingAidOf "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:findingAidOf "2016-04-29 (added inverse, updated range)")
+AnnotationAssertion(rdfs:comment bf:findingAidOf "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:findingAidOf "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:findingAidOf "Finding aid for")
+AnnotationAssertion(skos:definition bf:findingAidOf "Finding aid or similar control materials for archival, visual, and manuscript resources.")
+SubObjectPropertyOf(bf:findingAidOf bf:accompanies)
+
+# Object Property: bf:fontSize (Font size)
+
+AnnotationAssertion(dcterms:modified bf:fontSize "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:fontSize "Font size")
+AnnotationAssertion(skos:definition bf:fontSize "Size of the type used to represent the characters and symbols in a resource.")
+ObjectPropertyDomain(bf:fontSize bf:Instance)
+ObjectPropertyRange(bf:fontSize bf:FontSize)
+
+# Object Property: bf:frequency (Frequency)
+
+AnnotationAssertion(dcterms:modified bf:frequency "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:frequency "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:frequency "Frequency")
+AnnotationAssertion(skos:definition bf:frequency "Intervals at which the parts of a serially produced resource or the updates to an integrating resource are issued.")
+ObjectPropertyRange(bf:frequency bf:Frequency)
+
+# Object Property: bf:generation (Generation)
+
+AnnotationAssertion(dcterms:modified bf:generation "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:generation "Generation")
+AnnotationAssertion(skos:definition bf:generation "Relationship between an original carrier and the carrier of a reproduction made from the original.")
+ObjectPropertyDomain(bf:generation bf:Instance)
+ObjectPropertyRange(bf:generation bf:Generation)
+
+# Object Property: bf:generationProcess (Description generation)
+
+AnnotationAssertion(dcterms:modified bf:generationProcess "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:generationProcess "Description generation")
+AnnotationAssertion(skos:definition bf:generationProcess "Indication of the program or process used to generate the description by application of a particular transformation.")
+ObjectPropertyDomain(bf:generationProcess bf:AdminMetadata)
+ObjectPropertyRange(bf:generationProcess bf:GenerationProcess)
+
+# Object Property: bf:genreForm (Genre/form)
+
+AnnotationAssertion(dcterms:modified bf:genreForm "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:genreForm "Used with Work, Instance or Item")
+AnnotationAssertion(rdfs:label bf:genreForm "Genre/form")
+AnnotationAssertion(skos:definition bf:genreForm "Form category or genre to which a resource belongs")
+ObjectPropertyRange(bf:genreForm bf:GenreForm)
+
+# Object Property: bf:geographicCoverage (Geographic coverage)
+
+AnnotationAssertion(dcterms:modified bf:geographicCoverage "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:geographicCoverage "2017-02-06 (Changed from data to object property)")
+AnnotationAssertion(rdfs:label bf:geographicCoverage "Geographic coverage")
+AnnotationAssertion(skos:definition bf:geographicCoverage "Geographic coverage of the content of the resource.")
+ObjectPropertyDomain(bf:geographicCoverage bf:Work)
+ObjectPropertyRange(bf:geographicCoverage bf:GeographicCoverage)
+
+# Object Property: bf:grantingInstitution (Degree issuing institution)
+
+AnnotationAssertion(dcterms:modified bf:grantingInstitution "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:grantingInstitution "Degree issuing institution")
+AnnotationAssertion(skos:definition bf:grantingInstitution "Name of degree granting institution.")
+ObjectPropertyDomain(bf:grantingInstitution bf:Dissertation)
+ObjectPropertyRange(bf:grantingInstitution bf:Agent)
+
+# Object Property: bf:hasDerivative (Has derivative)
+
+AnnotationAssertion(dcterms:modified bf:hasDerivative "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:hasDerivative "2016-04-29 (added inverse)")
+AnnotationAssertion(rdfs:comment bf:hasDerivative "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:hasDerivative "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:hasDerivative "Has derivative")
+AnnotationAssertion(skos:definition bf:hasDerivative "Resource that is a modification of the described work.")
+SubObjectPropertyOf(bf:hasDerivative bf:relatedTo)
+
+# Object Property: bf:hasEquivalent (Equivalence)
+
+AnnotationAssertion(dcterms:modified bf:hasEquivalent "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:hasEquivalent "Expected value Work, Instance or Item")
+AnnotationAssertion(rdfs:comment bf:hasEquivalent "Used with Work, Instance or Item")
+AnnotationAssertion(rdfs:label bf:hasEquivalent "Equivalence")
+AnnotationAssertion(skos:definition bf:hasEquivalent "Resource embodies the same content as the described resource.")
+SubObjectPropertyOf(bf:hasEquivalent bf:relatedTo)
+SymmetricObjectProperty(bf:hasEquivalent)
+
+# Object Property: bf:hasExpression (Expressed as)
+
+AnnotationAssertion(dcterms:modified bf:hasExpression "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:hasExpression "2016-04-29 (added inverse)")
+AnnotationAssertion(rdfs:label bf:hasExpression "Expressed as")
+AnnotationAssertion(skos:definition bf:hasExpression "Work that is an expression of a described Work. For use to relate Works under FRBR/RDA rules.")
+SubObjectPropertyOf(bf:hasExpression bf:relatedTo)
+ObjectPropertyDomain(bf:hasExpression bf:Work)
+ObjectPropertyRange(bf:hasExpression bf:Work)
+
+# Object Property: bf:hasInstance (Instance of Work)
+
+AnnotationAssertion(dcterms:modified bf:hasInstance "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:hasInstance "2016-04-29 (added inverse)")
+AnnotationAssertion(rdfs:label bf:hasInstance "Instance of Work")
+AnnotationAssertion(skos:definition bf:hasInstance "Instance is related to described Work. For use to connect Works to Instances in the BIBFRAME structure.")
+SubObjectPropertyOf(bf:hasInstance bf:relatedTo)
+InverseObjectProperties(bf:hasInstance bf:instanceOf)
+ObjectPropertyDomain(bf:hasInstance bf:Work)
+ObjectPropertyRange(bf:hasInstance bf:Instance)
+
+# Object Property: bf:hasItem (Has holding)
+
+AnnotationAssertion(dcterms:modified bf:hasItem "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:hasItem "2016-04-29 (added inverse)")
+AnnotationAssertion(dcterms:modified bf:hasItem "2017-02-07 (slight revision of definition)")
+AnnotationAssertion(rdfs:label bf:hasItem "Has holding")
+AnnotationAssertion(skos:definition bf:hasItem "Item which is an example of the described Instance.")
+SubObjectPropertyOf(bf:hasItem bf:relatedTo)
+InverseObjectProperties(bf:hasItem bf:itemOf)
+ObjectPropertyDomain(bf:hasItem bf:Instance)
+ObjectPropertyRange(bf:hasItem bf:Item)
+
+# Object Property: bf:hasPart (Has part)
+
+AnnotationAssertion(dcterms:modified bf:hasPart "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:hasPart "2016-04-29 (added inverse)")
+AnnotationAssertion(rdfs:comment bf:hasPart "Expected value Work, Instance or Item")
+AnnotationAssertion(rdfs:comment bf:hasPart "Used with Work, Instance or Item")
+AnnotationAssertion(rdfs:label bf:hasPart "Has part")
+AnnotationAssertion(skos:definition bf:hasPart "Resource that is included either physically or logically in the described resource")
+SubObjectPropertyOf(bf:hasPart bf:relatedTo)
+InverseObjectProperties(bf:hasPart bf:partOf)
+
+# Object Property: bf:hasReproduction (Reproduced as)
+
+AnnotationAssertion(dcterms:modified bf:hasReproduction "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:hasReproduction "2016-04-29 (added inverse)")
+AnnotationAssertion(rdfs:label bf:hasReproduction "Reproduced as")
+AnnotationAssertion(skos:definition bf:hasReproduction "Resource that reproduces another Resource.")
+SubObjectPropertyOf(bf:hasReproduction bf:hasEquivalent)
+InverseObjectProperties(bf:hasReproduction bf:reproductionOf)
+ObjectPropertyDomain(bf:hasReproduction bf:Instance)
+ObjectPropertyRange(bf:hasReproduction bf:Instance)
+
+# Object Property: bf:hasSeries (In series)
+
+AnnotationAssertion(dcterms:modified bf:hasSeries "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:hasSeries "2016-04-29 (added inverse, updated range)")
+AnnotationAssertion(rdfs:comment bf:hasSeries "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:hasSeries "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:hasSeries "In series")
+AnnotationAssertion(skos:definition bf:hasSeries "Resource in which the part has been issued; the title of the larger resource appears on the part.")
+SubObjectPropertyOf(bf:hasSeries bf:partOf)
+InverseObjectProperties(bf:hasSeries bf:seriesOf)
+
+# Object Property: bf:hasSubseries (Subseries)
+
+AnnotationAssertion(dcterms:modified bf:hasSubseries "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:hasSubseries "2016-04-29 (added inverse, updated range)")
+AnnotationAssertion(rdfs:comment bf:hasSubseries "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:hasSubseries "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:hasSubseries "Subseries")
+AnnotationAssertion(skos:definition bf:hasSubseries "series resource that is part of another series.")
+SubObjectPropertyOf(bf:hasSubseries bf:partOf)
+InverseObjectProperties(bf:hasSubseries bf:subseriesOf)
+
+# Object Property: bf:heldBy (Held by)
+
+AnnotationAssertion(dcterms:modified bf:heldBy "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:heldBy "Held by")
+AnnotationAssertion(skos:definition bf:heldBy "Entity holding the item or from which it is available.")
+ObjectPropertyDomain(bf:heldBy bf:Item)
+ObjectPropertyRange(bf:heldBy bf:Agent)
+
+# Object Property: bf:identifiedBy (Identifier)
+
+AnnotationAssertion(dcterms:modified bf:identifiedBy "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:identifiedBy "Used with Unspecified")
+AnnotationAssertion(rdfs:label bf:identifiedBy "Identifier")
+AnnotationAssertion(skos:definition bf:identifiedBy "Character string associated with a resource that serves to differentiate that resource from other resources, i.e., that uniquely identifies an entity.")
+InverseObjectProperties(bf:identifiedBy bf:identifies)
+ObjectPropertyRange(bf:identifiedBy bf:Identifier)
+
+# Object Property: bf:identifies (Resouce identified)
+
+AnnotationAssertion(dcterms:modified bf:identifies "2017-02-03 (New inverse)")
+AnnotationAssertion(rdfs:label bf:identifies "Resouce identified")
+AnnotationAssertion(skos:definition bf:identifies "Resource that is associated with a character string that serves to differentiate one resource from another.")
+ObjectPropertyDomain(bf:identifies bf:Identifier)
+ObjectPropertyRange(bf:identifies owl:Thing)
+
+# Object Property: bf:illustrativeContent (Illustrative content information)
+
+AnnotationAssertion(dcterms:modified bf:illustrativeContent "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:illustrativeContent "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:illustrativeContent "Illustrative content information")
+AnnotationAssertion(skos:definition bf:illustrativeContent "Information about content intended to illustrate a resource.")
+ObjectPropertyRange(bf:illustrativeContent bf:Illustration)
+
+# Object Property: bf:immediateAcquisition (Immediate acquisition)
+
+AnnotationAssertion(dcterms:modified bf:immediateAcquisition "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:immediateAcquisition "2017-02-06 (Changed from data to object property)")
+AnnotationAssertion(rdfs:label bf:immediateAcquisition "Immediate acquisition")
+AnnotationAssertion(skos:definition bf:immediateAcquisition "Information about the circumstances, e.g., source, date, method, under which the resource was directly acquired.")
+ObjectPropertyDomain(bf:immediateAcquisition bf:Item)
+ObjectPropertyRange(bf:immediateAcquisition bf:ImmediateAcquisition)
+
+# Object Property: bf:index (Has index)
+
+AnnotationAssertion(dcterms:modified bf:index "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:index "2016-04-29 (added inverse, updated range)")
+AnnotationAssertion(dcterms:modified bf:index "2017-02-03 (corrected label)")
+AnnotationAssertion(rdfs:comment bf:index "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:index "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:index "Has index")
+AnnotationAssertion(skos:definition bf:index "Resource has an accompanying index")
+SubObjectPropertyOf(bf:index bf:accompaniedBy)
+InverseObjectProperties(bf:index bf:indexOf)
+
+# Object Property: bf:indexOf (Index to)
+
+AnnotationAssertion(dcterms:modified bf:indexOf "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:indexOf "2016-04-29 (added inverse, updated range)")
+AnnotationAssertion(rdfs:comment bf:indexOf "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:indexOf "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:indexOf "Index to")
+AnnotationAssertion(skos:definition bf:indexOf "Index that accompanies a resource.")
+SubObjectPropertyOf(bf:indexOf bf:accompanies)
+
+# Object Property: bf:instanceOf (Instance of)
+
+AnnotationAssertion(dcterms:modified bf:instanceOf "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:instanceOf "2016-04-29 (added inverse)")
+AnnotationAssertion(rdfs:label bf:instanceOf "Instance of")
+AnnotationAssertion(skos:definition bf:instanceOf "Work the Instance described instantiates or manifests. For use to connect Instances to Works in the BIBFRAME structure.")
+SubObjectPropertyOf(bf:instanceOf bf:relatedTo)
+ObjectPropertyDomain(bf:instanceOf bf:Instance)
+ObjectPropertyRange(bf:instanceOf bf:Work)
+
+# Object Property: bf:instrument (Instrument)
+
+AnnotationAssertion(dcterms:modified bf:instrument "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:instrument "Instrument")
+AnnotationAssertion(skos:definition bf:instrument "Instrument for which a musical Work is appropriate.")
+ObjectPropertyDomain(bf:instrument bf:Work)
+ObjectPropertyRange(bf:instrument bf:MusicInstrument)
+
+# Object Property: bf:intendedAudience (Intended audience)
+
+AnnotationAssertion(dcterms:modified bf:intendedAudience "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:intendedAudience "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:intendedAudience "Intended audience")
+AnnotationAssertion(skos:definition bf:intendedAudience "Information that identifies the specific audience or intellectual level for which the content of the resource is considered appropriate.")
+ObjectPropertyRange(bf:intendedAudience bf:IntendedAudience)
+
+# Object Property: bf:issuance (Mode of issuance)
+
+AnnotationAssertion(dcterms:modified bf:issuance "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:issuance "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:issuance "Mode of issuance")
+AnnotationAssertion(skos:definition bf:issuance "Categorization reflecting whether a resource is issued in one or more parts, the way it is updated, and its intended termination.")
+ObjectPropertyRange(bf:issuance bf:Issuance)
+
+# Object Property: bf:issuedWith (Issued with)
+
+AnnotationAssertion(dcterms:modified bf:issuedWith "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:issuedWith "Issued with")
+AnnotationAssertion(skos:definition bf:issuedWith "Resource that is issued on the same carrier as the resource being described.")
+SubObjectPropertyOf(bf:issuedWith bf:accompanies)
+SymmetricObjectProperty(bf:issuedWith)
+ObjectPropertyDomain(bf:issuedWith bf:Instance)
+ObjectPropertyRange(bf:issuedWith bf:Instance)
+
+# Object Property: bf:itemOf (Holding for)
+
+AnnotationAssertion(dcterms:modified bf:itemOf "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:itemOf "2016-04-29 (added inverse)")
+AnnotationAssertion(dcterms:modified bf:itemOf "2017-02-07 (slight revision of definition)")
+AnnotationAssertion(rdfs:label bf:itemOf "Holding for")
+AnnotationAssertion(skos:definition bf:itemOf "Instance for which the described Item is an example.")
+SubObjectPropertyOf(bf:itemOf bf:relatedTo)
+ObjectPropertyDomain(bf:itemOf bf:Item)
+ObjectPropertyRange(bf:itemOf bf:Instance)
+
+# Object Property: bf:language (Language information)
+
+AnnotationAssertion(dcterms:modified bf:language "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:language "Used with Unspecified")
+AnnotationAssertion(rdfs:label bf:language "Language information")
+AnnotationAssertion(skos:definition bf:language "Language associated with a resource or its parts.")
+ObjectPropertyRange(bf:language bf:Language)
+
+# Object Property: bf:layout (Layout)
+
+AnnotationAssertion(dcterms:modified bf:layout "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:layout "Layout")
+AnnotationAssertion(skos:definition bf:layout "Arrangement of text, images, tactile notation, etc., in a resource.")
+ObjectPropertyDomain(bf:layout bf:Instance)
+ObjectPropertyRange(bf:layout bf:Layout)
+
+# Object Property: bf:media (Media type)
+
+AnnotationAssertion(dcterms:modified bf:media "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:media "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:media "Media type")
+AnnotationAssertion(skos:definition bf:media "Categorization reflecting the general type of intermediation device required to view, play, run, etc., the content of a resource.")
+ObjectPropertyRange(bf:media bf:Media)
+
+# Object Property: bf:mergedToForm (Merged to form)
+
+AnnotationAssertion(dcterms:modified bf:mergedToForm "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:mergedToForm "2016-04-29 (added inverse, updated range)")
+AnnotationAssertion(rdfs:comment bf:mergedToForm "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:mergedToForm "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:mergedToForm "Merged to form")
+AnnotationAssertion(skos:definition bf:mergedToForm "One of two or more resources that come together to form a new resource.")
+SubObjectPropertyOf(bf:mergedToForm bf:succeededBy)
+InverseObjectProperties(bf:mergedToForm bf:mergerOf)
+
+# Object Property: bf:mergerOf (Merger of)
+
+AnnotationAssertion(dcterms:modified bf:mergerOf "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:mergerOf "2016-04-29 (added inverse, updated range)")
+AnnotationAssertion(rdfs:comment bf:mergerOf "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:mergerOf "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:mergerOf "Merger of")
+AnnotationAssertion(skos:definition bf:mergerOf "One of two or more resources which came together to form a new resource.")
+SubObjectPropertyOf(bf:mergerOf bf:precededBy)
+
+# Object Property: bf:mount (Mount material)
+
+AnnotationAssertion(dcterms:modified bf:mount "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:mount "Mount material")
+AnnotationAssertion(skos:definition bf:mount "Physical material used for the support or backing to which the base material of a resource has been attached.")
+ObjectPropertyDomain(bf:mount bf:Instance)
+ObjectPropertyRange(bf:mount bf:Mount)
+
+# Object Property: bf:musicFormat (Format of notated music)
+
+AnnotationAssertion(dcterms:modified bf:musicFormat "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:musicFormat "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:musicFormat "Format of notated music")
+AnnotationAssertion(skos:definition bf:musicFormat "Layout for content of a resource that is presented in the form of musical notation, such as full score, condensed score, vocal score, etc.")
+ObjectPropertyRange(bf:musicFormat bf:MusicFormat)
+
+# Object Property: bf:musicMedium (Music medium of performance)
+
+AnnotationAssertion(dcterms:modified bf:musicMedium "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:musicMedium "Music medium of performance")
+AnnotationAssertion(skos:definition bf:musicMedium "Instrumental, vocal, and/or other medium of performance for which a musical resource was originally conceived, written or performed.")
+ObjectPropertyDomain(bf:musicMedium bf:Work)
+ObjectPropertyRange(bf:musicMedium bf:MusicMedium)
+
+# Object Property: bf:notation (Notation system)
+
+AnnotationAssertion(dcterms:modified bf:notation "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:notation "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:notation "Notation system")
+AnnotationAssertion(skos:definition bf:notation "Alphabet, script, or symbol system used to convey the content of the resource, including specialized scripts, typefaces, tactile notation, movement notation, and musical notation.")
+ObjectPropertyRange(bf:notation bf:Notation)
+
+# Object Property: bf:note (Note)
+
+AnnotationAssertion(dcterms:modified bf:note "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:note "Used with Unspecified")
+AnnotationAssertion(rdfs:label bf:note "Note")
+AnnotationAssertion(skos:definition bf:note "General textual information relating to a resource, such as Information about a specific copy of a resource or information about a particular attribute of a resource.")
+ObjectPropertyRange(bf:note bf:Note)
+
+# Object Property: bf:originPlace (Associated title place)
+
+AnnotationAssertion(dcterms:modified bf:originPlace "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:originPlace "Associated title place")
+AnnotationAssertion(skos:definition bf:originPlace "Place from which the creation of the Work originated.")
+SubObjectPropertyOf(bf:originPlace bf:place)
+ObjectPropertyDomain(bf:originPlace bf:Work)
+ObjectPropertyRange(bf:originPlace bf:Place)
+
+# Object Property: bf:originalVersion (Original version)
+
+AnnotationAssertion(dcterms:modified bf:originalVersion "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:originalVersion "2016-04-29 (added inverse, updated range)")
+AnnotationAssertion(rdfs:comment bf:originalVersion "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:originalVersion "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:originalVersion "Original version")
+AnnotationAssertion(skos:definition bf:originalVersion "Resource is the original version of which this resource is a reproduction.")
+SubObjectPropertyOf(bf:originalVersion bf:derivativeOf)
+InverseObjectProperties(bf:originalVersion bf:originalVersionOf)
+
+# Object Property: bf:originalVersionOf (Original version of)
+
+AnnotationAssertion(dcterms:modified bf:originalVersionOf "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:originalVersionOf "2016-04-29 (added inverse, updated range)")
+AnnotationAssertion(rdfs:comment bf:originalVersionOf "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:originalVersionOf "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:originalVersionOf "Original version of")
+AnnotationAssertion(skos:definition bf:originalVersionOf "Original version of a resource.")
+SubObjectPropertyOf(bf:originalVersionOf bf:hasDerivative)
+
+# Object Property: bf:otherEdition (Other edition)
+
+AnnotationAssertion(dcterms:modified bf:otherEdition "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:otherEdition "2016-05-13 (symmetrical)")
+AnnotationAssertion(rdfs:comment bf:otherEdition "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:otherEdition "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:otherEdition "Other edition")
+AnnotationAssertion(skos:definition bf:otherEdition "Resource has other available editions, for example simultaneously published language editions or reprints.")
+SubObjectPropertyOf(bf:otherEdition bf:derivativeOf)
+SymmetricObjectProperty(bf:otherEdition)
+
+# Object Property: bf:otherPhysicalFormat (Has other physical format)
+
+AnnotationAssertion(dcterms:modified bf:otherPhysicalFormat "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:otherPhysicalFormat "Has other physical format")
+AnnotationAssertion(skos:definition bf:otherPhysicalFormat "Resource that is manifested in another physical carrier.")
+SubObjectPropertyOf(bf:otherPhysicalFormat bf:hasEquivalent)
+SymmetricObjectProperty(bf:otherPhysicalFormat)
+ObjectPropertyDomain(bf:otherPhysicalFormat bf:Instance)
+ObjectPropertyRange(bf:otherPhysicalFormat bf:Instance)
+
+# Object Property: bf:partOf (Is part of)
+
+AnnotationAssertion(dcterms:modified bf:partOf "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:partOf "2016-04-29 (added inverse)")
+AnnotationAssertion(rdfs:comment bf:partOf "Expected value Work, Instance or Item")
+AnnotationAssertion(rdfs:comment bf:partOf "Used with Work, Instance or Item")
+AnnotationAssertion(rdfs:label bf:partOf "Is part of")
+AnnotationAssertion(skos:definition bf:partOf "Resource in which the described resource is physically or logically contained.")
+SubObjectPropertyOf(bf:partOf bf:relatedTo)
+
+# Object Property: bf:place (Place)
+
+AnnotationAssertion(dcterms:modified bf:place "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:place "Used with Unspecified")
+AnnotationAssertion(rdfs:label bf:place "Place")
+AnnotationAssertion(skos:definition bf:place "Geographic location or place entity associated with a resource or element of description, such as the place associated with the publication, printing, distribution, issue, release or production of a resource, place of an event.")
+ObjectPropertyRange(bf:place bf:Place)
+
+# Object Property: bf:polarity (Polarity)
+
+AnnotationAssertion(dcterms:modified bf:polarity "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:polarity "Polarity")
+AnnotationAssertion(skos:definition bf:polarity "Relationship of the colors and tones in an image to the colors and tones of the object reproduced.")
+ObjectPropertyDomain(bf:polarity bf:Instance)
+ObjectPropertyRange(bf:polarity bf:Polarity)
+
+# Object Property: bf:precededBy (Preceded by)
+
+AnnotationAssertion(dcterms:modified bf:precededBy "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:precededBy "2016-04-29 (added inverse)")
+AnnotationAssertion(rdfs:comment bf:precededBy "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:precededBy "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:precededBy "Preceded by")
+AnnotationAssertion(skos:definition bf:precededBy "Resource that precedes the resource being described, e.g., is earlier in time or before in narrative.")
+SubObjectPropertyOf(bf:precededBy bf:relatedTo)
+InverseObjectProperties(bf:precededBy bf:succeededBy)
+
+# Object Property: bf:productionMethod (Production method)
+
+AnnotationAssertion(dcterms:modified bf:productionMethod "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:productionMethod "Production method")
+AnnotationAssertion(skos:definition bf:productionMethod "Process used to produce a resource.")
+ObjectPropertyDomain(bf:productionMethod bf:Instance)
+ObjectPropertyRange(bf:productionMethod bf:ProductionMethod)
+
+# Object Property: bf:projection (Cartographic projection)
+
+AnnotationAssertion(dcterms:modified bf:projection "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:projection "2017-02-03 (changed from data to object property)")
+AnnotationAssertion(rdfs:label bf:projection "Cartographic projection")
+AnnotationAssertion(skos:definition bf:projection "Method or system used to represent the surface of the earth or of a celestial sphere on a plane.")
+ObjectPropertyDomain(bf:projection bf:Cartographic)
+ObjectPropertyRange(bf:projection bf:Projection)
+
+# Object Property: bf:projectionCharacteristic (Projection characteristic)
+
+AnnotationAssertion(dcterms:modified bf:projectionCharacteristic "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:projectionCharacteristic "2017-02-03 (fixed typo in property name)")
+AnnotationAssertion(rdfs:label bf:projectionCharacteristic "Projection characteristic")
+AnnotationAssertion(skos:definition bf:projectionCharacteristic "Technical specification relating to the projection of a motion picture film.")
+ObjectPropertyDomain(bf:projectionCharacteristic bf:Instance)
+ObjectPropertyRange(bf:projectionCharacteristic bf:ProjectionCharacteristic)
+
+# Object Property: bf:provisionActivity (Provision activity)
+
+AnnotationAssertion(dcterms:modified bf:provisionActivity "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:provisionActivity "2017-02-03 (revised label and slightly revised definition)")
+AnnotationAssertion(rdfs:label bf:provisionActivity "Provision activity")
+AnnotationAssertion(skos:definition bf:provisionActivity "Place, name, and/or date information relating to the publication, printing, distribution, issue, release, production, etc. of a resource.")
+ObjectPropertyDomain(bf:provisionActivity bf:Instance)
+ObjectPropertyRange(bf:provisionActivity bf:ProvisionActivity)
+
+# Object Property: bf:reductionRatio (Reduction ratio)
+
+AnnotationAssertion(dcterms:modified bf:reductionRatio "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:reductionRatio "Reduction ratio")
+AnnotationAssertion(skos:definition bf:reductionRatio "Size of a micro-image in relation to the original from which it was produced.")
+ObjectPropertyDomain(bf:reductionRatio bf:Instance)
+ObjectPropertyRange(bf:reductionRatio bf:ReductionRatio)
+
+# Object Property: bf:referencedBy (Referenced by)
+
+AnnotationAssertion(dcterms:modified bf:referencedBy "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:referencedBy "2016-04-29 (added inverse)")
+AnnotationAssertion(rdfs:comment bf:referencedBy "Expected value Work, Instance or Item")
+AnnotationAssertion(rdfs:comment bf:referencedBy "Used with Work, Instance or Item")
+AnnotationAssertion(rdfs:label bf:referencedBy "Referenced by")
+AnnotationAssertion(skos:definition bf:referencedBy "Resource that references the described resource")
+SubObjectPropertyOf(bf:referencedBy bf:relatedTo)
+InverseObjectProperties(bf:referencedBy bf:references)
+
+# Object Property: bf:references (References)
+
+AnnotationAssertion(dcterms:modified bf:references "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:references "2016-04-29 (added inverse)")
+AnnotationAssertion(rdfs:comment bf:references "Expected value Work, Instance or Item")
+AnnotationAssertion(rdfs:comment bf:references "Used with Work, Instance or Item")
+AnnotationAssertion(rdfs:label bf:references "References")
+AnnotationAssertion(skos:definition bf:references "Resource that is referenced by the described resource.")
+SubObjectPropertyOf(bf:references bf:relatedTo)
+
+# Object Property: bf:relatedTo (Related resource)
+
+AnnotationAssertion(dcterms:modified bf:relatedTo "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:relatedTo "Related resource")
+AnnotationAssertion(skos:definition bf:relatedTo "Any relationship between Work, Instance, and Item resources.")
+SymmetricObjectProperty(bf:relatedTo)
+ObjectPropertyDomain(bf:relatedTo owl:Thing)
+ObjectPropertyRange(bf:relatedTo owl:Thing)
+
+# Object Property: bf:replacedBy (Succeeded by)
+
+AnnotationAssertion(dcterms:modified bf:replacedBy "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:replacedBy "2016-04-29 (added inverse, updated range)")
+AnnotationAssertion(rdfs:comment bf:replacedBy "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:replacedBy "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:replacedBy "Succeeded by")
+AnnotationAssertion(skos:definition bf:replacedBy "Later resource used in place of an earlier resource, usually because the later resource contains updated or new information.")
+SubObjectPropertyOf(bf:replacedBy bf:succeededBy)
+InverseObjectProperties(bf:replacedBy bf:replacementOf)
+
+# Object Property: bf:replacementOf (Preceded by)
+
+AnnotationAssertion(dcterms:modified bf:replacementOf "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:replacementOf "2016-04-29 (added inverse, updated range)")
+AnnotationAssertion(rdfs:comment bf:replacementOf "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:replacementOf "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:replacementOf "Preceded by")
+AnnotationAssertion(skos:definition bf:replacementOf "Earlier resource whose content has been replaced by a later resource, usually because the later resource contains updated or new information.")
+SubObjectPropertyOf(bf:replacementOf bf:precededBy)
+
+# Object Property: bf:reproductionOf (Reproduction of)
+
+AnnotationAssertion(dcterms:modified bf:reproductionOf "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:reproductionOf "2016-04-29 (added inverse)")
+AnnotationAssertion(rdfs:label bf:reproductionOf "Reproduction of")
+AnnotationAssertion(skos:definition bf:reproductionOf "Resource that is a reproduction of another Resource.")
+SubObjectPropertyOf(bf:reproductionOf bf:hasEquivalent)
+ObjectPropertyDomain(bf:reproductionOf bf:Instance)
+ObjectPropertyRange(bf:reproductionOf bf:Instance)
+
+# Object Property: bf:review (Review content)
+
+AnnotationAssertion(dcterms:modified bf:review "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:review "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:review "Review content")
+AnnotationAssertion(skos:definition bf:review "Review of a resource.")
+ObjectPropertyRange(bf:review bf:Review)
+
+# Object Property: bf:role (Contributor role)
+
+AnnotationAssertion(dcterms:modified bf:role "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:role "2017-02-03 (Changed from data to object property, adjusted label and definition)")
+AnnotationAssertion(rdfs:label bf:role "Contributor role")
+AnnotationAssertion(skos:definition bf:role "Function provided by a contributor, e.g., author, illustrator, etc.")
+ObjectPropertyDomain(bf:role bf:Contribution)
+ObjectPropertyRange(bf:role bf:Role)
+
+# Object Property: bf:scale (Scale)
+
+AnnotationAssertion(dcterms:modified bf:scale "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:scale "2017-02-03 (changed from data to object property)")
+AnnotationAssertion(rdfs:comment bf:scale "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:scale "Scale")
+AnnotationAssertion(skos:definition bf:scale "Ratio of the dimensions of a form contained or embodied in a resource to the dimensions of the entity it represents, e.g., for images or cartographic resources.")
+ObjectPropertyRange(bf:scale bf:Scale)
+
+# Object Property: bf:separatedFrom (Separated from)
+
+AnnotationAssertion(dcterms:modified bf:separatedFrom "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:separatedFrom "2016-04-29 (added inverse, updated range)")
+AnnotationAssertion(rdfs:comment bf:separatedFrom "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:separatedFrom "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:separatedFrom "Separated from")
+AnnotationAssertion(skos:definition bf:separatedFrom "Resource that spun off a part of its content to form a new resource.")
+SubObjectPropertyOf(bf:separatedFrom bf:precededBy)
+
+# Object Property: bf:seriesOf (Series container of)
+
+AnnotationAssertion(dcterms:modified bf:seriesOf "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:seriesOf "2016-04-29 (added inverse, updated range)")
+AnnotationAssertion(rdfs:comment bf:seriesOf "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:seriesOf "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:seriesOf "Series container of")
+AnnotationAssertion(skos:definition bf:seriesOf "Resource that is a part of a larger resource.")
+SubObjectPropertyOf(bf:seriesOf bf:hasPart)
+
+# Object Property: bf:shelfMark (Shelf mark)
+
+AnnotationAssertion(dcterms:modified bf:shelfMark "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:shelfMark "Shelf mark")
+AnnotationAssertion(skos:definition bf:shelfMark "Piece identifier, such as a call or other type of number.")
+ObjectPropertyDomain(bf:shelfMark bf:Item)
+ObjectPropertyRange(bf:shelfMark bf:ShelfMark)
+
+# Object Property: bf:soundCharacteristic (Sound characteristic)
+
+AnnotationAssertion(dcterms:modified bf:soundCharacteristic "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:soundCharacteristic "2016-04-21 (fixed name and range typos)")
+AnnotationAssertion(rdfs:label bf:soundCharacteristic "Sound characteristic")
+AnnotationAssertion(skos:definition bf:soundCharacteristic "Technical specification relating to the encoding of sound in a resource.")
+ObjectPropertyDomain(bf:soundCharacteristic bf:Instance)
+ObjectPropertyRange(bf:soundCharacteristic bf:SoundCharacteristic)
+
+# Object Property: bf:soundContent (Sound content)
+
+AnnotationAssertion(dcterms:modified bf:soundContent "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:soundContent "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:soundContent "Sound content")
+AnnotationAssertion(skos:definition bf:soundContent "Indication of whether the production of sound is an integral part of the resource.")
+ObjectPropertyRange(bf:soundContent bf:SoundContent)
+
+# Object Property: bf:source (Source)
+
+AnnotationAssertion(dcterms:modified bf:source "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:source "Used with Unspecified")
+AnnotationAssertion(rdfs:label bf:source "Source")
+AnnotationAssertion(skos:definition bf:source "Resource from which value or label came or was derived, such as the formal source/scheme from which a classification number is taken or derived, list from which an agent name is taken or derived, source within which an identifier is unique.")
+ObjectPropertyRange(bf:source bf:Source)
+
+# Object Property: bf:splitInto (Split into)
+
+AnnotationAssertion(dcterms:modified bf:splitInto "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:splitInto "2016-04-29 (added inverse, updated range)")
+AnnotationAssertion(rdfs:comment bf:splitInto "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:splitInto "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:splitInto "Split into")
+AnnotationAssertion(skos:definition bf:splitInto "One of two or more resources resulting from the division of an earlier resource into separate resources.")
+SubObjectPropertyOf(bf:splitInto bf:succeededBy)
+
+# Object Property: bf:status (Status)
+
+AnnotationAssertion(dcterms:modified bf:status "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:status "Used with Unspecified")
+AnnotationAssertion(rdfs:label bf:status "Status")
+AnnotationAssertion(skos:definition bf:status "Designation of the validity or position of something, such as indication that the classification number is canceled or invalid, circulation availability of an item, indication of whether the identifier is canceled or invalid.")
+ObjectPropertyRange(bf:status bf:Status)
+
+# Object Property: bf:subject (Subject)
+
+AnnotationAssertion(dcterms:modified bf:subject "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:subject "Used with Work, Instance or Item")
+AnnotationAssertion(rdfs:label bf:subject "Subject")
+AnnotationAssertion(skos:definition bf:subject "Subject term(s) describing a resource.")
+ObjectPropertyRange(bf:subject owl:Thing)
+
+# Object Property: bf:sublocation (Held in sublocation)
+
+AnnotationAssertion(dcterms:modified bf:sublocation "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:sublocation "Held in sublocation")
+AnnotationAssertion(skos:definition bf:sublocation "Specific place within the holding entity where the item is located or made available.")
+ObjectPropertyDomain(bf:sublocation bf:Item)
+ObjectPropertyRange(bf:sublocation bf:Sublocation)
+
+# Object Property: bf:subseriesOf (Subseries of)
+
+AnnotationAssertion(dcterms:modified bf:subseriesOf "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:subseriesOf "2016-04-29 (added inverse, updated range)")
+AnnotationAssertion(rdfs:comment bf:subseriesOf "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:subseriesOf "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:subseriesOf "Subseries of")
+AnnotationAssertion(skos:definition bf:subseriesOf "Series resource of which the described resource is a part.")
+SubObjectPropertyOf(bf:subseriesOf bf:hasPart)
+
+# Object Property: bf:succeededBy (Succeeded by)
+
+AnnotationAssertion(dcterms:modified bf:succeededBy "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:succeededBy "2016-04-29 (added inverse)")
+AnnotationAssertion(rdfs:comment bf:succeededBy "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:succeededBy "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:succeededBy "Succeeded by")
+AnnotationAssertion(skos:definition bf:succeededBy "Resource that succeeds the resource being described, e.g., later in time or after in a narrative.")
+SubObjectPropertyOf(bf:succeededBy bf:relatedTo)
+
+# Object Property: bf:summary (Summary content)
+
+AnnotationAssertion(dcterms:modified bf:summary "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:summary "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:summary "Summary content")
+AnnotationAssertion(skos:definition bf:summary "Summary or abstract of the resource described.")
+ObjectPropertyRange(bf:summary bf:Summary)
+
+# Object Property: bf:supplement (Supplement)
+
+AnnotationAssertion(dcterms:modified bf:supplement "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:supplement "2016-04-29 (added inverse, updated range)")
+AnnotationAssertion(rdfs:comment bf:supplement "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:supplement "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:supplement "Supplement")
+AnnotationAssertion(skos:definition bf:supplement "Resource that updates or otherwise complements the predominant resource.")
+SubObjectPropertyOf(bf:supplement bf:accompaniedBy)
+InverseObjectProperties(bf:supplement bf:supplementTo)
+
+# Object Property: bf:supplementTo (Supplement to)
+
+AnnotationAssertion(dcterms:modified bf:supplementTo "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:supplementTo "2016-04-29 (added inverse, updated range)")
+AnnotationAssertion(rdfs:comment bf:supplementTo "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:supplementTo "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:supplementTo "Supplement to")
+AnnotationAssertion(skos:definition bf:supplementTo "Resource that is updated or otherwise complemented by the augmenting resource.")
+SubObjectPropertyOf(bf:supplementTo bf:accompanies)
+
+# Object Property: bf:supplementaryContent (Supplementary material)
+
+AnnotationAssertion(dcterms:modified bf:supplementaryContent "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:supplementaryContent "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:supplementaryContent "Supplementary material")
+AnnotationAssertion(skos:definition bf:supplementaryContent "Material such as an index, bibliography, appendix intended to supplement the primary content of a resource.")
+ObjectPropertyRange(bf:supplementaryContent bf:SupplementaryContent)
+
+# Object Property: bf:systemRequirement (Equipment or system requirements)
+
+AnnotationAssertion(dcterms:modified bf:systemRequirement "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:systemRequirement "2017-02-06 (Changed from data to object property, changed property name from plural to singular)")
+AnnotationAssertion(rdfs:label bf:systemRequirement "Equipment or system requirements")
+AnnotationAssertion(skos:definition bf:systemRequirement "Equipment or system requirement beyond what is normal and obvious for the type of carrier or type of file, such as make and model of equipment or hardware, operating system, amount of memory, programming language, other necessary software, any plug-ins or peripherals required to play, view, or run the resource, etc.")
+ObjectPropertyDomain(bf:systemRequirement bf:Instance)
+ObjectPropertyRange(bf:systemRequirement bf:SystemRequirement)
+
+# Object Property: bf:tableOfContents (Table of contents content)
+
+AnnotationAssertion(dcterms:modified bf:tableOfContents "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:tableOfContents "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:tableOfContents "Table of contents content")
+AnnotationAssertion(skos:definition bf:tableOfContents "Table of contents of the described resource.")
+ObjectPropertyRange(bf:tableOfContents bf:TableOfContents)
+
+# Object Property: bf:title (Title resource)
+
+AnnotationAssertion(dcterms:modified bf:title "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:title "Used with Work, Instance or Item")
+AnnotationAssertion(rdfs:label bf:title "Title resource")
+AnnotationAssertion(skos:definition bf:title "Name given to a resource.")
+ObjectPropertyRange(bf:title bf:Title)
+
+# Object Property: bf:translation (Translation as)
+
+AnnotationAssertion(dcterms:modified bf:translation "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:translation "2016-04-29 (added inverse, updated range)")
+AnnotationAssertion(dcterms:modified bf:translation "2017-02-03 (corrected subproperty)")
+AnnotationAssertion(rdfs:comment bf:translation "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:translation "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:translation "Translation as")
+AnnotationAssertion(skos:definition bf:translation "Resource that translates the text of the source entity into a language different from that of the original.")
+SubObjectPropertyOf(bf:translation bf:hasDerivative)
+InverseObjectProperties(bf:translation bf:translationOf)
+
+# Object Property: bf:translationOf (Translation of)
+
+AnnotationAssertion(dcterms:modified bf:translationOf "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:translationOf "2016-04-29 (added inverse, updated range)")
+AnnotationAssertion(dcterms:modified bf:translationOf "2017-02-03 (corrected subproperty)")
+AnnotationAssertion(rdfs:comment bf:translationOf "Expected value Work or Instance")
+AnnotationAssertion(rdfs:comment bf:translationOf "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:translationOf "Translation of")
+AnnotationAssertion(skos:definition bf:translationOf "Resource that has been translated, i.e., the text is expressed in a language different from that of the original resource.")
+SubObjectPropertyOf(bf:translationOf bf:derivativeOf)
+
+# Object Property: bf:unit (Type of unit)
+
+AnnotationAssertion(dcterms:modified bf:unit "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:unit "Used with Unspecified")
+AnnotationAssertion(rdfs:label bf:unit "Type of unit")
+AnnotationAssertion(skos:definition bf:unit "Units in which a value is expressed, such as the physical or logical constituent of a resource (e.g., a volume, audiocassette, film reel, a map, a digital file).")
+ObjectPropertyRange(bf:unit bf:Unit)
+
+# Object Property: bf:usageAndAccessPolicy (Use and access condition)
+
+AnnotationAssertion(dcterms:modified bf:usageAndAccessPolicy "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:usageAndAccessPolicy "Used with Work, Instance or Item")
+AnnotationAssertion(rdfs:label bf:usageAndAccessPolicy "Use and access condition")
+AnnotationAssertion(skos:definition bf:usageAndAccessPolicy "General statement of allowances and restrictions on access to a resource, including retention, reproduction, access, and lending.")
+ObjectPropertyRange(bf:usageAndAccessPolicy bf:UsageAndAccessPolicy)
+
+# Object Property: bf:videoCharacteristic (Video characteristic)
+
+AnnotationAssertion(dcterms:modified bf:videoCharacteristic "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:videoCharacteristic "Video characteristic")
+AnnotationAssertion(skos:definition bf:videoCharacteristic "Technical specification relating to the encoding of video images in a resource")
+ObjectPropertyDomain(bf:videoCharacteristic bf:Instance)
+ObjectPropertyRange(bf:videoCharacteristic bf:VideoCharacteristic)
+
+# Object Property: bf:voice (Voice)
+
+AnnotationAssertion(dcterms:modified bf:voice "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:voice "Voice")
+AnnotationAssertion(skos:definition bf:voice "Voice for which a musical work is appropriate, such as soprano, tenor, mixed.")
+ObjectPropertyDomain(bf:voice bf:Work)
+ObjectPropertyRange(bf:voice bf:MusicVoice)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: bf:acquisitionTerms (Terms of acquisition)
+
+AnnotationAssertion(dcterms:modified bf:acquisitionTerms "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:acquisitionTerms "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:acquisitionTerms "Terms of acquisition")
+AnnotationAssertion(skos:definition bf:acquisitionTerms "Conditions under which the publisher, distributor, etc., will normally supply a resource, e.g., price of a resource.")
+DataPropertyRange(bf:acquisitionTerms rdfs:Literal)
+
+# Data Property: bf:ascensionAndDeclination (Cartographic ascension and declination)
+
+AnnotationAssertion(dcterms:modified bf:ascensionAndDeclination "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:ascensionAndDeclination "Cartographic ascension and declination")
+AnnotationAssertion(skos:definition bf:ascensionAndDeclination "System for identifying the location of a celestial object in the sky covered by the cartographic content of a resource using the angles of right ascension and declination.")
+DataPropertyDomain(bf:ascensionAndDeclination bf:Cartographic)
+DataPropertyRange(bf:ascensionAndDeclination rdfs:Literal)
+
+# Data Property: bf:awards (Award note)
+
+AnnotationAssertion(dcterms:modified bf:awards "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:awards "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:awards "Award note")
+AnnotationAssertion(skos:definition bf:awards "Information on awards associated with the described resource.")
+DataPropertyRange(bf:awards rdfs:Literal)
+
+# Data Property: bf:changeDate (Description change date)
+
+AnnotationAssertion(dcterms:modified bf:changeDate "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:changeDate "Description change date")
+AnnotationAssertion(skos:definition bf:changeDate "Date or date and time on which the metadata was modified.")
+SubDataPropertyOf(bf:changeDate bf:date)
+DataPropertyDomain(bf:changeDate bf:AdminMetadata)
+DataPropertyRange(bf:changeDate rdfs:Literal)
+
+# Data Property: bf:classificationPortion (Classification number)
+
+AnnotationAssertion(dcterms:modified bf:classificationPortion "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:classificationPortion "Classification number")
+AnnotationAssertion(skos:definition bf:classificationPortion "Classification number (single class number or beginning number of a span) that indicates the subject by applying a formal system of coding and organizing resources.")
+DataPropertyDomain(bf:classificationPortion bf:Classification)
+DataPropertyRange(bf:classificationPortion rdfs:Literal)
+
+# Data Property: bf:code (Code)
+
+AnnotationAssertion(dcterms:modified bf:code "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:code "Used with Unspecified")
+AnnotationAssertion(rdfs:label bf:code "Code")
+AnnotationAssertion(skos:definition bf:code "String of characters that serves as a code representing information.")
+DataPropertyRange(bf:code rdfs:Literal)
+
+# Data Property: bf:coordinates (Cartographic coordinates)
+
+AnnotationAssertion(dcterms:modified bf:coordinates "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:coordinates "Cartographic coordinates")
+AnnotationAssertion(skos:definition bf:coordinates "Mathematical system for identifying the area covered by the cartographic content of a resource, expressed either by means of longitude and latitude on the surface of planets or by the angles of right ascension and declination for celestial cartographic content.")
+DataPropertyDomain(bf:coordinates bf:Cartographic)
+DataPropertyRange(bf:coordinates rdfs:Literal)
+
+# Data Property: bf:copyrightDate (Copyright date)
+
+AnnotationAssertion(dcterms:modified bf:copyrightDate "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:copyrightDate "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:copyrightDate "Copyright date")
+AnnotationAssertion(skos:definition bf:copyrightDate "Date associated with a claim of protection under copyright or a similar regime.")
+SubDataPropertyOf(bf:copyrightDate bf:date)
+DataPropertyRange(bf:copyrightDate rdfs:Literal)
+
+# Data Property: bf:count (Number of units)
+
+AnnotationAssertion(dcterms:modified bf:count "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:count "Used with Unspecified")
+AnnotationAssertion(rdfs:label bf:count "Number of units")
+AnnotationAssertion(skos:definition bf:count "Number associated with a measure of units, such as the number of units and/or subunits making up a resource.")
+DataPropertyRange(bf:count rdfs:Literal)
+
+# Data Property: bf:creationDate (Description creation date)
+
+AnnotationAssertion(dcterms:modified bf:creationDate "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:creationDate "Description creation date")
+AnnotationAssertion(skos:definition bf:creationDate "Date or date and time on which the original metadata first created.")
+SubDataPropertyOf(bf:creationDate bf:date)
+DataPropertyDomain(bf:creationDate bf:AdminMetadata)
+DataPropertyRange(bf:creationDate rdfs:Literal)
+
+# Data Property: bf:credits (Credits note)
+
+AnnotationAssertion(dcterms:modified bf:credits "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:credits "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:credits "Credits note")
+AnnotationAssertion(skos:definition bf:credits "Information in note form of credits for persons or organizations who have participated in the creation and/or production of the resource.")
+DataPropertyRange(bf:credits rdfs:Literal)
+
+# Data Property: bf:custodialHistory (Custodial history)
+
+AnnotationAssertion(dcterms:modified bf:custodialHistory "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:custodialHistory "Used with Work, Instance or Item")
+AnnotationAssertion(rdfs:label bf:custodialHistory "Custodial history")
+AnnotationAssertion(skos:definition bf:custodialHistory "Information about the provenance, such as origin, ownership and custodial history (chain of custody), of a resource.")
+DataPropertyRange(bf:custodialHistory rdfs:Literal)
+
+# Data Property: bf:date (Date)
+
+AnnotationAssertion(dcterms:modified bf:date "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:date "Used with Unspecified")
+AnnotationAssertion(rdfs:label bf:date "Date")
+AnnotationAssertion(skos:definition bf:date "Date designation associated with a resource or element of description, such as date of title variation; year a degree was awarded; date associated with the publication, printing, distribution, issue, release or production of a resource. May be date typed.")
+DataPropertyRange(bf:date rdfs:Literal)
+
+# Data Property: bf:degree (Degree)
+
+AnnotationAssertion(dcterms:modified bf:degree "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:degree "Degree")
+AnnotationAssertion(skos:definition bf:degree "Degree for which author was a candidate.")
+DataPropertyDomain(bf:degree bf:Dissertation)
+DataPropertyRange(bf:degree rdfs:Literal)
+
+# Data Property: bf:derivedFrom (Source metadata)
+
+AnnotationAssertion(dcterms:modified bf:derivedFrom "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:derivedFrom "Source metadata")
+AnnotationAssertion(skos:definition bf:derivedFrom "Link to the metadata that was the source of the data.")
+DataPropertyDomain(bf:derivedFrom bf:AdminMetadata)
+DataPropertyRange(bf:derivedFrom rdfs:Literal)
+
+# Data Property: bf:dimensions (Dimensions)
+
+AnnotationAssertion(dcterms:modified bf:dimensions "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:dimensions "Dimensions")
+AnnotationAssertion(skos:definition bf:dimensions "Measurements of the carrier or carriers and/or the container of a resource.")
+DataPropertyDomain(bf:dimensions bf:Instance)
+DataPropertyRange(bf:dimensions rdfs:Literal)
+
+# Data Property: bf:duration (Duration)
+
+AnnotationAssertion(dcterms:modified bf:duration "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:duration "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:duration "Duration")
+AnnotationAssertion(skos:definition bf:duration "Information about the playing time, running time, etc. of a resource.")
+DataPropertyRange(bf:duration rdfs:Literal)
+
+# Data Property: bf:edition (Classification scheme edition)
+
+AnnotationAssertion(dcterms:modified bf:edition "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:edition "Classification scheme edition")
+AnnotationAssertion(skos:definition bf:edition "Edition of the classification scheme, such as full, abridged or a number, when a classification scheme designates editions.")
+DataPropertyDomain(bf:edition bf:Classification)
+DataPropertyRange(bf:edition rdfs:Literal)
+
+# Data Property: bf:editionEnumeration (Edition enumeration)
+
+AnnotationAssertion(dcterms:modified bf:editionEnumeration "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:editionEnumeration "Edition enumeration")
+AnnotationAssertion(skos:definition bf:editionEnumeration "Enumeration of the edition; usually transcribed.")
+DataPropertyDomain(bf:editionEnumeration bf:Instance)
+DataPropertyRange(bf:editionEnumeration rdfs:Literal)
+
+# Data Property: bf:editionStatement (Edition statement)
+
+AnnotationAssertion(dcterms:modified bf:editionStatement "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:editionStatement "Edition statement")
+AnnotationAssertion(skos:definition bf:editionStatement "Information identifying the edition or version of the resource and associated statements of responsibility for the edition; usually transcribed.")
+DataPropertyDomain(bf:editionStatement bf:Instance)
+DataPropertyRange(bf:editionStatement rdfs:Literal)
+
+# Data Property: bf:ensembleType (Ensemble type)
+
+AnnotationAssertion(dcterms:modified bf:ensembleType "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:ensembleType "Ensemble type")
+AnnotationAssertion(skos:definition bf:ensembleType "Specific type of ensemble, such as orchestra, band, guitar ensemble.")
+DataPropertyDomain(bf:ensembleType bf:MusicEnsemble)
+DataPropertyRange(bf:ensembleType rdfs:Literal)
+
+# Data Property: bf:equinox (Cartographic equinox)
+
+AnnotationAssertion(dcterms:modified bf:equinox "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:equinox "Cartographic equinox")
+AnnotationAssertion(skos:definition bf:equinox "One of two points of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0 degrees.")
+DataPropertyDomain(bf:equinox bf:Cartographic)
+DataPropertyRange(bf:equinox rdfs:Literal)
+
+# Data Property: bf:exclusionGRing (Cartographic G ring area excluded)
+
+AnnotationAssertion(dcterms:modified bf:exclusionGRing "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:exclusionGRing "Cartographic G ring area excluded")
+AnnotationAssertion(skos:definition bf:exclusionGRing "Coordinate pairs that identify the closed non-intersecting boundary of the area contained within the G-polygon outer ring that is excluded.")
+DataPropertyDomain(bf:exclusionGRing bf:Cartographic)
+DataPropertyRange(bf:exclusionGRing rdfs:Literal)
+
+# Data Property: bf:firstIssue (Multipart first issue)
+
+AnnotationAssertion(dcterms:modified bf:firstIssue "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:firstIssue "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:firstIssue "Multipart first issue")
+AnnotationAssertion(skos:definition bf:firstIssue "Beginning date of a resource and/or the sequential designations.")
+DataPropertyRange(bf:firstIssue rdfs:Literal)
+
+# Data Property: bf:generationDate (Date generated)
+
+AnnotationAssertion(dcterms:modified bf:generationDate "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:generationDate "Date generated")
+AnnotationAssertion(skos:definition bf:generationDate "Date of conversion of the metadata from another format.")
+SubDataPropertyOf(bf:generationDate bf:date)
+DataPropertyDomain(bf:generationDate bf:AdminMetadata)
+DataPropertyRange(bf:generationDate rdfs:Literal)
+
+# Data Property: bf:hierarchicalLevel (Hierarchical level of material)
+
+AnnotationAssertion(dcterms:modified bf:hierarchicalLevel "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:hierarchicalLevel "Hierarchical level of material")
+AnnotationAssertion(skos:definition bf:hierarchicalLevel "Hierarchical position of the described materials relative to other material from the same source.")
+DataPropertyDomain(bf:hierarchicalLevel bf:Arrangement)
+DataPropertyRange(bf:hierarchicalLevel rdfs:Literal)
+
+# Data Property: bf:historyOfWork (History of the work)
+
+AnnotationAssertion(dcterms:modified bf:historyOfWork "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:historyOfWork "History of the work")
+AnnotationAssertion(skos:definition bf:historyOfWork "Information about the history of a Work.")
+DataPropertyDomain(bf:historyOfWork bf:Work)
+DataPropertyRange(bf:historyOfWork rdfs:Literal)
+
+# Data Property: bf:instrumentalType (Instrument role)
+
+AnnotationAssertion(dcterms:modified bf:instrumentalType "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:instrumentalType "Instrument role")
+AnnotationAssertion(skos:definition bf:instrumentalType "Specific role of instrument, such as alternate, doubling, solo, ensemble.")
+DataPropertyDomain(bf:instrumentalType bf:MusicInstrument)
+DataPropertyRange(bf:instrumentalType rdfs:Literal)
+
+# Data Property: bf:itemPortion (Classification item number)
+
+AnnotationAssertion(dcterms:modified bf:itemPortion "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:itemPortion "Classification item number")
+AnnotationAssertion(skos:definition bf:itemPortion "Number attached to a classification string that indicates a particular item.")
+DataPropertyDomain(bf:itemPortion bf:Classification)
+DataPropertyRange(bf:itemPortion rdfs:Literal)
+
+# Data Property: bf:lastIssue (Multipart last issue)
+
+AnnotationAssertion(dcterms:modified bf:lastIssue "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:lastIssue "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:lastIssue "Multipart last issue")
+AnnotationAssertion(skos:definition bf:lastIssue "Ending date of a resource and/or the sequential designations.")
+DataPropertyRange(bf:lastIssue rdfs:Literal)
+
+# Data Property: bf:legalDate (Date of legal work)
+
+AnnotationAssertion(dcterms:modified bf:legalDate "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:legalDate "Date of legal work")
+AnnotationAssertion(skos:definition bf:legalDate "Date of legal work, or promulgation of a law, or signing of a treaty.")
+SubDataPropertyOf(bf:legalDate bf:date)
+DataPropertyDomain(bf:legalDate bf:Work)
+DataPropertyRange(bf:legalDate rdfs:Literal)
+
+# Data Property: bf:mainTitle (Main title)
+
+AnnotationAssertion(dcterms:modified bf:mainTitle "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:mainTitle "Main title")
+AnnotationAssertion(skos:definition bf:mainTitle "Title being addressed. Possible title component.")
+DataPropertyDomain(bf:mainTitle bf:Title)
+DataPropertyRange(bf:mainTitle rdfs:Literal)
+
+# Data Property: bf:musicKey (Music key)
+
+AnnotationAssertion(dcterms:modified bf:musicKey "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:musicKey "Music key")
+AnnotationAssertion(skos:definition bf:musicKey "Pitch and mode for music.")
+DataPropertyDomain(bf:musicKey bf:Work)
+DataPropertyRange(bf:musicKey rdfs:Literal)
+
+# Data Property: bf:musicOpusNumber (Music opus number)
+
+AnnotationAssertion(dcterms:modified bf:musicOpusNumber "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:musicOpusNumber "Music opus number")
+AnnotationAssertion(skos:definition bf:musicOpusNumber "Numeric designation of a musical work assigned by a composer, publisher, or a musicologist.")
+DataPropertyDomain(bf:musicOpusNumber bf:Work)
+DataPropertyRange(bf:musicOpusNumber rdfs:Literal)
+
+# Data Property: bf:musicSerialNumber (Music serial number)
+
+AnnotationAssertion(dcterms:modified bf:musicSerialNumber "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:musicSerialNumber "Music serial number")
+AnnotationAssertion(skos:definition bf:musicSerialNumber "Numeric designation for musical works consecutively numbered in music reference sources.")
+DataPropertyDomain(bf:musicSerialNumber bf:Work)
+DataPropertyRange(bf:musicSerialNumber rdfs:Literal)
+
+# Data Property: bf:musicThematicNumber (Music thematic number)
+
+AnnotationAssertion(dcterms:modified bf:musicThematicNumber "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:musicThematicNumber "Music thematic number")
+AnnotationAssertion(skos:definition bf:musicThematicNumber "Numeric designation for a musical work as found in a thematic index for the composer.")
+DataPropertyDomain(bf:musicThematicNumber bf:Work)
+DataPropertyRange(bf:musicThematicNumber rdfs:Literal)
+
+# Data Property: bf:natureOfContent (Content nature)
+
+AnnotationAssertion(dcterms:modified bf:natureOfContent "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:natureOfContent "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:natureOfContent "Content nature")
+AnnotationAssertion(skos:definition bf:natureOfContent "Characterization that epitomizes the primary content of a resource, e.g., field recording of birdsong; combined time series analysis and graph plotting system.")
+DataPropertyRange(bf:natureOfContent rdfs:Literal)
+
+# Data Property: bf:noteType (Note type)
+
+AnnotationAssertion(dcterms:modified bf:noteType "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:noteType "Note type")
+AnnotationAssertion(skos:definition bf:noteType "Type of note.")
+DataPropertyDomain(bf:noteType bf:Note)
+DataPropertyRange(bf:noteType rdfs:Literal)
+
+# Data Property: bf:organization (Organization of material)
+
+AnnotationAssertion(dcterms:modified bf:organization "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:organization "Organization of material")
+AnnotationAssertion(skos:definition bf:organization "Manner in which the resource is divided into smaller units.")
+DataPropertyDomain(bf:organization bf:Arrangement)
+DataPropertyRange(bf:organization rdfs:Literal)
+
+# Data Property: bf:originDate (Associated title date)
+
+AnnotationAssertion(dcterms:modified bf:originDate "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:originDate "Associated title date")
+AnnotationAssertion(skos:definition bf:originDate "Date or date range associated with the creation of a Work.")
+SubDataPropertyOf(bf:originDate bf:date)
+DataPropertyDomain(bf:originDate bf:Work)
+DataPropertyRange(bf:originDate rdfs:Literal)
+
+# Data Property: bf:outerGRing (Cartographic outer G ring area covered)
+
+AnnotationAssertion(dcterms:modified bf:outerGRing "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:outerGRing "Cartographic outer G ring area covered")
+AnnotationAssertion(skos:definition bf:outerGRing "Coordinate pairs that identify the closed non-intersecting boundary of the area covered.")
+DataPropertyDomain(bf:outerGRing bf:Cartographic)
+DataPropertyRange(bf:outerGRing rdfs:Literal)
+
+# Data Property: bf:part (Part)
+
+AnnotationAssertion(dcterms:modified bf:part "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:part "Used with Unspecified")
+AnnotationAssertion(rdfs:label bf:part "Part")
+AnnotationAssertion(skos:definition bf:part "Part of a resource to which information applies.")
+DataPropertyRange(bf:part rdfs:Literal)
+
+# Data Property: bf:partName (Part title)
+
+AnnotationAssertion(dcterms:modified bf:partName "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:partName "Part title")
+AnnotationAssertion(skos:definition bf:partName "Part or section name of a title. Possible title component.")
+DataPropertyDomain(bf:partName bf:Title)
+DataPropertyRange(bf:partName rdfs:Literal)
+
+# Data Property: bf:partNumber (Part number)
+
+AnnotationAssertion(dcterms:modified bf:partNumber "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:partNumber "Part number")
+AnnotationAssertion(skos:definition bf:partNumber "Part or section enumeration of a title. Possible title component.")
+DataPropertyDomain(bf:partNumber bf:Title)
+DataPropertyRange(bf:partNumber rdfs:Literal)
+
+# Data Property: bf:pattern (Arrangement of material)
+
+AnnotationAssertion(dcterms:modified bf:pattern "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:pattern "Arrangement of material")
+AnnotationAssertion(skos:definition bf:pattern "Pattern of arrangement of materials within a unit.")
+DataPropertyDomain(bf:pattern bf:Arrangement)
+DataPropertyRange(bf:pattern rdfs:Literal)
+
+# Data Property: bf:physicalLocation (Storing or shelving location)
+
+AnnotationAssertion(dcterms:modified bf:physicalLocation "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:physicalLocation "Storing or shelving location")
+AnnotationAssertion(skos:definition bf:physicalLocation "Location in the holding agency where the item is shelved or stored.")
+DataPropertyDomain(bf:physicalLocation bf:Item)
+DataPropertyRange(bf:physicalLocation rdfs:Literal)
+
+# Data Property: bf:preferredCitation (Preferred citation)
+
+AnnotationAssertion(dcterms:modified bf:preferredCitation "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:preferredCitation "Used with Work or Instance")
+AnnotationAssertion(rdfs:label bf:preferredCitation "Preferred citation")
+AnnotationAssertion(skos:definition bf:preferredCitation "Citation to the resource preferred by its custodian of the resource.")
+DataPropertyRange(bf:preferredCitation rdfs:Literal)
+
+# Data Property: bf:provisionActivityStatement (Provider statement)
+
+AnnotationAssertion(dcterms:modified bf:provisionActivityStatement "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:provisionActivityStatement "Provider statement")
+AnnotationAssertion(skos:definition bf:provisionActivityStatement "Statement relating to providers of a resource; usually transcribed.")
+DataPropertyDomain(bf:provisionActivityStatement bf:Instance)
+DataPropertyRange(bf:provisionActivityStatement rdfs:Literal)
+
+# Data Property: bf:qualifier (Qualifier)
+
+AnnotationAssertion(dcterms:modified bf:qualifier "2016-04-21 (New)")
+AnnotationAssertion(rdfs:comment bf:qualifier "Used with Unspecified")
+AnnotationAssertion(rdfs:label bf:qualifier "Qualifier")
+AnnotationAssertion(skos:definition bf:qualifier "Qualifier of information, such as an addition to a title to make it unique or qualifying information associated with an identifier.")
+DataPropertyRange(bf:qualifier rdfs:Literal)
+
+# Data Property: bf:responsibilityStatement (Creative responsibility statement)
+
+AnnotationAssertion(dcterms:modified bf:responsibilityStatement "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:responsibilityStatement "Creative responsibility statement")
+AnnotationAssertion(skos:definition bf:responsibilityStatement "Statement relating to any persons, families, or corporate bodies responsible for the creation of, or contributing to the content of a resource; usually transcribed.")
+DataPropertyDomain(bf:responsibilityStatement bf:Instance)
+DataPropertyRange(bf:responsibilityStatement rdfs:Literal)
+
+# Data Property: bf:schedulePart (Classification designation)
+
+AnnotationAssertion(dcterms:modified bf:schedulePart "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:schedulePart "Classification designation")
+AnnotationAssertion(skos:definition bf:schedulePart "Designates whether the classification number is from the standard or optional part of a schedule or table.")
+DataPropertyDomain(bf:schedulePart bf:Classification)
+DataPropertyRange(bf:schedulePart rdfs:Literal)
+
+# Data Property: bf:seriesEnumeration (Series enumeration)
+
+AnnotationAssertion(dcterms:modified bf:seriesEnumeration "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:seriesEnumeration "Series enumeration")
+AnnotationAssertion(skos:definition bf:seriesEnumeration "Series enumeration of the resource; usually transcribed.")
+DataPropertyDomain(bf:seriesEnumeration bf:Instance)
+DataPropertyRange(bf:seriesEnumeration rdfs:Literal)
+
+# Data Property: bf:seriesStatement (Series statement)
+
+AnnotationAssertion(dcterms:modified bf:seriesStatement "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:seriesStatement "Series statement")
+AnnotationAssertion(skos:definition bf:seriesStatement "Statement of the series the resource is in; usually transcribed; includes the ISSN if applicable.")
+DataPropertyDomain(bf:seriesStatement bf:Instance)
+DataPropertyRange(bf:seriesStatement rdfs:Literal)
+
+# Data Property: bf:spanEnd (Classification number span end)
+
+AnnotationAssertion(dcterms:modified bf:spanEnd "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:spanEnd "Classification number span end")
+AnnotationAssertion(skos:definition bf:spanEnd "Ending number of classification number span.")
+DataPropertyDomain(bf:spanEnd bf:Classification)
+DataPropertyRange(bf:spanEnd rdfs:Literal)
+
+# Data Property: bf:subseriesEnumeration (Subseries enumeration)
+
+AnnotationAssertion(dcterms:modified bf:subseriesEnumeration "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:subseriesEnumeration "Subseries enumeration")
+AnnotationAssertion(skos:definition bf:subseriesEnumeration "Subseries enumeration of the resource; usually transcribed.")
+DataPropertyDomain(bf:subseriesEnumeration bf:Instance)
+DataPropertyRange(bf:subseriesEnumeration rdfs:Literal)
+
+# Data Property: bf:subseriesStatement (Subseries statement)
+
+AnnotationAssertion(dcterms:modified bf:subseriesStatement "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:subseriesStatement "Subseries statement")
+AnnotationAssertion(skos:definition bf:subseriesStatement "Statement of the subseries the resource is in; usually transcribed; includes the ISSN if applicable.")
+DataPropertyDomain(bf:subseriesStatement bf:Instance)
+DataPropertyRange(bf:subseriesStatement rdfs:Literal)
+
+# Data Property: bf:subtitle (Subtitle)
+
+AnnotationAssertion(dcterms:modified bf:subtitle "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:subtitle "Subtitle")
+AnnotationAssertion(skos:definition bf:subtitle "Word, character, or group of words and/or characters that contains the remainder of the title after the main title. Possible title component.")
+DataPropertyDomain(bf:subtitle bf:Title)
+DataPropertyRange(bf:subtitle rdfs:Literal)
+
+# Data Property: bf:table (Classification table identification)
+
+AnnotationAssertion(dcterms:modified bf:table "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:table "Classification table identification")
+AnnotationAssertion(skos:definition bf:table "Number of the table from which the classification number in a subdivision entry is taken, e.g., a DDC table.")
+DataPropertyDomain(bf:table bf:Classification)
+DataPropertyRange(bf:table rdfs:Literal)
+
+# Data Property: bf:tableSeq (Classification table sequence number)
+
+AnnotationAssertion(dcterms:modified bf:tableSeq "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:tableSeq "Classification table sequence number")
+AnnotationAssertion(skos:definition bf:tableSeq "Sequence number or other identifier for an internal classification sub arrangement or add in a classification scheme.")
+DataPropertyDomain(bf:tableSeq bf:Classification)
+DataPropertyRange(bf:tableSeq rdfs:Literal)
+
+# Data Property: bf:temporalCoverage (Temporal coverage)
+
+AnnotationAssertion(dcterms:modified bf:temporalCoverage "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:temporalCoverage "Temporal coverage")
+AnnotationAssertion(skos:definition bf:temporalCoverage "Time period coverage of the content of the resource.")
+DataPropertyDomain(bf:temporalCoverage bf:Work)
+DataPropertyRange(bf:temporalCoverage rdfs:Literal)
+
+# Data Property: bf:variantType (Variant title type)
+
+AnnotationAssertion(dcterms:modified bf:variantType "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:variantType "Variant title type")
+AnnotationAssertion(skos:definition bf:variantType "Type of title variation, e.g., acronym, cover, spine, earlier, later, series version.")
+DataPropertyDomain(bf:variantType bf:VariantTitle)
+DataPropertyRange(bf:variantType rdfs:Literal)
+
+# Data Property: bf:version (Version)
+
+AnnotationAssertion(dcterms:modified bf:version "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:version "Version")
+AnnotationAssertion(skos:definition bf:version "Term or terms that identify works such as arranged for music, vulgate for religious work, etc.")
+DataPropertyDomain(bf:version bf:Work)
+DataPropertyRange(bf:version rdfs:Literal)
+
+# Data Property: bf:voiceType (Type of voice)
+
+AnnotationAssertion(dcterms:modified bf:voiceType "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:voiceType "Type of voice")
+AnnotationAssertion(skos:definition bf:voiceType "Specific type of voice group, such as chorus, solo.")
+DataPropertyDomain(bf:voiceType bf:MusicVoice)
+DataPropertyRange(bf:voiceType rdfs:Literal)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: bf:AbbreviatedTitle (Abbreviated title)
+
+AnnotationAssertion(dcterms:modified bf:AbbreviatedTitle "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:AbbreviatedTitle "Abbreviated title")
+AnnotationAssertion(skos:definition bf:AbbreviatedTitle "Title as abbreviated for citation, indexing, and/or identification.")
+SubClassOf(bf:AbbreviatedTitle bf:VariantTitle)
+
+# Class: bf:AccessPolicy (Access policy)
+
+AnnotationAssertion(dcterms:modified bf:AccessPolicy "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:AccessPolicy "Access policy")
+AnnotationAssertion(skos:definition bf:AccessPolicy "Access restrictions and allowances regarding access to a resource, e.g., lending policy, access restrictions, embargos.")
+SubClassOf(bf:AccessPolicy bf:UsageAndAccessPolicy)
+
+# Class: bf:AcquisitionSource (Acquisition source)
+
+AnnotationAssertion(dcterms:modified bf:AcquisitionSource "2017-02-06 (New)")
+AnnotationAssertion(rdfs:label bf:AcquisitionSource "Acquisition source")
+AnnotationAssertion(skos:definition bf:AcquisitionSource "Information about an organization, person, etc., from which a resource may be obtained.")
+
+# Class: bf:AdminMetadata (Administrative metadata)
+
+AnnotationAssertion(dcterms:modified bf:AdminMetadata "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:AdminMetadata "Administrative metadata")
+AnnotationAssertion(skos:definition bf:AdminMetadata "Metadata about the metadata, especially provenance information.")
+
+# Class: bf:Agent (Agent)
+
+AnnotationAssertion(dcterms:modified bf:Agent "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:Agent "2016-05-13 (New subclass)")
+AnnotationAssertion(rdfs:label bf:Agent "Agent")
+AnnotationAssertion(skos:definition bf:Agent "Entity having a role in a resource, such as a person or organization.")
+SubClassOf(bf:Agent <http://xmlns.com/foaf/0.1/Agent>)
+
+# Class: bf:Ansi (ANSI number)
+
+AnnotationAssertion(dcterms:modified bf:Ansi "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Ansi "ANSI number")
+AnnotationAssertion(skos:definition bf:Ansi "American National Standards Institute identifier.")
+SubClassOf(bf:Ansi bf:Identifier)
+
+# Class: bf:AppliedMaterial (Applied material)
+
+AnnotationAssertion(dcterms:modified bf:AppliedMaterial "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:AppliedMaterial "Applied material")
+AnnotationAssertion(skos:definition bf:AppliedMaterial "Physical or chemical substance applied to a base material of a resource.")
+
+# Class: bf:Archival (Archival controlled)
+
+AnnotationAssertion(dcterms:modified bf:Archival "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Archival "Archival controlled")
+AnnotationAssertion(skos:definition bf:Archival "Resources organically created, accumulated, and/or used by a person, family, or organization in the course of conduct of affairs and preserved because of their continuing value.")
+SubClassOf(bf:Archival bf:Instance)
+
+# Class: bf:Arrangement (Organization of materials information)
+
+AnnotationAssertion(dcterms:modified bf:Arrangement "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Arrangement "Organization of materials information")
+AnnotationAssertion(skos:definition bf:Arrangement "Information about the organization and arrangement of a collection of items. For instance, for computer files, organization and arrangement information may be the file structure and sort sequence of a file; for visual materials, this information may be how a collection is arranged.")
+
+# Class: bf:AspectRatio (Aspect ratio)
+
+AnnotationAssertion(dcterms:modified bf:AspectRatio "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:AspectRatio "Aspect ratio")
+AnnotationAssertion(skos:definition bf:AspectRatio "Proportional relationship between an image's width and its height.")
+
+# Class: bf:Audio (Audio)
+
+AnnotationAssertion(dcterms:modified bf:Audio "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Audio "Audio")
+AnnotationAssertion(skos:definition bf:Audio "Resources expressed in an audible form, including music or other sounds.")
+SubClassOf(bf:Audio bf:Work)
+
+# Class: bf:AudioIssueNumber (Audio issue number)
+
+AnnotationAssertion(dcterms:modified bf:AudioIssueNumber "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:AudioIssueNumber "2017-02-03 (Revised property name and definition)")
+AnnotationAssertion(rdfs:label bf:AudioIssueNumber "Audio issue number")
+AnnotationAssertion(skos:definition bf:AudioIssueNumber "Number assigned by publishers of sound recordings to identify the issue designation, or serial identification, of the resource.")
+SubClassOf(bf:AudioIssueNumber bf:Identifier)
+
+# Class: bf:AudioTake (Audio recording take)
+
+AnnotationAssertion(dcterms:modified bf:AudioTake "2017-02-03 (New)")
+AnnotationAssertion(rdfs:label bf:AudioTake "Audio recording take")
+AnnotationAssertion(skos:definition bf:AudioTake "Identifier assigned to the smallest identifiable unit of a recording session, e.g., a specific recording of an individual song.")
+SubClassOf(bf:AudioTake bf:Identifier)
+
+# Class: bf:Barcode (Barcode)
+
+AnnotationAssertion(dcterms:modified bf:Barcode "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:Barcode "2017-02-03 (Moved to Identifier class group from Item group)")
+AnnotationAssertion(rdfs:label bf:Barcode "Barcode")
+AnnotationAssertion(skos:definition bf:Barcode "Optical machine-readable representation of data relating to the item to which it is attached.")
+SubClassOf(bf:Barcode bf:Identifier)
+
+# Class: bf:BaseMaterial (Base material)
+
+AnnotationAssertion(dcterms:modified bf:BaseMaterial "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:BaseMaterial "Base material")
+AnnotationAssertion(skos:definition bf:BaseMaterial "Underlying physical material of a resource.")
+
+# Class: bf:BookFormat (Book format)
+
+AnnotationAssertion(dcterms:modified bf:BookFormat "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:BookFormat "Book format")
+AnnotationAssertion(skos:definition bf:BookFormat "Result of folding a printed sheet to form a gathering of leaves.")
+
+# Class: bf:BroadcastStandard (Broadcast standard)
+
+AnnotationAssertion(dcterms:modified bf:BroadcastStandard "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:BroadcastStandard "Broadcast standard")
+AnnotationAssertion(skos:definition bf:BroadcastStandard "System used to format a video resource for television broadcast, e.g., HDTV, PAL.")
+SubClassOf(bf:BroadcastStandard bf:VideoCharacteristic)
+
+# Class: bf:Capture (Capture of content)
+
+AnnotationAssertion(dcterms:modified bf:Capture "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Capture "Capture of content")
+AnnotationAssertion(skos:definition bf:Capture "Information about place and date associated with the capture (i.e., recording, filming, etc.) of the content of a resource.")
+
+# Class: bf:Carrier (Carrier type)
+
+AnnotationAssertion(dcterms:modified bf:Carrier "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Carrier "Carrier type")
+AnnotationAssertion(skos:definition bf:Carrier "Categorization reflecting the format of the storage medium and housing of a carrier.")
+
+# Class: bf:Cartographic (Cartographic information)
+
+AnnotationAssertion(dcterms:modified bf:Cartographic "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Cartographic "Cartographic information")
+AnnotationAssertion(skos:definition bf:Cartographic "Content that represents the whole or part of the earth, any celestial body, or imaginary place at any scale.")
+
+# Class: bf:CartographicDataType (Digital cartographic data type)
+
+AnnotationAssertion(dcterms:modified bf:CartographicDataType "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:CartographicDataType "Digital cartographic data type")
+AnnotationAssertion(skos:definition bf:CartographicDataType "Data type for encoding of geospatial information in a cartographic resource, e.g., raster, vector, point.")
+SubClassOf(bf:CartographicDataType bf:DigitalCharacteristic)
+
+# Class: bf:CartographicObjectType (Digital cartographic object type)
+
+AnnotationAssertion(dcterms:modified bf:CartographicObjectType "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:CartographicObjectType "Digital cartographic object type")
+AnnotationAssertion(skos:definition bf:CartographicObjectType "Object type for encoding of geospatial information in a cartographic resource, e.g., point, line, polygon.")
+SubClassOf(bf:CartographicObjectType bf:DigitalCharacteristic)
+
+# Class: bf:Cartography (Cartography)
+
+AnnotationAssertion(dcterms:modified bf:Cartography "2016-04-25 (fixed typo in definition)")
+AnnotationAssertion(rdfs:label bf:Cartography "Cartography")
+AnnotationAssertion(skos:definition bf:Cartography "Resource that shows spatial information, including maps, atlases, globes, digital, and other cartographic resources.")
+SubClassOf(bf:Cartography bf:Work)
+
+# Class: bf:Chronology (Chronology)
+
+AnnotationAssertion(dcterms:modified bf:Chronology "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Chronology "Chronology")
+AnnotationAssertion(skos:definition bf:Chronology "Dates associated with issues or items held.")
+SubClassOf(bf:Chronology bf:EnumerationAndChronology)
+
+# Class: bf:Classification (Classification entity)
+
+AnnotationAssertion(dcterms:modified bf:Classification "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Classification "Classification entity")
+AnnotationAssertion(skos:definition bf:Classification "System of coding and organizing materials according to their subject.")
+
+# Class: bf:ClassificationDdc (DDC Classification)
+
+AnnotationAssertion(dcterms:modified bf:ClassificationDdc "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:ClassificationDdc "DDC Classification")
+AnnotationAssertion(skos:definition bf:ClassificationDdc "Dewey Decimal Classification number used for subject access.")
+SubClassOf(bf:ClassificationDdc bf:Classification)
+
+# Class: bf:ClassificationLcc (LCC Classification)
+
+AnnotationAssertion(dcterms:modified bf:ClassificationLcc "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:ClassificationLcc "LCC Classification")
+AnnotationAssertion(skos:definition bf:ClassificationLcc "Library of Congress Classification number used for subject access.")
+SubClassOf(bf:ClassificationLcc bf:Classification)
+
+# Class: bf:ClassificationNlm (NLM classification)
+
+AnnotationAssertion(dcterms:modified bf:ClassificationNlm "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:ClassificationNlm "NLM classification")
+AnnotationAssertion(skos:definition bf:ClassificationNlm "National Library of Medicine Classification number used for subject access")
+SubClassOf(bf:ClassificationNlm bf:Classification)
+
+# Class: bf:ClassificationUdc (UDC Classification)
+
+AnnotationAssertion(dcterms:modified bf:ClassificationUdc "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:ClassificationUdc "UDC Classification")
+AnnotationAssertion(skos:definition bf:ClassificationUdc "Universal Decimal Classification number used for subject access.")
+SubClassOf(bf:ClassificationUdc bf:Classification)
+
+# Class: bf:Coden (CODEN)
+
+AnnotationAssertion(dcterms:modified bf:Coden "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Coden "CODEN")
+AnnotationAssertion(skos:definition bf:Coden "Identifier for scientific and technical periodical titles assigned by the International CODEN Section of Chemical Abstracts Service.")
+SubClassOf(bf:Coden bf:Identifier)
+
+# Class: bf:Collection (Collection)
+
+AnnotationAssertion(dcterms:modified bf:Collection "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Collection "Collection")
+AnnotationAssertion(skos:definition bf:Collection "Aggregation of resources, generally gathered together artificially.")
+
+# Class: bf:CollectiveTitle (Collective title)
+
+AnnotationAssertion(dcterms:modified bf:CollectiveTitle "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:CollectiveTitle "Collective title")
+AnnotationAssertion(skos:definition bf:CollectiveTitle "Title for a compilation of resources.")
+SubClassOf(bf:CollectiveTitle bf:VariantTitle)
+
+# Class: bf:ColorContent (Color content)
+
+AnnotationAssertion(dcterms:modified bf:ColorContent "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:ColorContent "Color content")
+AnnotationAssertion(skos:definition bf:ColorContent "Color characteristics of a resource, e.g., black and white, multicolored, etc.")
+
+# Class: bf:Content (Content type)
+
+AnnotationAssertion(dcterms:modified bf:Content "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Content "Content type")
+AnnotationAssertion(skos:definition bf:Content "Categorization reflecting the fundamental form of communication in which the content is expressed and the human sense through which it is intended to be perceived.")
+
+# Class: bf:ContentAccessibility (Content accessibility information)
+
+AnnotationAssertion(dcterms:modified bf:ContentAccessibility "2017-02-07 (New)")
+AnnotationAssertion(rdfs:label bf:ContentAccessibility "Content accessibility information")
+AnnotationAssertion(skos:definition bf:ContentAccessibility "Information that assists those with a sensory impairment for greater understanding of content, e.g., captions.")
+
+# Class: bf:Contribution (Contribution)
+
+AnnotationAssertion(dcterms:modified bf:Contribution "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Contribution "Contribution")
+AnnotationAssertion(skos:definition bf:Contribution "Agent and role with respect to the resource being described.")
+
+# Class: bf:CopyrightNumber (Copyright-legal deposit number)
+
+AnnotationAssertion(dcterms:modified bf:CopyrightNumber "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:CopyrightNumber "Copyright-legal deposit number")
+AnnotationAssertion(skos:definition bf:CopyrightNumber "Identifier assigned to a copyright registration or legal deposit.")
+SubClassOf(bf:CopyrightNumber bf:Identifier)
+
+# Class: bf:CopyrightRegistration (Copyright registration)
+
+AnnotationAssertion(dcterms:modified bf:CopyrightRegistration "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:CopyrightRegistration "2016-05-04 (Class name corrected)")
+AnnotationAssertion(rdfs:label bf:CopyrightRegistration "Copyright registration")
+AnnotationAssertion(skos:definition bf:CopyrightRegistration "Copyright or Legal Deposit registration information")
+
+# Class: bf:CoverArt (Cover art)
+
+AnnotationAssertion(dcterms:modified bf:CoverArt "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:CoverArt "Cover art")
+AnnotationAssertion(skos:definition bf:CoverArt "Cover illustration of a resource.")
+
+# Class: bf:Dataset (Dataset)
+
+AnnotationAssertion(dcterms:modified bf:Dataset "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Dataset "Dataset")
+AnnotationAssertion(skos:definition bf:Dataset "Data encoded in a defined structure. Includes numeric data, environmental data,etc., used by applications software to calculate averages, correlations, etc., or to produce models, etc., but not normally displayed in its raw form.")
+SubClassOf(bf:Dataset bf:Work)
+
+# Class: bf:DescriptionAuthentication (Metadata authentication)
+
+AnnotationAssertion(dcterms:modified bf:DescriptionAuthentication "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:DescriptionAuthentication "2016-04-29 (fixed class name)")
+AnnotationAssertion(rdfs:label bf:DescriptionAuthentication "Metadata authentication")
+AnnotationAssertion(skos:definition bf:DescriptionAuthentication "Indication of specific types of reviews that have been carried out on the description information.")
+SubClassOf(bf:DescriptionAuthentication bf:AdminMetadata)
+
+# Class: bf:DescriptionConventions (Description conventions)
+
+AnnotationAssertion(dcterms:modified bf:DescriptionConventions "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:DescriptionConventions "2016-04-24 (fixed class name)")
+AnnotationAssertion(rdfs:label bf:DescriptionConventions "Description conventions")
+AnnotationAssertion(skos:definition bf:DescriptionConventions "Rules used for the descriptive content of the resource description.")
+SubClassOf(bf:DescriptionConventions bf:AdminMetadata)
+
+# Class: bf:DigitalCharacteristic (Digital characteristic)
+
+AnnotationAssertion(dcterms:modified bf:DigitalCharacteristic "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:DigitalCharacteristic "Digital characteristic")
+AnnotationAssertion(skos:definition bf:DigitalCharacteristic "Technical specification relating to the digital encoding of text, image, audio, video, and other types of data in a resource.")
+
+# Class: bf:Dissertation (Dissertation information)
+
+AnnotationAssertion(dcterms:modified bf:Dissertation "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Dissertation "Dissertation information")
+AnnotationAssertion(skos:definition bf:Dissertation "Information about a work presented as part of the formal requirements for an academic degree.")
+
+# Class: bf:DissertationIdentifier (Dissertation Identifier)
+
+AnnotationAssertion(dcterms:modified bf:DissertationIdentifier "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:DissertationIdentifier "Dissertation Identifier")
+AnnotationAssertion(skos:definition bf:DissertationIdentifier "Identifier assigned to a thesis or dissertation for identification purposes .")
+SubClassOf(bf:DissertationIdentifier bf:Identifier)
+
+# Class: bf:Distribution (Distributor)
+
+AnnotationAssertion(dcterms:modified bf:Distribution "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Distribution "Distributor")
+AnnotationAssertion(skos:definition bf:Distribution "Information relating to distribution of a resource.")
+SubClassOf(bf:Distribution bf:ProvisionActivity)
+
+# Class: bf:Doi (DOI)
+
+AnnotationAssertion(dcterms:modified bf:Doi "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Doi "DOI")
+AnnotationAssertion(skos:definition bf:Doi "Digital Object Identifier.")
+SubClassOf(bf:Doi bf:Identifier)
+
+# Class: bf:Ean (EAN)
+
+AnnotationAssertion(dcterms:modified bf:Ean "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Ean "EAN")
+AnnotationAssertion(skos:definition bf:Ean "International Article Identifier.")
+SubClassOf(bf:Ean bf:Identifier)
+
+# Class: bf:Electronic (Electronic)
+
+AnnotationAssertion(dcterms:modified bf:Electronic "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Electronic "Electronic")
+AnnotationAssertion(skos:definition bf:Electronic "Resource that is intended for manipulation by a computer, accessed either directly or remotely.")
+SubClassOf(bf:Electronic bf:Instance)
+
+# Class: bf:Emulsion (Emulsion)
+
+AnnotationAssertion(dcterms:modified bf:Emulsion "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Emulsion "Emulsion")
+AnnotationAssertion(skos:definition bf:Emulsion "Suspension of light-sensitive chemicals used as a coating on a microfilm or microfiche, e.g., silver halide.")
+
+# Class: bf:EncodedBitrate (Encoded bitrate)
+
+AnnotationAssertion(dcterms:modified bf:EncodedBitrate "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:EncodedBitrate "Encoded bitrate")
+AnnotationAssertion(skos:definition bf:EncodedBitrate "Speed at which streaming audio, video, etc., is designed to play, e.g., 32 kbps.")
+SubClassOf(bf:EncodedBitrate bf:DigitalCharacteristic)
+
+# Class: bf:EncodingFormat (Encoding format)
+
+AnnotationAssertion(dcterms:modified bf:EncodingFormat "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:EncodingFormat "Encoding format")
+AnnotationAssertion(skos:definition bf:EncodingFormat "Schema, standard, etc., used to encode the digital content of a resource, e.g., MP3, XML, JPEG.")
+SubClassOf(bf:EncodingFormat bf:DigitalCharacteristic)
+
+# Class: bf:Enumeration (Enumeration)
+
+AnnotationAssertion(dcterms:modified bf:Enumeration "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Enumeration "Enumeration")
+AnnotationAssertion(skos:definition bf:Enumeration "Numbering or other enumeration associated with issues or items held.")
+SubClassOf(bf:Enumeration bf:EnumerationAndChronology)
+
+# Class: bf:EnumerationAndChronology (Enumeration and chronology)
+
+AnnotationAssertion(dcterms:modified bf:EnumerationAndChronology "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:EnumerationAndChronology "Enumeration and chronology")
+AnnotationAssertion(skos:definition bf:EnumerationAndChronology "Numbering or other enumeration and dates associated with issues or items held.")
+
+# Class: bf:Event (Event entity)
+
+AnnotationAssertion(dcterms:modified bf:Event "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Event "Event entity")
+AnnotationAssertion(skos:definition bf:Event "Something that happens at a certain time and location, such as a performance, speech, or athletic event, that is documented by a resource.")
+
+# Class: bf:Extent (Extent)
+
+AnnotationAssertion(dcterms:modified bf:Extent "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Extent "Extent")
+AnnotationAssertion(skos:definition bf:Extent "Number and type of units and/or subunits making up a resource.")
+
+# Class: bf:Family (Family)
+
+AnnotationAssertion(dcterms:modified bf:Family "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Family "Family")
+AnnotationAssertion(skos:definition bf:Family "Two or more persons related by birth, marriage, adoption, civil union, or similar legal status, or who otherwise present themselves as a family.")
+SubClassOf(bf:Family bf:Agent)
+
+# Class: bf:FileSize (File size)
+
+AnnotationAssertion(dcterms:modified bf:FileSize "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:FileSize "File size")
+AnnotationAssertion(skos:definition bf:FileSize "Number of bytes in a digital file, e.g., 162 KB.")
+SubClassOf(bf:FileSize bf:DigitalCharacteristic)
+
+# Class: bf:FileType (File type)
+
+AnnotationAssertion(dcterms:modified bf:FileType "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:FileType "File type")
+AnnotationAssertion(skos:definition bf:FileType "General type of data content encoded in a computer file, e.g., text file, audio file.")
+SubClassOf(bf:FileType bf:DigitalCharacteristic)
+
+# Class: bf:Fingerprint (Fingerprint identifier)
+
+AnnotationAssertion(dcterms:modified bf:Fingerprint "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Fingerprint "Fingerprint identifier")
+AnnotationAssertion(skos:definition bf:Fingerprint "Identifier that is used to assist in the identification of antiquarian books by recording information comprising groups of characters taken from specified positions on specified pages of the book.")
+SubClassOf(bf:Fingerprint bf:Identifier)
+
+# Class: bf:FontSize (Font size)
+
+AnnotationAssertion(dcterms:modified bf:FontSize "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:FontSize "Font size")
+AnnotationAssertion(skos:definition bf:FontSize "Size of the type used to represent the characters and symbols in a resource.")
+
+# Class: bf:Frequency (Frequency)
+
+AnnotationAssertion(dcterms:modified bf:Frequency "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Frequency "Frequency")
+AnnotationAssertion(skos:definition bf:Frequency "Information about intervals at which the parts of a serially produced resource or the updates to an integrating resource are issued.")
+
+# Class: bf:Generation (Generation)
+
+AnnotationAssertion(dcterms:modified bf:Generation "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Generation "Generation")
+AnnotationAssertion(skos:definition bf:Generation "Relationship between an original carrier and the carrier of a reproduction made from the original.")
+
+# Class: bf:GenerationProcess (Generation process)
+
+AnnotationAssertion(dcterms:modified bf:GenerationProcess "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:GenerationProcess "2016-04-24 (fixed class name)")
+AnnotationAssertion(rdfs:label bf:GenerationProcess "Generation process")
+AnnotationAssertion(skos:definition bf:GenerationProcess "Indication of the program or process used to generate the description by application of a particular transformation.")
+SubClassOf(bf:GenerationProcess bf:AdminMetadata)
+
+# Class: bf:GenreForm (Genre/form)
+
+AnnotationAssertion(dcterms:modified bf:GenreForm "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:GenreForm "Genre/form")
+AnnotationAssertion(skos:definition bf:GenreForm "Characteristics of works with similar plots, themes, settings, etc. (e.g., westerns, thrillers), or with a particular format of purpose (e.g., animation, short), or a combination (e.g., horror film where horror is the genre and film is the form).")
+
+# Class: bf:GeographicCoverage (Geographic coverage)
+
+AnnotationAssertion(dcterms:modified bf:GeographicCoverage "2017-02-06 (New)")
+AnnotationAssertion(rdfs:label bf:GeographicCoverage "Geographic coverage")
+AnnotationAssertion(skos:definition bf:GeographicCoverage "Geographic coverage of the content of the resource.")
+
+# Class: bf:GrooveCharacteristic (Groove characteristic)
+
+AnnotationAssertion(dcterms:modified bf:GrooveCharacteristic "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:GrooveCharacteristic "2016-04-26 (fixed typo in definition)")
+AnnotationAssertion(dcterms:modified bf:GrooveCharacteristic "2017-02-03 (Fixed name of property)")
+AnnotationAssertion(rdfs:label bf:GrooveCharacteristic "Groove characteristic")
+AnnotationAssertion(skos:definition bf:GrooveCharacteristic "Groove width of an analog disc or the groove pitch of an analog cylinder, e.g., coarse groove, microgroove")
+SubClassOf(bf:GrooveCharacteristic bf:SoundCharacteristic)
+
+# Class: bf:Gtin14Number (Global Trade Item Number 14)
+
+AnnotationAssertion(dcterms:modified bf:Gtin14Number "2017-02-03 (New)")
+AnnotationAssertion(rdfs:label bf:Gtin14Number "Global Trade Item Number 14")
+AnnotationAssertion(skos:definition bf:Gtin14Number "14 digit number assigned to identify trade items as various packaging levels. GTIN-14 encompasses EAN/UCC-128 and ITF-14.")
+SubClassOf(bf:Gtin14Number bf:Identifier)
+
+# Class: bf:Hdl (Handle)
+
+AnnotationAssertion(dcterms:modified bf:Hdl "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Hdl "Handle")
+AnnotationAssertion(skos:definition bf:Hdl "Unique and persistent identifier for digital objects developed by the Corporation for National Research Initiatives.")
+SubClassOf(bf:Hdl bf:Identifier)
+
+# Class: bf:Identifier (Identifier)
+
+AnnotationAssertion(dcterms:modified bf:Identifier "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Identifier "Identifier")
+AnnotationAssertion(skos:definition bf:Identifier "Token or name that is associated with a resource, such as a URI or an ISBN.")
+
+# Class: bf:Illustration (Illustrative content)
+
+AnnotationAssertion(dcterms:modified bf:Illustration "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Illustration "Illustrative content")
+AnnotationAssertion(skos:definition bf:Illustration "Information about content intended to illustrate a resource.")
+
+# Class: bf:ImmediateAcquisition (Immediate acquisition)
+
+AnnotationAssertion(dcterms:modified bf:ImmediateAcquisition "2017-02-06 (New)")
+AnnotationAssertion(rdfs:label bf:ImmediateAcquisition "Immediate acquisition")
+AnnotationAssertion(skos:definition bf:ImmediateAcquisition "Information about the circumstances, e.g., source, date, method, under which the resource was directly acquired.")
+
+# Class: bf:Instance (Instance)
+
+AnnotationAssertion(dcterms:modified bf:Instance "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Instance "Instance")
+AnnotationAssertion(skos:definition bf:Instance "Resource reflecting an individual, material embodiment of a Work.")
+
+# Class: bf:InstanceTitle (Instance title)
+
+AnnotationAssertion(dcterms:modified bf:InstanceTitle "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:InstanceTitle "2017-02-03 (removed)")
+AnnotationAssertion(rdfs:label bf:InstanceTitle "Instance title")
+AnnotationAssertion(skos:definition bf:InstanceTitle "Title chosen as the name of an Instance, sometimes called \"title proper\" and often transcribed from the instance.")
+SubClassOf(bf:InstanceTitle bf:Title)
+
+# Class: bf:IntendedAudience (Intended audience information)
+
+AnnotationAssertion(dcterms:modified bf:IntendedAudience "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:IntendedAudience "Intended audience information")
+AnnotationAssertion(skos:definition bf:IntendedAudience "Information that identifies the specific intended or target audience or intellectual level for which the content described is considered appropriate. Also used to record interest and motivation levels and special learner characteristics.")
+
+# Class: bf:Isan (ISAN)
+
+AnnotationAssertion(dcterms:modified bf:Isan "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Isan "ISAN")
+AnnotationAssertion(skos:definition bf:Isan "International Standard Audiovisual Number.")
+SubClassOf(bf:Isan bf:Identifier)
+
+# Class: bf:Isbn (ISBN)
+
+AnnotationAssertion(dcterms:modified bf:Isbn "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Isbn "ISBN")
+AnnotationAssertion(skos:definition bf:Isbn "International Standard Book Number.")
+SubClassOf(bf:Isbn bf:Identifier)
+
+# Class: bf:Ismn (ISMN)
+
+AnnotationAssertion(dcterms:modified bf:Ismn "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Ismn "ISMN")
+AnnotationAssertion(skos:definition bf:Ismn "International Standard Music Number.")
+SubClassOf(bf:Ismn bf:Identifier)
+
+# Class: bf:Isni (ISNI)
+
+AnnotationAssertion(dcterms:modified bf:Isni "2017-02-03 (New)")
+AnnotationAssertion(rdfs:label bf:Isni "ISNI")
+AnnotationAssertion(skos:definition bf:Isni "International Standard Name Identifier, a unique, persistent reference number for the identities of contributors to creative works.")
+SubClassOf(bf:Isni bf:Identifier)
+
+# Class: bf:Iso (ISO number)
+
+AnnotationAssertion(dcterms:modified bf:Iso "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Iso "ISO number")
+AnnotationAssertion(skos:definition bf:Iso "International Organization for Standardization standard number.")
+SubClassOf(bf:Iso bf:Identifier)
+
+# Class: bf:Isrc (ISRC)
+
+AnnotationAssertion(dcterms:modified bf:Isrc "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Isrc "ISRC")
+AnnotationAssertion(skos:definition bf:Isrc "International Standard Recording Code.")
+SubClassOf(bf:Isrc bf:Identifier)
+
+# Class: bf:Issn (ISSN)
+
+AnnotationAssertion(dcterms:modified bf:Issn "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Issn "ISSN")
+AnnotationAssertion(skos:definition bf:Issn "International Standard Serial Number.")
+SubClassOf(bf:Issn bf:Identifier)
+
+# Class: bf:IssnL (ISSN-L)
+
+AnnotationAssertion(dcterms:modified bf:IssnL "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:IssnL "ISSN-L")
+AnnotationAssertion(skos:definition bf:IssnL "International Standard Serial Number that links together various media versions of a continuing resource.")
+SubClassOf(bf:IssnL bf:Identifier)
+
+# Class: bf:Issuance (Mode of issuance)
+
+AnnotationAssertion(dcterms:modified bf:Issuance "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Issuance "Mode of issuance")
+AnnotationAssertion(skos:definition bf:Issuance "Information about whether a resource is issued in one or more parts, the way it is updated, and its intended termination.")
+
+# Class: bf:Istc (ISTC)
+
+AnnotationAssertion(dcterms:modified bf:Istc "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Istc "ISTC")
+AnnotationAssertion(skos:definition bf:Istc "International Standard Text Code, a numbering system developed to enable the unique identification of textual works.")
+SubClassOf(bf:Istc bf:Identifier)
+
+# Class: bf:Iswc (ISWC)
+
+AnnotationAssertion(dcterms:modified bf:Iswc "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Iswc "ISWC")
+AnnotationAssertion(skos:definition bf:Iswc "International Standard Musical Work Code, a unique, persistent reference number for the identification of musical works.")
+SubClassOf(bf:Iswc bf:Identifier)
+
+# Class: bf:Item (Item)
+
+AnnotationAssertion(dcterms:modified bf:Item "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Item "Item")
+AnnotationAssertion(skos:definition bf:Item "Single example of an Instance.")
+
+# Class: bf:Jurisdiction (Jurisdiction)
+
+AnnotationAssertion(dcterms:modified bf:Jurisdiction "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Jurisdiction "Jurisdiction")
+AnnotationAssertion(skos:definition bf:Jurisdiction "Legal or political unit administering a geographic area.")
+SubClassOf(bf:Jurisdiction bf:Agent)
+
+# Class: bf:KeyTitle (Key title)
+
+AnnotationAssertion(dcterms:modified bf:KeyTitle "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:KeyTitle "Key title")
+AnnotationAssertion(skos:definition bf:KeyTitle "Unique title for a continuing resource that is assigned by the ISSN International Center in conjunction with an ISSN.")
+SubClassOf(bf:KeyTitle bf:VariantTitle)
+
+# Class: bf:Language (Language entity)
+
+AnnotationAssertion(dcterms:modified bf:Language "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Language "Language entity")
+AnnotationAssertion(skos:definition bf:Language "Language entity.")
+
+# Class: bf:Layout (Layout)
+
+AnnotationAssertion(dcterms:modified bf:Layout "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Layout "Layout")
+AnnotationAssertion(skos:definition bf:Layout "Arrangement of text, images, tactile notation, etc., in a resource.")
+
+# Class: bf:LcOverseasAcq (LC acquisition program)
+
+AnnotationAssertion(dcterms:modified bf:LcOverseasAcq "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:LcOverseasAcq "LC acquisition program")
+AnnotationAssertion(skos:definition bf:LcOverseasAcq "Identification number assigned by the Library of Congress to works acquired through one of its collaborative overseas acquisition programs.")
+SubClassOf(bf:LcOverseasAcq bf:Identifier)
+
+# Class: bf:Lccn (LCCN)
+
+AnnotationAssertion(dcterms:modified bf:Lccn "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Lccn "LCCN")
+AnnotationAssertion(skos:definition bf:Lccn "Library of Congress Control Number that identifies a resource description.")
+SubClassOf(bf:Lccn bf:Identifier)
+
+# Class: bf:Local (Local identifier)
+
+AnnotationAssertion(dcterms:modified bf:Local "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Local "Local identifier")
+AnnotationAssertion(skos:definition bf:Local "Identifier established locally and not a standard number.")
+SubClassOf(bf:Local bf:Identifier)
+
+# Class: bf:Manufacture (Manufacturer)
+
+AnnotationAssertion(dcterms:modified bf:Manufacture "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Manufacture "Manufacturer")
+AnnotationAssertion(skos:definition bf:Manufacture "Information relating to manufacture of a resource.")
+SubClassOf(bf:Manufacture bf:ProvisionActivity)
+
+# Class: bf:Manuscript (Manuscript)
+
+AnnotationAssertion(dcterms:modified bf:Manuscript "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Manuscript "Manuscript")
+AnnotationAssertion(skos:definition bf:Manuscript "Resource that is written in handwriting or typescript. These are generally unique resources.")
+SubClassOf(bf:Manuscript bf:Instance)
+
+# Class: bf:MatrixNumber (Audio matrix number)
+
+AnnotationAssertion(dcterms:modified bf:MatrixNumber "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:MatrixNumber "2017-02-03 (Revised definition)")
+AnnotationAssertion(rdfs:label bf:MatrixNumber "Audio matrix number")
+AnnotationAssertion(skos:definition bf:MatrixNumber "Matrix identifier assigned to the master from which a specific sound recording was pressed.")
+SubClassOf(bf:MatrixNumber bf:Identifier)
+
+# Class: bf:Media (Media type)
+
+AnnotationAssertion(dcterms:modified bf:Media "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Media "Media type")
+AnnotationAssertion(skos:definition bf:Media "Categorization reflecting the general type of intermediation device required to view, play, run, etc., the content of a resource.")
+
+# Class: bf:Meeting (Meeting)
+
+AnnotationAssertion(dcterms:modified bf:Meeting "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Meeting "Meeting")
+AnnotationAssertion(skos:definition bf:Meeting "Gathering of individuals or representatives of various bodies for the purpose of discussing and/or acting on topics of common interest.")
+SubClassOf(bf:Meeting bf:Agent)
+
+# Class: bf:MixedMaterial (Mixed material)
+
+AnnotationAssertion(dcterms:modified bf:MixedMaterial "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:MixedMaterial "Mixed material")
+AnnotationAssertion(skos:definition bf:MixedMaterial "Resource comprised of multiple types which are not driven by software. This may include materials in two or more forms that are related by virtue of their having been accumulated by or about a person or body., archival fonds.")
+SubClassOf(bf:MixedMaterial bf:Work)
+
+# Class: bf:Mount (Mount)
+
+AnnotationAssertion(dcterms:modified bf:Mount "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Mount "Mount")
+AnnotationAssertion(skos:definition bf:Mount "Physical material used for the support or backing to which the base material of a resource has been attached.")
+
+# Class: bf:MovementNotation (Movement notation used)
+
+AnnotationAssertion(dcterms:modified bf:MovementNotation "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:MovementNotation "Movement notation used")
+AnnotationAssertion(skos:definition bf:MovementNotation "Information on the symbol system used to convey the content of a movement resource.")
+SubClassOf(bf:MovementNotation bf:Notation)
+
+# Class: bf:MovingImage (Moving image)
+
+AnnotationAssertion(dcterms:modified bf:MovingImage "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:MovingImage "2016-04-26 (fixed typo in definition)")
+AnnotationAssertion(rdfs:label bf:MovingImage "Moving image")
+AnnotationAssertion(skos:definition bf:MovingImage "Images intended to be perceived as moving, including motion pictures (using liveaction and/or animation), video recordings of performances, events,etc.")
+SubClassOf(bf:MovingImage bf:Work)
+
+# Class: bf:Multimedia (Software or multimedia)
+
+AnnotationAssertion(dcterms:modified bf:Multimedia "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Multimedia "Software or multimedia")
+AnnotationAssertion(skos:definition bf:Multimedia "Electronic resource that is a computer program (i.e., digitally encoded instructions intended to be processed and performed by a computer) or which consists of multiple media types that are software driven, such as videogames.")
+SubClassOf(bf:Multimedia bf:Work)
+
+# Class: bf:MusicDistributorNumber (Music distributor number)
+
+AnnotationAssertion(dcterms:modified bf:MusicDistributorNumber "2017-02-07 (New)")
+AnnotationAssertion(rdfs:label bf:MusicDistributorNumber "Music distributor number")
+AnnotationAssertion(skos:definition bf:MusicDistributorNumber "Identifier appearing on a resource assigned by a distributor to a specific audio recording, notated music publication, music-related publication, or videorecording.")
+SubClassOf(bf:MusicDistributorNumber bf:Identifier)
+
+# Class: bf:MusicEnsemble (Music ensemble)
+
+AnnotationAssertion(dcterms:modified bf:MusicEnsemble "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:MusicEnsemble "Music ensemble")
+AnnotationAssertion(skos:definition bf:MusicEnsemble "Ensemble for which a musical work is appropriate.")
+
+# Class: bf:MusicFormat (Notated music format)
+
+AnnotationAssertion(dcterms:modified bf:MusicFormat "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:MusicFormat "Notated music format")
+AnnotationAssertion(skos:definition bf:MusicFormat "Layout for content of a resource that is presented in the form of musical notation.")
+
+# Class: bf:MusicInstrument (Musical instrument)
+
+AnnotationAssertion(dcterms:modified bf:MusicInstrument "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:MusicInstrument "Musical instrument")
+AnnotationAssertion(skos:definition bf:MusicInstrument "Instrument for which a musical work is appropriate.")
+
+# Class: bf:MusicMedium (Music medium information)
+
+AnnotationAssertion(dcterms:modified bf:MusicMedium "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:MusicMedium "Music medium information")
+AnnotationAssertion(skos:definition bf:MusicMedium "Summary statement of the medium for a musical work.")
+
+# Class: bf:MusicNotation (Music notation used)
+
+AnnotationAssertion(dcterms:modified bf:MusicNotation "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:MusicNotation "Music notation used")
+AnnotationAssertion(skos:definition bf:MusicNotation "Information on the symbol system used to convey the content of a music resource.")
+SubClassOf(bf:MusicNotation bf:Notation)
+
+# Class: bf:MusicPlate (Music plate number)
+
+AnnotationAssertion(dcterms:modified bf:MusicPlate "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:MusicPlate "2017-02-03 (Revised definition)")
+AnnotationAssertion(rdfs:label bf:MusicPlate "Music plate number")
+AnnotationAssertion(skos:definition bf:MusicPlate "Identifiers assigned by a music publisher or printer to the printing plates for the notated portion of a notated music publication, or an identifier that emulates the printing plate tradition in contemporary publications.")
+SubClassOf(bf:MusicPlate bf:Identifier)
+
+# Class: bf:MusicPublisherNumber (Music publisher number)
+
+AnnotationAssertion(dcterms:modified bf:MusicPublisherNumber "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:MusicPublisherNumber "2017-02-03 (Revised definition)")
+AnnotationAssertion(rdfs:label bf:MusicPublisherNumber "Music publisher number")
+AnnotationAssertion(skos:definition bf:MusicPublisherNumber "Identifier assigned to a notated music publication other than an issue, matrix, or plate number.")
+SubClassOf(bf:MusicPublisherNumber bf:Identifier)
+
+# Class: bf:MusicVoice (Music voice)
+
+AnnotationAssertion(dcterms:modified bf:MusicVoice "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:MusicVoice "Music voice")
+AnnotationAssertion(skos:definition bf:MusicVoice "Voice for which a musical work is appropriate.")
+
+# Class: bf:Nbn (NBN)
+
+AnnotationAssertion(dcterms:modified bf:Nbn "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Nbn "NBN")
+AnnotationAssertion(skos:definition bf:Nbn "National Bibliography Number that identifies a resource description.")
+SubClassOf(bf:Nbn bf:Identifier)
+
+# Class: bf:NotatedMovement (Notated movement)
+
+AnnotationAssertion(dcterms:modified bf:NotatedMovement "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:NotatedMovement "Notated movement")
+AnnotationAssertion(skos:definition bf:NotatedMovement "Graphic, non-realized representations of movement intended to be perceived visually, e.g. dance.")
+SubClassOf(bf:NotatedMovement bf:Work)
+
+# Class: bf:NotatedMusic (Notated music)
+
+AnnotationAssertion(dcterms:modified bf:NotatedMusic "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:NotatedMusic "Notated music")
+AnnotationAssertion(skos:definition bf:NotatedMusic "Graphic, non-realized representations of musical works intended to be perceived visually.")
+SubClassOf(bf:NotatedMusic bf:Work)
+
+# Class: bf:Notation (Notation)
+
+AnnotationAssertion(dcterms:modified bf:Notation "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Notation "Notation")
+AnnotationAssertion(skos:definition bf:Notation "Information on the alphabet, script, or symbol system used to convey the content of the resource, including specialized scripts, typefaces, tactile notation, movement notation, and musical notation.")
+
+# Class: bf:Note (Note)
+
+AnnotationAssertion(dcterms:modified bf:Note "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Note "Note")
+AnnotationAssertion(skos:definition bf:Note "Information, usually in textual form, on attributes of a resource or some aspect of a resource.")
+
+# Class: bf:Object (Three-dimensional object)
+
+AnnotationAssertion(dcterms:modified bf:Object "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Object "Three-dimensional object")
+AnnotationAssertion(skos:definition bf:Object "Resource in a form intended to be perceived visually in three-dimensions. Includes man-made objects such as models, sculptures, clothing, and toys, as well as naturally occurring objects such as specimens mounted for viewing.")
+SubClassOf(bf:Object bf:Work)
+
+# Class: bf:ObjectCount (Digital cartographic object count)
+
+AnnotationAssertion(dcterms:modified bf:ObjectCount "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:ObjectCount "Digital cartographic object count")
+AnnotationAssertion(skos:definition bf:ObjectCount "Number of objects in encoded geospatial information in a cartographic resource.")
+SubClassOf(bf:ObjectCount bf:DigitalCharacteristic)
+
+# Class: bf:Organization (Organization)
+
+AnnotationAssertion(dcterms:modified bf:Organization "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Organization "Organization")
+AnnotationAssertion(skos:definition bf:Organization "Corporation or group of persons and/or organizations that acts, or may act, as a unit.")
+SubClassOf(bf:Organization bf:Agent)
+
+# Class: bf:ParallelTitle (Parallel title proper)
+
+AnnotationAssertion(dcterms:modified bf:ParallelTitle "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:ParallelTitle "Parallel title proper")
+AnnotationAssertion(skos:definition bf:ParallelTitle "Title in another language and/or script.")
+SubClassOf(bf:ParallelTitle bf:VariantTitle)
+
+# Class: bf:Person (Person)
+
+AnnotationAssertion(dcterms:modified bf:Person "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Person "Person")
+AnnotationAssertion(skos:definition bf:Person "Individual or identity established by an individual (either alone or in collaboration with one or more other individuals).")
+SubClassOf(bf:Person <http://xmlns.com/foaf/0.1/Person>)
+
+# Class: bf:Place (Place)
+
+AnnotationAssertion(dcterms:modified bf:Place "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Place "Place")
+AnnotationAssertion(skos:definition bf:Place "Geographic location.")
+
+# Class: bf:PlaybackChannels (Configuration of playback channels)
+
+AnnotationAssertion(dcterms:modified bf:PlaybackChannels "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:PlaybackChannels "Configuration of playback channels")
+AnnotationAssertion(skos:definition bf:PlaybackChannels "Configuration/number of sound channels used to make a recording, such as one channel for a monophonic recording, e.g., mono, stereo, quadraphonic, surround.")
+SubClassOf(bf:PlaybackChannels bf:SoundCharacteristic)
+
+# Class: bf:PlaybackCharacteristic (Special playback characteristics)
+
+AnnotationAssertion(dcterms:modified bf:PlaybackCharacteristic "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:PlaybackCharacteristic "Special playback characteristics")
+AnnotationAssertion(skos:definition bf:PlaybackCharacteristic "Equalization system, noise reduction system, etc., used in making an audio recording, e.g., CCIR standard, CX encoded, Dolby.")
+SubClassOf(bf:PlaybackCharacteristic bf:SoundCharacteristic)
+
+# Class: bf:PlayingSpeed (Playing speed)
+
+AnnotationAssertion(dcterms:modified bf:PlayingSpeed "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:PlayingSpeed "Playing speed")
+AnnotationAssertion(skos:definition bf:PlayingSpeed "Speed at which an audio carrier must be operated to produce the sound intended, e.g., 78 rpm, 19 cm/s.")
+SubClassOf(bf:PlayingSpeed bf:SoundCharacteristic)
+
+# Class: bf:Polarity (Polarity)
+
+AnnotationAssertion(dcterms:modified bf:Polarity "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Polarity "Polarity")
+AnnotationAssertion(skos:definition bf:Polarity "Relationship of the colors and tones in an image to the colors and tones of the object reproduced.")
+
+# Class: bf:PostalRegistration (Postal registration number)
+
+AnnotationAssertion(dcterms:modified bf:PostalRegistration "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:PostalRegistration "Postal registration number")
+AnnotationAssertion(skos:definition bf:PostalRegistration "Number assigned to a publication for which the specified postal service permits the use of a special mailing class privilege.")
+SubClassOf(bf:PostalRegistration bf:Identifier)
+
+# Class: bf:PresentationFormat (Presentation format)
+
+AnnotationAssertion(dcterms:modified bf:PresentationFormat "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:PresentationFormat "Presentation format")
+AnnotationAssertion(skos:definition bf:PresentationFormat "Format used in the production of a projected image, e.g., Cinerama, IMAX.")
+SubClassOf(bf:PresentationFormat bf:ProjectionCharacteristic)
+
+# Class: bf:Print (Printed)
+
+AnnotationAssertion(dcterms:modified bf:Print "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Print "Printed")
+AnnotationAssertion(skos:definition bf:Print "Resource that is printed.")
+SubClassOf(bf:Print bf:Instance)
+
+# Class: bf:Production (Producer)
+
+AnnotationAssertion(dcterms:modified bf:Production "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Production "Producer")
+AnnotationAssertion(skos:definition bf:Production "Information relating to production of a resource.")
+SubClassOf(bf:Production bf:ProvisionActivity)
+
+# Class: bf:ProductionMethod (Production method)
+
+AnnotationAssertion(dcterms:modified bf:ProductionMethod "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:ProductionMethod "Production method")
+AnnotationAssertion(skos:definition bf:ProductionMethod "Process used to produce a resource")
+
+# Class: bf:Projection (Projection)
+
+AnnotationAssertion(dcterms:modified bf:Projection "2017-02-03 (New)")
+AnnotationAssertion(rdfs:label bf:Projection "Projection")
+AnnotationAssertion(skos:definition bf:Projection "Method or system used to represent the surface of the earth or of a celestial sphere on a plane.")
+
+# Class: bf:ProjectionCharacteristic (Projection characteristic)
+
+AnnotationAssertion(dcterms:modified bf:ProjectionCharacteristic "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:ProjectionCharacteristic "Projection characteristic")
+AnnotationAssertion(skos:definition bf:ProjectionCharacteristic "Technical specification relating to the projection of a motion picture film.")
+
+# Class: bf:ProjectionSpeed (Projection speed)
+
+AnnotationAssertion(dcterms:modified bf:ProjectionSpeed "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:ProjectionSpeed "Projection speed")
+AnnotationAssertion(skos:definition bf:ProjectionSpeed "Speed at which a projected carrier must be operated to produce the moving image intended, e.g., 20 fps.")
+SubClassOf(bf:ProjectionSpeed bf:ProjectionCharacteristic)
+
+# Class: bf:ProvisionActivity (Provider entity)
+
+AnnotationAssertion(dcterms:modified bf:ProvisionActivity "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:ProvisionActivity "Provider entity")
+AnnotationAssertion(skos:definition bf:ProvisionActivity "Information about the agent or place relating to the publication, printing, distribution, issue, release, or production of a resource.")
+
+# Class: bf:Publication (Publisher)
+
+AnnotationAssertion(dcterms:modified bf:Publication "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Publication "Publisher")
+AnnotationAssertion(skos:definition bf:Publication "Information relating to publication of a resource.")
+SubClassOf(bf:Publication bf:ProvisionActivity)
+
+# Class: bf:PublisherNumber (Other publisher number)
+
+AnnotationAssertion(dcterms:modified bf:PublisherNumber "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:PublisherNumber "Other publisher number")
+AnnotationAssertion(skos:definition bf:PublisherNumber "Number assigned by a publisher that is not one of the specific defined types.")
+SubClassOf(bf:PublisherNumber bf:Identifier)
+
+# Class: bf:RecordingMedium (Recording medium)
+
+AnnotationAssertion(dcterms:modified bf:RecordingMedium "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:RecordingMedium "Recording medium")
+AnnotationAssertion(skos:definition bf:RecordingMedium "Type of medium used to record sound on an audio carrier, e.g., magnetic, optical.")
+SubClassOf(bf:RecordingMedium bf:SoundCharacteristic)
+
+# Class: bf:RecordingMethod (Type of recording)
+
+AnnotationAssertion(dcterms:modified bf:RecordingMethod "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:RecordingMethod "Type of recording")
+AnnotationAssertion(skos:definition bf:RecordingMethod "Method used to encode audio content for playback, e.g., analog, digital.")
+SubClassOf(bf:RecordingMethod bf:SoundCharacteristic)
+
+# Class: bf:ReductionRatio (Reduction ratio)
+
+AnnotationAssertion(dcterms:modified bf:ReductionRatio "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:ReductionRatio "Reduction ratio")
+AnnotationAssertion(skos:definition bf:ReductionRatio "Size of a micro-image in relation to the original from which it was produced.")
+
+# Class: bf:RegionalEncoding (Regional encoding)
+
+AnnotationAssertion(dcterms:modified bf:RegionalEncoding "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:RegionalEncoding "Regional encoding")
+AnnotationAssertion(skos:definition bf:RegionalEncoding "Identification of the region of the world for which a videodisc has been encoded, e.g., region 4.")
+SubClassOf(bf:RegionalEncoding bf:DigitalCharacteristic)
+
+# Class: bf:ReportNumber (Technical report number)
+
+AnnotationAssertion(dcterms:modified bf:ReportNumber "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:ReportNumber "Technical report number")
+AnnotationAssertion(skos:definition bf:ReportNumber "Identification number of a technical report that is not a Standard Technical Report Number.")
+SubClassOf(bf:ReportNumber bf:Identifier)
+
+# Class: bf:Resolution (Resolution)
+
+AnnotationAssertion(dcterms:modified bf:Resolution "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Resolution "Resolution")
+AnnotationAssertion(skos:definition bf:Resolution "Clarity or fineness of detail in a digital image, expressed by the measurement of the image in pixels, etc., e.g., 3.1 megapixels.")
+SubClassOf(bf:Resolution bf:DigitalCharacteristic)
+
+# Class: bf:RetentionPolicy (Retention policy)
+
+AnnotationAssertion(dcterms:modified bf:RetentionPolicy "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:RetentionPolicy "Retention policy")
+AnnotationAssertion(skos:definition bf:RetentionPolicy "Policy of holding institution for retaining resource.")
+SubClassOf(bf:RetentionPolicy bf:UsageAndAccessPolicy)
+
+# Class: bf:Review (Review)
+
+AnnotationAssertion(dcterms:modified bf:Review "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Review "Review")
+AnnotationAssertion(skos:definition bf:Review "Review of a resource.")
+
+# Class: bf:Role (Role)
+
+AnnotationAssertion(dcterms:modified bf:Role "2017-02-03 (New)")
+AnnotationAssertion(rdfs:label bf:Role "Role")
+AnnotationAssertion(skos:definition bf:Role "Function played or provided by a contributor, e.g., author, illustrator, etc.")
+
+# Class: bf:Scale (Scale)
+
+AnnotationAssertion(dcterms:modified bf:Scale "2017-02-03 (New)")
+AnnotationAssertion(rdfs:label bf:Scale "Scale")
+AnnotationAssertion(skos:definition bf:Scale "Ratio of the dimensions of a form contained or embodied in a resource to the dimensions of the entity it represents, e.g., for images or cartographic resources.")
+
+# Class: bf:Script (Script used)
+
+AnnotationAssertion(dcterms:modified bf:Script "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Script "Script used")
+AnnotationAssertion(skos:definition bf:Script "Information on the script, or symbol system used to convey the content of a text resource.")
+SubClassOf(bf:Script bf:Notation)
+
+# Class: bf:ShelfMark (Shelf location)
+
+AnnotationAssertion(dcterms:modified bf:ShelfMark "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:ShelfMark "Shelf location")
+AnnotationAssertion(skos:definition bf:ShelfMark "Piece/item identifier, such as a call or other type of number.")
+SubClassOf(bf:ShelfMark bf:Identifier)
+
+# Class: bf:ShelfMarkDdc (DDC call number)
+
+AnnotationAssertion(dcterms:modified bf:ShelfMarkDdc "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:ShelfMarkDdc "DDC call number")
+AnnotationAssertion(skos:definition bf:ShelfMarkDdc "Shelf mark based on Dewey Decimal Classification.")
+SubClassOf(bf:ShelfMarkDdc bf:ShelfMark)
+
+# Class: bf:ShelfMarkLcc (LCC call number)
+
+AnnotationAssertion(dcterms:modified bf:ShelfMarkLcc "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:ShelfMarkLcc "LCC call number")
+AnnotationAssertion(skos:definition bf:ShelfMarkLcc "Shelf mark based on Library of Congress Classification.")
+SubClassOf(bf:ShelfMarkLcc bf:ShelfMark)
+
+# Class: bf:ShelfMarkNlm (NLM call number)
+
+AnnotationAssertion(dcterms:modified bf:ShelfMarkNlm "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:ShelfMarkNlm "NLM call number")
+AnnotationAssertion(skos:definition bf:ShelfMarkNlm "Shelf mark based on National Library of Medicine Classification.")
+SubClassOf(bf:ShelfMarkNlm bf:ShelfMark)
+
+# Class: bf:ShelfMarkUdc (UDC call number)
+
+AnnotationAssertion(dcterms:modified bf:ShelfMarkUdc "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:ShelfMarkUdc "UDC call number")
+AnnotationAssertion(skos:definition bf:ShelfMarkUdc "Shelf mark based on Universal Decimal Classification.")
+SubClassOf(bf:ShelfMarkUdc bf:ShelfMark)
+
+# Class: bf:Sici (SICI)
+
+AnnotationAssertion(dcterms:modified bf:Sici "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Sici "SICI")
+AnnotationAssertion(skos:definition bf:Sici "Serial Item and Contribution Identifier.")
+SubClassOf(bf:Sici bf:Identifier)
+
+# Class: bf:SoundCharacteristic (Sound characteristic)
+
+AnnotationAssertion(dcterms:modified bf:SoundCharacteristic "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:SoundCharacteristic "Sound characteristic")
+AnnotationAssertion(skos:definition bf:SoundCharacteristic "Technical specification relating to the encoding of sound in a resource.")
+
+# Class: bf:SoundContent (Sound content)
+
+AnnotationAssertion(dcterms:modified bf:SoundContent "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:SoundContent "Sound content")
+AnnotationAssertion(skos:definition bf:SoundContent "Indication of whether the production of sound is an integral part of the resource.")
+
+# Class: bf:Source (Source)
+
+AnnotationAssertion(dcterms:modified bf:Source "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Source "Source")
+AnnotationAssertion(skos:definition bf:Source "Resource from which value or label came or was derived.")
+
+# Class: bf:Status (Status)
+
+AnnotationAssertion(dcterms:modified bf:Status "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Status "Status")
+AnnotationAssertion(skos:definition bf:Status "Designation of the validity or position of something, e.g., whether something is incorrect or available.")
+
+# Class: bf:StillImage (Still image)
+
+AnnotationAssertion(dcterms:modified bf:StillImage "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:StillImage "Still image")
+AnnotationAssertion(skos:definition bf:StillImage "Resource expressed through line, shape, shading, etc., intended to be perceived visually as a still image or images in two dimensions. Includes two-dimensional images and slides and transparencies.")
+SubClassOf(bf:StillImage bf:Work)
+
+# Class: bf:StockNumber (Stock number)
+
+AnnotationAssertion(dcterms:modified bf:StockNumber "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:StockNumber "Stock number")
+AnnotationAssertion(skos:definition bf:StockNumber "Identification number used for stock purposes and assigned by agencies such as distributors, publishers, or vendors.")
+SubClassOf(bf:StockNumber bf:Identifier)
+
+# Class: bf:Strn (STRN)
+
+AnnotationAssertion(dcterms:modified bf:Strn "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Strn "STRN")
+AnnotationAssertion(skos:definition bf:Strn "Standard Technical Report Number.")
+SubClassOf(bf:Strn bf:Identifier)
+
+# Class: bf:StudyNumber (Study number)
+
+AnnotationAssertion(dcterms:modified bf:StudyNumber "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:StudyNumber "Study number")
+AnnotationAssertion(skos:definition bf:StudyNumber "Identification number for a computer data file.")
+SubClassOf(bf:StudyNumber bf:Identifier)
+
+# Class: bf:Sublocation (Sublocation)
+
+AnnotationAssertion(dcterms:modified bf:Sublocation "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Sublocation "Sublocation")
+AnnotationAssertion(skos:definition bf:Sublocation "Specific place within the holding entity where the item is located or made available.")
+
+# Class: bf:Summary (Summary)
+
+AnnotationAssertion(dcterms:modified bf:Summary "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Summary "Summary")
+AnnotationAssertion(skos:definition bf:Summary "Description of the content of a resource, such as an abstract, summary, etc..")
+
+# Class: bf:SupplementaryContent (Supplementary material)
+
+AnnotationAssertion(dcterms:modified bf:SupplementaryContent "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:SupplementaryContent "Supplementary material")
+AnnotationAssertion(skos:definition bf:SupplementaryContent "Index, bibliography, appendix, etc. intended to supplement the primary content of a resource.")
+
+# Class: bf:SystemRequirement (System Requirement)
+
+AnnotationAssertion(dcterms:modified bf:SystemRequirement "2017-02-06 (New)")
+AnnotationAssertion(rdfs:label bf:SystemRequirement "System Requirement")
+AnnotationAssertion(skos:definition bf:SystemRequirement "Equipment or system requirements beyond what is normal and obvious for the type of carrier or type of file, such as make and model of equipment or hardware, operating system, amount of memory, programming language, other necessary software, any plug-ins or peripherals required to play, view, or run the resource, etc.")
+
+# Class: bf:TableOfContents (Table of contents)
+
+AnnotationAssertion(dcterms:modified bf:TableOfContents "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:TableOfContents "Table of contents")
+AnnotationAssertion(skos:definition bf:TableOfContents "Table of contents of a resource.")
+
+# Class: bf:Tactile (Tactile material)
+
+AnnotationAssertion(dcterms:modified bf:Tactile "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Tactile "Tactile material")
+AnnotationAssertion(skos:definition bf:Tactile "Resource that is intended to be perceived by touch.")
+SubClassOf(bf:Tactile bf:Instance)
+
+# Class: bf:TactileNotation (Tactile notation used)
+
+AnnotationAssertion(dcterms:modified bf:TactileNotation "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:TactileNotation "Tactile notation used")
+AnnotationAssertion(skos:definition bf:TactileNotation "Information on the symbol system used to convey the content of a tactile resource.")
+SubClassOf(bf:TactileNotation bf:Notation)
+
+# Class: bf:TapeConfig (Tape configuration)
+
+AnnotationAssertion(dcterms:modified bf:TapeConfig "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:TapeConfig "Tape configuration")
+AnnotationAssertion(skos:definition bf:TapeConfig "Number of tracks on an audiotape, e.g., 12 track.")
+SubClassOf(bf:TapeConfig bf:SoundCharacteristic)
+
+# Class: bf:Temporal (Temporal concept)
+
+AnnotationAssertion(dcterms:modified bf:Temporal "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Temporal "Temporal concept")
+AnnotationAssertion(skos:definition bf:Temporal "Chronological period.")
+
+# Class: bf:Text (Text)
+
+AnnotationAssertion(dcterms:modified bf:Text "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Text "Text")
+AnnotationAssertion(skos:definition bf:Text "Resource intended to be perceived visually and understood through the use of language in written or spoken form.")
+SubClassOf(bf:Text bf:Work)
+
+# Class: bf:Title (Title entity)
+
+AnnotationAssertion(dcterms:modified bf:Title "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:Title "2017-02-03 (Definition changed)")
+AnnotationAssertion(rdfs:label bf:Title "Title entity")
+AnnotationAssertion(skos:definition bf:Title "Title information relating to a resource: work title, preferred title, instance title, transcribed title, translated title, variant form of title, etc.")
+
+# Class: bf:Topic (Topic)
+
+AnnotationAssertion(dcterms:modified bf:Topic "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Topic "Topic")
+AnnotationAssertion(skos:definition bf:Topic "Concept or area of knowledge.")
+
+# Class: bf:TrackConfig (Track configuration)
+
+AnnotationAssertion(dcterms:modified bf:TrackConfig "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:TrackConfig "Track configuration")
+AnnotationAssertion(skos:definition bf:TrackConfig "Configuration of the audio track on a sound-track film, e.g., center track, edge track.")
+SubClassOf(bf:TrackConfig bf:SoundCharacteristic)
+
+# Class: bf:Unit (Unit)
+
+AnnotationAssertion(dcterms:modified bf:Unit "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Unit "Unit")
+AnnotationAssertion(skos:definition bf:Unit "Units in which a value is expressed.")
+
+# Class: bf:Upc (UPC)
+
+AnnotationAssertion(dcterms:modified bf:Upc "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Upc "UPC")
+AnnotationAssertion(skos:definition bf:Upc "Universal Product Code.")
+SubClassOf(bf:Upc bf:Identifier)
+
+# Class: bf:Urn (URN)
+
+AnnotationAssertion(dcterms:modified bf:Urn "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Urn "URN")
+AnnotationAssertion(skos:definition bf:Urn "Uniform Resource Number.")
+SubClassOf(bf:Urn bf:Identifier)
+
+# Class: bf:UsageAndAccessPolicy (Use and access conditions)
+
+AnnotationAssertion(dcterms:modified bf:UsageAndAccessPolicy "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:UsageAndAccessPolicy "Use and access conditions")
+AnnotationAssertion(skos:definition bf:UsageAndAccessPolicy "General statement of allowances and restrictions on access to a resource, including retention, reproduction, access, and lending.")
+
+# Class: bf:UsePolicy (Use policy)
+
+AnnotationAssertion(dcterms:modified bf:UsePolicy "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:UsePolicy "Use policy")
+AnnotationAssertion(skos:definition bf:UsePolicy "Usage limitations placed on a resource with respect to reproduction, publication, exhibition, etc..")
+SubClassOf(bf:UsePolicy bf:UsageAndAccessPolicy)
+
+# Class: bf:VariantTitle (Title variation)
+
+AnnotationAssertion(dcterms:modified bf:VariantTitle "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:VariantTitle "Title variation")
+AnnotationAssertion(skos:definition bf:VariantTitle "Title associated with the resource that is different from the Work or Instance title.")
+SubClassOf(bf:VariantTitle bf:Title)
+
+# Class: bf:VideoCharacteristic (Video characteristic)
+
+AnnotationAssertion(dcterms:modified bf:VideoCharacteristic "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:VideoCharacteristic "Video characteristic")
+AnnotationAssertion(skos:definition bf:VideoCharacteristic "Technical specification relating to the encoding of video images in a resource.")
+
+# Class: bf:VideoFormat (Video format)
+
+AnnotationAssertion(dcterms:modified bf:VideoFormat "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:VideoFormat "Video format")
+AnnotationAssertion(skos:definition bf:VideoFormat "Standard, etc., used to encode the analog video content of a resource, e.g., Beta, 8mm.")
+SubClassOf(bf:VideoFormat bf:VideoCharacteristic)
+
+# Class: bf:VideoRecordingNumber (Video recording number)
+
+AnnotationAssertion(dcterms:modified bf:VideoRecordingNumber "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:VideoRecordingNumber "2017-02-03 (Corrected case in class name)")
+AnnotationAssertion(rdfs:label bf:VideoRecordingNumber "Video recording number")
+AnnotationAssertion(skos:definition bf:VideoRecordingNumber "Number assigned by a publisher to a video recording.")
+SubClassOf(bf:VideoRecordingNumber bf:Identifier)
+
+# Class: bf:Work (Work)
+
+AnnotationAssertion(dcterms:modified bf:Work "2016-04-21 (New)")
+AnnotationAssertion(rdfs:label bf:Work "Work")
+AnnotationAssertion(skos:definition bf:Work "Resource reflecting a conceptual essence of a cataloging resource.")
+
+# Class: bf:WorkTitle (Work title)
+
+AnnotationAssertion(dcterms:modified bf:WorkTitle "2016-04-21 (New)")
+AnnotationAssertion(dcterms:modified bf:WorkTitle "2017-02-03 (removed)")
+AnnotationAssertion(rdfs:label bf:WorkTitle "Work title")
+AnnotationAssertion(skos:definition bf:WorkTitle "Title or form of title chosen to identify the work, such as a preferred title, preferred title with additions, uniform title, etc.")
+SubClassOf(bf:WorkTitle bf:Title)
+
+
+)
