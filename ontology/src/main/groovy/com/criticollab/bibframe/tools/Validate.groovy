@@ -64,9 +64,26 @@ class Validate {
             for (OWLProfileViolation violation : report.violations) {
                 logger.error("Violation: {}",violation)
             }
+            logger.error("\n{}",violationsToMarkdown(report.violations))
             return false 
         }
         return report.inProfile
     }
+    static String violationsToMarkdown(Collection<OWLProfileViolation> violations,buildTable=false ) {
 
+        StringBuilder buf = new StringBuilder()
+        if (buildTable) {
+            buf.append("Violation Type | Source | Ontology | Fix\n")
+            buf.append("---------------|--------|----------|----\n")
+            for (OWLProfileViolation violation : violations) {
+                buf.append(violation.getClass().getName()).append(" | ").append(violation.axiom).append(" | |")
+                        .append(violation.ontologyID).append(" | ").append(violation.repair()).append("\n")
+            }
+        } else {
+            for (OWLProfileViolation violation : violations) {
+                buf.append(" * ").append(violation).append("\n")
+            }
+        }
+        return buf.toString()
+    }
 }
