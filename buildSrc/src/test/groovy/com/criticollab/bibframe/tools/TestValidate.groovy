@@ -6,13 +6,13 @@ import org.semanticweb.owlapi.formats.RDFXMLDocumentFormat
 import org.semanticweb.owlapi.profiles.OWL2DLProfile
 
 import static org.junit.Assert.assertTrue
-
+//@Ignore
 class TestValidate {
-    private resource
+    private URL resource
 
     @Before
     void setUp() {
-        resource = getClass().getResource("/bibframe.rdf.xml")
+         resource = getClass().getResource("/bibframe-fixed.rdf.xml")
     }
 
     @Test

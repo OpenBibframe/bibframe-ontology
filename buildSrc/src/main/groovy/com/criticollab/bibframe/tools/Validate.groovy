@@ -69,7 +69,7 @@ class Validate {
         }
         return report.inProfile
     }
-    static String violationsToMarkdown(Collection<OWLProfileViolation> violations,buildTable=false ) {
+    static String violationsToMarkdown(Collection<OWLProfileViolation> violations, buildTable=false ) {
 
         StringBuilder buf = new StringBuilder()
         if (buildTable) {
