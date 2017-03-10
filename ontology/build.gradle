@@ -1,7 +1,41 @@
-apply plugin: 'groovy'
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+         classpath 'net.sourceforge.owlapi:owlapi-osgidistribution:5.0.5'
+    }
+}
+import com.criticollab.bibframe.tools.OWLFormatConvertTask
+import com.criticollab.bibframe.tools.ValidateTask
+import org.semanticweb.owlapi.formats.FunctionalSyntaxDocumentFormat
+import org.semanticweb.owlapi.formats.ManchesterSyntaxDocumentFormat
+import org.semanticweb.owlapi.formats.RDFXMLDocumentFormat
+import org.semanticweb.owlapi.formats.TurtleDocumentFormat
 
-dependencies {
-    compile 'net.sourceforge.owlapi:owlapi-osgidistribution:5.0.5'
-    compile localGroovy()
-    testRuntimeOnly 'org.slf4j:slf4j-simple:1.7.21'
+ext {
+    srcFile = project.file( "src/main/resources/bibframe-protege.omn")
+}
+
+task test(type: ValidateTask) {
+    group = "verification"
+    description="validate OWL"
+    file = srcFile
+    profile = "OWL2_DL"
+}
+
+task build(type: OWLFormatConvertTask, group: "build") {
+    dependsOn  test
+    description "Convert files to different OWL formats"
+    src = srcFile
+    destDir = new File(buildDir,"owl")
+    destDir.mkdirs()
+    formats = [new TurtleDocumentFormat(),new ManchesterSyntaxDocumentFormat(),new FunctionalSyntaxDocumentFormat(),
+               new RDFXMLDocumentFormat()]
+}
+
+task clean {
+    doLast {
+        project.delete(buildDir)
+    }
 }

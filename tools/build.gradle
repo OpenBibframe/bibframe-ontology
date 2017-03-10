@@ -1,7 +1,0 @@
-apply plugin: 'groovy'
-
-dependencies {
-    compileClasspath 'net.sourceforge.owlapi:owlapi-osgidistribution:5.0.5'
-    compile localGroovy()
-    testRuntimeOnly 'org.slf4j:slf4j-simple:1.7.21'
-}
