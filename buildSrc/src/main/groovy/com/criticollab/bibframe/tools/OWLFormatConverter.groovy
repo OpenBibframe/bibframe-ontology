@@ -1,10 +1,7 @@
 package com.criticollab.bibframe.tools
 
 import org.semanticweb.owlapi.apibinding.OWLManager
-import org.semanticweb.owlapi.formats.FunctionalSyntaxDocumentFormat
-import org.semanticweb.owlapi.formats.ManchesterSyntaxDocumentFormat
-import org.semanticweb.owlapi.formats.RDFXMLDocumentFormat
-import org.semanticweb.owlapi.formats.TurtleDocumentFormat
+import org.semanticweb.owlapi.formats.*
 import org.semanticweb.owlapi.io.FileDocumentTarget
 import org.semanticweb.owlapi.io.OWLOntologyDocumentTarget
 import org.semanticweb.owlapi.model.OWLDocumentFormat
@@ -13,6 +10,12 @@ class OWLFormatConverter {
     static convert(File src, File destDir, OWLDocumentFormat format) {
         def manager = OWLManager.createOWLOntologyManager()
         def ontology = manager.loadOntologyFromOntologyDocument(src)
+        def inputFormat = manager.getOntologyFormat(ontology)
+
+        if(inputFormat instanceof PrefixDocumentFormat && format instanceof PrefixDocumentFormat) {
+            PrefixDocumentFormat pdf = inputFormat as PrefixDocumentFormat
+             format.copyPrefixesFrom(pdf)
+        }
         def baseName = src.name
         int pos
         if(baseName.endsWith(".rdf.xml")) {

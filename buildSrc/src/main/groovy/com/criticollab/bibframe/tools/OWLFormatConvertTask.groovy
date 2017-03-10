@@ -21,6 +21,7 @@ class OWLFormatConvertTask extends  AbstractTask {
         } else if (formats instanceof Iterable) {
             formats.each {
                 OWLDocumentFormat df = it as OWLDocumentFormat
+
                 logger.info "converting {} to {}",src,df.key
                 OWLFormatConverter.convert(src,destDir,df)
             }
