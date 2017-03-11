@@ -32,7 +32,8 @@ class Validate {
 
         OWLOntologyManager manager = OWLManager.createOWLOntologyManager()
         OWLOntologyLoaderConfiguration loaderConfiguration = manager.getOntologyLoaderConfiguration()
-        loaderConfiguration.strict = true
+
+        manager.setOntologyLoaderConfiguration(loaderConfiguration.setStrict(true))
         OWLOntology ontology
         ontology = manager.loadOntologyFromOntologyDocument(documentSource, loaderConfiguration)
         def format2 = manager.getOntologyFormat(ontology)

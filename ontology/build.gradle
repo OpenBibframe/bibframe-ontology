@@ -1,9 +1,10 @@
 buildscript {
     repositories {
         mavenCentral()
+        mavenLocal()
     }
     dependencies {
-         classpath 'net.sourceforge.owlapi:owlapi-osgidistribution:5.0.5'
+         classpath 'net.sourceforge.owlapi:owlapi-osgidistribution:[5.0.5,5.1)'
     }
 }
 import com.criticollab.bibframe.tools.OWLFormatConvertTask

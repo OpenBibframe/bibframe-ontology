@@ -9,6 +9,7 @@ import org.semanticweb.owlapi.model.OWLDocumentFormat
 class OWLFormatConverter {
     static convert(File src, File destDir, OWLDocumentFormat format) {
         def manager = OWLManager.createOWLOntologyManager()
+        manager.setOntologyWriterConfiguration(manager.getOntologyWriterConfiguration().withUseNamespaceEntities( true ))
         def ontology = manager.loadOntologyFromOntologyDocument(src)
         def inputFormat = manager.getOntologyFormat(ontology)
 
