@@ -106,6 +106,20 @@
     
 
 
+    <!-- http://www.w3.org/2001/XMLSchema#anyURI -->
+
+
+    <rdfs:Datatype rdf:about="&xsd;anyURI"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#string -->
+
+
+    <rdfs:Datatype rdf:about="&xsd;string"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -184,6 +198,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;acquisitionSource">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
         <rdfs:range rdf:resource="&bf;AcquisitionSource"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <dcterms:modified>2017-02-06 (Changed from data to object property</dcterms:modified>
@@ -202,6 +217,7 @@
         <rdfs:range rdf:resource="&bf;AdminMetadata"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Unspecified</rdfs:comment>
+        <rdfs:comment>should this be an annotation property? SES</rdfs:comment>
         <rdfs:label>Administrative metadata</rdfs:label>
         <skos:definition>Metadata about the metadata, especially provenance information.</skos:definition>
     </owl:ObjectProperty>
@@ -215,6 +231,7 @@
         <rdfs:range rdf:resource="&bf;Agent"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Unspecified</rdfs:comment>
+        <rdfs:comment>What *precisely* is an element of description? </rdfs:comment>
         <rdfs:label>Associated agent</rdfs:label>
         <skos:definition>Entity associated with a resource or element of description, such as the name of the entity responsible for the content or of the publication, printing, distribution, issue, release or production of a resource.</skos:definition>
     </owl:ObjectProperty>
@@ -238,6 +255,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;arrangement">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
         <rdfs:range rdf:resource="&bf;Arrangement"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
@@ -251,6 +269,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;aspectRatio">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
         <rdfs:range rdf:resource="&bf;AspectRatio"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
@@ -317,6 +336,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;capture">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
         <rdfs:range rdf:resource="&bf;Capture"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
@@ -343,6 +363,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;cartographicAttributes">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
         <rdfs:range rdf:resource="&bf;Cartographic"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
@@ -356,6 +377,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;classification">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstanceOrItem"/>
         <rdfs:range rdf:resource="&bf;Classification"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work, Instance or Item</rdfs:comment>
@@ -369,6 +391,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;colorContent">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
         <rdfs:range rdf:resource="&bf;ColorContent"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
@@ -395,6 +418,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;contentAccessibility">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
         <rdfs:range rdf:resource="&bf;ContentAccessibility"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <dcterms:modified>2017-02-03 (changed from data to object property)</dcterms:modified>
@@ -472,6 +496,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;contribution">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstanceOrItem"/>
         <rdfs:range rdf:resource="&bf;Contribution"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <dcterms:modified>2017-02-03 (Corrected label)</dcterms:modified>
@@ -486,6 +511,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;copyrightRegistration">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
         <rdfs:range rdf:resource="&bf;CopyrightRegistration"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <dcterms:modified>2016-05-04 (Corrected expected value)</dcterms:modified>
@@ -500,6 +526,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;coverArt">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
         <rdfs:range rdf:resource="&bf;CoverArt"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
@@ -514,6 +541,8 @@
 
     <owl:ObjectProperty rdf:about="&bf;dataSource">
         <rdfs:subPropertyOf rdf:resource="&bf;relatedTo"/>
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
+        <rdfs:range rdf:resource="&bf;WorkOrInstance"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <dcterms:modified>2016-04-29 (updated range)</dcterms:modified>
         <rdfs:comment>Expected value Work or Instance</rdfs:comment>
@@ -610,6 +639,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;dissertation">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
         <rdfs:range rdf:resource="&bf;Dissertation"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
@@ -624,8 +654,8 @@
 
     <owl:ObjectProperty rdf:about="&bf;electronicLocator">
         <rdfs:domain rdf:resource="&bf;Item"/>
-        <rdfs:range rdf:resource="&owl;Thing"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+        <rdfs:comment>This should be a data property of type xsd:anyURI (SES)</rdfs:comment>
         <rdfs:label>Electronic location</rdfs:label>
         <skos:definition>Electronic location from which the resource is available.</skos:definition>
     </owl:ObjectProperty>
@@ -681,6 +711,7 @@
         <rdfs:range rdf:resource="&bf;Work"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <dcterms:modified>2016-04-29 (added inverse)</dcterms:modified>
+        <rdfs:comment>This isn&apos;t be  a sub-property of relatedTo (SES)</rdfs:comment>
         <rdfs:label>Event content</rdfs:label>
         <skos:definition>Work whose content is the described event.</skos:definition>
     </owl:ObjectProperty>
@@ -737,6 +768,8 @@
     <owl:ObjectProperty rdf:about="&bf;findingAid">
         <rdfs:subPropertyOf rdf:resource="&bf;accompaniedBy"/>
         <owl:inverseOf rdf:resource="&bf;findingAidOf"/>
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
+        <rdfs:range rdf:resource="&bf;WorkOrInstance"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <dcterms:modified>2016-04-29 (added inverse, updated range)</dcterms:modified>
         <rdfs:comment>Expected value Work or Instance</rdfs:comment>
@@ -779,6 +812,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;frequency">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
         <rdfs:range rdf:resource="&bf;Frequency"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
@@ -818,6 +852,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;genreForm">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstanceOrItem"/>
         <rdfs:range rdf:resource="&bf;GenreForm"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work, Instance or Item</rdfs:comment>
@@ -859,6 +894,8 @@
 
     <owl:ObjectProperty rdf:about="&bf;hasDerivative">
         <rdfs:subPropertyOf rdf:resource="&bf;relatedTo"/>
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
+        <rdfs:range rdf:resource="&bf;WorkOrInstance"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <dcterms:modified>2016-04-29 (added inverse)</dcterms:modified>
         <rdfs:comment>Expected value Work or Instance</rdfs:comment>
@@ -970,6 +1007,8 @@
     <owl:ObjectProperty rdf:about="&bf;hasSeries">
         <rdfs:subPropertyOf rdf:resource="&bf;partOf"/>
         <owl:inverseOf rdf:resource="&bf;seriesOf"/>
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
+        <rdfs:range rdf:resource="&bf;WorkOrInstance"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <dcterms:modified>2016-04-29 (added inverse, updated range)</dcterms:modified>
         <rdfs:comment>Expected value Work or Instance</rdfs:comment>
@@ -1027,8 +1066,6 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;identifies">
-        <rdfs:domain rdf:resource="&bf;Identifier"/>
-        <rdfs:range rdf:resource="&owl;Thing"/>
         <dcterms:modified>2017-02-03 (New inverse)</dcterms:modified>
         <rdfs:label>Resouce identified</rdfs:label>
         <skos:definition>Resource that is associated with a character string that serves to differentiate one resource from another.</skos:definition>
@@ -1040,6 +1077,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;illustrativeContent">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
         <rdfs:range rdf:resource="&bf;Illustration"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
@@ -1085,6 +1123,8 @@
 
     <owl:ObjectProperty rdf:about="&bf;indexOf">
         <rdfs:subPropertyOf rdf:resource="&bf;accompanies"/>
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
+        <rdfs:range rdf:resource="&bf;WorkOrInstance"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <dcterms:modified>2016-04-29 (added inverse, updated range)</dcterms:modified>
         <rdfs:comment>Expected value Work or Instance</rdfs:comment>
@@ -1127,6 +1167,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;intendedAudience">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
         <rdfs:range rdf:resource="&bf;IntendedAudience"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
@@ -1140,6 +1181,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;issuance">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
         <rdfs:range rdf:resource="&bf;Issuance"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
@@ -1210,6 +1252,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;media">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
         <rdfs:range rdf:resource="&bf;Media"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
@@ -1267,6 +1310,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;musicFormat">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
         <rdfs:range rdf:resource="&bf;MusicFormat"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
@@ -1293,6 +1337,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;notation">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
         <rdfs:range rdf:resource="&bf;Notation"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
@@ -1552,8 +1597,8 @@
 
     <owl:ObjectProperty rdf:about="&bf;relatedTo">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
-        <rdfs:domain rdf:resource="&owl;Thing"/>
-        <rdfs:range rdf:resource="&owl;Thing"/>
+        <rdfs:domain rdf:resource="&bf;WorkOrInstanceOrItem"/>
+        <rdfs:range rdf:resource="&bf;WorkOrInstanceOrItem"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:label>Related resource</rdfs:label>
         <skos:definition>Any relationship between Work, Instance, and Item resources.</skos:definition>
@@ -1611,6 +1656,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;review">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
         <rdfs:range rdf:resource="&bf;Review"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
@@ -1638,6 +1684,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;scale">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
         <rdfs:range rdf:resource="&bf;Scale"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <dcterms:modified>2017-02-03 (changed from data to object property)</dcterms:modified>
@@ -1709,6 +1756,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;soundContent">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
         <rdfs:range rdf:resource="&bf;SoundContent"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
@@ -1725,6 +1773,7 @@
         <rdfs:range rdf:resource="&bf;Source"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Unspecified</rdfs:comment>
+        <rdfs:comment>What is meant by value or label here? (SES)</rdfs:comment>
         <rdfs:label>Source</rdfs:label>
         <skos:definition>Resource from which value or label came or was derived, such as the formal source/scheme from which a classification number is taken or derived, list from which an agent name is taken or derived, source within which an identifier is unique.</skos:definition>
     </owl:ObjectProperty>
@@ -1752,6 +1801,7 @@
     <owl:ObjectProperty rdf:about="&bf;status">
         <rdfs:range rdf:resource="&bf;Status"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+        <rdfs:comment>Meaning is almost unspecified too. (SES)</rdfs:comment>
         <rdfs:comment>Used with Unspecified</rdfs:comment>
         <rdfs:label>Status</rdfs:label>
         <skos:definition>Designation of the validity or position of something, such as indication that the classification number is canceled or invalid, circulation availability of an item, indication of whether the identifier is canceled or invalid.</skos:definition>
@@ -1763,7 +1813,8 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;subject">
-        <rdfs:range rdf:resource="&owl;Thing"/>
+        <rdfs:domain rdf:resource="&bf;WorkOrInstanceOrItem"/>
+        <rdfs:range rdf:resource="&skos;Concept"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work, Instance or Item</rdfs:comment>
         <rdfs:label>Subject</rdfs:label>
@@ -1790,6 +1841,8 @@
 
     <owl:ObjectProperty rdf:about="&bf;subseriesOf">
         <rdfs:subPropertyOf rdf:resource="&bf;hasPart"/>
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
+        <rdfs:range rdf:resource="&bf;WorkOrInstance"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <dcterms:modified>2016-04-29 (added inverse, updated range)</dcterms:modified>
         <rdfs:comment>Expected value Work or Instance</rdfs:comment>
@@ -1805,6 +1858,8 @@
 
     <owl:ObjectProperty rdf:about="&bf;succeededBy">
         <rdfs:subPropertyOf rdf:resource="&bf;relatedTo"/>
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
+        <rdfs:range rdf:resource="&bf;WorkOrInstance"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <dcterms:modified>2016-04-29 (added inverse)</dcterms:modified>
         <rdfs:comment>Expected value Work or Instance</rdfs:comment>
@@ -1819,6 +1874,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;summary">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
         <rdfs:range rdf:resource="&bf;Summary"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
@@ -1849,6 +1905,8 @@
 
     <owl:ObjectProperty rdf:about="&bf;supplementTo">
         <rdfs:subPropertyOf rdf:resource="&bf;accompanies"/>
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
+        <rdfs:range rdf:resource="&bf;WorkOrInstance"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <dcterms:modified>2016-04-29 (added inverse, updated range)</dcterms:modified>
         <rdfs:comment>Expected value Work or Instance</rdfs:comment>
@@ -1863,6 +1921,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;supplementaryContent">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
         <rdfs:range rdf:resource="&bf;SupplementaryContent"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
@@ -1890,6 +1949,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;tableOfContents">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
         <rdfs:range rdf:resource="&bf;TableOfContents"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
@@ -1903,6 +1963,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;title">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstanceOrItem"/>
         <rdfs:range rdf:resource="&bf;Title"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work, Instance or Item</rdfs:comment>
@@ -1952,6 +2013,7 @@
         <rdfs:range rdf:resource="&bf;Unit"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Unspecified</rdfs:comment>
+        <rdfs:comment>Where are these values? What are these values? (SES)</rdfs:comment>
         <rdfs:label>Type of unit</rdfs:label>
         <skos:definition>Units in which a value is expressed, such as the physical or logical constituent of a resource (e.g., a volume, audiocassette, film reel, a map, a digital file).</skos:definition>
     </owl:ObjectProperty>
@@ -1962,6 +2024,7 @@
 
 
     <owl:ObjectProperty rdf:about="&bf;usageAndAccessPolicy">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstanceOrItem"/>
         <rdfs:range rdf:resource="&bf;UsageAndAccessPolicy"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work, Instance or Item</rdfs:comment>
@@ -2013,7 +2076,8 @@
 
 
     <owl:DatatypeProperty rdf:about="&bf;acquisitionTerms">
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
+        <rdfs:range rdf:resource="&rdf;PlainLiteral"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
         <rdfs:label>Terms of acquisition</rdfs:label>
@@ -2027,7 +2091,7 @@
 
     <owl:DatatypeProperty rdf:about="&bf;ascensionAndDeclination">
         <rdfs:domain rdf:resource="&bf;Cartographic"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:label>Cartographic ascension and declination</rdfs:label>
         <skos:definition>System for identifying the location of a celestial object in the sky covered by the cartographic content of a resource using the angles of right ascension and declination.</skos:definition>
@@ -2039,7 +2103,8 @@
 
 
     <owl:DatatypeProperty rdf:about="&bf;awards">
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
+        <rdfs:range rdf:resource="&rdf;PlainLiteral"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
         <rdfs:label>Award note</rdfs:label>
@@ -2067,7 +2132,7 @@
 
     <owl:DatatypeProperty rdf:about="&bf;classificationPortion">
         <rdfs:domain rdf:resource="&bf;Classification"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:label>Classification number</rdfs:label>
         <skos:definition>Classification number (single class number or beginning number of a span) that indicates the subject by applying a formal system of coding and organizing resources.</skos:definition>
@@ -2079,7 +2144,7 @@
 
 
     <owl:DatatypeProperty rdf:about="&bf;code">
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Unspecified</rdfs:comment>
         <rdfs:label>Code</rdfs:label>
@@ -2093,7 +2158,7 @@
 
     <owl:DatatypeProperty rdf:about="&bf;coordinates">
         <rdfs:domain rdf:resource="&bf;Cartographic"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:label>Cartographic coordinates</rdfs:label>
         <skos:definition>Mathematical system for identifying the area covered by the cartographic content of a resource, expressed either by means of longitude and latitude on the surface of planets or by the angles of right ascension and declination for celestial cartographic content.</skos:definition>
@@ -2106,6 +2171,7 @@
 
     <owl:DatatypeProperty rdf:about="&bf;copyrightDate">
         <rdfs:subPropertyOf rdf:resource="&bf;date"/>
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
@@ -2121,6 +2187,7 @@
     <owl:DatatypeProperty rdf:about="&bf;count">
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+        <rdfs:comment>Shouldn&apos;t the number of units be some number type? (SES)</rdfs:comment>
         <rdfs:comment>Used with Unspecified</rdfs:comment>
         <rdfs:label>Number of units</rdfs:label>
         <skos:definition>Number associated with a measure of units, such as the number of units and/or subunits making up a resource.</skos:definition>
@@ -2146,7 +2213,8 @@
 
 
     <owl:DatatypeProperty rdf:about="&bf;credits">
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
+        <rdfs:range rdf:resource="&rdf;PlainLiteral"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
         <rdfs:label>Credits note</rdfs:label>
@@ -2159,7 +2227,8 @@
 
 
     <owl:DatatypeProperty rdf:about="&bf;custodialHistory">
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&bf;WorkOrInstanceOrItem"/>
+        <rdfs:range rdf:resource="&rdf;PlainLiteral"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work, Instance or Item</rdfs:comment>
         <rdfs:label>Custodial history</rdfs:label>
@@ -2175,6 +2244,7 @@
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Unspecified</rdfs:comment>
+        <rdfs:comment>date *may* be date typed? (ses)</rdfs:comment>
         <rdfs:label>Date</rdfs:label>
         <skos:definition>Date designation associated with a resource or element of description, such as date of title variation; year a degree was awarded; date associated with the publication, printing, distribution, issue, release or production of a resource. May be date typed.</skos:definition>
     </owl:DatatypeProperty>
@@ -2186,7 +2256,7 @@
 
     <owl:DatatypeProperty rdf:about="&bf;degree">
         <rdfs:domain rdf:resource="&bf;Dissertation"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:label>Degree</rdfs:label>
         <skos:definition>Degree for which author was a candidate.</skos:definition>
@@ -2199,7 +2269,7 @@
 
     <owl:DatatypeProperty rdf:about="&bf;derivedFrom">
         <rdfs:domain rdf:resource="&bf;AdminMetadata"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:label>Source metadata</rdfs:label>
         <skos:definition>Link to the metadata that was the source of the data.</skos:definition>
@@ -2212,7 +2282,7 @@
 
     <owl:DatatypeProperty rdf:about="&bf;dimensions">
         <rdfs:domain rdf:resource="&bf;Instance"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:label>Dimensions</rdfs:label>
         <skos:definition>Measurements of the carrier or carriers and/or the container of a resource.</skos:definition>
@@ -2224,9 +2294,11 @@
 
 
     <owl:DatatypeProperty rdf:about="&bf;duration">
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
+        <rdfs:comment>ideally this would be an xsd:duration, but that&apos;s non-standard(SES)</rdfs:comment>
         <rdfs:label>Duration</rdfs:label>
         <skos:definition>Information about the playing time, running time, etc. of a resource.</skos:definition>
     </owl:DatatypeProperty>
@@ -2240,6 +2312,7 @@
         <rdfs:domain rdf:resource="&bf;Classification"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+        <rdfs:comment>This could be an object property, with a range that is enumerated</rdfs:comment>
         <rdfs:label>Classification scheme edition</rdfs:label>
         <skos:definition>Edition of the classification scheme, such as full, abridged or a number, when a classification scheme designates editions.</skos:definition>
     </owl:DatatypeProperty>
@@ -2251,7 +2324,7 @@
 
     <owl:DatatypeProperty rdf:about="&bf;editionEnumeration">
         <rdfs:domain rdf:resource="&bf;Instance"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:range rdf:resource="&rdf;PlainLiteral"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:label>Edition enumeration</rdfs:label>
         <skos:definition>Enumeration of the edition; usually transcribed.</skos:definition>
@@ -2264,7 +2337,7 @@
 
     <owl:DatatypeProperty rdf:about="&bf;editionStatement">
         <rdfs:domain rdf:resource="&bf;Instance"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:range rdf:resource="&rdf;PlainLiteral"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:label>Edition statement</rdfs:label>
         <skos:definition>Information identifying the edition or version of the resource and associated statements of responsibility for the edition; usually transcribed.</skos:definition>
@@ -2279,6 +2352,7 @@
         <rdfs:domain rdf:resource="&bf;MusicEnsemble"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+        <rdfs:comment>This is the sort of property that should be an *Objec*t property, with a range Class that has   Orchestra, band, etc, as Individuals. (SES)</rdfs:comment>
         <rdfs:label>Ensemble type</rdfs:label>
         <skos:definition>Specific type of ensemble, such as orchestra, band, guitar ensemble.</skos:definition>
     </owl:DatatypeProperty>
@@ -2292,6 +2366,7 @@
         <rdfs:domain rdf:resource="&bf;Cartographic"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+        <rdfs:comment>Sounds like this could be an object property with a class with two values?</rdfs:comment>
         <rdfs:label>Cartographic equinox</rdfs:label>
         <skos:definition>One of two points of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0 degrees.</skos:definition>
     </owl:DatatypeProperty>
@@ -2315,6 +2390,7 @@
 
 
     <owl:DatatypeProperty rdf:about="&bf;firstIssue">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
@@ -2345,6 +2421,7 @@
         <rdfs:domain rdf:resource="&bf;Arrangement"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+        <rdfs:comment>This could be better specified (SES)</rdfs:comment>
         <rdfs:label>Hierarchical level of material</rdfs:label>
         <skos:definition>Hierarchical position of the described materials relative to other material from the same source.</skos:definition>
     </owl:DatatypeProperty>
@@ -2356,7 +2433,7 @@
 
     <owl:DatatypeProperty rdf:about="&bf;historyOfWork">
         <rdfs:domain rdf:resource="&bf;Work"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:range rdf:resource="&rdf;PlainLiteral"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:label>History of the work</rdfs:label>
         <skos:definition>Information about the history of a Work.</skos:definition>
@@ -2382,7 +2459,7 @@
 
     <owl:DatatypeProperty rdf:about="&bf;itemPortion">
         <rdfs:domain rdf:resource="&bf;Classification"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:label>Classification item number</rdfs:label>
         <skos:definition>Number attached to a classification string that indicates a particular item.</skos:definition>
@@ -2394,6 +2471,7 @@
 
 
     <owl:DatatypeProperty rdf:about="&bf;lastIssue">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
@@ -2422,7 +2500,7 @@
 
     <owl:DatatypeProperty rdf:about="&bf;mainTitle">
         <rdfs:domain rdf:resource="&bf;Title"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:range rdf:resource="&rdf;PlainLiteral"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:label>Main title</rdfs:label>
         <skos:definition>Title being addressed. Possible title component.</skos:definition>
@@ -2463,6 +2541,7 @@
         <rdfs:domain rdf:resource="&bf;Work"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+        <rdfs:comment>What kind of number? Why not a number type?(SES)</rdfs:comment>
         <rdfs:label>Music serial number</rdfs:label>
         <skos:definition>Numeric designation for musical works consecutively numbered in music reference sources.</skos:definition>
     </owl:DatatypeProperty>
@@ -2486,8 +2565,10 @@
 
 
     <owl:DatatypeProperty rdf:about="&bf;natureOfContent">
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+        <rdfs:comment>Are these all ad-hoc? If not, why isn&apos;t this an object property with a range class for the values? Or possibly a class hierarchy? (SES)</rdfs:comment>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
         <rdfs:label>Content nature</rdfs:label>
         <skos:definition>Characterization that epitomizes the primary content of a resource, e.g., field recording of birdsong; combined time series analysis and graph plotting system.</skos:definition>
@@ -2502,6 +2583,7 @@
         <rdfs:domain rdf:resource="&bf;Note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
+        <rdfs:comment>Why is the type of note not a type? (SES)</rdfs:comment>
         <rdfs:label>Note type</rdfs:label>
         <skos:definition>Type of note.</skos:definition>
     </owl:DatatypeProperty>
@@ -2555,6 +2637,7 @@
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Unspecified</rdfs:comment>
+        <rdfs:comment>What does this property do? It seems like resource is used elsewhere to refer to  some of subset of Work , Instance and Item?  But this is a data property. What information? (SES)</rdfs:comment>
         <rdfs:label>Part</rdfs:label>
         <skos:definition>Part of a resource to which information applies.</skos:definition>
     </owl:DatatypeProperty>
@@ -2566,7 +2649,7 @@
 
     <owl:DatatypeProperty rdf:about="&bf;partName">
         <rdfs:domain rdf:resource="&bf;Title"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:range rdf:resource="&rdf;PlainLiteral"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:label>Part title</rdfs:label>
         <skos:definition>Part or section name of a title. Possible title component.</skos:definition>
@@ -2579,7 +2662,7 @@
 
     <owl:DatatypeProperty rdf:about="&bf;partNumber">
         <rdfs:domain rdf:resource="&bf;Title"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:range rdf:resource="&rdf;PlainLiteral"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:label>Part number</rdfs:label>
         <skos:definition>Part or section enumeration of a title. Possible title component.</skos:definition>
@@ -2617,7 +2700,8 @@
 
 
     <owl:DatatypeProperty rdf:about="&bf;preferredCitation">
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&bf;WorkOrInstance"/>
+        <rdfs:range rdf:resource="&rdf;PlainLiteral"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Work or Instance</rdfs:comment>
         <rdfs:label>Preferred citation</rdfs:label>
@@ -2631,7 +2715,7 @@
 
     <owl:DatatypeProperty rdf:about="&bf;provisionActivityStatement">
         <rdfs:domain rdf:resource="&bf;Instance"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:range rdf:resource="&rdf;PlainLiteral"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:label>Provider statement</rdfs:label>
         <skos:definition>Statement relating to providers of a resource; usually transcribed.</skos:definition>
@@ -2646,6 +2730,7 @@
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Unspecified</rdfs:comment>
+        <rdfs:comment>Void for vagueness. Domain Thing, Range Literal, meaning: some sort of extra information associated with some other information? (SES)</rdfs:comment>
         <rdfs:label>Qualifier</rdfs:label>
         <skos:definition>Qualifier of information, such as an addition to a title to make it unique or qualifying information associated with an identifier.</skos:definition>
     </owl:DatatypeProperty>
@@ -2657,7 +2742,7 @@
 
     <owl:DatatypeProperty rdf:about="&bf;responsibilityStatement">
         <rdfs:domain rdf:resource="&bf;Instance"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:range rdf:resource="&rdf;PlainLiteral"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:label>Creative responsibility statement</rdfs:label>
         <skos:definition>Statement relating to any persons, families, or corporate bodies responsible for the creation of, or contributing to the content of a resource; usually transcribed.</skos:definition>
@@ -2683,7 +2768,7 @@
 
     <owl:DatatypeProperty rdf:about="&bf;seriesEnumeration">
         <rdfs:domain rdf:resource="&bf;Instance"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:range rdf:resource="&rdf;PlainLiteral"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:label>Series enumeration</rdfs:label>
         <skos:definition>Series enumeration of the resource; usually transcribed.</skos:definition>
@@ -2696,7 +2781,7 @@
 
     <owl:DatatypeProperty rdf:about="&bf;seriesStatement">
         <rdfs:domain rdf:resource="&bf;Instance"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:range rdf:resource="&rdf;PlainLiteral"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:label>Series statement</rdfs:label>
         <skos:definition>Statement of the series the resource is in; usually transcribed; includes the ISSN if applicable.</skos:definition>
@@ -2722,7 +2807,7 @@
 
     <owl:DatatypeProperty rdf:about="&bf;subseriesEnumeration">
         <rdfs:domain rdf:resource="&bf;Instance"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:range rdf:resource="&rdf;PlainLiteral"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:label>Subseries enumeration</rdfs:label>
         <skos:definition>Subseries enumeration of the resource; usually transcribed.</skos:definition>
@@ -2735,7 +2820,7 @@
 
     <owl:DatatypeProperty rdf:about="&bf;subseriesStatement">
         <rdfs:domain rdf:resource="&bf;Instance"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:range rdf:resource="&rdf;PlainLiteral"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:label>Subseries statement</rdfs:label>
         <skos:definition>Statement of the subseries the resource is in; usually transcribed; includes the ISSN if applicable.</skos:definition>
@@ -2748,7 +2833,7 @@
 
     <owl:DatatypeProperty rdf:about="&bf;subtitle">
         <rdfs:domain rdf:resource="&bf;Title"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:range rdf:resource="&rdf;PlainLiteral"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:label>Subtitle</rdfs:label>
         <skos:definition>Word, character, or group of words and/or characters that contains the remainder of the title after the main title. Possible title component.</skos:definition>
@@ -2813,7 +2898,7 @@
 
     <owl:DatatypeProperty rdf:about="&bf;version">
         <rdfs:domain rdf:resource="&bf;Work"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:range rdf:resource="&rdf;PlainLiteral"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:label>Version</rdfs:label>
         <skos:definition>Term or terms that identify works such as arranged for music, vulgate for religious work, etc.</skos:definition>
@@ -5033,6 +5118,38 @@
     
 
 
+    <!-- http://id.loc.gov/ontologies/bibframe/WorkOrInstance -->
+
+
+    <owl:Class rdf:about="&bf;WorkOrInstance">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&bf;Instance"/>
+                    <rdf:Description rdf:about="&bf;Work"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://id.loc.gov/ontologies/bibframe/WorkOrInstanceOrItem -->
+
+
+    <owl:Class rdf:about="&bf;WorkOrInstanceOrItem">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&bf;Item"/>
+                    <rdf:Description rdf:about="&bf;WorkOrInstance"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
     <!-- http://id.loc.gov/ontologies/bibframe/WorkTitle -->
 
 
@@ -5050,6 +5167,13 @@
 
 
     <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+
+    <owl:Class rdf:about="&skos;Concept"/>
     
 
 

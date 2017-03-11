@@ -39,6 +39,9 @@ Datatype: rdf:PlainLiteral
 Datatype: rdfs:Literal
 
     
+Datatype: xsd:anyURI
+
+    
 Datatype: xsd:string
 
     
@@ -120,6 +123,9 @@ ObjectProperty: bf:acquisitionSource
         rdfs:label "Source of acquisition",
         skos:definition "Information about an organization, person, etc., from which a resource may be obtained."
     
+    Domain: 
+        bf:WorkOrInstance
+    
     Range: 
         bf:AcquisitionSource
     
@@ -129,6 +135,7 @@ ObjectProperty: bf:adminMetadata
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
         rdfs:comment "Used with Unspecified",
+        rdfs:comment "should this be an annotation property? SES",
         rdfs:label "Administrative metadata",
         skos:definition "Metadata about the metadata, especially provenance information."
     
@@ -141,6 +148,7 @@ ObjectProperty: bf:agent
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
         rdfs:comment "Used with Unspecified",
+        rdfs:comment "What *precisely* is an element of description? (SES)",
         rdfs:label "Associated agent",
         skos:definition "Entity associated with a resource or element of description, such as the name of the entity responsible for the content or of the publication, printing, distribution, issue, release or production of a resource."
     
@@ -170,6 +178,9 @@ ObjectProperty: bf:arrangement
         rdfs:label "Organization and arrangement",
         skos:definition "Information about the organization and arrangement of a collection of resources."
     
+    Domain: 
+        bf:WorkOrInstance
+    
     Range: 
         bf:Arrangement
     
@@ -181,6 +192,9 @@ ObjectProperty: bf:aspectRatio
         rdfs:comment "Used with Work or Instance",
         rdfs:label "Aspect ratio",
         skos:definition "Proportional relationship between an image's width and its height."
+    
+    Domain: 
+        bf:WorkOrInstance
     
     Range: 
         bf:AspectRatio
@@ -251,6 +265,9 @@ ObjectProperty: bf:capture
         rdfs:label "Capture of content",
         skos:definition "Information about place and date associated with the capture (e.g., recording, filming) of the content of a resource."
     
+    Domain: 
+        bf:WorkOrInstance
+    
     Range: 
         bf:Capture
     
@@ -277,6 +294,9 @@ ObjectProperty: bf:cartographicAttributes
         rdfs:label "Cartographic data",
         skos:definition "Cartographic data that identifies characteristics of the resource, such as coordinates, projection, etc."
     
+    Domain: 
+        bf:WorkOrInstance
+    
     Range: 
         bf:Cartographic
     
@@ -289,6 +309,9 @@ ObjectProperty: bf:classification
         rdfs:label "Classification",
         skos:definition "Classification number in any scheme."
     
+    Domain: 
+        bf:WorkOrInstanceOrItem
+    
     Range: 
         bf:Classification
     
@@ -300,6 +323,9 @@ ObjectProperty: bf:colorContent
         rdfs:comment "Used with Work or Instance",
         rdfs:label "Color content",
         skos:definition "Color characteristics, e.g., black and white, multicolored."
+    
+    Domain: 
+        bf:WorkOrInstance
     
     Range: 
         bf:ColorContent
@@ -327,6 +353,9 @@ ObjectProperty: bf:contentAccessibility
         rdfs:comment "Used with Work or Instance",
         rdfs:label "Content accessibility information",
         skos:definition "Information that assists those with a sensory impairment for greater understanding of content, e.g., captions."
+    
+    Domain: 
+        bf:WorkOrInstance
     
     Range: 
         bf:ContentAccessibility
@@ -409,6 +438,9 @@ ObjectProperty: bf:contribution
         rdfs:label "Contributor and role",
         skos:definition "Agent and its role in relation to the resource."
     
+    Domain: 
+        bf:WorkOrInstanceOrItem
+    
     Range: 
         bf:Contribution
     
@@ -422,6 +454,9 @@ ObjectProperty: bf:copyrightRegistration
         rdfs:label "Copyright registration information",
         skos:definition "Copyright and Legal Deposit registration information"
     
+    Domain: 
+        bf:WorkOrInstance
+    
     Range: 
         bf:CopyrightRegistration
     
@@ -433,6 +468,9 @@ ObjectProperty: bf:coverArt
         rdfs:comment "Used with Work or Instance",
         rdfs:label "Cover art",
         skos:definition "Cover art image of a resource."
+    
+    Domain: 
+        bf:WorkOrInstance
     
     Range: 
         bf:CoverArt
@@ -450,6 +488,12 @@ ObjectProperty: bf:dataSource
     
     SubPropertyOf: 
         bf:relatedTo
+    
+    Domain: 
+        bf:WorkOrInstance
+    
+    Range: 
+        bf:WorkOrInstance
     
     
 ObjectProperty: bf:derivativeOf
@@ -548,6 +592,9 @@ ObjectProperty: bf:dissertation
         rdfs:label "Dissertation Information",
         skos:definition "Work presented as part of the formal requirements for an academic degree."
     
+    Domain: 
+        bf:WorkOrInstance
+    
     Range: 
         bf:Dissertation
     
@@ -556,14 +603,12 @@ ObjectProperty: bf:electronicLocator
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
+        rdfs:comment "This should be a data property of type xsd:anyURI (SES)",
         rdfs:label "Electronic location",
         skos:definition "Electronic location from which the resource is available."
     
     Domain: 
         bf:Item
-    
-    Range: 
-        owl:Thing
     
     
 ObjectProperty: bf:emulsion
@@ -613,6 +658,7 @@ ObjectProperty: bf:eventContent
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2016-04-29 (added inverse)",
+        rdfs:comment "This isn't be  a sub-property of relatedTo (SES)",
         rdfs:label "Event content",
         skos:definition "Work whose content is the described event."
     
@@ -698,6 +744,12 @@ ObjectProperty: bf:findingAid
     SubPropertyOf: 
         bf:accompaniedBy
     
+    Domain: 
+        bf:WorkOrInstance
+    
+    Range: 
+        bf:WorkOrInstance
+    
     InverseOf: 
         bf:findingAidOf
     
@@ -741,6 +793,9 @@ ObjectProperty: bf:frequency
         rdfs:label "Frequency",
         skos:definition "Intervals at which the parts of a serially produced resource or the updates to an integrating resource are issued."
     
+    Domain: 
+        bf:WorkOrInstance
+    
     Range: 
         bf:Frequency
     
@@ -780,6 +835,9 @@ ObjectProperty: bf:genreForm
         rdfs:comment "Used with Work, Instance or Item",
         rdfs:label "Genre/form",
         skos:definition "Form category or genre to which a resource belongs"
+    
+    Domain: 
+        bf:WorkOrInstanceOrItem
     
     Range: 
         bf:GenreForm
@@ -826,6 +884,12 @@ ObjectProperty: bf:hasDerivative
     
     SubPropertyOf: 
         bf:relatedTo
+    
+    Domain: 
+        bf:WorkOrInstance
+    
+    Range: 
+        bf:WorkOrInstance
     
     InverseOf: 
         bf:derivativeOf
@@ -962,6 +1026,12 @@ ObjectProperty: bf:hasSeries
     SubPropertyOf: 
         bf:partOf
     
+    Domain: 
+        bf:WorkOrInstance
+    
+    Range: 
+        bf:WorkOrInstance
+    
     InverseOf: 
         bf:seriesOf
     
@@ -1019,12 +1089,6 @@ ObjectProperty: bf:identifies
         rdfs:label "Resouce identified",
         skos:definition "Resource that is associated with a character string that serves to differentiate one resource from another."
     
-    Domain: 
-        bf:Identifier
-    
-    Range: 
-        owl:Thing
-    
     InverseOf: 
         bf:identifiedBy
     
@@ -1036,6 +1100,9 @@ ObjectProperty: bf:illustrativeContent
         rdfs:comment "Used with Work or Instance",
         rdfs:label "Illustrative content information",
         skos:definition "Information about content intended to illustrate a resource."
+    
+    Domain: 
+        bf:WorkOrInstance
     
     Range: 
         bf:Illustration
@@ -1087,6 +1154,12 @@ ObjectProperty: bf:indexOf
     SubPropertyOf: 
         bf:accompanies
     
+    Domain: 
+        bf:WorkOrInstance
+    
+    Range: 
+        bf:WorkOrInstance
+    
     InverseOf: 
         bf:index
     
@@ -1134,6 +1207,9 @@ ObjectProperty: bf:intendedAudience
         rdfs:label "Intended audience",
         skos:definition "Information that identifies the specific audience or intellectual level for which the content of the resource is considered appropriate."
     
+    Domain: 
+        bf:WorkOrInstance
+    
     Range: 
         bf:IntendedAudience
     
@@ -1145,6 +1221,9 @@ ObjectProperty: bf:issuance
         rdfs:comment "Used with Work or Instance",
         rdfs:label "Mode of issuance",
         skos:definition "Categorization reflecting whether a resource is issued in one or more parts, the way it is updated, and its intended termination."
+    
+    Domain: 
+        bf:WorkOrInstance
     
     Range: 
         bf:Issuance
@@ -1226,6 +1305,9 @@ ObjectProperty: bf:media
         rdfs:label "Media type",
         skos:definition "Categorization reflecting the general type of intermediation device required to view, play, run, etc., the content of a resource."
     
+    Domain: 
+        bf:WorkOrInstance
+    
     Range: 
         bf:Media
     
@@ -1286,6 +1368,9 @@ ObjectProperty: bf:musicFormat
         rdfs:label "Format of notated music",
         skos:definition "Layout for content of a resource that is presented in the form of musical notation, such as full score, condensed score, vocal score, etc."
     
+    Domain: 
+        bf:WorkOrInstance
+    
     Range: 
         bf:MusicFormat
     
@@ -1311,6 +1396,9 @@ ObjectProperty: bf:notation
         rdfs:comment "Used with Work or Instance",
         rdfs:label "Notation system",
         skos:definition "Alphabet, script, or symbol system used to convey the content of the resource, including specialized scripts, typefaces, tactile notation, movement notation, and musical notation."
+    
+    Domain: 
+        bf:WorkOrInstance
     
     Range: 
         bf:Notation
@@ -1594,10 +1682,10 @@ ObjectProperty: bf:relatedTo
         Symmetric
     
     Domain: 
-        owl:Thing
+        bf:WorkOrInstanceOrItem
     
     Range: 
-        owl:Thing
+        bf:WorkOrInstanceOrItem
     
     
 ObjectProperty: bf:replacedBy
@@ -1663,6 +1751,9 @@ ObjectProperty: bf:review
         rdfs:label "Review content",
         skos:definition "Review of a resource."
     
+    Domain: 
+        bf:WorkOrInstance
+    
     Range: 
         bf:Review
     
@@ -1690,6 +1781,9 @@ ObjectProperty: bf:scale
         rdfs:comment "Used with Work or Instance",
         rdfs:label "Scale",
         skos:definition "Ratio of the dimensions of a form contained or embodied in a resource to the dimensions of the entity it represents, e.g., for images or cartographic resources."
+    
+    Domain: 
+        bf:WorkOrInstance
     
     Range: 
         bf:Scale
@@ -1766,6 +1860,9 @@ ObjectProperty: bf:soundContent
         rdfs:label "Sound content",
         skos:definition "Indication of whether the production of sound is an integral part of the resource."
     
+    Domain: 
+        bf:WorkOrInstance
+    
     Range: 
         bf:SoundContent
     
@@ -1775,6 +1872,7 @@ ObjectProperty: bf:source
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
         rdfs:comment "Used with Unspecified",
+        rdfs:comment "What is meant by value or label here? (SES)",
         rdfs:label "Source",
         skos:definition "Resource from which value or label came or was derived, such as the formal source/scheme from which a classification number is taken or derived, list from which an agent name is taken or derived, source within which an identifier is unique."
     
@@ -1803,6 +1901,7 @@ ObjectProperty: bf:status
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
+        rdfs:comment "Meaning is almost unspecified too. (SES)",
         rdfs:comment "Used with Unspecified",
         rdfs:label "Status",
         skos:definition "Designation of the validity or position of something, such as indication that the classification number is canceled or invalid, circulation availability of an item, indication of whether the identifier is canceled or invalid."
@@ -1819,8 +1918,11 @@ ObjectProperty: bf:subject
         rdfs:label "Subject",
         skos:definition "Subject term(s) describing a resource."
     
+    Domain: 
+        bf:WorkOrInstanceOrItem
+    
     Range: 
-        owl:Thing
+        skos:Concept
     
     
 ObjectProperty: bf:sublocation
@@ -1850,6 +1952,12 @@ ObjectProperty: bf:subseriesOf
     SubPropertyOf: 
         bf:hasPart
     
+    Domain: 
+        bf:WorkOrInstance
+    
+    Range: 
+        bf:WorkOrInstance
+    
     InverseOf: 
         bf:hasSubseries
     
@@ -1867,6 +1975,12 @@ ObjectProperty: bf:succeededBy
     SubPropertyOf: 
         bf:relatedTo
     
+    Domain: 
+        bf:WorkOrInstance
+    
+    Range: 
+        bf:WorkOrInstance
+    
     InverseOf: 
         bf:precededBy
     
@@ -1878,6 +1992,9 @@ ObjectProperty: bf:summary
         rdfs:comment "Used with Work or Instance",
         rdfs:label "Summary content",
         skos:definition "Summary or abstract of the resource described."
+    
+    Domain: 
+        bf:WorkOrInstance
     
     Range: 
         bf:Summary
@@ -1913,6 +2030,12 @@ ObjectProperty: bf:supplementTo
     SubPropertyOf: 
         bf:accompanies
     
+    Domain: 
+        bf:WorkOrInstance
+    
+    Range: 
+        bf:WorkOrInstance
+    
     InverseOf: 
         bf:supplement
     
@@ -1924,6 +2047,9 @@ ObjectProperty: bf:supplementaryContent
         rdfs:comment "Used with Work or Instance",
         rdfs:label "Supplementary material",
         skos:definition "Material such as an index, bibliography, appendix intended to supplement the primary content of a resource."
+    
+    Domain: 
+        bf:WorkOrInstance
     
     Range: 
         bf:SupplementaryContent
@@ -1952,6 +2078,9 @@ ObjectProperty: bf:tableOfContents
         rdfs:label "Table of contents content",
         skos:definition "Table of contents of the described resource."
     
+    Domain: 
+        bf:WorkOrInstance
+    
     Range: 
         bf:TableOfContents
     
@@ -1963,6 +2092,9 @@ ObjectProperty: bf:title
         rdfs:comment "Used with Work, Instance or Item",
         rdfs:label "Title resource",
         skos:definition "Name given to a resource."
+    
+    Domain: 
+        bf:WorkOrInstanceOrItem
     
     Range: 
         bf:Title
@@ -2009,6 +2141,7 @@ ObjectProperty: bf:unit
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
         rdfs:comment "Used with Unspecified",
+        rdfs:comment "Where are these values? What are these values? (SES)",
         rdfs:label "Type of unit",
         skos:definition "Units in which a value is expressed, such as the physical or logical constituent of a resource (e.g., a volume, audiocassette, film reel, a map, a digital file)."
     
@@ -2023,6 +2156,9 @@ ObjectProperty: bf:usageAndAccessPolicy
         rdfs:comment "Used with Work, Instance or Item",
         rdfs:label "Use and access condition",
         skos:definition "General statement of allowances and restrictions on access to a resource, including retention, reproduction, access, and lending."
+    
+    Domain: 
+        bf:WorkOrInstanceOrItem
     
     Range: 
         bf:UsageAndAccessPolicy
@@ -2064,8 +2200,11 @@ DataProperty: bf:acquisitionTerms
         rdfs:label "Terms of acquisition",
         skos:definition "Conditions under which the publisher, distributor, etc., will normally supply a resource, e.g., price of a resource."
     
+    Domain: 
+        bf:WorkOrInstance
+    
     Range: 
-        rdfs:Literal
+        rdf:PlainLiteral
     
     
 DataProperty: bf:ascensionAndDeclination
@@ -2079,7 +2218,7 @@ DataProperty: bf:ascensionAndDeclination
         bf:Cartographic
     
     Range: 
-        rdfs:Literal
+        xsd:string
     
     
 DataProperty: bf:awards
@@ -2090,8 +2229,11 @@ DataProperty: bf:awards
         rdfs:label "Award note",
         skos:definition "Information on awards associated with the described resource."
     
+    Domain: 
+        bf:WorkOrInstance
+    
     Range: 
-        rdfs:Literal
+        rdf:PlainLiteral
     
     
 DataProperty: bf:changeDate
@@ -2122,7 +2264,7 @@ DataProperty: bf:classificationPortion
         bf:Classification
     
     Range: 
-        rdfs:Literal
+        xsd:string
     
     
 DataProperty: bf:code
@@ -2134,7 +2276,7 @@ DataProperty: bf:code
         skos:definition "String of characters that serves as a code representing information."
     
     Range: 
-        rdfs:Literal
+        xsd:string
     
     
 DataProperty: bf:coordinates
@@ -2148,7 +2290,7 @@ DataProperty: bf:coordinates
         bf:Cartographic
     
     Range: 
-        rdfs:Literal
+        xsd:string
     
     
 DataProperty: bf:copyrightDate
@@ -2158,6 +2300,9 @@ DataProperty: bf:copyrightDate
         rdfs:comment "Used with Work or Instance",
         rdfs:label "Copyright date",
         skos:definition "Date associated with a claim of protection under copyright or a similar regime."
+    
+    Domain: 
+        bf:WorkOrInstance
     
     Range: 
         rdfs:Literal
@@ -2170,6 +2315,7 @@ DataProperty: bf:count
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
+        rdfs:comment "Shouldn't the number of units be some number type? (SES)",
         rdfs:comment "Used with Unspecified",
         rdfs:label "Number of units",
         skos:definition "Number associated with a measure of units, such as the number of units and/or subunits making up a resource."
@@ -2203,8 +2349,11 @@ DataProperty: bf:credits
         rdfs:label "Credits note",
         skos:definition "Information in note form of credits for persons or organizations who have participated in the creation and/or production of the resource."
     
+    Domain: 
+        bf:WorkOrInstance
+    
     Range: 
-        rdfs:Literal
+        rdf:PlainLiteral
     
     
 DataProperty: bf:custodialHistory
@@ -2215,8 +2364,11 @@ DataProperty: bf:custodialHistory
         rdfs:label "Custodial history",
         skos:definition "Information about the provenance, such as origin, ownership and custodial history (chain of custody), of a resource."
     
+    Domain: 
+        bf:WorkOrInstanceOrItem
+    
     Range: 
-        rdfs:Literal
+        rdf:PlainLiteral
     
     
 DataProperty: bf:date
@@ -2224,6 +2376,7 @@ DataProperty: bf:date
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
         rdfs:comment "Used with Unspecified",
+        rdfs:comment "date *may* be date typed? (ses)",
         rdfs:label "Date",
         skos:definition "Date designation associated with a resource or element of description, such as date of title variation; year a degree was awarded; date associated with the publication, printing, distribution, issue, release or production of a resource. May be date typed."
     
@@ -2242,7 +2395,7 @@ DataProperty: bf:degree
         bf:Dissertation
     
     Range: 
-        rdfs:Literal
+        xsd:string
     
     
 DataProperty: bf:derivedFrom
@@ -2256,7 +2409,7 @@ DataProperty: bf:derivedFrom
         bf:AdminMetadata
     
     Range: 
-        rdfs:Literal
+        xsd:anyURI
     
     
 DataProperty: bf:dimensions
@@ -2270,7 +2423,7 @@ DataProperty: bf:dimensions
         bf:Instance
     
     Range: 
-        rdfs:Literal
+        xsd:string
     
     
 DataProperty: bf:duration
@@ -2278,17 +2431,22 @@ DataProperty: bf:duration
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
         rdfs:comment "Used with Work or Instance",
+        rdfs:comment "ideally this would be an xsd:duration, but that's non-standard(SES)",
         rdfs:label "Duration",
         skos:definition "Information about the playing time, running time, etc. of a resource."
     
+    Domain: 
+        bf:WorkOrInstance
+    
     Range: 
-        rdfs:Literal
+        xsd:string
     
     
 DataProperty: bf:edition
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
+        rdfs:comment "This could be an object property, with a range that is enumerated",
         rdfs:label "Classification scheme edition",
         skos:definition "Edition of the classification scheme, such as full, abridged or a number, when a classification scheme designates editions."
     
@@ -2310,7 +2468,7 @@ DataProperty: bf:editionEnumeration
         bf:Instance
     
     Range: 
-        rdfs:Literal
+        rdf:PlainLiteral
     
     
 DataProperty: bf:editionStatement
@@ -2324,13 +2482,14 @@ DataProperty: bf:editionStatement
         bf:Instance
     
     Range: 
-        rdfs:Literal
+        rdf:PlainLiteral
     
     
 DataProperty: bf:ensembleType
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
+        rdfs:comment "This is the sort of property that should be an *Objec*t property, with a range Class that has   Orchestra, band, etc, as Individuals. (SES)",
         rdfs:label "Ensemble type",
         skos:definition "Specific type of ensemble, such as orchestra, band, guitar ensemble."
     
@@ -2345,6 +2504,7 @@ DataProperty: bf:equinox
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
+        rdfs:comment "Sounds like this could be an object property with a class with two values? (SES)",
         rdfs:label "Cartographic equinox",
         skos:definition "One of two points of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0 degrees."
     
@@ -2377,6 +2537,9 @@ DataProperty: bf:firstIssue
         rdfs:label "Multipart first issue",
         skos:definition "Beginning date of a resource and/or the sequential designations."
     
+    Domain: 
+        bf:WorkOrInstance
+    
     Range: 
         rdfs:Literal
     
@@ -2402,6 +2565,7 @@ DataProperty: bf:hierarchicalLevel
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
+        rdfs:comment "This could be better specified (SES)",
         rdfs:label "Hierarchical level of material",
         skos:definition "Hierarchical position of the described materials relative to other material from the same source."
     
@@ -2423,7 +2587,7 @@ DataProperty: bf:historyOfWork
         bf:Work
     
     Range: 
-        rdfs:Literal
+        rdf:PlainLiteral
     
     
 DataProperty: bf:instrumentalType
@@ -2451,7 +2615,7 @@ DataProperty: bf:itemPortion
         bf:Classification
     
     Range: 
-        rdfs:Literal
+        xsd:string
     
     
 DataProperty: bf:lastIssue
@@ -2461,6 +2625,9 @@ DataProperty: bf:lastIssue
         rdfs:comment "Used with Work or Instance",
         rdfs:label "Multipart last issue",
         skos:definition "Ending date of a resource and/or the sequential designations."
+    
+    Domain: 
+        bf:WorkOrInstance
     
     Range: 
         rdfs:Literal
@@ -2494,7 +2661,7 @@ DataProperty: bf:mainTitle
         bf:Title
     
     Range: 
-        rdfs:Literal
+        rdf:PlainLiteral
     
     
 DataProperty: bf:musicKey
@@ -2529,6 +2696,7 @@ DataProperty: bf:musicSerialNumber
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
+        rdfs:comment "What kind of number? Why not a number type?(SES)",
         rdfs:label "Music serial number",
         skos:definition "Numeric designation for musical works consecutively numbered in music reference sources."
     
@@ -2557,9 +2725,13 @@ DataProperty: bf:natureOfContent
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
+        rdfs:comment "Are these all ad-hoc? If not, why isn't this an object property with a range class for the values? Or possibly a class hierarchy? (SES)",
         rdfs:comment "Used with Work or Instance",
         rdfs:label "Content nature",
         skos:definition "Characterization that epitomizes the primary content of a resource, e.g., field recording of birdsong; combined time series analysis and graph plotting system."
+    
+    Domain: 
+        bf:WorkOrInstance
     
     Range: 
         rdfs:Literal
@@ -2569,6 +2741,7 @@ DataProperty: bf:noteType
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
+        rdfs:comment "Why is the type of note not a type? (SES)",
         rdfs:label "Note type",
         skos:definition "Type of note."
     
@@ -2629,6 +2802,7 @@ DataProperty: bf:part
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
         rdfs:comment "Used with Unspecified",
+        rdfs:comment "What does this property do? It seems like resource is used elsewhere to refer to  some of subset of Work , Instance and Item?  But this is a data property. What information? (SES)",
         rdfs:label "Part",
         skos:definition "Part of a resource to which information applies."
     
@@ -2647,7 +2821,7 @@ DataProperty: bf:partName
         bf:Title
     
     Range: 
-        rdfs:Literal
+        rdf:PlainLiteral
     
     
 DataProperty: bf:partNumber
@@ -2661,7 +2835,7 @@ DataProperty: bf:partNumber
         bf:Title
     
     Range: 
-        rdfs:Literal
+        rdf:PlainLiteral
     
     
 DataProperty: bf:pattern
@@ -2700,8 +2874,11 @@ DataProperty: bf:preferredCitation
         rdfs:label "Preferred citation",
         skos:definition "Citation to the resource preferred by its custodian of the resource."
     
+    Domain: 
+        bf:WorkOrInstance
+    
     Range: 
-        rdfs:Literal
+        rdf:PlainLiteral
     
     
 DataProperty: bf:provisionActivityStatement
@@ -2715,7 +2892,7 @@ DataProperty: bf:provisionActivityStatement
         bf:Instance
     
     Range: 
-        rdfs:Literal
+        rdf:PlainLiteral
     
     
 DataProperty: bf:qualifier
@@ -2723,6 +2900,7 @@ DataProperty: bf:qualifier
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
         rdfs:comment "Used with Unspecified",
+        rdfs:comment "Void for vagueness. Domain Thing, Range Literal, meaning: some sort of extra information associated with some other information? (SES)",
         rdfs:label "Qualifier",
         skos:definition "Qualifier of information, such as an addition to a title to make it unique or qualifying information associated with an identifier."
     
@@ -2741,7 +2919,7 @@ DataProperty: bf:responsibilityStatement
         bf:Instance
     
     Range: 
-        rdfs:Literal
+        rdf:PlainLiteral
     
     
 DataProperty: bf:schedulePart
@@ -2769,7 +2947,7 @@ DataProperty: bf:seriesEnumeration
         bf:Instance
     
     Range: 
-        rdfs:Literal
+        rdf:PlainLiteral
     
     
 DataProperty: bf:seriesStatement
@@ -2783,7 +2961,7 @@ DataProperty: bf:seriesStatement
         bf:Instance
     
     Range: 
-        rdfs:Literal
+        rdf:PlainLiteral
     
     
 DataProperty: bf:spanEnd
@@ -2811,7 +2989,7 @@ DataProperty: bf:subseriesEnumeration
         bf:Instance
     
     Range: 
-        rdfs:Literal
+        rdf:PlainLiteral
     
     
 DataProperty: bf:subseriesStatement
@@ -2825,7 +3003,7 @@ DataProperty: bf:subseriesStatement
         bf:Instance
     
     Range: 
-        rdfs:Literal
+        rdf:PlainLiteral
     
     
 DataProperty: bf:subtitle
@@ -2839,7 +3017,7 @@ DataProperty: bf:subtitle
         bf:Title
     
     Range: 
-        rdfs:Literal
+        rdf:PlainLiteral
     
     
 DataProperty: bf:table
@@ -2909,7 +3087,7 @@ DataProperty: bf:version
         bf:Work
     
     Range: 
-        rdfs:Literal
+        rdf:PlainLiteral
     
     
 DataProperty: bf:voiceType
@@ -4786,6 +4964,18 @@ Class: bf:Work
         skos:definition "Resource reflecting a conceptual essence of a cataloging resource."
     
     
+Class: bf:WorkOrInstance
+
+    EquivalentTo: 
+        bf:Instance or bf:Work
+    
+    
+Class: bf:WorkOrInstanceOrItem
+
+    EquivalentTo: 
+        bf:Item or bf:WorkOrInstance
+    
+    
 Class: bf:WorkTitle
 
     Annotations: 
@@ -4799,5 +4989,8 @@ Class: bf:WorkTitle
     
     
 Class: owl:Thing
+
+    
+Class: skos:Concept
 
     

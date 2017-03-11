@@ -51,6 +51,14 @@ rdf:PlainLiteral rdf:type rdfs:Datatype .
 rdfs:Literal rdf:type rdfs:Datatype .
 
 
+###  http://www.w3.org/2001/XMLSchema#anyURI
+xsd:anyURI rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#string
+xsd:string rdf:type rdfs:Datatype .
+
+
 #################################################################
 #    Object Properties
 #################################################################
@@ -103,6 +111,7 @@ bf:accompanies rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/acquisitionSource
 bf:acquisitionSource rdf:type owl:ObjectProperty ;
+                     rdfs:domain bf:WorkOrInstance ;
                      rdfs:range bf:AcquisitionSource ;
                      dcterms:modified "2016-04-21 (New)" ,
                                       "2017-02-06 (Changed from data to object property" ,
@@ -116,7 +125,8 @@ bf:acquisitionSource rdf:type owl:ObjectProperty ;
 bf:adminMetadata rdf:type owl:ObjectProperty ;
                  rdfs:range bf:AdminMetadata ;
                  dcterms:modified "2016-04-21 (New)" ;
-                 rdfs:comment "Used with Unspecified" ;
+                 rdfs:comment "Used with Unspecified" ,
+                              "should this be an annotation property? SES" ;
                  rdfs:label "Administrative metadata" ;
                  skos:definition "Metadata about the metadata, especially provenance information." .
 
@@ -125,7 +135,8 @@ bf:adminMetadata rdf:type owl:ObjectProperty ;
 bf:agent rdf:type owl:ObjectProperty ;
          rdfs:range bf:Agent ;
          dcterms:modified "2016-04-21 (New)" ;
-         rdfs:comment "Used with Unspecified" ;
+         rdfs:comment "Used with Unspecified" ,
+                      "What *precisely* is an element of description? " ;
          rdfs:label "Associated agent" ;
          skos:definition "Entity associated with a resource or element of description, such as the name of the entity responsible for the content or of the publication, printing, distribution, issue, release or production of a resource." .
 
@@ -141,6 +152,7 @@ bf:appliedMaterial rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/arrangement
 bf:arrangement rdf:type owl:ObjectProperty ;
+               rdfs:domain bf:WorkOrInstance ;
                rdfs:range bf:Arrangement ;
                dcterms:modified "2016-04-21 (New)" ;
                rdfs:comment "Used with Work or Instance" ;
@@ -150,6 +162,7 @@ bf:arrangement rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/aspectRatio
 bf:aspectRatio rdf:type owl:ObjectProperty ;
+               rdfs:domain bf:WorkOrInstance ;
                rdfs:range bf:AspectRatio ;
                dcterms:modified "2016-04-21 (New)" ;
                rdfs:comment "Used with Work or Instance" ;
@@ -196,6 +209,7 @@ bf:bookFormat rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/capture
 bf:capture rdf:type owl:ObjectProperty ;
+           rdfs:domain bf:WorkOrInstance ;
            rdfs:range bf:Capture ;
            dcterms:modified "2016-04-21 (New)" ;
            rdfs:comment "Used with Work or Instance" ;
@@ -214,6 +228,7 @@ bf:carrier rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/cartographicAttributes
 bf:cartographicAttributes rdf:type owl:ObjectProperty ;
+                          rdfs:domain bf:WorkOrInstance ;
                           rdfs:range bf:Cartographic ;
                           dcterms:modified "2016-04-21 (New)" ;
                           rdfs:comment "Used with Work or Instance" ;
@@ -223,6 +238,7 @@ bf:cartographicAttributes rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/classification
 bf:classification rdf:type owl:ObjectProperty ;
+                  rdfs:domain bf:WorkOrInstanceOrItem ;
                   rdfs:range bf:Classification ;
                   dcterms:modified "2016-04-21 (New)" ;
                   rdfs:comment "Used with Work, Instance or Item" ;
@@ -232,6 +248,7 @@ bf:classification rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/colorContent
 bf:colorContent rdf:type owl:ObjectProperty ;
+                rdfs:domain bf:WorkOrInstance ;
                 rdfs:range bf:ColorContent ;
                 dcterms:modified "2016-04-21 (New)" ;
                 rdfs:comment "Used with Work or Instance" ;
@@ -250,6 +267,7 @@ bf:content rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/contentAccessibility
 bf:contentAccessibility rdf:type owl:ObjectProperty ;
+                        rdfs:domain bf:WorkOrInstance ;
                         rdfs:range bf:ContentAccessibility ;
                         dcterms:modified "2016-04-21 (New)" ,
                                          "2017-02-03 (changed from data to object property)" ;
@@ -307,6 +325,7 @@ bf:continuesInPart rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/contribution
 bf:contribution rdf:type owl:ObjectProperty ;
+                rdfs:domain bf:WorkOrInstanceOrItem ;
                 rdfs:range bf:Contribution ;
                 dcterms:modified "2016-04-21 (New)" ,
                                  "2017-02-03 (Corrected label)" ;
@@ -317,6 +336,7 @@ bf:contribution rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/copyrightRegistration
 bf:copyrightRegistration rdf:type owl:ObjectProperty ;
+                         rdfs:domain bf:WorkOrInstance ;
                          rdfs:range bf:CopyrightRegistration ;
                          dcterms:modified "2016-04-21 (New)" ,
                                           "2016-05-04 (Corrected expected value)" ;
@@ -327,6 +347,7 @@ bf:copyrightRegistration rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/coverArt
 bf:coverArt rdf:type owl:ObjectProperty ;
+            rdfs:domain bf:WorkOrInstance ;
             rdfs:range bf:CoverArt ;
             dcterms:modified "2016-04-21 (New)" ;
             rdfs:comment "Used with Work or Instance" ;
@@ -337,6 +358,8 @@ bf:coverArt rdf:type owl:ObjectProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/dataSource
 bf:dataSource rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf bf:relatedTo ;
+              rdfs:domain bf:WorkOrInstance ;
+              rdfs:range bf:WorkOrInstance ;
               dcterms:modified "2016-04-21 (New)" ,
                                "2016-04-29 (updated range)" ;
               rdfs:comment "Expected value Work or Instance" ,
@@ -405,6 +428,7 @@ bf:digitalCharacteristic rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/dissertation
 bf:dissertation rdf:type owl:ObjectProperty ;
+                rdfs:domain bf:WorkOrInstance ;
                 rdfs:range bf:Dissertation ;
                 dcterms:modified "2016-04-21 (New)" ;
                 rdfs:comment "Used with Work or Instance" ;
@@ -415,8 +439,8 @@ bf:dissertation rdf:type owl:ObjectProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/electronicLocator
 bf:electronicLocator rdf:type owl:ObjectProperty ;
                      rdfs:domain bf:Item ;
-                     rdfs:range owl:Thing ;
                      dcterms:modified "2016-04-21 (New)" ;
+                     rdfs:comment "This should be a data property of type xsd:anyURI (SES)" ;
                      rdfs:label "Electronic location" ;
                      skos:definition "Electronic location from which the resource is available." .
 
@@ -456,6 +480,7 @@ bf:eventContent rdf:type owl:ObjectProperty ;
                 rdfs:range bf:Work ;
                 dcterms:modified "2016-04-21 (New)" ,
                                  "2016-04-29 (added inverse)" ;
+                rdfs:comment "This isn't be  a sub-property of relatedTo (SES)" ;
                 rdfs:label "Event content" ;
                 skos:definition "Work whose content is the described event." .
 
@@ -496,6 +521,8 @@ bf:extent rdf:type owl:ObjectProperty ;
 bf:findingAid rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf bf:accompaniedBy ;
               owl:inverseOf bf:findingAidOf ;
+              rdfs:domain bf:WorkOrInstance ;
+              rdfs:range bf:WorkOrInstance ;
               dcterms:modified "2016-04-21 (New)" ,
                                "2016-04-29 (added inverse, updated range)" ;
               rdfs:comment "Expected value Work or Instance" ,
@@ -526,6 +553,7 @@ bf:fontSize rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/frequency
 bf:frequency rdf:type owl:ObjectProperty ;
+             rdfs:domain bf:WorkOrInstance ;
              rdfs:range bf:Frequency ;
              dcterms:modified "2016-04-21 (New)" ;
              rdfs:comment "Used with Work or Instance" ;
@@ -553,6 +581,7 @@ bf:generationProcess rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/genreForm
 bf:genreForm rdf:type owl:ObjectProperty ;
+             rdfs:domain bf:WorkOrInstanceOrItem ;
              rdfs:range bf:GenreForm ;
              dcterms:modified "2016-04-21 (New)" ;
              rdfs:comment "Used with Work, Instance or Item" ;
@@ -582,6 +611,8 @@ bf:grantingInstitution rdf:type owl:ObjectProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/hasDerivative
 bf:hasDerivative rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf bf:relatedTo ;
+                 rdfs:domain bf:WorkOrInstance ;
+                 rdfs:range bf:WorkOrInstance ;
                  dcterms:modified "2016-04-21 (New)" ,
                                   "2016-04-29 (added inverse)" ;
                  rdfs:comment "Expected value Work or Instance" ,
@@ -665,6 +696,8 @@ bf:hasReproduction rdf:type owl:ObjectProperty ;
 bf:hasSeries rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf bf:partOf ;
              owl:inverseOf bf:seriesOf ;
+             rdfs:domain bf:WorkOrInstance ;
+             rdfs:range bf:WorkOrInstance ;
              dcterms:modified "2016-04-21 (New)" ,
                               "2016-04-29 (added inverse, updated range)" ;
              rdfs:comment "Expected value Work or Instance" ,
@@ -706,8 +739,6 @@ bf:identifiedBy rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/identifies
 bf:identifies rdf:type owl:ObjectProperty ;
-              rdfs:domain bf:Identifier ;
-              rdfs:range owl:Thing ;
               dcterms:modified "2017-02-03 (New inverse)" ;
               rdfs:label "Resouce identified" ;
               skos:definition "Resource that is associated with a character string that serves to differentiate one resource from another." .
@@ -715,6 +746,7 @@ bf:identifies rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/illustrativeContent
 bf:illustrativeContent rdf:type owl:ObjectProperty ;
+                       rdfs:domain bf:WorkOrInstance ;
                        rdfs:range bf:Illustration ;
                        dcterms:modified "2016-04-21 (New)" ;
                        rdfs:comment "Used with Work or Instance" ;
@@ -748,6 +780,8 @@ bf:index rdf:type owl:ObjectProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/indexOf
 bf:indexOf rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf bf:accompanies ;
+           rdfs:domain bf:WorkOrInstance ;
+           rdfs:range bf:WorkOrInstance ;
            dcterms:modified "2016-04-21 (New)" ,
                             "2016-04-29 (added inverse, updated range)" ;
            rdfs:comment "Expected value Work or Instance" ,
@@ -778,6 +812,7 @@ bf:instrument rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/intendedAudience
 bf:intendedAudience rdf:type owl:ObjectProperty ;
+                    rdfs:domain bf:WorkOrInstance ;
                     rdfs:range bf:IntendedAudience ;
                     dcterms:modified "2016-04-21 (New)" ;
                     rdfs:comment "Used with Work or Instance" ;
@@ -787,6 +822,7 @@ bf:intendedAudience rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/issuance
 bf:issuance rdf:type owl:ObjectProperty ;
+            rdfs:domain bf:WorkOrInstance ;
             rdfs:range bf:Issuance ;
             dcterms:modified "2016-04-21 (New)" ;
             rdfs:comment "Used with Work or Instance" ;
@@ -837,6 +873,7 @@ bf:layout rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/media
 bf:media rdf:type owl:ObjectProperty ;
+         rdfs:domain bf:WorkOrInstance ;
          rdfs:range bf:Media ;
          dcterms:modified "2016-04-21 (New)" ;
          rdfs:comment "Used with Work or Instance" ;
@@ -878,6 +915,7 @@ bf:mount rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/musicFormat
 bf:musicFormat rdf:type owl:ObjectProperty ;
+               rdfs:domain bf:WorkOrInstance ;
                rdfs:range bf:MusicFormat ;
                dcterms:modified "2016-04-21 (New)" ;
                rdfs:comment "Used with Work or Instance" ;
@@ -896,6 +934,7 @@ bf:musicMedium rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/notation
 bf:notation rdf:type owl:ObjectProperty ;
+            rdfs:domain bf:WorkOrInstance ;
             rdfs:range bf:Notation ;
             dcterms:modified "2016-04-21 (New)" ;
             rdfs:comment "Used with Work or Instance" ;
@@ -1083,8 +1122,8 @@ bf:references rdf:type owl:ObjectProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/relatedTo
 bf:relatedTo rdf:type owl:ObjectProperty ,
                       owl:SymmetricProperty ;
-             rdfs:domain owl:Thing ;
-             rdfs:range owl:Thing ;
+             rdfs:domain bf:WorkOrInstanceOrItem ;
+             rdfs:range bf:WorkOrInstanceOrItem ;
              dcterms:modified "2016-04-21 (New)" ;
              rdfs:label "Related resource" ;
              skos:definition "Any relationship between Work, Instance, and Item resources." .
@@ -1126,6 +1165,7 @@ bf:reproductionOf rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/review
 bf:review rdf:type owl:ObjectProperty ;
+          rdfs:domain bf:WorkOrInstance ;
           rdfs:range bf:Review ;
           dcterms:modified "2016-04-21 (New)" ;
           rdfs:comment "Used with Work or Instance" ;
@@ -1145,6 +1185,7 @@ bf:role rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/scale
 bf:scale rdf:type owl:ObjectProperty ;
+         rdfs:domain bf:WorkOrInstance ;
          rdfs:range bf:Scale ;
          dcterms:modified "2016-04-21 (New)" ,
                           "2017-02-03 (changed from data to object property)" ;
@@ -1196,6 +1237,7 @@ bf:soundCharacteristic rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/soundContent
 bf:soundContent rdf:type owl:ObjectProperty ;
+                rdfs:domain bf:WorkOrInstance ;
                 rdfs:range bf:SoundContent ;
                 dcterms:modified "2016-04-21 (New)" ;
                 rdfs:comment "Used with Work or Instance" ;
@@ -1207,7 +1249,8 @@ bf:soundContent rdf:type owl:ObjectProperty ;
 bf:source rdf:type owl:ObjectProperty ;
           rdfs:range bf:Source ;
           dcterms:modified "2016-04-21 (New)" ;
-          rdfs:comment "Used with Unspecified" ;
+          rdfs:comment "Used with Unspecified" ,
+                       "What is meant by value or label here? (SES)" ;
           rdfs:label "Source" ;
           skos:definition "Resource from which value or label came or was derived, such as the formal source/scheme from which a classification number is taken or derived, list from which an agent name is taken or derived, source within which an identifier is unique." .
 
@@ -1227,14 +1270,16 @@ bf:splitInto rdf:type owl:ObjectProperty ;
 bf:status rdf:type owl:ObjectProperty ;
           rdfs:range bf:Status ;
           dcterms:modified "2016-04-21 (New)" ;
-          rdfs:comment "Used with Unspecified" ;
+          rdfs:comment "Meaning is almost unspecified too. (SES)" ,
+                       "Used with Unspecified" ;
           rdfs:label "Status" ;
           skos:definition "Designation of the validity or position of something, such as indication that the classification number is canceled or invalid, circulation availability of an item, indication of whether the identifier is canceled or invalid." .
 
 
 ###  http://id.loc.gov/ontologies/bibframe/subject
 bf:subject rdf:type owl:ObjectProperty ;
-           rdfs:range owl:Thing ;
+           rdfs:domain bf:WorkOrInstanceOrItem ;
+           rdfs:range skos:Concept ;
            dcterms:modified "2016-04-21 (New)" ;
            rdfs:comment "Used with Work, Instance or Item" ;
            rdfs:label "Subject" ;
@@ -1253,6 +1298,8 @@ bf:sublocation rdf:type owl:ObjectProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/subseriesOf
 bf:subseriesOf rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf bf:hasPart ;
+               rdfs:domain bf:WorkOrInstance ;
+               rdfs:range bf:WorkOrInstance ;
                dcterms:modified "2016-04-21 (New)" ,
                                 "2016-04-29 (added inverse, updated range)" ;
                rdfs:comment "Expected value Work or Instance" ,
@@ -1264,6 +1311,8 @@ bf:subseriesOf rdf:type owl:ObjectProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/succeededBy
 bf:succeededBy rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf bf:relatedTo ;
+               rdfs:domain bf:WorkOrInstance ;
+               rdfs:range bf:WorkOrInstance ;
                dcterms:modified "2016-04-21 (New)" ,
                                 "2016-04-29 (added inverse)" ;
                rdfs:comment "Expected value Work or Instance" ,
@@ -1274,6 +1323,7 @@ bf:succeededBy rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/summary
 bf:summary rdf:type owl:ObjectProperty ;
+           rdfs:domain bf:WorkOrInstance ;
            rdfs:range bf:Summary ;
            dcterms:modified "2016-04-21 (New)" ;
            rdfs:comment "Used with Work or Instance" ;
@@ -1296,6 +1346,8 @@ bf:supplement rdf:type owl:ObjectProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/supplementTo
 bf:supplementTo rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf bf:accompanies ;
+                rdfs:domain bf:WorkOrInstance ;
+                rdfs:range bf:WorkOrInstance ;
                 dcterms:modified "2016-04-21 (New)" ,
                                  "2016-04-29 (added inverse, updated range)" ;
                 rdfs:comment "Expected value Work or Instance" ,
@@ -1306,6 +1358,7 @@ bf:supplementTo rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/supplementaryContent
 bf:supplementaryContent rdf:type owl:ObjectProperty ;
+                        rdfs:domain bf:WorkOrInstance ;
                         rdfs:range bf:SupplementaryContent ;
                         dcterms:modified "2016-04-21 (New)" ;
                         rdfs:comment "Used with Work or Instance" ;
@@ -1325,6 +1378,7 @@ bf:systemRequirement rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/tableOfContents
 bf:tableOfContents rdf:type owl:ObjectProperty ;
+                   rdfs:domain bf:WorkOrInstance ;
                    rdfs:range bf:TableOfContents ;
                    dcterms:modified "2016-04-21 (New)" ;
                    rdfs:comment "Used with Work or Instance" ;
@@ -1334,6 +1388,7 @@ bf:tableOfContents rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/title
 bf:title rdf:type owl:ObjectProperty ;
+         rdfs:domain bf:WorkOrInstanceOrItem ;
          rdfs:range bf:Title ;
          dcterms:modified "2016-04-21 (New)" ;
          rdfs:comment "Used with Work, Instance or Item" ;
@@ -1370,13 +1425,15 @@ bf:translationOf rdf:type owl:ObjectProperty ;
 bf:unit rdf:type owl:ObjectProperty ;
         rdfs:range bf:Unit ;
         dcterms:modified "2016-04-21 (New)" ;
-        rdfs:comment "Used with Unspecified" ;
+        rdfs:comment "Used with Unspecified" ,
+                     "Where are these values? What are these values? (SES)" ;
         rdfs:label "Type of unit" ;
         skos:definition "Units in which a value is expressed, such as the physical or logical constituent of a resource (e.g., a volume, audiocassette, film reel, a map, a digital file)." .
 
 
 ###  http://id.loc.gov/ontologies/bibframe/usageAndAccessPolicy
 bf:usageAndAccessPolicy rdf:type owl:ObjectProperty ;
+                        rdfs:domain bf:WorkOrInstanceOrItem ;
                         rdfs:range bf:UsageAndAccessPolicy ;
                         dcterms:modified "2016-04-21 (New)" ;
                         rdfs:comment "Used with Work, Instance or Item" ;
@@ -1408,7 +1465,8 @@ bf:voice rdf:type owl:ObjectProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/acquisitionTerms
 bf:acquisitionTerms rdf:type owl:DatatypeProperty ;
-                    rdfs:range rdfs:Literal ;
+                    rdfs:domain bf:WorkOrInstance ;
+                    rdfs:range rdf:PlainLiteral ;
                     dcterms:modified "2016-04-21 (New)" ;
                     rdfs:comment "Used with Work or Instance" ;
                     rdfs:label "Terms of acquisition" ;
@@ -1418,7 +1476,7 @@ bf:acquisitionTerms rdf:type owl:DatatypeProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/ascensionAndDeclination
 bf:ascensionAndDeclination rdf:type owl:DatatypeProperty ;
                            rdfs:domain bf:Cartographic ;
-                           rdfs:range rdfs:Literal ;
+                           rdfs:range xsd:string ;
                            dcterms:modified "2016-04-21 (New)" ;
                            rdfs:label "Cartographic ascension and declination" ;
                            skos:definition "System for identifying the location of a celestial object in the sky covered by the cartographic content of a resource using the angles of right ascension and declination." .
@@ -1426,7 +1484,8 @@ bf:ascensionAndDeclination rdf:type owl:DatatypeProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/awards
 bf:awards rdf:type owl:DatatypeProperty ;
-          rdfs:range rdfs:Literal ;
+          rdfs:domain bf:WorkOrInstance ;
+          rdfs:range rdf:PlainLiteral ;
           dcterms:modified "2016-04-21 (New)" ;
           rdfs:comment "Used with Work or Instance" ;
           rdfs:label "Award note" ;
@@ -1446,7 +1505,7 @@ bf:changeDate rdf:type owl:DatatypeProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/classificationPortion
 bf:classificationPortion rdf:type owl:DatatypeProperty ;
                          rdfs:domain bf:Classification ;
-                         rdfs:range rdfs:Literal ;
+                         rdfs:range xsd:string ;
                          dcterms:modified "2016-04-21 (New)" ;
                          rdfs:label "Classification number" ;
                          skos:definition "Classification number (single class number or beginning number of a span) that indicates the subject by applying a formal system of coding and organizing resources." .
@@ -1454,7 +1513,7 @@ bf:classificationPortion rdf:type owl:DatatypeProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/code
 bf:code rdf:type owl:DatatypeProperty ;
-        rdfs:range rdfs:Literal ;
+        rdfs:range xsd:string ;
         dcterms:modified "2016-04-21 (New)" ;
         rdfs:comment "Used with Unspecified" ;
         rdfs:label "Code" ;
@@ -1464,7 +1523,7 @@ bf:code rdf:type owl:DatatypeProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/coordinates
 bf:coordinates rdf:type owl:DatatypeProperty ;
                rdfs:domain bf:Cartographic ;
-               rdfs:range rdfs:Literal ;
+               rdfs:range xsd:string ;
                dcterms:modified "2016-04-21 (New)" ;
                rdfs:label "Cartographic coordinates" ;
                skos:definition "Mathematical system for identifying the area covered by the cartographic content of a resource, expressed either by means of longitude and latitude on the surface of planets or by the angles of right ascension and declination for celestial cartographic content." .
@@ -1473,6 +1532,7 @@ bf:coordinates rdf:type owl:DatatypeProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/copyrightDate
 bf:copyrightDate rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf bf:date ;
+                 rdfs:domain bf:WorkOrInstance ;
                  rdfs:range rdfs:Literal ;
                  dcterms:modified "2016-04-21 (New)" ;
                  rdfs:comment "Used with Work or Instance" ;
@@ -1484,7 +1544,8 @@ bf:copyrightDate rdf:type owl:DatatypeProperty ;
 bf:count rdf:type owl:DatatypeProperty ;
          rdfs:range rdfs:Literal ;
          dcterms:modified "2016-04-21 (New)" ;
-         rdfs:comment "Used with Unspecified" ;
+         rdfs:comment "Shouldn't the number of units be some number type? (SES)" ,
+                      "Used with Unspecified" ;
          rdfs:label "Number of units" ;
          skos:definition "Number associated with a measure of units, such as the number of units and/or subunits making up a resource." .
 
@@ -1501,7 +1562,8 @@ bf:creationDate rdf:type owl:DatatypeProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/credits
 bf:credits rdf:type owl:DatatypeProperty ;
-           rdfs:range rdfs:Literal ;
+           rdfs:domain bf:WorkOrInstance ;
+           rdfs:range rdf:PlainLiteral ;
            dcterms:modified "2016-04-21 (New)" ;
            rdfs:comment "Used with Work or Instance" ;
            rdfs:label "Credits note" ;
@@ -1510,7 +1572,8 @@ bf:credits rdf:type owl:DatatypeProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/custodialHistory
 bf:custodialHistory rdf:type owl:DatatypeProperty ;
-                    rdfs:range rdfs:Literal ;
+                    rdfs:domain bf:WorkOrInstanceOrItem ;
+                    rdfs:range rdf:PlainLiteral ;
                     dcterms:modified "2016-04-21 (New)" ;
                     rdfs:comment "Used with Work, Instance or Item" ;
                     rdfs:label "Custodial history" ;
@@ -1521,7 +1584,8 @@ bf:custodialHistory rdf:type owl:DatatypeProperty ;
 bf:date rdf:type owl:DatatypeProperty ;
         rdfs:range rdfs:Literal ;
         dcterms:modified "2016-04-21 (New)" ;
-        rdfs:comment "Used with Unspecified" ;
+        rdfs:comment "Used with Unspecified" ,
+                     "date *may* be date typed? (ses)" ;
         rdfs:label "Date" ;
         skos:definition "Date designation associated with a resource or element of description, such as date of title variation; year a degree was awarded; date associated with the publication, printing, distribution, issue, release or production of a resource. May be date typed." .
 
@@ -1529,7 +1593,7 @@ bf:date rdf:type owl:DatatypeProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/degree
 bf:degree rdf:type owl:DatatypeProperty ;
           rdfs:domain bf:Dissertation ;
-          rdfs:range rdfs:Literal ;
+          rdfs:range xsd:string ;
           dcterms:modified "2016-04-21 (New)" ;
           rdfs:label "Degree" ;
           skos:definition "Degree for which author was a candidate." .
@@ -1538,7 +1602,7 @@ bf:degree rdf:type owl:DatatypeProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/derivedFrom
 bf:derivedFrom rdf:type owl:DatatypeProperty ;
                rdfs:domain bf:AdminMetadata ;
-               rdfs:range rdfs:Literal ;
+               rdfs:range xsd:anyURI ;
                dcterms:modified "2016-04-21 (New)" ;
                rdfs:label "Source metadata" ;
                skos:definition "Link to the metadata that was the source of the data." .
@@ -1547,7 +1611,7 @@ bf:derivedFrom rdf:type owl:DatatypeProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/dimensions
 bf:dimensions rdf:type owl:DatatypeProperty ;
               rdfs:domain bf:Instance ;
-              rdfs:range rdfs:Literal ;
+              rdfs:range xsd:string ;
               dcterms:modified "2016-04-21 (New)" ;
               rdfs:label "Dimensions" ;
               skos:definition "Measurements of the carrier or carriers and/or the container of a resource." .
@@ -1555,9 +1619,11 @@ bf:dimensions rdf:type owl:DatatypeProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/duration
 bf:duration rdf:type owl:DatatypeProperty ;
-            rdfs:range rdfs:Literal ;
+            rdfs:domain bf:WorkOrInstance ;
+            rdfs:range xsd:string ;
             dcterms:modified "2016-04-21 (New)" ;
-            rdfs:comment "Used with Work or Instance" ;
+            rdfs:comment "Used with Work or Instance" ,
+                         "ideally this would be an xsd:duration, but that's non-standard(SES)" ;
             rdfs:label "Duration" ;
             skos:definition "Information about the playing time, running time, etc. of a resource." .
 
@@ -1567,6 +1633,7 @@ bf:edition rdf:type owl:DatatypeProperty ;
            rdfs:domain bf:Classification ;
            rdfs:range rdfs:Literal ;
            dcterms:modified "2016-04-21 (New)" ;
+           rdfs:comment "This could be an object property, with a range that is enumerated" ;
            rdfs:label "Classification scheme edition" ;
            skos:definition "Edition of the classification scheme, such as full, abridged or a number, when a classification scheme designates editions." .
 
@@ -1574,7 +1641,7 @@ bf:edition rdf:type owl:DatatypeProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/editionEnumeration
 bf:editionEnumeration rdf:type owl:DatatypeProperty ;
                       rdfs:domain bf:Instance ;
-                      rdfs:range rdfs:Literal ;
+                      rdfs:range rdf:PlainLiteral ;
                       dcterms:modified "2016-04-21 (New)" ;
                       rdfs:label "Edition enumeration" ;
                       skos:definition "Enumeration of the edition; usually transcribed." .
@@ -1583,7 +1650,7 @@ bf:editionEnumeration rdf:type owl:DatatypeProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/editionStatement
 bf:editionStatement rdf:type owl:DatatypeProperty ;
                     rdfs:domain bf:Instance ;
-                    rdfs:range rdfs:Literal ;
+                    rdfs:range rdf:PlainLiteral ;
                     dcterms:modified "2016-04-21 (New)" ;
                     rdfs:label "Edition statement" ;
                     skos:definition "Information identifying the edition or version of the resource and associated statements of responsibility for the edition; usually transcribed." .
@@ -1594,6 +1661,7 @@ bf:ensembleType rdf:type owl:DatatypeProperty ;
                 rdfs:domain bf:MusicEnsemble ;
                 rdfs:range rdfs:Literal ;
                 dcterms:modified "2016-04-21 (New)" ;
+                rdfs:comment "This is the sort of property that should be an *Objec*t property, with a range Class that has   Orchestra, band, etc, as Individuals. (SES)" ;
                 rdfs:label "Ensemble type" ;
                 skos:definition "Specific type of ensemble, such as orchestra, band, guitar ensemble." .
 
@@ -1603,6 +1671,7 @@ bf:equinox rdf:type owl:DatatypeProperty ;
            rdfs:domain bf:Cartographic ;
            rdfs:range rdfs:Literal ;
            dcterms:modified "2016-04-21 (New)" ;
+           rdfs:comment "Sounds like this could be an object property with a class with two values?" ;
            rdfs:label "Cartographic equinox" ;
            skos:definition "One of two points of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0 degrees." .
 
@@ -1618,6 +1687,7 @@ bf:exclusionGRing rdf:type owl:DatatypeProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/firstIssue
 bf:firstIssue rdf:type owl:DatatypeProperty ;
+              rdfs:domain bf:WorkOrInstance ;
               rdfs:range rdfs:Literal ;
               dcterms:modified "2016-04-21 (New)" ;
               rdfs:comment "Used with Work or Instance" ;
@@ -1640,6 +1710,7 @@ bf:hierarchicalLevel rdf:type owl:DatatypeProperty ;
                      rdfs:domain bf:Arrangement ;
                      rdfs:range rdfs:Literal ;
                      dcterms:modified "2016-04-21 (New)" ;
+                     rdfs:comment "This could be better specified (SES)" ;
                      rdfs:label "Hierarchical level of material" ;
                      skos:definition "Hierarchical position of the described materials relative to other material from the same source." .
 
@@ -1647,7 +1718,7 @@ bf:hierarchicalLevel rdf:type owl:DatatypeProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/historyOfWork
 bf:historyOfWork rdf:type owl:DatatypeProperty ;
                  rdfs:domain bf:Work ;
-                 rdfs:range rdfs:Literal ;
+                 rdfs:range rdf:PlainLiteral ;
                  dcterms:modified "2016-04-21 (New)" ;
                  rdfs:label "History of the work" ;
                  skos:definition "Information about the history of a Work." .
@@ -1665,7 +1736,7 @@ bf:instrumentalType rdf:type owl:DatatypeProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/itemPortion
 bf:itemPortion rdf:type owl:DatatypeProperty ;
                rdfs:domain bf:Classification ;
-               rdfs:range rdfs:Literal ;
+               rdfs:range xsd:string ;
                dcterms:modified "2016-04-21 (New)" ;
                rdfs:label "Classification item number" ;
                skos:definition "Number attached to a classification string that indicates a particular item." .
@@ -1673,6 +1744,7 @@ bf:itemPortion rdf:type owl:DatatypeProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/lastIssue
 bf:lastIssue rdf:type owl:DatatypeProperty ;
+             rdfs:domain bf:WorkOrInstance ;
              rdfs:range rdfs:Literal ;
              dcterms:modified "2016-04-21 (New)" ;
              rdfs:comment "Used with Work or Instance" ;
@@ -1693,7 +1765,7 @@ bf:legalDate rdf:type owl:DatatypeProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/mainTitle
 bf:mainTitle rdf:type owl:DatatypeProperty ;
              rdfs:domain bf:Title ;
-             rdfs:range rdfs:Literal ;
+             rdfs:range rdf:PlainLiteral ;
              dcterms:modified "2016-04-21 (New)" ;
              rdfs:label "Main title" ;
              skos:definition "Title being addressed. Possible title component." .
@@ -1722,6 +1794,7 @@ bf:musicSerialNumber rdf:type owl:DatatypeProperty ;
                      rdfs:domain bf:Work ;
                      rdfs:range rdfs:Literal ;
                      dcterms:modified "2016-04-21 (New)" ;
+                     rdfs:comment "What kind of number? Why not a number type?(SES)" ;
                      rdfs:label "Music serial number" ;
                      skos:definition "Numeric designation for musical works consecutively numbered in music reference sources." .
 
@@ -1737,9 +1810,11 @@ bf:musicThematicNumber rdf:type owl:DatatypeProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/natureOfContent
 bf:natureOfContent rdf:type owl:DatatypeProperty ;
+                   rdfs:domain bf:WorkOrInstance ;
                    rdfs:range rdfs:Literal ;
                    dcterms:modified "2016-04-21 (New)" ;
-                   rdfs:comment "Used with Work or Instance" ;
+                   rdfs:comment "Are these all ad-hoc? If not, why isn't this an object property with a range class for the values? Or possibly a class hierarchy? (SES)" ,
+                                "Used with Work or Instance" ;
                    rdfs:label "Content nature" ;
                    skos:definition "Characterization that epitomizes the primary content of a resource, e.g., field recording of birdsong; combined time series analysis and graph plotting system." .
 
@@ -1749,6 +1824,7 @@ bf:noteType rdf:type owl:DatatypeProperty ;
             rdfs:domain bf:Note ;
             rdfs:range rdfs:Literal ;
             dcterms:modified "2016-04-21 (New)" ;
+            rdfs:comment "Why is the type of note not a type? (SES)" ;
             rdfs:label "Note type" ;
             skos:definition "Type of note." .
 
@@ -1785,7 +1861,8 @@ bf:outerGRing rdf:type owl:DatatypeProperty ;
 bf:part rdf:type owl:DatatypeProperty ;
         rdfs:range rdfs:Literal ;
         dcterms:modified "2016-04-21 (New)" ;
-        rdfs:comment "Used with Unspecified" ;
+        rdfs:comment "Used with Unspecified" ,
+                     "What does this property do? It seems like resource is used elsewhere to refer to  some of subset of Work , Instance and Item?  But this is a data property. What information? (SES)" ;
         rdfs:label "Part" ;
         skos:definition "Part of a resource to which information applies." .
 
@@ -1793,7 +1870,7 @@ bf:part rdf:type owl:DatatypeProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/partName
 bf:partName rdf:type owl:DatatypeProperty ;
             rdfs:domain bf:Title ;
-            rdfs:range rdfs:Literal ;
+            rdfs:range rdf:PlainLiteral ;
             dcterms:modified "2016-04-21 (New)" ;
             rdfs:label "Part title" ;
             skos:definition "Part or section name of a title. Possible title component." .
@@ -1802,7 +1879,7 @@ bf:partName rdf:type owl:DatatypeProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/partNumber
 bf:partNumber rdf:type owl:DatatypeProperty ;
               rdfs:domain bf:Title ;
-              rdfs:range rdfs:Literal ;
+              rdfs:range rdf:PlainLiteral ;
               dcterms:modified "2016-04-21 (New)" ;
               rdfs:label "Part number" ;
               skos:definition "Part or section enumeration of a title. Possible title component." .
@@ -1828,7 +1905,8 @@ bf:physicalLocation rdf:type owl:DatatypeProperty ;
 
 ###  http://id.loc.gov/ontologies/bibframe/preferredCitation
 bf:preferredCitation rdf:type owl:DatatypeProperty ;
-                     rdfs:range rdfs:Literal ;
+                     rdfs:domain bf:WorkOrInstance ;
+                     rdfs:range rdf:PlainLiteral ;
                      dcterms:modified "2016-04-21 (New)" ;
                      rdfs:comment "Used with Work or Instance" ;
                      rdfs:label "Preferred citation" ;
@@ -1838,7 +1916,7 @@ bf:preferredCitation rdf:type owl:DatatypeProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/provisionActivityStatement
 bf:provisionActivityStatement rdf:type owl:DatatypeProperty ;
                               rdfs:domain bf:Instance ;
-                              rdfs:range rdfs:Literal ;
+                              rdfs:range rdf:PlainLiteral ;
                               dcterms:modified "2016-04-21 (New)" ;
                               rdfs:label "Provider statement" ;
                               skos:definition "Statement relating to providers of a resource; usually transcribed." .
@@ -1848,7 +1926,8 @@ bf:provisionActivityStatement rdf:type owl:DatatypeProperty ;
 bf:qualifier rdf:type owl:DatatypeProperty ;
              rdfs:range rdfs:Literal ;
              dcterms:modified "2016-04-21 (New)" ;
-             rdfs:comment "Used with Unspecified" ;
+             rdfs:comment "Used with Unspecified" ,
+                          "Void for vagueness. Domain Thing, Range Literal, meaning: some sort of extra information associated with some other information? (SES)" ;
              rdfs:label "Qualifier" ;
              skos:definition "Qualifier of information, such as an addition to a title to make it unique or qualifying information associated with an identifier." .
 
@@ -1856,7 +1935,7 @@ bf:qualifier rdf:type owl:DatatypeProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/responsibilityStatement
 bf:responsibilityStatement rdf:type owl:DatatypeProperty ;
                            rdfs:domain bf:Instance ;
-                           rdfs:range rdfs:Literal ;
+                           rdfs:range rdf:PlainLiteral ;
                            dcterms:modified "2016-04-21 (New)" ;
                            rdfs:label "Creative responsibility statement" ;
                            skos:definition "Statement relating to any persons, families, or corporate bodies responsible for the creation of, or contributing to the content of a resource; usually transcribed." .
@@ -1874,7 +1953,7 @@ bf:schedulePart rdf:type owl:DatatypeProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/seriesEnumeration
 bf:seriesEnumeration rdf:type owl:DatatypeProperty ;
                      rdfs:domain bf:Instance ;
-                     rdfs:range rdfs:Literal ;
+                     rdfs:range rdf:PlainLiteral ;
                      dcterms:modified "2016-04-21 (New)" ;
                      rdfs:label "Series enumeration" ;
                      skos:definition "Series enumeration of the resource; usually transcribed." .
@@ -1883,7 +1962,7 @@ bf:seriesEnumeration rdf:type owl:DatatypeProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/seriesStatement
 bf:seriesStatement rdf:type owl:DatatypeProperty ;
                    rdfs:domain bf:Instance ;
-                   rdfs:range rdfs:Literal ;
+                   rdfs:range rdf:PlainLiteral ;
                    dcterms:modified "2016-04-21 (New)" ;
                    rdfs:label "Series statement" ;
                    skos:definition "Statement of the series the resource is in; usually transcribed; includes the ISSN if applicable." .
@@ -1901,7 +1980,7 @@ bf:spanEnd rdf:type owl:DatatypeProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/subseriesEnumeration
 bf:subseriesEnumeration rdf:type owl:DatatypeProperty ;
                         rdfs:domain bf:Instance ;
-                        rdfs:range rdfs:Literal ;
+                        rdfs:range rdf:PlainLiteral ;
                         dcterms:modified "2016-04-21 (New)" ;
                         rdfs:label "Subseries enumeration" ;
                         skos:definition "Subseries enumeration of the resource; usually transcribed." .
@@ -1910,7 +1989,7 @@ bf:subseriesEnumeration rdf:type owl:DatatypeProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/subseriesStatement
 bf:subseriesStatement rdf:type owl:DatatypeProperty ;
                       rdfs:domain bf:Instance ;
-                      rdfs:range rdfs:Literal ;
+                      rdfs:range rdf:PlainLiteral ;
                       dcterms:modified "2016-04-21 (New)" ;
                       rdfs:label "Subseries statement" ;
                       skos:definition "Statement of the subseries the resource is in; usually transcribed; includes the ISSN if applicable." .
@@ -1919,7 +1998,7 @@ bf:subseriesStatement rdf:type owl:DatatypeProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/subtitle
 bf:subtitle rdf:type owl:DatatypeProperty ;
             rdfs:domain bf:Title ;
-            rdfs:range rdfs:Literal ;
+            rdfs:range rdf:PlainLiteral ;
             dcterms:modified "2016-04-21 (New)" ;
             rdfs:label "Subtitle" ;
             skos:definition "Word, character, or group of words and/or characters that contains the remainder of the title after the main title. Possible title component." .
@@ -1964,7 +2043,7 @@ bf:variantType rdf:type owl:DatatypeProperty ;
 ###  http://id.loc.gov/ontologies/bibframe/version
 bf:version rdf:type owl:DatatypeProperty ;
            rdfs:domain bf:Work ;
-           rdfs:range rdfs:Literal ;
+           rdfs:range rdf:PlainLiteral ;
            dcterms:modified "2016-04-21 (New)" ;
            rdfs:label "Version" ;
            skos:definition "Term or terms that identify works such as arranged for music, vulgate for religious work, etc." .
@@ -3422,6 +3501,24 @@ bf:Work rdf:type owl:Class ;
         skos:definition "Resource reflecting a conceptual essence of a cataloging resource." .
 
 
+###  http://id.loc.gov/ontologies/bibframe/WorkOrInstance
+bf:WorkOrInstance rdf:type owl:Class ;
+                  owl:equivalentClass [ rdf:type owl:Class ;
+                                        owl:unionOf ( bf:Instance
+                                                      bf:Work
+                                                    )
+                                      ] .
+
+
+###  http://id.loc.gov/ontologies/bibframe/WorkOrInstanceOrItem
+bf:WorkOrInstanceOrItem rdf:type owl:Class ;
+                        owl:equivalentClass [ rdf:type owl:Class ;
+                                              owl:unionOf ( bf:Item
+                                                            bf:WorkOrInstance
+                                                          )
+                                            ] .
+
+
 ###  http://id.loc.gov/ontologies/bibframe/WorkTitle
 bf:WorkTitle rdf:type owl:Class ;
              rdfs:subClassOf bf:Title ;
@@ -3433,6 +3530,10 @@ bf:WorkTitle rdf:type owl:Class ;
 
 ###  http://www.w3.org/2002/07/owl#Thing
 owl:Thing rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class .
 
 
 ###  http://xmlns.com/foaf/0.1/Agent
