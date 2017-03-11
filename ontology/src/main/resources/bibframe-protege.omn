@@ -1,4 +1,5 @@
 Prefix: bf: <http://id.loc.gov/ontologies/bibframe/>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: dcterms: <http://purl.org/dc/terms/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -15,7 +16,7 @@ Ontology: <http://id.loc.gov/ontologies/bibframe/>
 Annotations: 
     dcterms:modified "2017-03-06T16:29:26.076-05:00",
     rdfs:label "BIBFRAME vocabulary",
-    owl:versionInfo "2017-03-06T16:29:26.076-05:00"^^xsd:string
+    owl:versionInfo "2017-03-06T16:29:26.076-05:00"
 
 AnnotationProperty: dcterms:modified
 
@@ -38,15 +39,18 @@ Datatype: rdf:PlainLiteral
 Datatype: rdfs:Literal
 
     
+Datatype: xsd:string
+
+    
 ObjectProperty: bf:absorbed
 
     Annotations: 
-        dcterms:modified "2016-04-29 (added inverse, updated range)",
-        rdfs:label "Absorption of",
-        skos:definition "Resource that has been incorporated into another resource.",
         dcterms:modified "2016-04-21 (New)",
+        dcterms:modified "2016-04-29 (added inverse, updated range)",
         rdfs:comment "Expected value Work or Instance",
-        rdfs:comment "Used with Work or Instance"
+        rdfs:comment "Used with Work or Instance",
+        rdfs:label "Absorption of",
+        skos:definition "Resource that has been incorporated into another resource."
     
     SubPropertyOf: 
         bf:precededBy
@@ -59,11 +63,11 @@ ObjectProperty: bf:absorbedBy
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
+        dcterms:modified "2016-04-29 (added inverse, updated range)",
         rdfs:comment "Expected value Work or Instance",
         rdfs:comment "Used with Work or Instance",
-        skos:definition "Resource that incorporates another resource.",
-        dcterms:modified "2016-04-29 (added inverse, updated range)",
-        rdfs:label "Absorbed by"
+        rdfs:label "Absorbed by",
+        skos:definition "Resource that incorporates another resource."
     
     SubPropertyOf: 
         bf:succeededBy
@@ -75,12 +79,12 @@ ObjectProperty: bf:absorbedBy
 ObjectProperty: bf:accompaniedBy
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2016-04-29 (added inverse)",
-        rdfs:comment "Used with Work, Instance or Item",
         rdfs:comment "Expected value Work, Instance or Item",
+        rdfs:comment "Used with Work, Instance or Item",
         rdfs:label "Accompanied by",
-        skos:definition "Resource that accompanies the described resource.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Resource that accompanies the described resource."
     
     SubPropertyOf: 
         bf:relatedTo
@@ -92,12 +96,12 @@ ObjectProperty: bf:accompaniedBy
 ObjectProperty: bf:accompanies
 
     Annotations: 
-        rdfs:label "Accompanies",
+        dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2016-04-29 (added inverse)",
         rdfs:comment "Expected value Work, Instance or Item",
         rdfs:comment "Used with Work, Instance or Item",
-        skos:definition "Resource that adds to or is issued with the described resource.",
-        dcterms:modified "2016-04-21 (New)"
+        rdfs:label "Accompanies",
+        skos:definition "Resource that adds to or is issued with the described resource."
     
     SubPropertyOf: 
         bf:relatedTo
@@ -109,12 +113,12 @@ ObjectProperty: bf:accompanies
 ObjectProperty: bf:acquisitionSource
 
     Annotations: 
-        dcterms:modified "2017-02-06 (Changed from data to object property",
-        rdfs:comment "Used with Work or Instance",
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Information about an organization, person, etc., from which a resource may be obtained.",
+        dcterms:modified "2017-02-06 (Changed from data to object property",
+        dcterms:modified "slight change to definition)",
+        rdfs:comment "Used with Work or Instance",
         rdfs:label "Source of acquisition",
-        dcterms:modified "slight change to definition)"
+        skos:definition "Information about an organization, person, etc., from which a resource may be obtained."
     
     Range: 
         bf:AcquisitionSource
@@ -123,10 +127,10 @@ ObjectProperty: bf:acquisitionSource
 ObjectProperty: bf:adminMetadata
 
     Annotations: 
-        skos:definition "Metadata about the metadata, especially provenance information.",
         dcterms:modified "2016-04-21 (New)",
         rdfs:comment "Used with Unspecified",
-        rdfs:label "Administrative metadata"
+        rdfs:label "Administrative metadata",
+        skos:definition "Metadata about the metadata, especially provenance information."
     
     Range: 
         bf:AdminMetadata
@@ -135,10 +139,10 @@ ObjectProperty: bf:adminMetadata
 ObjectProperty: bf:agent
 
     Annotations: 
-        rdfs:label "Associated agent",
-        skos:definition "Entity associated with a resource or element of description, such as the name of the entity responsible for the content or of the publication, printing, distribution, issue, release or production of a resource.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:comment "Used with Unspecified"
+        rdfs:comment "Used with Unspecified",
+        rdfs:label "Associated agent",
+        skos:definition "Entity associated with a resource or element of description, such as the name of the entity responsible for the content or of the publication, printing, distribution, issue, release or production of a resource."
     
     Range: 
         bf:Agent
@@ -147,9 +151,9 @@ ObjectProperty: bf:agent
 ObjectProperty: bf:appliedMaterial
 
     Annotations: 
-        skos:definition "Physical or chemical substance applied to a base material of a resource.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Applied material"
+        rdfs:label "Applied material",
+        skos:definition "Physical or chemical substance applied to a base material of a resource."
     
     Domain: 
         bf:Instance
@@ -161,10 +165,10 @@ ObjectProperty: bf:appliedMaterial
 ObjectProperty: bf:arrangement
 
     Annotations: 
-        skos:definition "Information about the organization and arrangement of a collection of resources.",
-        rdfs:comment "Used with Work or Instance",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Organization and arrangement"
+        rdfs:comment "Used with Work or Instance",
+        rdfs:label "Organization and arrangement",
+        skos:definition "Information about the organization and arrangement of a collection of resources."
     
     Range: 
         bf:Arrangement
@@ -173,10 +177,10 @@ ObjectProperty: bf:arrangement
 ObjectProperty: bf:aspectRatio
 
     Annotations: 
-        skos:definition "Proportional relationship between an image's width and its height.",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:comment "Used with Work or Instance",
         rdfs:label "Aspect ratio",
-        rdfs:comment "Used with Work or Instance"
+        skos:definition "Proportional relationship between an image's width and its height."
     
     Range: 
         bf:AspectRatio
@@ -185,8 +189,8 @@ ObjectProperty: bf:aspectRatio
 ObjectProperty: bf:assigner
 
     Annotations: 
-        rdfs:label "Assigner",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Assigner",
         skos:definition "Entity that assigned the metadata, such as the entity that assigned a classification number, entity that assigned a name, entity that assigned an identifier."
     
     Domain: 
@@ -199,10 +203,10 @@ ObjectProperty: bf:assigner
 ObjectProperty: bf:barcode
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2017-02-03 (Removed as property, added as Class)",
         rdfs:label "Barcode",
-        skos:definition "Optical machine-readable representation of data relating to the item, to which it is attached.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Optical machine-readable representation of data relating to the item, to which it is attached."
     
     Domain: 
         bf:Item
@@ -214,8 +218,8 @@ ObjectProperty: bf:barcode
 ObjectProperty: bf:baseMaterial
 
     Annotations: 
-        rdfs:label "Base material",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Base material",
         skos:definition "Underlying physical material of a resource."
     
     Domain: 
@@ -228,8 +232,8 @@ ObjectProperty: bf:baseMaterial
 ObjectProperty: bf:bookFormat
 
     Annotations: 
-        rdfs:label "Book format",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Book format",
         skos:definition "Result of folding a printed sheet to form a gathering of leaves."
     
     Domain: 
@@ -242,10 +246,10 @@ ObjectProperty: bf:bookFormat
 ObjectProperty: bf:capture
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:comment "Used with Work or Instance",
         rdfs:label "Capture of content",
-        skos:definition "Information about place and date associated with the capture (e.g., recording, filming) of the content of a resource.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Information about place and date associated with the capture (e.g., recording, filming) of the content of a resource."
     
     Range: 
         bf:Capture
@@ -255,8 +259,8 @@ ObjectProperty: bf:carrier
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Categorization reflecting the format of the storage medium and housing of a carrier.",
-        rdfs:label "Carrier type"
+        rdfs:label "Carrier type",
+        skos:definition "Categorization reflecting the format of the storage medium and housing of a carrier."
     
     Domain: 
         bf:Instance
@@ -268,10 +272,10 @@ ObjectProperty: bf:carrier
 ObjectProperty: bf:cartographicAttributes
 
     Annotations: 
-        skos:definition "Cartographic data that identifies characteristics of the resource, such as coordinates, projection, etc.",
         dcterms:modified "2016-04-21 (New)",
         rdfs:comment "Used with Work or Instance",
-        rdfs:label "Cartographic data"
+        rdfs:label "Cartographic data",
+        skos:definition "Cartographic data that identifies characteristics of the resource, such as coordinates, projection, etc."
     
     Range: 
         bf:Cartographic
@@ -280,10 +284,10 @@ ObjectProperty: bf:cartographicAttributes
 ObjectProperty: bf:classification
 
     Annotations: 
-        skos:definition "Classification number in any scheme.",
-        rdfs:label "Classification",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:comment "Used with Work, Instance or Item",
-        dcterms:modified "2016-04-21 (New)"
+        rdfs:label "Classification",
+        skos:definition "Classification number in any scheme."
     
     Range: 
         bf:Classification
@@ -292,9 +296,9 @@ ObjectProperty: bf:classification
 ObjectProperty: bf:colorContent
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:comment "Used with Work or Instance",
         rdfs:label "Color content",
-        dcterms:modified "2016-04-21 (New)",
         skos:definition "Color characteristics, e.g., black and white, multicolored."
     
     Range: 
@@ -304,9 +308,9 @@ ObjectProperty: bf:colorContent
 ObjectProperty: bf:content
 
     Annotations: 
-        skos:definition "Categorization reflecting the fundamental form of communication in which the content is expressed and the human sense through which it is intended to be perceived.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Content type"
+        rdfs:label "Content type",
+        skos:definition "Categorization reflecting the fundamental form of communication in which the content is expressed and the human sense through which it is intended to be perceived."
     
     Domain: 
         bf:Work
@@ -318,9 +322,9 @@ ObjectProperty: bf:content
 ObjectProperty: bf:contentAccessibility
 
     Annotations: 
-        rdfs:comment "Used with Work or Instance",
         dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2017-02-03 (changed from data to object property)",
+        rdfs:comment "Used with Work or Instance",
         rdfs:label "Content accessibility information",
         skos:definition "Information that assists those with a sensory impairment for greater understanding of content, e.g., captions."
     
@@ -331,12 +335,12 @@ ObjectProperty: bf:contentAccessibility
 ObjectProperty: bf:continuedBy
 
     Annotations: 
-        rdfs:label "Continued by",
-        skos:definition "Resource whose content continues an earlier resource under a new title.",
-        rdfs:comment "Used with Work or Instance",
-        rdfs:comment "Expected value Work or Instance",
         dcterms:modified "2016-04-21 (New)",
-        dcterms:modified "2016-04-29 (added inverse, updated range)"
+        dcterms:modified "2016-04-29 (added inverse, updated range)",
+        rdfs:comment "Expected value Work or Instance",
+        rdfs:comment "Used with Work or Instance",
+        rdfs:label "Continued by",
+        skos:definition "Resource whose content continues an earlier resource under a new title."
     
     SubPropertyOf: 
         bf:succeededBy
@@ -348,12 +352,12 @@ ObjectProperty: bf:continuedBy
 ObjectProperty: bf:continuedInPartBy
 
     Annotations: 
-        skos:definition "Resource part of whose content separated from an earlier resource to form a new resource.",
+        dcterms:modified "2016-04-21 (New)",
+        dcterms:modified "2016-04-29 (added inverse, updated range)",
         rdfs:comment "Expected value Work or Instance",
         rdfs:comment "Used with Work or Instance",
         rdfs:label "Continued in part by",
-        dcterms:modified "2016-04-21 (New)",
-        dcterms:modified "2016-04-29 (added inverse, updated range)"
+        skos:definition "Resource part of whose content separated from an earlier resource to form a new resource."
     
     SubPropertyOf: 
         bf:succeededBy
@@ -365,12 +369,12 @@ ObjectProperty: bf:continuedInPartBy
 ObjectProperty: bf:continues
 
     Annotations: 
-        skos:definition "Resource that is continued by the content of a later resource under a new title.",
-        rdfs:label "Continuation of",
+        dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2016-04-29 (added inverse, updated range)",
         rdfs:comment "Expected value Work or Instance",
         rdfs:comment "Used with Work or Instance",
-        dcterms:modified "2016-04-21 (New)"
+        rdfs:label "Continuation of",
+        skos:definition "Resource that is continued by the content of a later resource under a new title."
     
     SubPropertyOf: 
         bf:precededBy
@@ -382,12 +386,12 @@ ObjectProperty: bf:continues
 ObjectProperty: bf:continuesInPart
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
+        dcterms:modified "2016-04-29 (added inverse, updated range)",
         rdfs:comment "Expected value Work or Instance",
         rdfs:comment "Used with Work or Instance",
-        dcterms:modified "2016-04-21 (New)",
-        skos:definition "Resource that split into two or more separate resources with new titles.",
-        dcterms:modified "2016-04-29 (added inverse, updated range)",
-        rdfs:label "Continuation in part of"
+        rdfs:label "Continuation in part of",
+        skos:definition "Resource that split into two or more separate resources with new titles."
     
     SubPropertyOf: 
         bf:precededBy
@@ -399,11 +403,11 @@ ObjectProperty: bf:continuesInPart
 ObjectProperty: bf:contribution
 
     Annotations: 
-        dcterms:modified "2017-02-03 (Corrected label)",
-        skos:definition "Agent and its role in relation to the resource.",
-        rdfs:comment "Used with Work, Instance or Item",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Contributor and role"
+        dcterms:modified "2017-02-03 (Corrected label)",
+        rdfs:comment "Used with Work, Instance or Item",
+        rdfs:label "Contributor and role",
+        skos:definition "Agent and its role in relation to the resource."
     
     Range: 
         bf:Contribution
@@ -412,11 +416,11 @@ ObjectProperty: bf:contribution
 ObjectProperty: bf:copyrightRegistration
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
+        dcterms:modified "2016-05-04 (Corrected expected value)",
         rdfs:comment "Used with Work or Instance",
         rdfs:label "Copyright registration information",
-        skos:definition "Copyright and Legal Deposit registration information",
-        dcterms:modified "2016-05-04 (Corrected expected value)",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Copyright and Legal Deposit registration information"
     
     Range: 
         bf:CopyrightRegistration
@@ -425,9 +429,9 @@ ObjectProperty: bf:copyrightRegistration
 ObjectProperty: bf:coverArt
 
     Annotations: 
-        rdfs:label "Cover art",
-        rdfs:comment "Used with Work or Instance",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:comment "Used with Work or Instance",
+        rdfs:label "Cover art",
         skos:definition "Cover art image of a resource."
     
     Range: 
@@ -437,12 +441,12 @@ ObjectProperty: bf:coverArt
 ObjectProperty: bf:dataSource
 
     Annotations: 
-        skos:definition "Resource that is a data source to which the described resource is related. It may contain information about other files, printed sources, or collection procedures.",
-        rdfs:label "Data source",
-        rdfs:comment "Used with Work or Instance",
-        rdfs:comment "Expected value Work or Instance",
+        dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2016-04-29 (updated range)",
-        dcterms:modified "2016-04-21 (New)"
+        rdfs:comment "Expected value Work or Instance",
+        rdfs:comment "Used with Work or Instance",
+        rdfs:label "Data source",
+        skos:definition "Resource that is a data source to which the described resource is related. It may contain information about other files, printed sources, or collection procedures."
     
     SubPropertyOf: 
         bf:relatedTo
@@ -451,12 +455,12 @@ ObjectProperty: bf:dataSource
 ObjectProperty: bf:derivativeOf
 
     Annotations: 
-        skos:definition "Source work from which the described resource is derived.",
-        rdfs:label "Is derivative of",
+        dcterms:modified "2016-04-21 (New)",
+        dcterms:modified "2016-04-29 (added inverse)",
         rdfs:comment "Expected value Work or Instance",
         rdfs:comment "Used with Work or Instance",
-        dcterms:modified "2016-04-21 (New)",
-        dcterms:modified "2016-04-29 (added inverse)"
+        rdfs:label "Is derivative of",
+        skos:definition "Source work from which the described resource is derived."
     
     SubPropertyOf: 
         bf:relatedTo
@@ -468,9 +472,9 @@ ObjectProperty: bf:derivativeOf
 ObjectProperty: bf:descriptionAuthentication
 
     Annotations: 
-        skos:definition "Indication of specific types of reviews that have been carried out on the description information.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Description authentication"
+        rdfs:label "Description authentication",
+        skos:definition "Indication of specific types of reviews that have been carried out on the description information."
     
     Domain: 
         bf:AdminMetadata
@@ -482,10 +486,10 @@ ObjectProperty: bf:descriptionAuthentication
 ObjectProperty: bf:descriptionConventions
 
     Annotations: 
-        rdfs:label "Description conventions",
-        skos:definition "Rules used for the descriptive content of the resource description.",
         dcterms:modified "2016-04-21 (New)",
-        dcterms:modified "2016-04-24 (fixed domain name)"
+        dcterms:modified "2016-04-24 (fixed domain name)",
+        rdfs:label "Description conventions",
+        skos:definition "Rules used for the descriptive content of the resource description."
     
     Domain: 
         bf:AdminMetadata
@@ -498,8 +502,8 @@ ObjectProperty: bf:descriptionLanguage
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Language used for the metadata.",
-        rdfs:label "Description language"
+        rdfs:label "Description language",
+        skos:definition "Language used for the metadata."
     
     Domain: 
         bf:AdminMetadata
@@ -511,9 +515,9 @@ ObjectProperty: bf:descriptionLanguage
 ObjectProperty: bf:descriptionModifier
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Description modifier",
-        skos:definition "Agency that modified a description.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Agency that modified a description."
     
     Domain: 
         bf:AdminMetadata
@@ -540,9 +544,9 @@ ObjectProperty: bf:dissertation
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Work presented as part of the formal requirements for an academic degree.",
+        rdfs:comment "Used with Work or Instance",
         rdfs:label "Dissertation Information",
-        rdfs:comment "Used with Work or Instance"
+        skos:definition "Work presented as part of the formal requirements for an academic degree."
     
     Range: 
         bf:Dissertation
@@ -551,8 +555,8 @@ ObjectProperty: bf:dissertation
 ObjectProperty: bf:electronicLocator
 
     Annotations: 
-        rdfs:label "Electronic location",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Electronic location",
         skos:definition "Electronic location from which the resource is available."
     
     Domain: 
@@ -565,9 +569,9 @@ ObjectProperty: bf:electronicLocator
 ObjectProperty: bf:emulsion
 
     Annotations: 
-        skos:definition "Suspension of light-sensitive chemicals used as a coating on a microfilm or microfiche, e.g., silver halide.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Emulsion",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Suspension of light-sensitive chemicals used as a coating on a microfilm or microfiche, e.g., silver halide."
     
     Domain: 
         bf:Instance
@@ -579,9 +583,9 @@ ObjectProperty: bf:emulsion
 ObjectProperty: bf:ensemble
 
     Annotations: 
-        skos:definition "Ensemble for which a musical work is appropriate.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Ensemble"
+        rdfs:label "Ensemble",
+        skos:definition "Ensemble for which a musical work is appropriate."
     
     Domain: 
         bf:Work
@@ -594,8 +598,8 @@ ObjectProperty: bf:enumerationAndChronology
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Numbering and dates of issues or items held.",
-        rdfs:label "Numbering or other enumeration and dates associated with issues or items held."
+        rdfs:label "Numbering or other enumeration and dates associated with issues or items held.",
+        skos:definition "Numbering and dates of issues or items held."
     
     Domain: 
         bf:Item
@@ -607,10 +611,10 @@ ObjectProperty: bf:enumerationAndChronology
 ObjectProperty: bf:eventContent
 
     Annotations: 
-        rdfs:label "Event content",
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Work whose content is the described event.",
-        dcterms:modified "2016-04-29 (added inverse)"
+        dcterms:modified "2016-04-29 (added inverse)",
+        rdfs:label "Event content",
+        skos:definition "Work whose content is the described event."
     
     SubPropertyOf: 
         bf:relatedTo
@@ -629,8 +633,8 @@ ObjectProperty: bf:eventContentOf
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Has event content",
         dcterms:modified "2016-04-29 (added inverse)",
+        rdfs:label "Has event content",
         skos:definition "Event that is the content of the described work."
     
     SubPropertyOf: 
@@ -649,10 +653,10 @@ ObjectProperty: bf:eventContentOf
 ObjectProperty: bf:expressionOf
 
     Annotations: 
-        rdfs:label "Expression of",
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Work that the described Work is an expression of. For use to connect Works under FRBR/RDA rules.",
-        dcterms:modified "2016-04-29 (added inverse)"
+        dcterms:modified "2016-04-29 (added inverse)",
+        rdfs:label "Expression of",
+        skos:definition "Work that the described Work is an expression of. For use to connect Works under FRBR/RDA rules."
     
     SubPropertyOf: 
         bf:relatedTo
@@ -670,9 +674,9 @@ ObjectProperty: bf:expressionOf
 ObjectProperty: bf:extent
 
     Annotations: 
-        skos:definition "Number and type of units and/or subunits making up a resource.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Extent",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Number and type of units and/or subunits making up a resource."
     
     Domain: 
         bf:Instance
@@ -685,10 +689,10 @@ ObjectProperty: bf:findingAid
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Finding aid",
+        dcterms:modified "2016-04-29 (added inverse, updated range)",
         rdfs:comment "Expected value Work or Instance",
         rdfs:comment "Used with Work or Instance",
-        dcterms:modified "2016-04-29 (added inverse, updated range)",
+        rdfs:label "Finding aid",
         skos:definition "Relationship for archival, visual, and manuscript resources to a finding aid or similar control materials."
     
     SubPropertyOf: 
@@ -701,12 +705,12 @@ ObjectProperty: bf:findingAid
 ObjectProperty: bf:findingAidOf
 
     Annotations: 
-        skos:definition "Finding aid or similar control materials for archival, visual, and manuscript resources.",
         dcterms:modified "2016-04-21 (New)",
+        dcterms:modified "2016-04-29 (added inverse, updated range)",
         rdfs:comment "Expected value Work or Instance",
         rdfs:comment "Used with Work or Instance",
-        dcterms:modified "2016-04-29 (added inverse, updated range)",
-        rdfs:label "Finding aid for"
+        rdfs:label "Finding aid for",
+        skos:definition "Finding aid or similar control materials for archival, visual, and manuscript resources."
     
     SubPropertyOf: 
         bf:accompanies
@@ -718,9 +722,9 @@ ObjectProperty: bf:findingAidOf
 ObjectProperty: bf:fontSize
 
     Annotations: 
-        skos:definition "Size of the type used to represent the characters and symbols in a resource.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Font size"
+        rdfs:label "Font size",
+        skos:definition "Size of the type used to represent the characters and symbols in a resource."
     
     Domain: 
         bf:Instance
@@ -733,9 +737,9 @@ ObjectProperty: bf:frequency
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Intervals at which the parts of a serially produced resource or the updates to an integrating resource are issued.",
+        rdfs:comment "Used with Work or Instance",
         rdfs:label "Frequency",
-        rdfs:comment "Used with Work or Instance"
+        skos:definition "Intervals at which the parts of a serially produced resource or the updates to an integrating resource are issued."
     
     Range: 
         bf:Frequency
@@ -744,9 +748,9 @@ ObjectProperty: bf:frequency
 ObjectProperty: bf:generation
 
     Annotations: 
-        skos:definition "Relationship between an original carrier and the carrier of a reproduction made from the original.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Generation"
+        rdfs:label "Generation",
+        skos:definition "Relationship between an original carrier and the carrier of a reproduction made from the original."
     
     Domain: 
         bf:Instance
@@ -772,10 +776,10 @@ ObjectProperty: bf:generationProcess
 ObjectProperty: bf:genreForm
 
     Annotations: 
-        skos:definition "Form category or genre to which a resource belongs",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:comment "Used with Work, Instance or Item",
         rdfs:label "Genre/form",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Form category or genre to which a resource belongs"
     
     Range: 
         bf:GenreForm
@@ -784,10 +788,10 @@ ObjectProperty: bf:genreForm
 ObjectProperty: bf:geographicCoverage
 
     Annotations: 
-        skos:definition "Geographic coverage of the content of the resource.",
+        dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2017-02-06 (Changed from data to object property)",
         rdfs:label "Geographic coverage",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Geographic coverage of the content of the resource."
     
     Domain: 
         bf:Work
@@ -799,9 +803,9 @@ ObjectProperty: bf:geographicCoverage
 ObjectProperty: bf:grantingInstitution
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Degree issuing institution",
-        skos:definition "Name of degree granting institution.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Name of degree granting institution."
     
     Domain: 
         bf:Dissertation
@@ -814,10 +818,10 @@ ObjectProperty: bf:hasDerivative
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
+        dcterms:modified "2016-04-29 (added inverse)",
         rdfs:comment "Expected value Work or Instance",
         rdfs:comment "Used with Work or Instance",
         rdfs:label "Has derivative",
-        dcterms:modified "2016-04-29 (added inverse)",
         skos:definition "Resource that is a modification of the described work."
     
     SubPropertyOf: 
@@ -830,11 +834,11 @@ ObjectProperty: bf:hasDerivative
 ObjectProperty: bf:hasEquivalent
 
     Annotations: 
-        rdfs:label "Equivalence",
-        skos:definition "Resource embodies the same content as the described resource.",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:comment "Expected value Work, Instance or Item",
         rdfs:comment "Used with Work, Instance or Item",
-        rdfs:comment "Expected value Work, Instance or Item"
+        rdfs:label "Equivalence",
+        skos:definition "Resource embodies the same content as the described resource."
     
     SubPropertyOf: 
         bf:relatedTo
@@ -846,10 +850,10 @@ ObjectProperty: bf:hasEquivalent
 ObjectProperty: bf:hasExpression
 
     Annotations: 
-        dcterms:modified "2016-04-29 (added inverse)",
-        skos:definition "Work that is an expression of a described Work. For use to relate Works under FRBR/RDA rules.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Expressed as"
+        dcterms:modified "2016-04-29 (added inverse)",
+        rdfs:label "Expressed as",
+        skos:definition "Work that is an expression of a described Work. For use to relate Works under FRBR/RDA rules."
     
     SubPropertyOf: 
         bf:relatedTo
@@ -868,9 +872,9 @@ ObjectProperty: bf:hasInstance
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Instance is related to described Work. For use to connect Works to Instances in the BIBFRAME structure.",
         dcterms:modified "2016-04-29 (added inverse)",
-        rdfs:label "Instance of Work"
+        rdfs:label "Instance of Work",
+        skos:definition "Instance is related to described Work. For use to connect Works to Instances in the BIBFRAME structure."
     
     SubPropertyOf: 
         bf:relatedTo
@@ -888,11 +892,11 @@ ObjectProperty: bf:hasInstance
 ObjectProperty: bf:hasItem
 
     Annotations: 
-        dcterms:modified "2016-04-29 (added inverse)",
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Item which is an example of the described Instance.",
+        dcterms:modified "2016-04-29 (added inverse)",
         dcterms:modified "2017-02-07 (slight revision of definition)",
-        rdfs:label "Has holding"
+        rdfs:label "Has holding",
+        skos:definition "Item which is an example of the described Instance."
     
     SubPropertyOf: 
         bf:relatedTo
@@ -910,12 +914,12 @@ ObjectProperty: bf:hasItem
 ObjectProperty: bf:hasPart
 
     Annotations: 
-        rdfs:comment "Used with Work, Instance or Item",
-        rdfs:comment "Expected value Work, Instance or Item",
-        skos:definition "Resource that is included either physically or logically in the described resource",
+        dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2016-04-29 (added inverse)",
+        rdfs:comment "Expected value Work, Instance or Item",
+        rdfs:comment "Used with Work, Instance or Item",
         rdfs:label "Has part",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Resource that is included either physically or logically in the described resource"
     
     SubPropertyOf: 
         bf:relatedTo
@@ -927,10 +931,10 @@ ObjectProperty: bf:hasPart
 ObjectProperty: bf:hasReproduction
 
     Annotations: 
-        rdfs:label "Reproduced as",
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Resource that reproduces another Resource.",
-        dcterms:modified "2016-04-29 (added inverse)"
+        dcterms:modified "2016-04-29 (added inverse)",
+        rdfs:label "Reproduced as",
+        skos:definition "Resource that reproduces another Resource."
     
     SubPropertyOf: 
         bf:hasEquivalent
@@ -948,12 +952,12 @@ ObjectProperty: bf:hasReproduction
 ObjectProperty: bf:hasSeries
 
     Annotations: 
-        dcterms:modified "2016-04-29 (added inverse, updated range)",
-        skos:definition "Resource in which the part has been issued; the title of the larger resource appears on the part.",
-        rdfs:comment "Expected value Work or Instance",
         dcterms:modified "2016-04-21 (New)",
+        dcterms:modified "2016-04-29 (added inverse, updated range)",
+        rdfs:comment "Expected value Work or Instance",
         rdfs:comment "Used with Work or Instance",
-        rdfs:label "In series"
+        rdfs:label "In series",
+        skos:definition "Resource in which the part has been issued; the title of the larger resource appears on the part."
     
     SubPropertyOf: 
         bf:partOf
@@ -965,12 +969,12 @@ ObjectProperty: bf:hasSeries
 ObjectProperty: bf:hasSubseries
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2016-04-29 (added inverse, updated range)",
         rdfs:comment "Expected value Work or Instance",
         rdfs:comment "Used with Work or Instance",
-        skos:definition "series resource that is part of another series.",
-        dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Subseries"
+        rdfs:label "Subseries",
+        skos:definition "series resource that is part of another series."
     
     SubPropertyOf: 
         bf:partOf
@@ -982,9 +986,9 @@ ObjectProperty: bf:hasSubseries
 ObjectProperty: bf:heldBy
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Held by",
-        skos:definition "Entity holding the item or from which it is available.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Entity holding the item or from which it is available."
     
     Domain: 
         bf:Item
@@ -997,8 +1001,8 @@ ObjectProperty: bf:identifiedBy
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Identifier",
         rdfs:comment "Used with Unspecified",
+        rdfs:label "Identifier",
         skos:definition "Character string associated with a resource that serves to differentiate that resource from other resources, i.e., that uniquely identifies an entity."
     
     Range: 
@@ -1012,8 +1016,8 @@ ObjectProperty: bf:identifies
 
     Annotations: 
         dcterms:modified "2017-02-03 (New inverse)",
-        skos:definition "Resource that is associated with a character string that serves to differentiate one resource from another.",
-        rdfs:label "Resouce identified"
+        rdfs:label "Resouce identified",
+        skos:definition "Resource that is associated with a character string that serves to differentiate one resource from another."
     
     Domain: 
         bf:Identifier
@@ -1028,10 +1032,10 @@ ObjectProperty: bf:identifies
 ObjectProperty: bf:illustrativeContent
 
     Annotations: 
-        skos:definition "Information about content intended to illustrate a resource.",
         dcterms:modified "2016-04-21 (New)",
         rdfs:comment "Used with Work or Instance",
-        rdfs:label "Illustrative content information"
+        rdfs:label "Illustrative content information",
+        skos:definition "Information about content intended to illustrate a resource."
     
     Range: 
         bf:Illustration
@@ -1040,10 +1044,10 @@ ObjectProperty: bf:illustrativeContent
 ObjectProperty: bf:immediateAcquisition
 
     Annotations: 
-        rdfs:label "Immediate acquisition",
-        skos:definition "Information about the circumstances, e.g., source, date, method, under which the resource was directly acquired.",
+        dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2017-02-06 (Changed from data to object property)",
-        dcterms:modified "2016-04-21 (New)"
+        rdfs:label "Immediate acquisition",
+        skos:definition "Information about the circumstances, e.g., source, date, method, under which the resource was directly acquired."
     
     Domain: 
         bf:Item
@@ -1055,13 +1059,13 @@ ObjectProperty: bf:immediateAcquisition
 ObjectProperty: bf:index
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
+        dcterms:modified "2016-04-29 (added inverse, updated range)",
+        dcterms:modified "2017-02-03 (corrected label)",
         rdfs:comment "Expected value Work or Instance",
         rdfs:comment "Used with Work or Instance",
         rdfs:label "Has index",
-        dcterms:modified "2017-02-03 (corrected label)",
-        dcterms:modified "2016-04-29 (added inverse, updated range)",
-        skos:definition "Resource has an accompanying index",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Resource has an accompanying index"
     
     SubPropertyOf: 
         bf:accompaniedBy
@@ -1074,10 +1078,10 @@ ObjectProperty: bf:indexOf
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        rdfs:comment "Used with Work or Instance",
-        rdfs:comment "Expected value Work or Instance",
-        rdfs:label "Index to",
         dcterms:modified "2016-04-29 (added inverse, updated range)",
+        rdfs:comment "Expected value Work or Instance",
+        rdfs:comment "Used with Work or Instance",
+        rdfs:label "Index to",
         skos:definition "Index that accompanies a resource."
     
     SubPropertyOf: 
@@ -1090,10 +1094,10 @@ ObjectProperty: bf:indexOf
 ObjectProperty: bf:instanceOf
 
     Annotations: 
-        rdfs:label "Instance of",
-        skos:definition "Work the Instance described instantiates or manifests. For use to connect Instances to Works in the BIBFRAME structure.",
+        dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2016-04-29 (added inverse)",
-        dcterms:modified "2016-04-21 (New)"
+        rdfs:label "Instance of",
+        skos:definition "Work the Instance described instantiates or manifests. For use to connect Instances to Works in the BIBFRAME structure."
     
     SubPropertyOf: 
         bf:relatedTo
@@ -1125,10 +1129,10 @@ ObjectProperty: bf:instrument
 ObjectProperty: bf:intendedAudience
 
     Annotations: 
-        skos:definition "Information that identifies the specific audience or intellectual level for which the content of the resource is considered appropriate.",
         dcterms:modified "2016-04-21 (New)",
         rdfs:comment "Used with Work or Instance",
-        rdfs:label "Intended audience"
+        rdfs:label "Intended audience",
+        skos:definition "Information that identifies the specific audience or intellectual level for which the content of the resource is considered appropriate."
     
     Range: 
         bf:IntendedAudience
@@ -1137,10 +1141,10 @@ ObjectProperty: bf:intendedAudience
 ObjectProperty: bf:issuance
 
     Annotations: 
-        skos:definition "Categorization reflecting whether a resource is issued in one or more parts, the way it is updated, and its intended termination.",
-        rdfs:comment "Used with Work or Instance",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Mode of issuance"
+        rdfs:comment "Used with Work or Instance",
+        rdfs:label "Mode of issuance",
+        skos:definition "Categorization reflecting whether a resource is issued in one or more parts, the way it is updated, and its intended termination."
     
     Range: 
         bf:Issuance
@@ -1169,11 +1173,11 @@ ObjectProperty: bf:issuedWith
 ObjectProperty: bf:itemOf
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2016-04-29 (added inverse)",
-        skos:definition "Instance for which the described Item is an example.",
         dcterms:modified "2017-02-07 (slight revision of definition)",
         rdfs:label "Holding for",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Instance for which the described Item is an example."
     
     SubPropertyOf: 
         bf:relatedTo
@@ -1191,8 +1195,8 @@ ObjectProperty: bf:itemOf
 ObjectProperty: bf:language
 
     Annotations: 
-        rdfs:comment "Used with Unspecified",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:comment "Used with Unspecified",
         rdfs:label "Language information",
         skos:definition "Language associated with a resource or its parts."
     
@@ -1204,8 +1208,8 @@ ObjectProperty: bf:layout
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Arrangement of text, images, tactile notation, etc., in a resource.",
-        rdfs:label "Layout"
+        rdfs:label "Layout",
+        skos:definition "Arrangement of text, images, tactile notation, etc., in a resource."
     
     Domain: 
         bf:Instance
@@ -1217,9 +1221,9 @@ ObjectProperty: bf:layout
 ObjectProperty: bf:media
 
     Annotations: 
-        rdfs:label "Media type",
-        rdfs:comment "Used with Work or Instance",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:comment "Used with Work or Instance",
+        rdfs:label "Media type",
         skos:definition "Categorization reflecting the general type of intermediation device required to view, play, run, etc., the content of a resource."
     
     Range: 
@@ -1229,10 +1233,10 @@ ObjectProperty: bf:media
 ObjectProperty: bf:mergedToForm
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2016-04-29 (added inverse, updated range)",
         rdfs:comment "Expected value Work or Instance",
         rdfs:comment "Used with Work or Instance",
-        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Merged to form",
         skos:definition "One of two or more resources that come together to form a new resource."
     
@@ -1246,12 +1250,12 @@ ObjectProperty: bf:mergedToForm
 ObjectProperty: bf:mergerOf
 
     Annotations: 
-        dcterms:modified "2016-04-29 (added inverse, updated range)",
-        rdfs:label "Merger of",
-        skos:definition "One of two or more resources which came together to form a new resource.",
         dcterms:modified "2016-04-21 (New)",
+        dcterms:modified "2016-04-29 (added inverse, updated range)",
         rdfs:comment "Expected value Work or Instance",
-        rdfs:comment "Used with Work or Instance"
+        rdfs:comment "Used with Work or Instance",
+        rdfs:label "Merger of",
+        skos:definition "One of two or more resources which came together to form a new resource."
     
     SubPropertyOf: 
         bf:precededBy
@@ -1263,9 +1267,9 @@ ObjectProperty: bf:mergerOf
 ObjectProperty: bf:mount
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Mount material",
-        skos:definition "Physical material used for the support or backing to which the base material of a resource has been attached.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Physical material used for the support or backing to which the base material of a resource has been attached."
     
     Domain: 
         bf:Instance
@@ -1278,9 +1282,9 @@ ObjectProperty: bf:musicFormat
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Layout for content of a resource that is presented in the form of musical notation, such as full score, condensed score, vocal score, etc.",
+        rdfs:comment "Used with Work or Instance",
         rdfs:label "Format of notated music",
-        rdfs:comment "Used with Work or Instance"
+        skos:definition "Layout for content of a resource that is presented in the form of musical notation, such as full score, condensed score, vocal score, etc."
     
     Range: 
         bf:MusicFormat
@@ -1289,9 +1293,9 @@ ObjectProperty: bf:musicFormat
 ObjectProperty: bf:musicMedium
 
     Annotations: 
-        skos:definition "Instrumental, vocal, and/or other medium of performance for which a musical resource was originally conceived, written or performed.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Music medium of performance"
+        rdfs:label "Music medium of performance",
+        skos:definition "Instrumental, vocal, and/or other medium of performance for which a musical resource was originally conceived, written or performed."
     
     Domain: 
         bf:Work
@@ -1303,10 +1307,10 @@ ObjectProperty: bf:musicMedium
 ObjectProperty: bf:notation
 
     Annotations: 
-        skos:definition "Alphabet, script, or symbol system used to convey the content of the resource, including specialized scripts, typefaces, tactile notation, movement notation, and musical notation.",
-        rdfs:label "Notation system",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:comment "Used with Work or Instance",
-        dcterms:modified "2016-04-21 (New)"
+        rdfs:label "Notation system",
+        skos:definition "Alphabet, script, or symbol system used to convey the content of the resource, including specialized scripts, typefaces, tactile notation, movement notation, and musical notation."
     
     Range: 
         bf:Notation
@@ -1315,9 +1319,9 @@ ObjectProperty: bf:notation
 ObjectProperty: bf:note
 
     Annotations: 
-        rdfs:label "Note",
-        rdfs:comment "Used with Unspecified",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:comment "Used with Unspecified",
+        rdfs:label "Note",
         skos:definition "General textual information relating to a resource, such as Information about a specific copy of a resource or information about a particular attribute of a resource."
     
     Range: 
@@ -1328,8 +1332,8 @@ ObjectProperty: bf:originPlace
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Place from which the creation of the Work originated.",
-        rdfs:label "Associated title place"
+        rdfs:label "Associated title place",
+        skos:definition "Place from which the creation of the Work originated."
     
     SubPropertyOf: 
         bf:place
@@ -1344,12 +1348,12 @@ ObjectProperty: bf:originPlace
 ObjectProperty: bf:originalVersion
 
     Annotations: 
-        rdfs:label "Original version",
-        dcterms:modified "2016-04-29 (added inverse, updated range)",
-        skos:definition "Resource is the original version of which this resource is a reproduction.",
         dcterms:modified "2016-04-21 (New)",
+        dcterms:modified "2016-04-29 (added inverse, updated range)",
         rdfs:comment "Expected value Work or Instance",
-        rdfs:comment "Used with Work or Instance"
+        rdfs:comment "Used with Work or Instance",
+        rdfs:label "Original version",
+        skos:definition "Resource is the original version of which this resource is a reproduction."
     
     SubPropertyOf: 
         bf:derivativeOf
@@ -1362,11 +1366,11 @@ ObjectProperty: bf:originalVersionOf
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Original version of",
-        skos:definition "Original version of a resource.",
         dcterms:modified "2016-04-29 (added inverse, updated range)",
         rdfs:comment "Expected value Work or Instance",
-        rdfs:comment "Used with Work or Instance"
+        rdfs:comment "Used with Work or Instance",
+        rdfs:label "Original version of",
+        skos:definition "Original version of a resource."
     
     SubPropertyOf: 
         bf:hasDerivative
@@ -1380,9 +1384,9 @@ ObjectProperty: bf:otherEdition
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2016-05-13 (symmetrical)",
-        rdfs:label "Other edition",
         rdfs:comment "Expected value Work or Instance",
         rdfs:comment "Used with Work or Instance",
+        rdfs:label "Other edition",
         skos:definition "Resource has other available editions, for example simultaneously published language editions or reprints."
     
     SubPropertyOf: 
@@ -1395,8 +1399,8 @@ ObjectProperty: bf:otherEdition
 ObjectProperty: bf:otherPhysicalFormat
 
     Annotations: 
-        rdfs:label "Has other physical format",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Has other physical format",
         skos:definition "Resource that is manifested in another physical carrier."
     
     SubPropertyOf: 
@@ -1415,12 +1419,12 @@ ObjectProperty: bf:otherPhysicalFormat
 ObjectProperty: bf:partOf
 
     Annotations: 
-        skos:definition "Resource in which the described resource is physically or logically contained.",
         dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2016-04-29 (added inverse)",
-        rdfs:label "Is part of",
+        rdfs:comment "Expected value Work, Instance or Item",
         rdfs:comment "Used with Work, Instance or Item",
-        rdfs:comment "Expected value Work, Instance or Item"
+        rdfs:label "Is part of",
+        skos:definition "Resource in which the described resource is physically or logically contained."
     
     SubPropertyOf: 
         bf:relatedTo
@@ -1432,10 +1436,10 @@ ObjectProperty: bf:partOf
 ObjectProperty: bf:place
 
     Annotations: 
-        skos:definition "Geographic location or place entity associated with a resource or element of description, such as the place associated with the publication, printing, distribution, issue, release or production of a resource, place of an event.",
-        rdfs:comment "Used with Unspecified",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Place"
+        rdfs:comment "Used with Unspecified",
+        rdfs:label "Place",
+        skos:definition "Geographic location or place entity associated with a resource or element of description, such as the place associated with the publication, printing, distribution, issue, release or production of a resource, place of an event."
     
     Range: 
         bf:Place
@@ -1444,9 +1448,9 @@ ObjectProperty: bf:place
 ObjectProperty: bf:polarity
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Polarity",
-        skos:definition "Relationship of the colors and tones in an image to the colors and tones of the object reproduced.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Relationship of the colors and tones in an image to the colors and tones of the object reproduced."
     
     Domain: 
         bf:Instance
@@ -1458,10 +1462,10 @@ ObjectProperty: bf:polarity
 ObjectProperty: bf:precededBy
 
     Annotations: 
-        dcterms:modified "2016-04-29 (added inverse)",
-        rdfs:comment "Used with Work or Instance",
-        rdfs:comment "Expected value Work or Instance",
         dcterms:modified "2016-04-21 (New)",
+        dcterms:modified "2016-04-29 (added inverse)",
+        rdfs:comment "Expected value Work or Instance",
+        rdfs:comment "Used with Work or Instance",
         rdfs:label "Preceded by",
         skos:definition "Resource that precedes the resource being described, e.g., is earlier in time or before in narrative."
     
@@ -1475,9 +1479,9 @@ ObjectProperty: bf:precededBy
 ObjectProperty: bf:productionMethod
 
     Annotations: 
-        skos:definition "Process used to produce a resource.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Production method",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Process used to produce a resource."
     
     Domain: 
         bf:Instance
@@ -1491,8 +1495,8 @@ ObjectProperty: bf:projection
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2017-02-03 (changed from data to object property)",
-        skos:definition "Method or system used to represent the surface of the earth or of a celestial sphere on a plane.",
-        rdfs:label "Cartographic projection"
+        rdfs:label "Cartographic projection",
+        skos:definition "Method or system used to represent the surface of the earth or of a celestial sphere on a plane."
     
     Domain: 
         bf:Cartographic
@@ -1504,10 +1508,10 @@ ObjectProperty: bf:projection
 ObjectProperty: bf:projectionCharacteristic
 
     Annotations: 
-        rdfs:label "Projection characteristic",
-        skos:definition "Technical specification relating to the projection of a motion picture film.",
         dcterms:modified "2016-04-21 (New)",
-        dcterms:modified "2017-02-03 (fixed typo in property name)"
+        dcterms:modified "2017-02-03 (fixed typo in property name)",
+        rdfs:label "Projection characteristic",
+        skos:definition "Technical specification relating to the projection of a motion picture film."
     
     Domain: 
         bf:Instance
@@ -1519,10 +1523,10 @@ ObjectProperty: bf:projectionCharacteristic
 ObjectProperty: bf:provisionActivity
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2017-02-03 (revised label and slightly revised definition)",
         rdfs:label "Provision activity",
-        skos:definition "Place, name, and/or date information relating to the publication, printing, distribution, issue, release, production, etc. of a resource.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Place, name, and/or date information relating to the publication, printing, distribution, issue, release, production, etc. of a resource."
     
     Domain: 
         bf:Instance
@@ -1534,9 +1538,9 @@ ObjectProperty: bf:provisionActivity
 ObjectProperty: bf:reductionRatio
 
     Annotations: 
-        skos:definition "Size of a micro-image in relation to the original from which it was produced.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Reduction ratio"
+        rdfs:label "Reduction ratio",
+        skos:definition "Size of a micro-image in relation to the original from which it was produced."
     
     Domain: 
         bf:Instance
@@ -1548,12 +1552,12 @@ ObjectProperty: bf:reductionRatio
 ObjectProperty: bf:referencedBy
 
     Annotations: 
-        skos:definition "Resource that references the described resource",
+        dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2016-04-29 (added inverse)",
-        rdfs:label "Referenced by",
-        rdfs:comment "Used with Work, Instance or Item",
         rdfs:comment "Expected value Work, Instance or Item",
-        dcterms:modified "2016-04-21 (New)"
+        rdfs:comment "Used with Work, Instance or Item",
+        rdfs:label "Referenced by",
+        skos:definition "Resource that references the described resource"
     
     SubPropertyOf: 
         bf:relatedTo
@@ -1565,11 +1569,11 @@ ObjectProperty: bf:referencedBy
 ObjectProperty: bf:references
 
     Annotations: 
-        rdfs:label "References",
-        dcterms:modified "2016-04-29 (added inverse)",
-        rdfs:comment "Used with Work, Instance or Item",
-        rdfs:comment "Expected value Work, Instance or Item",
         dcterms:modified "2016-04-21 (New)",
+        dcterms:modified "2016-04-29 (added inverse)",
+        rdfs:comment "Expected value Work, Instance or Item",
+        rdfs:comment "Used with Work, Instance or Item",
+        rdfs:label "References",
         skos:definition "Resource that is referenced by the described resource."
     
     SubPropertyOf: 
@@ -1583,8 +1587,8 @@ ObjectProperty: bf:relatedTo
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Any relationship between Work, Instance, and Item resources.",
-        rdfs:label "Related resource"
+        rdfs:label "Related resource",
+        skos:definition "Any relationship between Work, Instance, and Item resources."
     
     Characteristics: 
         Symmetric
@@ -1599,12 +1603,12 @@ ObjectProperty: bf:relatedTo
 ObjectProperty: bf:replacedBy
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
+        dcterms:modified "2016-04-29 (added inverse, updated range)",
         rdfs:comment "Expected value Work or Instance",
         rdfs:comment "Used with Work or Instance",
-        dcterms:modified "2016-04-21 (New)",
-        skos:definition "Later resource used in place of an earlier resource, usually because the later resource contains updated or new information.",
         rdfs:label "Succeeded by",
-        dcterms:modified "2016-04-29 (added inverse, updated range)"
+        skos:definition "Later resource used in place of an earlier resource, usually because the later resource contains updated or new information."
     
     SubPropertyOf: 
         bf:succeededBy
@@ -1617,11 +1621,11 @@ ObjectProperty: bf:replacementOf
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
+        dcterms:modified "2016-04-29 (added inverse, updated range)",
         rdfs:comment "Expected value Work or Instance",
         rdfs:comment "Used with Work or Instance",
-        skos:definition "Earlier resource whose content has been replaced by a later resource, usually because the later resource contains updated or new information.",
-        dcterms:modified "2016-04-29 (added inverse, updated range)",
-        rdfs:label "Preceded by"
+        rdfs:label "Preceded by",
+        skos:definition "Earlier resource whose content has been replaced by a later resource, usually because the later resource contains updated or new information."
     
     SubPropertyOf: 
         bf:precededBy
@@ -1633,10 +1637,10 @@ ObjectProperty: bf:replacementOf
 ObjectProperty: bf:reproductionOf
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2016-04-29 (added inverse)",
         rdfs:label "Reproduction of",
-        skos:definition "Resource that is a reproduction of another Resource.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Resource that is a reproduction of another Resource."
     
     SubPropertyOf: 
         bf:hasEquivalent
@@ -1655,9 +1659,9 @@ ObjectProperty: bf:review
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
+        rdfs:comment "Used with Work or Instance",
         rdfs:label "Review content",
-        skos:definition "Review of a resource.",
-        rdfs:comment "Used with Work or Instance"
+        skos:definition "Review of a resource."
     
     Range: 
         bf:Review
@@ -1666,10 +1670,10 @@ ObjectProperty: bf:review
 ObjectProperty: bf:role
 
     Annotations: 
-        skos:definition "Function provided by a contributor, e.g., author, illustrator, etc.",
+        dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2017-02-03 (Changed from data to object property, adjusted label and definition)",
         rdfs:label "Contributor role",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Function provided by a contributor, e.g., author, illustrator, etc."
     
     Domain: 
         bf:Contribution
@@ -1681,11 +1685,11 @@ ObjectProperty: bf:role
 ObjectProperty: bf:scale
 
     Annotations: 
-        skos:definition "Ratio of the dimensions of a form contained or embodied in a resource to the dimensions of the entity it represents, e.g., for images or cartographic resources.",
+        dcterms:modified "2016-04-21 (New)",
+        dcterms:modified "2017-02-03 (changed from data to object property)",
         rdfs:comment "Used with Work or Instance",
         rdfs:label "Scale",
-        dcterms:modified "2016-04-21 (New)",
-        dcterms:modified "2017-02-03 (changed from data to object property)"
+        skos:definition "Ratio of the dimensions of a form contained or embodied in a resource to the dimensions of the entity it represents, e.g., for images or cartographic resources."
     
     Range: 
         bf:Scale
@@ -1696,10 +1700,10 @@ ObjectProperty: bf:separatedFrom
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2016-04-29 (added inverse, updated range)",
-        rdfs:comment "Used with Work or Instance",
         rdfs:comment "Expected value Work or Instance",
-        skos:definition "Resource that spun off a part of its content to form a new resource.",
-        rdfs:label "Separated from"
+        rdfs:comment "Used with Work or Instance",
+        rdfs:label "Separated from",
+        skos:definition "Resource that spun off a part of its content to form a new resource."
     
     SubPropertyOf: 
         bf:precededBy
@@ -1711,10 +1715,10 @@ ObjectProperty: bf:separatedFrom
 ObjectProperty: bf:seriesOf
 
     Annotations: 
-        dcterms:modified "2016-04-29 (added inverse, updated range)",
-        rdfs:comment "Used with Work or Instance",
-        rdfs:comment "Expected value Work or Instance",
         dcterms:modified "2016-04-21 (New)",
+        dcterms:modified "2016-04-29 (added inverse, updated range)",
+        rdfs:comment "Expected value Work or Instance",
+        rdfs:comment "Used with Work or Instance",
         rdfs:label "Series container of",
         skos:definition "Resource that is a part of a larger resource."
     
@@ -1742,10 +1746,10 @@ ObjectProperty: bf:shelfMark
 ObjectProperty: bf:soundCharacteristic
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2016-04-21 (fixed name and range typos)",
         rdfs:label "Sound characteristic",
-        skos:definition "Technical specification relating to the encoding of sound in a resource.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Technical specification relating to the encoding of sound in a resource."
     
     Domain: 
         bf:Instance
@@ -1757,10 +1761,10 @@ ObjectProperty: bf:soundCharacteristic
 ObjectProperty: bf:soundContent
 
     Annotations: 
-        skos:definition "Indication of whether the production of sound is an integral part of the resource.",
-        rdfs:comment "Used with Work or Instance",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Sound content"
+        rdfs:comment "Used with Work or Instance",
+        rdfs:label "Sound content",
+        skos:definition "Indication of whether the production of sound is an integral part of the resource."
     
     Range: 
         bf:SoundContent
@@ -1769,10 +1773,10 @@ ObjectProperty: bf:soundContent
 ObjectProperty: bf:source
 
     Annotations: 
-        skos:definition "Resource from which value or label came or was derived, such as the formal source/scheme from which a classification number is taken or derived, list from which an agent name is taken or derived, source within which an identifier is unique.",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:comment "Used with Unspecified",
         rdfs:label "Source",
-        rdfs:comment "Used with Unspecified"
+        skos:definition "Resource from which value or label came or was derived, such as the formal source/scheme from which a classification number is taken or derived, list from which an agent name is taken or derived, source within which an identifier is unique."
     
     Range: 
         bf:Source
@@ -1782,11 +1786,11 @@ ObjectProperty: bf:splitInto
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Split into",
-        skos:definition "One of two or more resources resulting from the division of an earlier resource into separate resources.",
-        rdfs:comment "Used with Work or Instance",
+        dcterms:modified "2016-04-29 (added inverse, updated range)",
         rdfs:comment "Expected value Work or Instance",
-        dcterms:modified "2016-04-29 (added inverse, updated range)"
+        rdfs:comment "Used with Work or Instance",
+        rdfs:label "Split into",
+        skos:definition "One of two or more resources resulting from the division of an earlier resource into separate resources."
     
     SubPropertyOf: 
         bf:succeededBy
@@ -1799,9 +1803,9 @@ ObjectProperty: bf:status
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
+        rdfs:comment "Used with Unspecified",
         rdfs:label "Status",
-        skos:definition "Designation of the validity or position of something, such as indication that the classification number is canceled or invalid, circulation availability of an item, indication of whether the identifier is canceled or invalid.",
-        rdfs:comment "Used with Unspecified"
+        skos:definition "Designation of the validity or position of something, such as indication that the classification number is canceled or invalid, circulation availability of an item, indication of whether the identifier is canceled or invalid."
     
     Range: 
         bf:Status
@@ -1811,8 +1815,8 @@ ObjectProperty: bf:subject
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Subject",
         rdfs:comment "Used with Work, Instance or Item",
+        rdfs:label "Subject",
         skos:definition "Subject term(s) describing a resource."
     
     Range: 
@@ -1836,12 +1840,12 @@ ObjectProperty: bf:sublocation
 ObjectProperty: bf:subseriesOf
 
     Annotations: 
-        rdfs:label "Subseries of",
-        rdfs:comment "Expected value Work or Instance",
-        skos:definition "Series resource of which the described resource is a part.",
-        rdfs:comment "Used with Work or Instance",
         dcterms:modified "2016-04-21 (New)",
-        dcterms:modified "2016-04-29 (added inverse, updated range)"
+        dcterms:modified "2016-04-29 (added inverse, updated range)",
+        rdfs:comment "Expected value Work or Instance",
+        rdfs:comment "Used with Work or Instance",
+        rdfs:label "Subseries of",
+        skos:definition "Series resource of which the described resource is a part."
     
     SubPropertyOf: 
         bf:hasPart
@@ -1853,12 +1857,12 @@ ObjectProperty: bf:subseriesOf
 ObjectProperty: bf:succeededBy
 
     Annotations: 
-        dcterms:modified "2016-04-29 (added inverse)",
-        skos:definition "Resource that succeeds the resource being described, e.g., later in time or after in a narrative.",
         dcterms:modified "2016-04-21 (New)",
+        dcterms:modified "2016-04-29 (added inverse)",
         rdfs:comment "Expected value Work or Instance",
+        rdfs:comment "Used with Work or Instance",
         rdfs:label "Succeeded by",
-        rdfs:comment "Used with Work or Instance"
+        skos:definition "Resource that succeeds the resource being described, e.g., later in time or after in a narrative."
     
     SubPropertyOf: 
         bf:relatedTo
@@ -1870,10 +1874,10 @@ ObjectProperty: bf:succeededBy
 ObjectProperty: bf:summary
 
     Annotations: 
-        rdfs:comment "Used with Work or Instance",
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Summary or abstract of the resource described.",
-        rdfs:label "Summary content"
+        rdfs:comment "Used with Work or Instance",
+        rdfs:label "Summary content",
+        skos:definition "Summary or abstract of the resource described."
     
     Range: 
         bf:Summary
@@ -1883,10 +1887,10 @@ ObjectProperty: bf:supplement
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Supplement",
-        rdfs:comment "Used with Work or Instance",
-        rdfs:comment "Expected value Work or Instance",
         dcterms:modified "2016-04-29 (added inverse, updated range)",
+        rdfs:comment "Expected value Work or Instance",
+        rdfs:comment "Used with Work or Instance",
+        rdfs:label "Supplement",
         skos:definition "Resource that updates or otherwise complements the predominant resource."
     
     SubPropertyOf: 
@@ -1899,12 +1903,12 @@ ObjectProperty: bf:supplement
 ObjectProperty: bf:supplementTo
 
     Annotations: 
-        skos:definition "Resource that is updated or otherwise complemented by the augmenting resource.",
-        rdfs:label "Supplement to",
+        dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2016-04-29 (added inverse, updated range)",
-        rdfs:comment "Used with Work or Instance",
         rdfs:comment "Expected value Work or Instance",
-        dcterms:modified "2016-04-21 (New)"
+        rdfs:comment "Used with Work or Instance",
+        rdfs:label "Supplement to",
+        skos:definition "Resource that is updated or otherwise complemented by the augmenting resource."
     
     SubPropertyOf: 
         bf:accompanies
@@ -1916,10 +1920,10 @@ ObjectProperty: bf:supplementTo
 ObjectProperty: bf:supplementaryContent
 
     Annotations: 
-        skos:definition "Material such as an index, bibliography, appendix intended to supplement the primary content of a resource.",
-        rdfs:label "Supplementary material",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:comment "Used with Work or Instance",
-        dcterms:modified "2016-04-21 (New)"
+        rdfs:label "Supplementary material",
+        skos:definition "Material such as an index, bibliography, appendix intended to supplement the primary content of a resource."
     
     Range: 
         bf:SupplementaryContent
@@ -1944,9 +1948,9 @@ ObjectProperty: bf:tableOfContents
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Table of contents of the described resource.",
         rdfs:comment "Used with Work or Instance",
-        rdfs:label "Table of contents content"
+        rdfs:label "Table of contents content",
+        skos:definition "Table of contents of the described resource."
     
     Range: 
         bf:TableOfContents
@@ -1955,10 +1959,10 @@ ObjectProperty: bf:tableOfContents
 ObjectProperty: bf:title
 
     Annotations: 
-        skos:definition "Name given to a resource.",
-        rdfs:comment "Used with Work, Instance or Item",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Title resource"
+        rdfs:comment "Used with Work, Instance or Item",
+        rdfs:label "Title resource",
+        skos:definition "Name given to a resource."
     
     Range: 
         bf:Title
@@ -1968,12 +1972,12 @@ ObjectProperty: bf:translation
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Translation as",
+        dcterms:modified "2016-04-29 (added inverse, updated range)",
+        dcterms:modified "2017-02-03 (corrected subproperty)",
         rdfs:comment "Expected value Work or Instance",
         rdfs:comment "Used with Work or Instance",
-        skos:definition "Resource that translates the text of the source entity into a language different from that of the original.",
-        dcterms:modified "2017-02-03 (corrected subproperty)",
-        dcterms:modified "2016-04-29 (added inverse, updated range)"
+        rdfs:label "Translation as",
+        skos:definition "Resource that translates the text of the source entity into a language different from that of the original."
     
     SubPropertyOf: 
         bf:hasDerivative
@@ -1985,13 +1989,13 @@ ObjectProperty: bf:translation
 ObjectProperty: bf:translationOf
 
     Annotations: 
-        skos:definition "Resource that has been translated, i.e., the text is expressed in a language different from that of the original resource.",
-        rdfs:comment "Used with Work or Instance",
-        rdfs:comment "Expected value Work or Instance",
         dcterms:modified "2016-04-21 (New)",
+        dcterms:modified "2016-04-29 (added inverse, updated range)",
         dcterms:modified "2017-02-03 (corrected subproperty)",
+        rdfs:comment "Expected value Work or Instance",
+        rdfs:comment "Used with Work or Instance",
         rdfs:label "Translation of",
-        dcterms:modified "2016-04-29 (added inverse, updated range)"
+        skos:definition "Resource that has been translated, i.e., the text is expressed in a language different from that of the original resource."
     
     SubPropertyOf: 
         bf:derivativeOf
@@ -2003,10 +2007,10 @@ ObjectProperty: bf:translationOf
 ObjectProperty: bf:unit
 
     Annotations: 
-        rdfs:label "Type of unit",
-        skos:definition "Units in which a value is expressed, such as the physical or logical constituent of a resource (e.g., a volume, audiocassette, film reel, a map, a digital file).",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:comment "Used with Unspecified"
+        rdfs:comment "Used with Unspecified",
+        rdfs:label "Type of unit",
+        skos:definition "Units in which a value is expressed, such as the physical or logical constituent of a resource (e.g., a volume, audiocassette, film reel, a map, a digital file)."
     
     Range: 
         bf:Unit
@@ -2015,10 +2019,10 @@ ObjectProperty: bf:unit
 ObjectProperty: bf:usageAndAccessPolicy
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:comment "Used with Work, Instance or Item",
-        skos:definition "General statement of allowances and restrictions on access to a resource, including retention, reproduction, access, and lending.",
         rdfs:label "Use and access condition",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "General statement of allowances and restrictions on access to a resource, including retention, reproduction, access, and lending."
     
     Range: 
         bf:UsageAndAccessPolicy
@@ -2055,10 +2059,10 @@ ObjectProperty: bf:voice
 DataProperty: bf:acquisitionTerms
 
     Annotations: 
-        skos:definition "Conditions under which the publisher, distributor, etc., will normally supply a resource, e.g., price of a resource.",
-        rdfs:label "Terms of acquisition",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:comment "Used with Work or Instance",
-        dcterms:modified "2016-04-21 (New)"
+        rdfs:label "Terms of acquisition",
+        skos:definition "Conditions under which the publisher, distributor, etc., will normally supply a resource, e.g., price of a resource."
     
     Range: 
         rdfs:Literal
@@ -2068,8 +2072,8 @@ DataProperty: bf:ascensionAndDeclination
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "System for identifying the location of a celestial object in the sky covered by the cartographic content of a resource using the angles of right ascension and declination.",
-        rdfs:label "Cartographic ascension and declination"
+        rdfs:label "Cartographic ascension and declination",
+        skos:definition "System for identifying the location of a celestial object in the sky covered by the cartographic content of a resource using the angles of right ascension and declination."
     
     Domain: 
         bf:Cartographic
@@ -2081,10 +2085,10 @@ DataProperty: bf:ascensionAndDeclination
 DataProperty: bf:awards
 
     Annotations: 
-        skos:definition "Information on awards associated with the described resource.",
         dcterms:modified "2016-04-21 (New)",
         rdfs:comment "Used with Work or Instance",
-        rdfs:label "Award note"
+        rdfs:label "Award note",
+        skos:definition "Information on awards associated with the described resource."
     
     Range: 
         rdfs:Literal
@@ -2093,9 +2097,9 @@ DataProperty: bf:awards
 DataProperty: bf:changeDate
 
     Annotations: 
-        skos:definition "Date or date and time on which the metadata was modified.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Description change date"
+        rdfs:label "Description change date",
+        skos:definition "Date or date and time on which the metadata was modified."
     
     Domain: 
         bf:AdminMetadata
@@ -2110,9 +2114,9 @@ DataProperty: bf:changeDate
 DataProperty: bf:classificationPortion
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Classification number",
-        skos:definition "Classification number (single class number or beginning number of a span) that indicates the subject by applying a formal system of coding and organizing resources.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Classification number (single class number or beginning number of a span) that indicates the subject by applying a formal system of coding and organizing resources."
     
     Domain: 
         bf:Classification
@@ -2124,10 +2128,10 @@ DataProperty: bf:classificationPortion
 DataProperty: bf:code
 
     Annotations: 
-        skos:definition "String of characters that serves as a code representing information.",
-        rdfs:label "Code",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:comment "Used with Unspecified",
-        dcterms:modified "2016-04-21 (New)"
+        rdfs:label "Code",
+        skos:definition "String of characters that serves as a code representing information."
     
     Range: 
         rdfs:Literal
@@ -2136,8 +2140,8 @@ DataProperty: bf:code
 DataProperty: bf:coordinates
 
     Annotations: 
-        rdfs:label "Cartographic coordinates",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Cartographic coordinates",
         skos:definition "Mathematical system for identifying the area covered by the cartographic content of a resource, expressed either by means of longitude and latitude on the surface of planets or by the angles of right ascension and declination for celestial cartographic content."
     
     Domain: 
@@ -2150,10 +2154,10 @@ DataProperty: bf:coordinates
 DataProperty: bf:copyrightDate
 
     Annotations: 
-        skos:definition "Date associated with a claim of protection under copyright or a similar regime.",
-        rdfs:label "Copyright date",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:comment "Used with Work or Instance",
-        dcterms:modified "2016-04-21 (New)"
+        rdfs:label "Copyright date",
+        skos:definition "Date associated with a claim of protection under copyright or a similar regime."
     
     Range: 
         rdfs:Literal
@@ -2165,9 +2169,9 @@ DataProperty: bf:copyrightDate
 DataProperty: bf:count
 
     Annotations: 
-        rdfs:label "Number of units",
-        rdfs:comment "Used with Unspecified",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:comment "Used with Unspecified",
+        rdfs:label "Number of units",
         skos:definition "Number associated with a measure of units, such as the number of units and/or subunits making up a resource."
     
     Range: 
@@ -2194,10 +2198,10 @@ DataProperty: bf:creationDate
 DataProperty: bf:credits
 
     Annotations: 
-        rdfs:comment "Used with Work or Instance",
-        skos:definition "Information in note form of credits for persons or organizations who have participated in the creation and/or production of the resource.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Credits note"
+        rdfs:comment "Used with Work or Instance",
+        rdfs:label "Credits note",
+        skos:definition "Information in note form of credits for persons or organizations who have participated in the creation and/or production of the resource."
     
     Range: 
         rdfs:Literal
@@ -2206,10 +2210,10 @@ DataProperty: bf:credits
 DataProperty: bf:custodialHistory
 
     Annotations: 
-        rdfs:label "Custodial history",
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Information about the provenance, such as origin, ownership and custodial history (chain of custody), of a resource.",
-        rdfs:comment "Used with Work, Instance or Item"
+        rdfs:comment "Used with Work, Instance or Item",
+        rdfs:label "Custodial history",
+        skos:definition "Information about the provenance, such as origin, ownership and custodial history (chain of custody), of a resource."
     
     Range: 
         rdfs:Literal
@@ -2218,10 +2222,10 @@ DataProperty: bf:custodialHistory
 DataProperty: bf:date
 
     Annotations: 
-        skos:definition "Date designation associated with a resource or element of description, such as date of title variation; year a degree was awarded; date associated with the publication, printing, distribution, issue, release or production of a resource. May be date typed.",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:comment "Used with Unspecified",
         rdfs:label "Date",
-        rdfs:comment "Used with Unspecified"
+        skos:definition "Date designation associated with a resource or element of description, such as date of title variation; year a degree was awarded; date associated with the publication, printing, distribution, issue, release or production of a resource. May be date typed."
     
     Range: 
         rdfs:Literal
@@ -2230,8 +2234,8 @@ DataProperty: bf:date
 DataProperty: bf:degree
 
     Annotations: 
-        rdfs:label "Degree",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Degree",
         skos:definition "Degree for which author was a candidate."
     
     Domain: 
@@ -2244,9 +2248,9 @@ DataProperty: bf:degree
 DataProperty: bf:derivedFrom
 
     Annotations: 
-        skos:definition "Link to the metadata that was the source of the data.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Source metadata"
+        rdfs:label "Source metadata",
+        skos:definition "Link to the metadata that was the source of the data."
     
     Domain: 
         bf:AdminMetadata
@@ -2258,9 +2262,9 @@ DataProperty: bf:derivedFrom
 DataProperty: bf:dimensions
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Dimensions",
-        skos:definition "Measurements of the carrier or carriers and/or the container of a resource.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Measurements of the carrier or carriers and/or the container of a resource."
     
     Domain: 
         bf:Instance
@@ -2272,8 +2276,8 @@ DataProperty: bf:dimensions
 DataProperty: bf:duration
 
     Annotations: 
-        rdfs:comment "Used with Work or Instance",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:comment "Used with Work or Instance",
         rdfs:label "Duration",
         skos:definition "Information about the playing time, running time, etc. of a resource."
     
@@ -2284,9 +2288,9 @@ DataProperty: bf:duration
 DataProperty: bf:edition
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Classification scheme edition",
-        skos:definition "Edition of the classification scheme, such as full, abridged or a number, when a classification scheme designates editions.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Edition of the classification scheme, such as full, abridged or a number, when a classification scheme designates editions."
     
     Domain: 
         bf:Classification
@@ -2298,9 +2302,9 @@ DataProperty: bf:edition
 DataProperty: bf:editionEnumeration
 
     Annotations: 
-        skos:definition "Enumeration of the edition; usually transcribed.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Edition enumeration"
+        rdfs:label "Edition enumeration",
+        skos:definition "Enumeration of the edition; usually transcribed."
     
     Domain: 
         bf:Instance
@@ -2313,8 +2317,8 @@ DataProperty: bf:editionStatement
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Information identifying the edition or version of the resource and associated statements of responsibility for the edition; usually transcribed.",
-        rdfs:label "Edition statement"
+        rdfs:label "Edition statement",
+        skos:definition "Information identifying the edition or version of the resource and associated statements of responsibility for the edition; usually transcribed."
     
     Domain: 
         bf:Instance
@@ -2340,9 +2344,9 @@ DataProperty: bf:ensembleType
 DataProperty: bf:equinox
 
     Annotations: 
-        skos:definition "One of two points of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0 degrees.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Cartographic equinox",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "One of two points of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0 degrees."
     
     Domain: 
         bf:Cartographic
@@ -2354,9 +2358,9 @@ DataProperty: bf:equinox
 DataProperty: bf:exclusionGRing
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Cartographic G ring area excluded",
-        skos:definition "Coordinate pairs that identify the closed non-intersecting boundary of the area contained within the G-polygon outer ring that is excluded.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Coordinate pairs that identify the closed non-intersecting boundary of the area contained within the G-polygon outer ring that is excluded."
     
     Domain: 
         bf:Cartographic
@@ -2368,10 +2372,10 @@ DataProperty: bf:exclusionGRing
 DataProperty: bf:firstIssue
 
     Annotations: 
-        skos:definition "Beginning date of a resource and/or the sequential designations.",
         dcterms:modified "2016-04-21 (New)",
         rdfs:comment "Used with Work or Instance",
-        rdfs:label "Multipart first issue"
+        rdfs:label "Multipart first issue",
+        skos:definition "Beginning date of a resource and/or the sequential designations."
     
     Range: 
         rdfs:Literal
@@ -2380,9 +2384,9 @@ DataProperty: bf:firstIssue
 DataProperty: bf:generationDate
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Date generated",
-        skos:definition "Date of conversion of the metadata from another format.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Date of conversion of the metadata from another format."
     
     Domain: 
         bf:AdminMetadata
@@ -2397,9 +2401,9 @@ DataProperty: bf:generationDate
 DataProperty: bf:hierarchicalLevel
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Hierarchical level of material",
-        skos:definition "Hierarchical position of the described materials relative to other material from the same source.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Hierarchical position of the described materials relative to other material from the same source."
     
     Domain: 
         bf:Arrangement
@@ -2439,9 +2443,9 @@ DataProperty: bf:instrumentalType
 DataProperty: bf:itemPortion
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Classification item number",
-        skos:definition "Number attached to a classification string that indicates a particular item.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Number attached to a classification string that indicates a particular item."
     
     Domain: 
         bf:Classification
@@ -2453,10 +2457,10 @@ DataProperty: bf:itemPortion
 DataProperty: bf:lastIssue
 
     Annotations: 
-        rdfs:label "Multipart last issue",
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Ending date of a resource and/or the sequential designations.",
-        rdfs:comment "Used with Work or Instance"
+        rdfs:comment "Used with Work or Instance",
+        rdfs:label "Multipart last issue",
+        skos:definition "Ending date of a resource and/or the sequential designations."
     
     Range: 
         rdfs:Literal
@@ -2465,9 +2469,9 @@ DataProperty: bf:lastIssue
 DataProperty: bf:legalDate
 
     Annotations: 
-        skos:definition "Date of legal work, or promulgation of a law, or signing of a treaty.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Date of legal work"
+        rdfs:label "Date of legal work",
+        skos:definition "Date of legal work, or promulgation of a law, or signing of a treaty."
     
     Domain: 
         bf:Work
@@ -2482,8 +2486,8 @@ DataProperty: bf:legalDate
 DataProperty: bf:mainTitle
 
     Annotations: 
-        rdfs:label "Main title",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Main title",
         skos:definition "Title being addressed. Possible title component."
     
     Domain: 
@@ -2496,8 +2500,8 @@ DataProperty: bf:mainTitle
 DataProperty: bf:musicKey
 
     Annotations: 
-        rdfs:label "Music key",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Music key",
         skos:definition "Pitch and mode for music."
     
     Domain: 
@@ -2538,9 +2542,9 @@ DataProperty: bf:musicSerialNumber
 DataProperty: bf:musicThematicNumber
 
     Annotations: 
-        skos:definition "Numeric designation for a musical work as found in a thematic index for the composer.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Music thematic number",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Numeric designation for a musical work as found in a thematic index for the composer."
     
     Domain: 
         bf:Work
@@ -2552,9 +2556,9 @@ DataProperty: bf:musicThematicNumber
 DataProperty: bf:natureOfContent
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:comment "Used with Work or Instance",
         rdfs:label "Content nature",
-        dcterms:modified "2016-04-21 (New)",
         skos:definition "Characterization that epitomizes the primary content of a resource, e.g., field recording of birdsong; combined time series analysis and graph plotting system."
     
     Range: 
@@ -2564,9 +2568,9 @@ DataProperty: bf:natureOfContent
 DataProperty: bf:noteType
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Note type",
-        skos:definition "Type of note.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Type of note."
     
     Domain: 
         bf:Note
@@ -2592,9 +2596,9 @@ DataProperty: bf:organization
 DataProperty: bf:originDate
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Associated title date",
-        skos:definition "Date or date range associated with the creation of a Work.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Date or date range associated with the creation of a Work."
     
     Domain: 
         bf:Work
@@ -2609,9 +2613,9 @@ DataProperty: bf:originDate
 DataProperty: bf:outerGRing
 
     Annotations: 
-        skos:definition "Coordinate pairs that identify the closed non-intersecting boundary of the area covered.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Cartographic outer G ring area covered",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Coordinate pairs that identify the closed non-intersecting boundary of the area covered."
     
     Domain: 
         bf:Cartographic
@@ -2623,10 +2627,10 @@ DataProperty: bf:outerGRing
 DataProperty: bf:part
 
     Annotations: 
-        rdfs:label "Part",
-        skos:definition "Part of a resource to which information applies.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:comment "Used with Unspecified"
+        rdfs:comment "Used with Unspecified",
+        rdfs:label "Part",
+        skos:definition "Part of a resource to which information applies."
     
     Range: 
         rdfs:Literal
@@ -2650,8 +2654,8 @@ DataProperty: bf:partNumber
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Part or section enumeration of a title. Possible title component.",
-        rdfs:label "Part number"
+        rdfs:label "Part number",
+        skos:definition "Part or section enumeration of a title. Possible title component."
     
     Domain: 
         bf:Title
@@ -2677,9 +2681,9 @@ DataProperty: bf:pattern
 DataProperty: bf:physicalLocation
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Storing or shelving location",
-        skos:definition "Location in the holding agency where the item is shelved or stored.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Location in the holding agency where the item is shelved or stored."
     
     Domain: 
         bf:Item
@@ -2691,9 +2695,9 @@ DataProperty: bf:physicalLocation
 DataProperty: bf:preferredCitation
 
     Annotations: 
-        rdfs:label "Preferred citation",
-        rdfs:comment "Used with Work or Instance",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:comment "Used with Work or Instance",
+        rdfs:label "Preferred citation",
         skos:definition "Citation to the resource preferred by its custodian of the resource."
     
     Range: 
@@ -2704,8 +2708,8 @@ DataProperty: bf:provisionActivityStatement
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Statement relating to providers of a resource; usually transcribed.",
-        rdfs:label "Provider statement"
+        rdfs:label "Provider statement",
+        skos:definition "Statement relating to providers of a resource; usually transcribed."
     
     Domain: 
         bf:Instance
@@ -2717,10 +2721,10 @@ DataProperty: bf:provisionActivityStatement
 DataProperty: bf:qualifier
 
     Annotations: 
-        rdfs:label "Qualifier",
-        skos:definition "Qualifier of information, such as an addition to a title to make it unique or qualifying information associated with an identifier.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:comment "Used with Unspecified",
-        dcterms:modified "2016-04-21 (New)"
+        rdfs:label "Qualifier",
+        skos:definition "Qualifier of information, such as an addition to a title to make it unique or qualifying information associated with an identifier."
     
     Range: 
         rdfs:Literal
@@ -2730,8 +2734,8 @@ DataProperty: bf:responsibilityStatement
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Statement relating to any persons, families, or corporate bodies responsible for the creation of, or contributing to the content of a resource; usually transcribed.",
-        rdfs:label "Creative responsibility statement"
+        rdfs:label "Creative responsibility statement",
+        skos:definition "Statement relating to any persons, families, or corporate bodies responsible for the creation of, or contributing to the content of a resource; usually transcribed."
     
     Domain: 
         bf:Instance
@@ -2743,9 +2747,9 @@ DataProperty: bf:responsibilityStatement
 DataProperty: bf:schedulePart
 
     Annotations: 
-        skos:definition "Designates whether the classification number is from the standard or optional part of a schedule or table.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Classification designation"
+        rdfs:label "Classification designation",
+        skos:definition "Designates whether the classification number is from the standard or optional part of a schedule or table."
     
     Domain: 
         bf:Classification
@@ -2757,9 +2761,9 @@ DataProperty: bf:schedulePart
 DataProperty: bf:seriesEnumeration
 
     Annotations: 
-        skos:definition "Series enumeration of the resource; usually transcribed.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Series enumeration",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Series enumeration of the resource; usually transcribed."
     
     Domain: 
         bf:Instance
@@ -2771,8 +2775,8 @@ DataProperty: bf:seriesEnumeration
 DataProperty: bf:seriesStatement
 
     Annotations: 
-        rdfs:label "Series statement",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Series statement",
         skos:definition "Statement of the series the resource is in; usually transcribed; includes the ISSN if applicable."
     
     Domain: 
@@ -2785,9 +2789,9 @@ DataProperty: bf:seriesStatement
 DataProperty: bf:spanEnd
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Classification number span end",
-        skos:definition "Ending number of classification number span.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Ending number of classification number span."
     
     Domain: 
         bf:Classification
@@ -2800,8 +2804,8 @@ DataProperty: bf:subseriesEnumeration
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Subseries enumeration of the resource; usually transcribed.",
-        rdfs:label "Subseries enumeration"
+        rdfs:label "Subseries enumeration",
+        skos:definition "Subseries enumeration of the resource; usually transcribed."
     
     Domain: 
         bf:Instance
@@ -2813,9 +2817,9 @@ DataProperty: bf:subseriesEnumeration
 DataProperty: bf:subseriesStatement
 
     Annotations: 
-        skos:definition "Statement of the subseries the resource is in; usually transcribed; includes the ISSN if applicable.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Subseries statement",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Statement of the subseries the resource is in; usually transcribed; includes the ISSN if applicable."
     
     Domain: 
         bf:Instance
@@ -2827,9 +2831,9 @@ DataProperty: bf:subseriesStatement
 DataProperty: bf:subtitle
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Subtitle",
-        skos:definition "Word, character, or group of words and/or characters that contains the remainder of the title after the main title. Possible title component.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Word, character, or group of words and/or characters that contains the remainder of the title after the main title. Possible title component."
     
     Domain: 
         bf:Title
@@ -2841,9 +2845,9 @@ DataProperty: bf:subtitle
 DataProperty: bf:table
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Classification table identification",
-        skos:definition "Number of the table from which the classification number in a subdivision entry is taken, e.g., a DDC table.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Number of the table from which the classification number in a subdivision entry is taken, e.g., a DDC table."
     
     Domain: 
         bf:Classification
@@ -2855,9 +2859,9 @@ DataProperty: bf:table
 DataProperty: bf:tableSeq
 
     Annotations: 
-        skos:definition "Sequence number or other identifier for an internal classification sub arrangement or add in a classification scheme.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Classification table sequence number",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Sequence number or other identifier for an internal classification sub arrangement or add in a classification scheme."
     
     Domain: 
         bf:Classification
@@ -2870,8 +2874,8 @@ DataProperty: bf:temporalCoverage
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Time period coverage of the content of the resource.",
-        rdfs:label "Temporal coverage"
+        rdfs:label "Temporal coverage",
+        skos:definition "Time period coverage of the content of the resource."
     
     Domain: 
         bf:Work
@@ -2884,8 +2888,8 @@ DataProperty: bf:variantType
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Type of title variation, e.g., acronym, cover, spine, earlier, later, series version.",
-        rdfs:label "Variant title type"
+        rdfs:label "Variant title type",
+        skos:definition "Type of title variation, e.g., acronym, cover, spine, earlier, later, series version."
     
     Domain: 
         bf:VariantTitle
@@ -2897,8 +2901,8 @@ DataProperty: bf:variantType
 DataProperty: bf:version
 
     Annotations: 
-        rdfs:label "Version",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Version",
         skos:definition "Term or terms that identify works such as arranged for music, vulgate for religious work, etc."
     
     Domain: 
@@ -2912,8 +2916,8 @@ DataProperty: bf:voiceType
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Specific type of voice group, such as chorus, solo.",
-        rdfs:label "Type of voice"
+        rdfs:label "Type of voice",
+        skos:definition "Specific type of voice group, such as chorus, solo."
     
     Domain: 
         bf:MusicVoice
@@ -2931,9 +2935,9 @@ Class: <http://xmlns.com/foaf/0.1/Person>
 Class: bf:AbbreviatedTitle
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Abbreviated title",
-        skos:definition "Title as abbreviated for citation, indexing, and/or identification.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Title as abbreviated for citation, indexing, and/or identification."
     
     SubClassOf: 
         bf:VariantTitle
@@ -2953,26 +2957,26 @@ Class: bf:AccessPolicy
 Class: bf:AcquisitionSource
 
     Annotations: 
+        dcterms:modified "2017-02-06 (New)",
         rdfs:label "Acquisition source",
-        skos:definition "Information about an organization, person, etc., from which a resource may be obtained.",
-        dcterms:modified "2017-02-06 (New)"
+        skos:definition "Information about an organization, person, etc., from which a resource may be obtained."
     
     
 Class: bf:AdminMetadata
 
     Annotations: 
-        rdfs:label "Administrative metadata",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Administrative metadata",
         skos:definition "Metadata about the metadata, especially provenance information."
     
     
 Class: bf:Agent
 
     Annotations: 
-        rdfs:label "Agent",
+        dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2016-05-13 (New subclass)",
-        skos:definition "Entity having a role in a resource, such as a person or organization.",
-        dcterms:modified "2016-04-21 (New)"
+        rdfs:label "Agent",
+        skos:definition "Entity having a role in a resource, such as a person or organization."
     
     SubClassOf: 
         <http://xmlns.com/foaf/0.1/Agent>
@@ -2981,8 +2985,8 @@ Class: bf:Agent
 Class: bf:Ansi
 
     Annotations: 
-        rdfs:label "ANSI number",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "ANSI number",
         skos:definition "American National Standards Institute identifier."
     
     SubClassOf: 
@@ -2992,17 +2996,17 @@ Class: bf:Ansi
 Class: bf:AppliedMaterial
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Applied material",
-        skos:definition "Physical or chemical substance applied to a base material of a resource.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Physical or chemical substance applied to a base material of a resource."
     
     
 Class: bf:Archival
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Resources organically created, accumulated, and/or used by a person, family, or organization in the course of conduct of affairs and preserved because of their continuing value.",
-        rdfs:label "Archival controlled"
+        rdfs:label "Archival controlled",
+        skos:definition "Resources organically created, accumulated, and/or used by a person, family, or organization in the course of conduct of affairs and preserved because of their continuing value."
     
     SubClassOf: 
         bf:Instance
@@ -3012,24 +3016,24 @@ Class: bf:Arrangement
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Information about the organization and arrangement of a collection of items. For instance, for computer files, organization and arrangement information may be the file structure and sort sequence of a file; for visual materials, this information may be how a collection is arranged.",
-        rdfs:label "Organization of materials information"
+        rdfs:label "Organization of materials information",
+        skos:definition "Information about the organization and arrangement of a collection of items. For instance, for computer files, organization and arrangement information may be the file structure and sort sequence of a file; for visual materials, this information may be how a collection is arranged."
     
     
 Class: bf:AspectRatio
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Proportional relationship between an image's width and its height.",
-        rdfs:label "Aspect ratio"
+        rdfs:label "Aspect ratio",
+        skos:definition "Proportional relationship between an image's width and its height."
     
     
 Class: bf:Audio
 
     Annotations: 
-        skos:definition "Resources expressed in an audible form, including music or other sounds.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Audio"
+        rdfs:label "Audio",
+        skos:definition "Resources expressed in an audible form, including music or other sounds."
     
     SubClassOf: 
         bf:Work
@@ -3038,10 +3042,10 @@ Class: bf:Audio
 Class: bf:AudioIssueNumber
 
     Annotations: 
-        dcterms:modified "2017-02-03 (Revised property name and definition)",
-        skos:definition "Number assigned by publishers of sound recordings to identify the issue designation, or serial identification, of the resource.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Audio issue number"
+        dcterms:modified "2017-02-03 (Revised property name and definition)",
+        rdfs:label "Audio issue number",
+        skos:definition "Number assigned by publishers of sound recordings to identify the issue designation, or serial identification, of the resource."
     
     SubClassOf: 
         bf:Identifier
@@ -3050,9 +3054,9 @@ Class: bf:AudioIssueNumber
 Class: bf:AudioTake
 
     Annotations: 
-        skos:definition "Identifier assigned to the smallest identifiable unit of a recording session, e.g., a specific recording of an individual song.",
         dcterms:modified "2017-02-03 (New)",
-        rdfs:label "Audio recording take"
+        rdfs:label "Audio recording take",
+        skos:definition "Identifier assigned to the smallest identifiable unit of a recording session, e.g., a specific recording of an individual song."
     
     SubClassOf: 
         bf:Identifier
@@ -3061,10 +3065,10 @@ Class: bf:AudioTake
 Class: bf:Barcode
 
     Annotations: 
-        rdfs:label "Barcode",
-        skos:definition "Optical machine-readable representation of data relating to the item to which it is attached.",
+        dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2017-02-03 (Moved to Identifier class group from Item group)",
-        dcterms:modified "2016-04-21 (New)"
+        rdfs:label "Barcode",
+        skos:definition "Optical machine-readable representation of data relating to the item to which it is attached."
     
     SubClassOf: 
         bf:Identifier
@@ -3073,25 +3077,25 @@ Class: bf:Barcode
 Class: bf:BaseMaterial
 
     Annotations: 
-        skos:definition "Underlying physical material of a resource.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Base material"
+        rdfs:label "Base material",
+        skos:definition "Underlying physical material of a resource."
     
     
 Class: bf:BookFormat
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Book format",
-        skos:definition "Result of folding a printed sheet to form a gathering of leaves.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Result of folding a printed sheet to form a gathering of leaves."
     
     
 Class: bf:BroadcastStandard
 
     Annotations: 
-        skos:definition "System used to format a video resource for television broadcast, e.g., HDTV, PAL.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Broadcast standard"
+        rdfs:label "Broadcast standard",
+        skos:definition "System used to format a video resource for television broadcast, e.g., HDTV, PAL."
     
     SubClassOf: 
         bf:VideoCharacteristic
@@ -3100,33 +3104,33 @@ Class: bf:BroadcastStandard
 Class: bf:Capture
 
     Annotations: 
-        skos:definition "Information about place and date associated with the capture (i.e., recording, filming, etc.) of the content of a resource.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Capture of content",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Information about place and date associated with the capture (i.e., recording, filming, etc.) of the content of a resource."
     
     
 Class: bf:Carrier
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Carrier type",
-        skos:definition "Categorization reflecting the format of the storage medium and housing of a carrier.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Categorization reflecting the format of the storage medium and housing of a carrier."
     
     
 Class: bf:Cartographic
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Cartographic information",
-        skos:definition "Content that represents the whole or part of the earth, any celestial body, or imaginary place at any scale.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Content that represents the whole or part of the earth, any celestial body, or imaginary place at any scale."
     
     
 Class: bf:CartographicDataType
 
     Annotations: 
-        skos:definition "Data type for encoding of geospatial information in a cartographic resource, e.g., raster, vector, point.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Digital cartographic data type",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Data type for encoding of geospatial information in a cartographic resource, e.g., raster, vector, point."
     
     SubClassOf: 
         bf:DigitalCharacteristic
@@ -3135,9 +3139,9 @@ Class: bf:CartographicDataType
 Class: bf:CartographicObjectType
 
     Annotations: 
-        skos:definition "Object type for encoding of geospatial information in a cartographic resource, e.g., point, line, polygon.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Digital cartographic object type",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Object type for encoding of geospatial information in a cartographic resource, e.g., point, line, polygon."
     
     SubClassOf: 
         bf:DigitalCharacteristic
@@ -3147,8 +3151,8 @@ Class: bf:Cartography
 
     Annotations: 
         dcterms:modified "2016-04-25 (fixed typo in definition)",
-        skos:definition "Resource that shows spatial information, including maps, atlases, globes, digital, and other cartographic resources.",
-        rdfs:label "Cartography"
+        rdfs:label "Cartography",
+        skos:definition "Resource that shows spatial information, including maps, atlases, globes, digital, and other cartographic resources."
     
     SubClassOf: 
         bf:Work
@@ -3157,9 +3161,9 @@ Class: bf:Cartography
 Class: bf:Chronology
 
     Annotations: 
-        skos:definition "Dates associated with issues or items held.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Chronology"
+        rdfs:label "Chronology",
+        skos:definition "Dates associated with issues or items held."
     
     SubClassOf: 
         bf:EnumerationAndChronology
@@ -3168,17 +3172,17 @@ Class: bf:Chronology
 Class: bf:Classification
 
     Annotations: 
-        rdfs:label "Classification entity",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Classification entity",
         skos:definition "System of coding and organizing materials according to their subject."
     
     
 Class: bf:ClassificationDdc
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "DDC Classification",
-        skos:definition "Dewey Decimal Classification number used for subject access.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Dewey Decimal Classification number used for subject access."
     
     SubClassOf: 
         bf:Classification
@@ -3187,9 +3191,9 @@ Class: bf:ClassificationDdc
 Class: bf:ClassificationLcc
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "LCC Classification",
-        skos:definition "Library of Congress Classification number used for subject access.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Library of Congress Classification number used for subject access."
     
     SubClassOf: 
         bf:Classification
@@ -3198,8 +3202,8 @@ Class: bf:ClassificationLcc
 Class: bf:ClassificationNlm
 
     Annotations: 
-        rdfs:label "NLM classification",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "NLM classification",
         skos:definition "National Library of Medicine Classification number used for subject access"
     
     SubClassOf: 
@@ -3209,9 +3213,9 @@ Class: bf:ClassificationNlm
 Class: bf:ClassificationUdc
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "UDC Classification",
-        skos:definition "Universal Decimal Classification number used for subject access.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Universal Decimal Classification number used for subject access."
     
     SubClassOf: 
         bf:Classification
@@ -3239,8 +3243,8 @@ Class: bf:Collection
 Class: bf:CollectiveTitle
 
     Annotations: 
-        rdfs:label "Collective title",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Collective title",
         skos:definition "Title for a compilation of resources."
     
     SubClassOf: 
@@ -3250,8 +3254,8 @@ Class: bf:CollectiveTitle
 Class: bf:ColorContent
 
     Annotations: 
-        rdfs:label "Color content",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Color content",
         skos:definition "Color characteristics of a resource, e.g., black and white, multicolored, etc."
     
     
@@ -3259,32 +3263,32 @@ Class: bf:Content
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Categorization reflecting the fundamental form of communication in which the content is expressed and the human sense through which it is intended to be perceived.",
-        rdfs:label "Content type"
+        rdfs:label "Content type",
+        skos:definition "Categorization reflecting the fundamental form of communication in which the content is expressed and the human sense through which it is intended to be perceived."
     
     
 Class: bf:ContentAccessibility
 
     Annotations: 
-        skos:definition "Information that assists those with a sensory impairment for greater understanding of content, e.g., captions.",
         dcterms:modified "2017-02-07 (New)",
-        rdfs:label "Content accessibility information"
+        rdfs:label "Content accessibility information",
+        skos:definition "Information that assists those with a sensory impairment for greater understanding of content, e.g., captions."
     
     
 Class: bf:Contribution
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Contribution",
-        skos:definition "Agent and role with respect to the resource being described.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Agent and role with respect to the resource being described."
     
     
 Class: bf:CopyrightNumber
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Copyright-legal deposit number",
-        skos:definition "Identifier assigned to a copyright registration or legal deposit.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Identifier assigned to a copyright registration or legal deposit."
     
     SubClassOf: 
         bf:Identifier
@@ -3293,26 +3297,26 @@ Class: bf:CopyrightNumber
 Class: bf:CopyrightRegistration
 
     Annotations: 
-        skos:definition "Copyright or Legal Deposit registration information",
-        dcterms:modified "2016-05-04 (Class name corrected)",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Copyright registration"
+        dcterms:modified "2016-05-04 (Class name corrected)",
+        rdfs:label "Copyright registration",
+        skos:definition "Copyright or Legal Deposit registration information"
     
     
 Class: bf:CoverArt
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Cover illustration of a resource.",
-        rdfs:label "Cover art"
+        rdfs:label "Cover art",
+        skos:definition "Cover illustration of a resource."
     
     
 Class: bf:Dataset
 
     Annotations: 
-        skos:definition "Data encoded in a defined structure. Includes numeric data, environmental data,etc., used by applications software to calculate averages, correlations, etc., or to produce models, etc., but not normally displayed in its raw form.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Dataset",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Data encoded in a defined structure. Includes numeric data, environmental data,etc., used by applications software to calculate averages, correlations, etc., or to produce models, etc., but not normally displayed in its raw form."
     
     SubClassOf: 
         bf:Work
@@ -3321,10 +3325,10 @@ Class: bf:Dataset
 Class: bf:DescriptionAuthentication
 
     Annotations: 
-        skos:definition "Indication of specific types of reviews that have been carried out on the description information.",
-        dcterms:modified "2016-04-29 (fixed class name)",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Metadata authentication"
+        dcterms:modified "2016-04-29 (fixed class name)",
+        rdfs:label "Metadata authentication",
+        skos:definition "Indication of specific types of reviews that have been carried out on the description information."
     
     SubClassOf: 
         bf:AdminMetadata
@@ -3333,10 +3337,10 @@ Class: bf:DescriptionAuthentication
 Class: bf:DescriptionConventions
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2016-04-24 (fixed class name)",
         rdfs:label "Description conventions",
-        skos:definition "Rules used for the descriptive content of the resource description.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Rules used for the descriptive content of the resource description."
     
     SubClassOf: 
         bf:AdminMetadata
@@ -3345,9 +3349,9 @@ Class: bf:DescriptionConventions
 Class: bf:DigitalCharacteristic
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Digital characteristic",
-        skos:definition "Technical specification relating to the digital encoding of text, image, audio, video, and other types of data in a resource.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Technical specification relating to the digital encoding of text, image, audio, video, and other types of data in a resource."
     
     
 Class: bf:Dissertation
@@ -3372,9 +3376,9 @@ Class: bf:DissertationIdentifier
 Class: bf:Distribution
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Distributor",
-        skos:definition "Information relating to distribution of a resource.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Information relating to distribution of a resource."
     
     SubClassOf: 
         bf:ProvisionActivity
@@ -3383,9 +3387,9 @@ Class: bf:Distribution
 Class: bf:Doi
 
     Annotations: 
-        skos:definition "Digital Object Identifier.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "DOI"
+        rdfs:label "DOI",
+        skos:definition "Digital Object Identifier."
     
     SubClassOf: 
         bf:Identifier
@@ -3395,8 +3399,8 @@ Class: bf:Ean
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "International Article Identifier.",
-        rdfs:label "EAN"
+        rdfs:label "EAN",
+        skos:definition "International Article Identifier."
     
     SubClassOf: 
         bf:Identifier
@@ -3405,9 +3409,9 @@ Class: bf:Ean
 Class: bf:Electronic
 
     Annotations: 
-        skos:definition "Resource that is intended for manipulation by a computer, accessed either directly or remotely.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Electronic",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Resource that is intended for manipulation by a computer, accessed either directly or remotely."
     
     SubClassOf: 
         bf:Instance
@@ -3416,17 +3420,17 @@ Class: bf:Electronic
 Class: bf:Emulsion
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Emulsion",
-        skos:definition "Suspension of light-sensitive chemicals used as a coating on a microfilm or microfiche, e.g., silver halide.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Suspension of light-sensitive chemicals used as a coating on a microfilm or microfiche, e.g., silver halide."
     
     
 Class: bf:EncodedBitrate
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Speed at which streaming audio, video, etc., is designed to play, e.g., 32 kbps.",
-        rdfs:label "Encoded bitrate"
+        rdfs:label "Encoded bitrate",
+        skos:definition "Speed at which streaming audio, video, etc., is designed to play, e.g., 32 kbps."
     
     SubClassOf: 
         bf:DigitalCharacteristic
@@ -3435,8 +3439,8 @@ Class: bf:EncodedBitrate
 Class: bf:EncodingFormat
 
     Annotations: 
-        rdfs:label "Encoding format",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Encoding format",
         skos:definition "Schema, standard, etc., used to encode the digital content of a resource, e.g., MP3, XML, JPEG."
     
     SubClassOf: 
@@ -3446,9 +3450,9 @@ Class: bf:EncodingFormat
 Class: bf:Enumeration
 
     Annotations: 
-        skos:definition "Numbering or other enumeration associated with issues or items held.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Enumeration",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Numbering or other enumeration associated with issues or items held."
     
     SubClassOf: 
         bf:EnumerationAndChronology
@@ -3457,33 +3461,33 @@ Class: bf:Enumeration
 Class: bf:EnumerationAndChronology
 
     Annotations: 
-        skos:definition "Numbering or other enumeration and dates associated with issues or items held.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Enumeration and chronology"
+        rdfs:label "Enumeration and chronology",
+        skos:definition "Numbering or other enumeration and dates associated with issues or items held."
     
     
 Class: bf:Event
 
     Annotations: 
-        skos:definition "Something that happens at a certain time and location, such as a performance, speech, or athletic event, that is documented by a resource.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Event entity",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Something that happens at a certain time and location, such as a performance, speech, or athletic event, that is documented by a resource."
     
     
 Class: bf:Extent
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Number and type of units and/or subunits making up a resource.",
-        rdfs:label "Extent"
+        rdfs:label "Extent",
+        skos:definition "Number and type of units and/or subunits making up a resource."
     
     
 Class: bf:Family
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Two or more persons related by birth, marriage, adoption, civil union, or similar legal status, or who otherwise present themselves as a family.",
-        rdfs:label "Family"
+        rdfs:label "Family",
+        skos:definition "Two or more persons related by birth, marriage, adoption, civil union, or similar legal status, or who otherwise present themselves as a family."
     
     SubClassOf: 
         bf:Agent
@@ -3492,9 +3496,9 @@ Class: bf:Family
 Class: bf:FileSize
 
     Annotations: 
-        skos:definition "Number of bytes in a digital file, e.g., 162 KB.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "File size",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Number of bytes in a digital file, e.g., 162 KB."
     
     SubClassOf: 
         bf:DigitalCharacteristic
@@ -3503,9 +3507,9 @@ Class: bf:FileSize
 Class: bf:FileType
 
     Annotations: 
-        skos:definition "General type of data content encoded in a computer file, e.g., text file, audio file.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "File type"
+        rdfs:label "File type",
+        skos:definition "General type of data content encoded in a computer file, e.g., text file, audio file."
     
     SubClassOf: 
         bf:DigitalCharacteristic
@@ -3514,9 +3518,9 @@ Class: bf:FileType
 Class: bf:Fingerprint
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Fingerprint identifier",
-        skos:definition "Identifier that is used to assist in the identification of antiquarian books by recording information comprising groups of characters taken from specified positions on specified pages of the book.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Identifier that is used to assist in the identification of antiquarian books by recording information comprising groups of characters taken from specified positions on specified pages of the book."
     
     SubClassOf: 
         bf:Identifier
@@ -3533,26 +3537,26 @@ Class: bf:FontSize
 Class: bf:Frequency
 
     Annotations: 
-        rdfs:label "Frequency",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Frequency",
         skos:definition "Information about intervals at which the parts of a serially produced resource or the updates to an integrating resource are issued."
     
     
 Class: bf:Generation
 
     Annotations: 
-        skos:definition "Relationship between an original carrier and the carrier of a reproduction made from the original.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Generation",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Relationship between an original carrier and the carrier of a reproduction made from the original."
     
     
 Class: bf:GenerationProcess
 
     Annotations: 
-        skos:definition "Indication of the program or process used to generate the description by application of a particular transformation.",
+        dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2016-04-24 (fixed class name)",
         rdfs:label "Generation process",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Indication of the program or process used to generate the description by application of a particular transformation."
     
     SubClassOf: 
         bf:AdminMetadata
@@ -3562,8 +3566,8 @@ Class: bf:GenreForm
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Characteristics of works with similar plots, themes, settings, etc. (e.g., westerns, thrillers), or with a particular format of purpose (e.g., animation, short), or a combination (e.g., horror film where horror is the genre and film is the form).",
-        rdfs:label "Genre/form"
+        rdfs:label "Genre/form",
+        skos:definition "Characteristics of works with similar plots, themes, settings, etc. (e.g., westerns, thrillers), or with a particular format of purpose (e.g., animation, short), or a combination (e.g., horror film where horror is the genre and film is the form)."
     
     
 Class: bf:GeographicCoverage
@@ -3577,9 +3581,9 @@ Class: bf:GeographicCoverage
 Class: bf:GrooveCharacteristic
 
     Annotations: 
-        dcterms:modified "2017-02-03 (Fixed name of property)",
-        dcterms:modified "2016-04-26 (fixed typo in definition)",
         dcterms:modified "2016-04-21 (New)",
+        dcterms:modified "2016-04-26 (fixed typo in definition)",
+        dcterms:modified "2017-02-03 (Fixed name of property)",
         rdfs:label "Groove characteristic",
         skos:definition "Groove width of an analog disc or the groove pitch of an analog cylinder, e.g., coarse groove, microgroove"
     
@@ -3590,9 +3594,9 @@ Class: bf:GrooveCharacteristic
 Class: bf:Gtin14Number
 
     Annotations: 
-        skos:definition "14 digit number assigned to identify trade items as various packaging levels. GTIN-14 encompasses EAN/UCC-128 and ITF-14.",
+        dcterms:modified "2017-02-03 (New)",
         rdfs:label "Global Trade Item Number 14",
-        dcterms:modified "2017-02-03 (New)"
+        skos:definition "14 digit number assigned to identify trade items as various packaging levels. GTIN-14 encompasses EAN/UCC-128 and ITF-14."
     
     SubClassOf: 
         bf:Identifier
@@ -3601,9 +3605,9 @@ Class: bf:Gtin14Number
 Class: bf:Hdl
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Handle",
-        skos:definition "Unique and persistent identifier for digital objects developed by the Corporation for National Research Initiatives.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Unique and persistent identifier for digital objects developed by the Corporation for National Research Initiatives."
     
     SubClassOf: 
         bf:Identifier
@@ -3612,42 +3616,42 @@ Class: bf:Hdl
 Class: bf:Identifier
 
     Annotations: 
-        skos:definition "Token or name that is associated with a resource, such as a URI or an ISBN.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Identifier",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Token or name that is associated with a resource, such as a URI or an ISBN."
     
     
 Class: bf:Illustration
 
     Annotations: 
-        skos:definition "Information about content intended to illustrate a resource.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Illustrative content"
+        rdfs:label "Illustrative content",
+        skos:definition "Information about content intended to illustrate a resource."
     
     
 Class: bf:ImmediateAcquisition
 
     Annotations: 
-        rdfs:label "Immediate acquisition",
         dcterms:modified "2017-02-06 (New)",
+        rdfs:label "Immediate acquisition",
         skos:definition "Information about the circumstances, e.g., source, date, method, under which the resource was directly acquired."
     
     
 Class: bf:Instance
 
     Annotations: 
-        skos:definition "Resource reflecting an individual, material embodiment of a Work.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Instance",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Resource reflecting an individual, material embodiment of a Work."
     
     
 Class: bf:InstanceTitle
 
     Annotations: 
-        dcterms:modified "2017-02-03 (removed)",
-        skos:definition "Title chosen as the name of an Instance, sometimes called \"title proper\" and often transcribed from the instance.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Instance title"
+        dcterms:modified "2017-02-03 (removed)",
+        rdfs:label "Instance title",
+        skos:definition "Title chosen as the name of an Instance, sometimes called \"title proper\" and often transcribed from the instance."
     
     SubClassOf: 
         bf:Title
@@ -3657,16 +3661,16 @@ Class: bf:IntendedAudience
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Information that identifies the specific intended or target audience or intellectual level for which the content described is considered appropriate. Also used to record interest and motivation levels and special learner characteristics.",
-        rdfs:label "Intended audience information"
+        rdfs:label "Intended audience information",
+        skos:definition "Information that identifies the specific intended or target audience or intellectual level for which the content described is considered appropriate. Also used to record interest and motivation levels and special learner characteristics."
     
     
 Class: bf:Isan
 
     Annotations: 
-        skos:definition "International Standard Audiovisual Number.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "ISAN",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "International Standard Audiovisual Number."
     
     SubClassOf: 
         bf:Identifier
@@ -3675,8 +3679,8 @@ Class: bf:Isan
 Class: bf:Isbn
 
     Annotations: 
-        rdfs:label "ISBN",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "ISBN",
         skos:definition "International Standard Book Number."
     
     SubClassOf: 
@@ -3686,9 +3690,9 @@ Class: bf:Isbn
 Class: bf:Ismn
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "ISMN",
-        skos:definition "International Standard Music Number.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "International Standard Music Number."
     
     SubClassOf: 
         bf:Identifier
@@ -3697,8 +3701,8 @@ Class: bf:Ismn
 Class: bf:Isni
 
     Annotations: 
-        rdfs:label "ISNI",
         dcterms:modified "2017-02-03 (New)",
+        rdfs:label "ISNI",
         skos:definition "International Standard Name Identifier, a unique, persistent reference number for the identities of contributors to creative works."
     
     SubClassOf: 
@@ -3708,8 +3712,8 @@ Class: bf:Isni
 Class: bf:Iso
 
     Annotations: 
-        rdfs:label "ISO number",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "ISO number",
         skos:definition "International Organization for Standardization standard number."
     
     SubClassOf: 
@@ -3719,8 +3723,8 @@ Class: bf:Iso
 Class: bf:Isrc
 
     Annotations: 
-        rdfs:label "ISRC",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "ISRC",
         skos:definition "International Standard Recording Code."
     
     SubClassOf: 
@@ -3730,9 +3734,9 @@ Class: bf:Isrc
 Class: bf:Issn
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "ISSN",
-        skos:definition "International Standard Serial Number.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "International Standard Serial Number."
     
     SubClassOf: 
         bf:Identifier
@@ -3741,8 +3745,8 @@ Class: bf:Issn
 Class: bf:IssnL
 
     Annotations: 
-        rdfs:label "ISSN-L",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "ISSN-L",
         skos:definition "International Standard Serial Number that links together various media versions of a continuing resource."
     
     SubClassOf: 
@@ -3753,16 +3757,16 @@ Class: bf:Issuance
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Information about whether a resource is issued in one or more parts, the way it is updated, and its intended termination.",
-        rdfs:label "Mode of issuance"
+        rdfs:label "Mode of issuance",
+        skos:definition "Information about whether a resource is issued in one or more parts, the way it is updated, and its intended termination."
     
     
 Class: bf:Istc
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "ISTC",
-        skos:definition "International Standard Text Code, a numbering system developed to enable the unique identification of textual works.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "International Standard Text Code, a numbering system developed to enable the unique identification of textual works."
     
     SubClassOf: 
         bf:Identifier
@@ -3771,9 +3775,9 @@ Class: bf:Istc
 Class: bf:Iswc
 
     Annotations: 
-        skos:definition "International Standard Musical Work Code, a unique, persistent reference number for the identification of musical works.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "ISWC"
+        rdfs:label "ISWC",
+        skos:definition "International Standard Musical Work Code, a unique, persistent reference number for the identification of musical works."
     
     SubClassOf: 
         bf:Identifier
@@ -3782,17 +3786,17 @@ Class: bf:Iswc
 Class: bf:Item
 
     Annotations: 
-        skos:definition "Single example of an Instance.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Item"
+        rdfs:label "Item",
+        skos:definition "Single example of an Instance."
     
     
 Class: bf:Jurisdiction
 
     Annotations: 
-        skos:definition "Legal or political unit administering a geographic area.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Jurisdiction",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Legal or political unit administering a geographic area."
     
     SubClassOf: 
         bf:Agent
@@ -3801,9 +3805,9 @@ Class: bf:Jurisdiction
 Class: bf:KeyTitle
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Key title",
-        skos:definition "Unique title for a continuing resource that is assigned by the ISSN International Center in conjunction with an ISSN.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Unique title for a continuing resource that is assigned by the ISSN International Center in conjunction with an ISSN."
     
     SubClassOf: 
         bf:VariantTitle
@@ -3820,8 +3824,8 @@ Class: bf:Language
 Class: bf:Layout
 
     Annotations: 
-        rdfs:label "Layout",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Layout",
         skos:definition "Arrangement of text, images, tactile notation, etc., in a resource."
     
     
@@ -3829,8 +3833,8 @@ Class: bf:LcOverseasAcq
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Identification number assigned by the Library of Congress to works acquired through one of its collaborative overseas acquisition programs.",
-        rdfs:label "LC acquisition program"
+        rdfs:label "LC acquisition program",
+        skos:definition "Identification number assigned by the Library of Congress to works acquired through one of its collaborative overseas acquisition programs."
     
     SubClassOf: 
         bf:Identifier
@@ -3840,8 +3844,8 @@ Class: bf:Lccn
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Library of Congress Control Number that identifies a resource description.",
-        rdfs:label "LCCN"
+        rdfs:label "LCCN",
+        skos:definition "Library of Congress Control Number that identifies a resource description."
     
     SubClassOf: 
         bf:Identifier
@@ -3851,8 +3855,8 @@ Class: bf:Local
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Identifier established locally and not a standard number.",
-        rdfs:label "Local identifier"
+        rdfs:label "Local identifier",
+        skos:definition "Identifier established locally and not a standard number."
     
     SubClassOf: 
         bf:Identifier
@@ -3883,10 +3887,10 @@ Class: bf:Manuscript
 Class: bf:MatrixNumber
 
     Annotations: 
-        dcterms:modified "2017-02-03 (Revised definition)",
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Matrix identifier assigned to the master from which a specific sound recording was pressed.",
-        rdfs:label "Audio matrix number"
+        dcterms:modified "2017-02-03 (Revised definition)",
+        rdfs:label "Audio matrix number",
+        skos:definition "Matrix identifier assigned to the master from which a specific sound recording was pressed."
     
     SubClassOf: 
         bf:Identifier
@@ -3895,17 +3899,17 @@ Class: bf:MatrixNumber
 Class: bf:Media
 
     Annotations: 
-        skos:definition "Categorization reflecting the general type of intermediation device required to view, play, run, etc., the content of a resource.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Media type",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Categorization reflecting the general type of intermediation device required to view, play, run, etc., the content of a resource."
     
     
 Class: bf:Meeting
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Meeting",
-        skos:definition "Gathering of individuals or representatives of various bodies for the purpose of discussing and/or acting on topics of common interest.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Gathering of individuals or representatives of various bodies for the purpose of discussing and/or acting on topics of common interest."
     
     SubClassOf: 
         bf:Agent
@@ -3915,8 +3919,8 @@ Class: bf:MixedMaterial
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Resource comprised of multiple types which are not driven by software. This may include materials in two or more forms that are related by virtue of their having been accumulated by or about a person or body., archival fonds.",
-        rdfs:label "Mixed material"
+        rdfs:label "Mixed material",
+        skos:definition "Resource comprised of multiple types which are not driven by software. This may include materials in two or more forms that are related by virtue of their having been accumulated by or about a person or body., archival fonds."
     
     SubClassOf: 
         bf:Work
@@ -3925,17 +3929,17 @@ Class: bf:MixedMaterial
 Class: bf:Mount
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Mount",
-        skos:definition "Physical material used for the support or backing to which the base material of a resource has been attached.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Physical material used for the support or backing to which the base material of a resource has been attached."
     
     
 Class: bf:MovementNotation
 
     Annotations: 
-        skos:definition "Information on the symbol system used to convey the content of a movement resource.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Movement notation used"
+        rdfs:label "Movement notation used",
+        skos:definition "Information on the symbol system used to convey the content of a movement resource."
     
     SubClassOf: 
         bf:Notation
@@ -3956,8 +3960,8 @@ Class: bf:MovingImage
 Class: bf:Multimedia
 
     Annotations: 
-        rdfs:label "Software or multimedia",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Software or multimedia",
         skos:definition "Electronic resource that is a computer program (i.e., digitally encoded instructions intended to be processed and performed by a computer) or which consists of multiple media types that are software driven, such as videogames."
     
     SubClassOf: 
@@ -3967,9 +3971,9 @@ Class: bf:Multimedia
 Class: bf:MusicDistributorNumber
 
     Annotations: 
+        dcterms:modified "2017-02-07 (New)",
         rdfs:label "Music distributor number",
-        skos:definition "Identifier appearing on a resource assigned by a distributor to a specific audio recording, notated music publication, music-related publication, or videorecording.",
-        dcterms:modified "2017-02-07 (New)"
+        skos:definition "Identifier appearing on a resource assigned by a distributor to a specific audio recording, notated music publication, music-related publication, or videorecording."
     
     SubClassOf: 
         bf:Identifier
@@ -3978,33 +3982,33 @@ Class: bf:MusicDistributorNumber
 Class: bf:MusicEnsemble
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Music ensemble",
-        skos:definition "Ensemble for which a musical work is appropriate.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Ensemble for which a musical work is appropriate."
     
     
 Class: bf:MusicFormat
 
     Annotations: 
-        skos:definition "Layout for content of a resource that is presented in the form of musical notation.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Notated music format"
+        rdfs:label "Notated music format",
+        skos:definition "Layout for content of a resource that is presented in the form of musical notation."
     
     
 Class: bf:MusicInstrument
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Instrument for which a musical work is appropriate.",
-        rdfs:label "Musical instrument"
+        rdfs:label "Musical instrument",
+        skos:definition "Instrument for which a musical work is appropriate."
     
     
 Class: bf:MusicMedium
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Summary statement of the medium for a musical work.",
-        rdfs:label "Music medium information"
+        rdfs:label "Music medium information",
+        skos:definition "Summary statement of the medium for a musical work."
     
     
 Class: bf:MusicNotation
@@ -4021,10 +4025,10 @@ Class: bf:MusicNotation
 Class: bf:MusicPlate
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2017-02-03 (Revised definition)",
         rdfs:label "Music plate number",
-        skos:definition "Identifiers assigned by a music publisher or printer to the printing plates for the notated portion of a notated music publication, or an identifier that emulates the printing plate tradition in contemporary publications.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Identifiers assigned by a music publisher or printer to the printing plates for the notated portion of a notated music publication, or an identifier that emulates the printing plate tradition in contemporary publications."
     
     SubClassOf: 
         bf:Identifier
@@ -4034,9 +4038,9 @@ Class: bf:MusicPublisherNumber
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
+        dcterms:modified "2017-02-03 (Revised definition)",
         rdfs:label "Music publisher number",
-        skos:definition "Identifier assigned to a notated music publication other than an issue, matrix, or plate number.",
-        dcterms:modified "2017-02-03 (Revised definition)"
+        skos:definition "Identifier assigned to a notated music publication other than an issue, matrix, or plate number."
     
     SubClassOf: 
         bf:Identifier
@@ -4045,9 +4049,9 @@ Class: bf:MusicPublisherNumber
 Class: bf:MusicVoice
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Music voice",
-        skos:definition "Voice for which a musical work is appropriate.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Voice for which a musical work is appropriate."
     
     
 Class: bf:Nbn
@@ -4075,8 +4079,8 @@ Class: bf:NotatedMovement
 Class: bf:NotatedMusic
 
     Annotations: 
-        rdfs:label "Notated music",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Notated music",
         skos:definition "Graphic, non-realized representations of musical works intended to be perceived visually."
     
     SubClassOf: 
@@ -4086,25 +4090,25 @@ Class: bf:NotatedMusic
 Class: bf:Notation
 
     Annotations: 
-        rdfs:label "Notation",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Notation",
         skos:definition "Information on the alphabet, script, or symbol system used to convey the content of the resource, including specialized scripts, typefaces, tactile notation, movement notation, and musical notation."
     
     
 Class: bf:Note
 
     Annotations: 
-        skos:definition "Information, usually in textual form, on attributes of a resource or some aspect of a resource.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Note",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Information, usually in textual form, on attributes of a resource or some aspect of a resource."
     
     
 Class: bf:Object
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Resource in a form intended to be perceived visually in three-dimensions. Includes man-made objects such as models, sculptures, clothing, and toys, as well as naturally occurring objects such as specimens mounted for viewing.",
-        rdfs:label "Three-dimensional object"
+        rdfs:label "Three-dimensional object",
+        skos:definition "Resource in a form intended to be perceived visually in three-dimensions. Includes man-made objects such as models, sculptures, clothing, and toys, as well as naturally occurring objects such as specimens mounted for viewing."
     
     SubClassOf: 
         bf:Work
@@ -4124,9 +4128,9 @@ Class: bf:ObjectCount
 Class: bf:Organization
 
     Annotations: 
-        skos:definition "Corporation or group of persons and/or organizations that acts, or may act, as a unit.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Organization"
+        rdfs:label "Organization",
+        skos:definition "Corporation or group of persons and/or organizations that acts, or may act, as a unit."
     
     SubClassOf: 
         bf:Agent
@@ -4135,8 +4139,8 @@ Class: bf:Organization
 Class: bf:ParallelTitle
 
     Annotations: 
-        rdfs:label "Parallel title proper",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Parallel title proper",
         skos:definition "Title in another language and/or script."
     
     SubClassOf: 
@@ -4146,9 +4150,9 @@ Class: bf:ParallelTitle
 Class: bf:Person
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Person",
-        skos:definition "Individual or identity established by an individual (either alone or in collaboration with one or more other individuals).",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Individual or identity established by an individual (either alone or in collaboration with one or more other individuals)."
     
     SubClassOf: 
         <http://xmlns.com/foaf/0.1/Person>
@@ -4157,17 +4161,17 @@ Class: bf:Person
 Class: bf:Place
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Place",
-        skos:definition "Geographic location.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Geographic location."
     
     
 Class: bf:PlaybackChannels
 
     Annotations: 
-        skos:definition "Configuration/number of sound channels used to make a recording, such as one channel for a monophonic recording, e.g., mono, stereo, quadraphonic, surround.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Configuration of playback channels",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Configuration/number of sound channels used to make a recording, such as one channel for a monophonic recording, e.g., mono, stereo, quadraphonic, surround."
     
     SubClassOf: 
         bf:SoundCharacteristic
@@ -4176,9 +4180,9 @@ Class: bf:PlaybackChannels
 Class: bf:PlaybackCharacteristic
 
     Annotations: 
-        skos:definition "Equalization system, noise reduction system, etc., used in making an audio recording, e.g., CCIR standard, CX encoded, Dolby.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Special playback characteristics",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Equalization system, noise reduction system, etc., used in making an audio recording, e.g., CCIR standard, CX encoded, Dolby."
     
     SubClassOf: 
         bf:SoundCharacteristic
@@ -4187,8 +4191,8 @@ Class: bf:PlaybackCharacteristic
 Class: bf:PlayingSpeed
 
     Annotations: 
-        rdfs:label "Playing speed",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Playing speed",
         skos:definition "Speed at which an audio carrier must be operated to produce the sound intended, e.g., 78 rpm, 19 cm/s."
     
     SubClassOf: 
@@ -4199,15 +4203,15 @@ Class: bf:Polarity
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Relationship of the colors and tones in an image to the colors and tones of the object reproduced.",
-        rdfs:label "Polarity"
+        rdfs:label "Polarity",
+        skos:definition "Relationship of the colors and tones in an image to the colors and tones of the object reproduced."
     
     
 Class: bf:PostalRegistration
 
     Annotations: 
-        rdfs:label "Postal registration number",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Postal registration number",
         skos:definition "Number assigned to a publication for which the specified postal service permits the use of a special mailing class privilege."
     
     SubClassOf: 
@@ -4217,9 +4221,9 @@ Class: bf:PostalRegistration
 Class: bf:PresentationFormat
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Presentation format",
-        skos:definition "Format used in the production of a projected image, e.g., Cinerama, IMAX.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Format used in the production of a projected image, e.g., Cinerama, IMAX."
     
     SubClassOf: 
         bf:ProjectionCharacteristic
@@ -4229,8 +4233,8 @@ Class: bf:Print
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Resource that is printed.",
-        rdfs:label "Printed"
+        rdfs:label "Printed",
+        skos:definition "Resource that is printed."
     
     SubClassOf: 
         bf:Instance
@@ -4250,33 +4254,33 @@ Class: bf:Production
 Class: bf:ProductionMethod
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Production method",
-        skos:definition "Process used to produce a resource",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Process used to produce a resource"
     
     
 Class: bf:Projection
 
     Annotations: 
         dcterms:modified "2017-02-03 (New)",
-        skos:definition "Method or system used to represent the surface of the earth or of a celestial sphere on a plane.",
-        rdfs:label "Projection"
+        rdfs:label "Projection",
+        skos:definition "Method or system used to represent the surface of the earth or of a celestial sphere on a plane."
     
     
 Class: bf:ProjectionCharacteristic
 
     Annotations: 
-        skos:definition "Technical specification relating to the projection of a motion picture film.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Projection characteristic"
+        rdfs:label "Projection characteristic",
+        skos:definition "Technical specification relating to the projection of a motion picture film."
     
     
 Class: bf:ProjectionSpeed
 
     Annotations: 
-        skos:definition "Speed at which a projected carrier must be operated to produce the moving image intended, e.g., 20 fps.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Projection speed"
+        rdfs:label "Projection speed",
+        skos:definition "Speed at which a projected carrier must be operated to produce the moving image intended, e.g., 20 fps."
     
     SubClassOf: 
         bf:ProjectionCharacteristic
@@ -4293,9 +4297,9 @@ Class: bf:ProvisionActivity
 Class: bf:Publication
 
     Annotations: 
-        skos:definition "Information relating to publication of a resource.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Publisher"
+        rdfs:label "Publisher",
+        skos:definition "Information relating to publication of a resource."
     
     SubClassOf: 
         bf:ProvisionActivity
@@ -4304,9 +4308,9 @@ Class: bf:Publication
 Class: bf:PublisherNumber
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Other publisher number",
-        skos:definition "Number assigned by a publisher that is not one of the specific defined types.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Number assigned by a publisher that is not one of the specific defined types."
     
     SubClassOf: 
         bf:Identifier
@@ -4315,8 +4319,8 @@ Class: bf:PublisherNumber
 Class: bf:RecordingMedium
 
     Annotations: 
-        rdfs:label "Recording medium",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Recording medium",
         skos:definition "Type of medium used to record sound on an audio carrier, e.g., magnetic, optical."
     
     SubClassOf: 
@@ -4326,9 +4330,9 @@ Class: bf:RecordingMedium
 Class: bf:RecordingMethod
 
     Annotations: 
-        skos:definition "Method used to encode audio content for playback, e.g., analog, digital.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Type of recording"
+        rdfs:label "Type of recording",
+        skos:definition "Method used to encode audio content for playback, e.g., analog, digital."
     
     SubClassOf: 
         bf:SoundCharacteristic
@@ -4337,16 +4341,16 @@ Class: bf:RecordingMethod
 Class: bf:ReductionRatio
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Reduction ratio",
-        skos:definition "Size of a micro-image in relation to the original from which it was produced.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Size of a micro-image in relation to the original from which it was produced."
     
     
 Class: bf:RegionalEncoding
 
     Annotations: 
-        rdfs:label "Regional encoding",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Regional encoding",
         skos:definition "Identification of the region of the world for which a videodisc has been encoded, e.g., region 4."
     
     SubClassOf: 
@@ -4357,8 +4361,8 @@ Class: bf:ReportNumber
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Identification number of a technical report that is not a Standard Technical Report Number.",
-        rdfs:label "Technical report number"
+        rdfs:label "Technical report number",
+        skos:definition "Identification number of a technical report that is not a Standard Technical Report Number."
     
     SubClassOf: 
         bf:Identifier
@@ -4367,9 +4371,9 @@ Class: bf:ReportNumber
 Class: bf:Resolution
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Resolution",
-        skos:definition "Clarity or fineness of detail in a digital image, expressed by the measurement of the image in pixels, etc., e.g., 3.1 megapixels.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Clarity or fineness of detail in a digital image, expressed by the measurement of the image in pixels, etc., e.g., 3.1 megapixels."
     
     SubClassOf: 
         bf:DigitalCharacteristic
@@ -4379,8 +4383,8 @@ Class: bf:RetentionPolicy
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Policy of holding institution for retaining resource.",
-        rdfs:label "Retention policy"
+        rdfs:label "Retention policy",
+        skos:definition "Policy of holding institution for retaining resource."
     
     SubClassOf: 
         bf:UsageAndAccessPolicy
@@ -4389,24 +4393,24 @@ Class: bf:RetentionPolicy
 Class: bf:Review
 
     Annotations: 
-        skos:definition "Review of a resource.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Review",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Review of a resource."
     
     
 Class: bf:Role
 
     Annotations: 
-        rdfs:label "Role",
         dcterms:modified "2017-02-03 (New)",
+        rdfs:label "Role",
         skos:definition "Function played or provided by a contributor, e.g., author, illustrator, etc."
     
     
 Class: bf:Scale
 
     Annotations: 
-        rdfs:label "Scale",
         dcterms:modified "2017-02-03 (New)",
+        rdfs:label "Scale",
         skos:definition "Ratio of the dimensions of a form contained or embodied in a resource to the dimensions of the entity it represents, e.g., for images or cartographic resources."
     
     
@@ -4424,9 +4428,9 @@ Class: bf:Script
 Class: bf:ShelfMark
 
     Annotations: 
-        skos:definition "Piece/item identifier, such as a call or other type of number.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Shelf location"
+        rdfs:label "Shelf location",
+        skos:definition "Piece/item identifier, such as a call or other type of number."
     
     SubClassOf: 
         bf:Identifier
@@ -4446,9 +4450,9 @@ Class: bf:ShelfMarkDdc
 Class: bf:ShelfMarkLcc
 
     Annotations: 
-        skos:definition "Shelf mark based on Library of Congress Classification.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "LCC call number",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Shelf mark based on Library of Congress Classification."
     
     SubClassOf: 
         bf:ShelfMark
@@ -4457,9 +4461,9 @@ Class: bf:ShelfMarkLcc
 Class: bf:ShelfMarkNlm
 
     Annotations: 
-        skos:definition "Shelf mark based on National Library of Medicine Classification.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "NLM call number"
+        rdfs:label "NLM call number",
+        skos:definition "Shelf mark based on National Library of Medicine Classification."
     
     SubClassOf: 
         bf:ShelfMark
@@ -4468,9 +4472,9 @@ Class: bf:ShelfMarkNlm
 Class: bf:ShelfMarkUdc
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "UDC call number",
-        skos:definition "Shelf mark based on Universal Decimal Classification.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Shelf mark based on Universal Decimal Classification."
     
     SubClassOf: 
         bf:ShelfMark
@@ -4480,8 +4484,8 @@ Class: bf:Sici
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Serial Item and Contribution Identifier.",
-        rdfs:label "SICI"
+        rdfs:label "SICI",
+        skos:definition "Serial Item and Contribution Identifier."
     
     SubClassOf: 
         bf:Identifier
@@ -4490,9 +4494,9 @@ Class: bf:Sici
 Class: bf:SoundCharacteristic
 
     Annotations: 
-        skos:definition "Technical specification relating to the encoding of sound in a resource.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Sound characteristic"
+        rdfs:label "Sound characteristic",
+        skos:definition "Technical specification relating to the encoding of sound in a resource."
     
     
 Class: bf:SoundContent
@@ -4506,8 +4510,8 @@ Class: bf:SoundContent
 Class: bf:Source
 
     Annotations: 
-        rdfs:label "Source",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Source",
         skos:definition "Resource from which value or label came or was derived."
     
     
@@ -4534,8 +4538,8 @@ Class: bf:StockNumber
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Identification number used for stock purposes and assigned by agencies such as distributors, publishers, or vendors.",
-        rdfs:label "Stock number"
+        rdfs:label "Stock number",
+        skos:definition "Identification number used for stock purposes and assigned by agencies such as distributors, publishers, or vendors."
     
     SubClassOf: 
         bf:Identifier
@@ -4544,9 +4548,9 @@ Class: bf:StockNumber
 Class: bf:Strn
 
     Annotations: 
-        skos:definition "Standard Technical Report Number.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "STRN",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Standard Technical Report Number."
     
     SubClassOf: 
         bf:Identifier
@@ -4556,8 +4560,8 @@ Class: bf:StudyNumber
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Identification number for a computer data file.",
-        rdfs:label "Study number"
+        rdfs:label "Study number",
+        skos:definition "Identification number for a computer data file."
     
     SubClassOf: 
         bf:Identifier
@@ -4567,48 +4571,48 @@ Class: bf:Sublocation
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Specific place within the holding entity where the item is located or made available.",
-        rdfs:label "Sublocation"
+        rdfs:label "Sublocation",
+        skos:definition "Specific place within the holding entity where the item is located or made available."
     
     
 Class: bf:Summary
 
     Annotations: 
-        skos:definition "Description of the content of a resource, such as an abstract, summary, etc..",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Summary"
+        rdfs:label "Summary",
+        skos:definition "Description of the content of a resource, such as an abstract, summary, etc.."
     
     
 Class: bf:SupplementaryContent
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Index, bibliography, appendix, etc. intended to supplement the primary content of a resource.",
-        rdfs:label "Supplementary material"
+        rdfs:label "Supplementary material",
+        skos:definition "Index, bibliography, appendix, etc. intended to supplement the primary content of a resource."
     
     
 Class: bf:SystemRequirement
 
     Annotations: 
-        skos:definition "Equipment or system requirements beyond what is normal and obvious for the type of carrier or type of file, such as make and model of equipment or hardware, operating system, amount of memory, programming language, other necessary software, any plug-ins or peripherals required to play, view, or run the resource, etc.",
         dcterms:modified "2017-02-06 (New)",
-        rdfs:label "System Requirement"
+        rdfs:label "System Requirement",
+        skos:definition "Equipment or system requirements beyond what is normal and obvious for the type of carrier or type of file, such as make and model of equipment or hardware, operating system, amount of memory, programming language, other necessary software, any plug-ins or peripherals required to play, view, or run the resource, etc."
     
     
 Class: bf:TableOfContents
 
     Annotations: 
-        rdfs:label "Table of contents",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Table of contents",
         skos:definition "Table of contents of a resource."
     
     
 Class: bf:Tactile
 
     Annotations: 
-        skos:definition "Resource that is intended to be perceived by touch.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Tactile material",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Resource that is intended to be perceived by touch."
     
     SubClassOf: 
         bf:Instance
@@ -4628,9 +4632,9 @@ Class: bf:TactileNotation
 Class: bf:TapeConfig
 
     Annotations: 
-        skos:definition "Number of tracks on an audiotape, e.g., 12 track.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Tape configuration"
+        rdfs:label "Tape configuration",
+        skos:definition "Number of tracks on an audiotape, e.g., 12 track."
     
     SubClassOf: 
         bf:SoundCharacteristic
@@ -4639,9 +4643,9 @@ Class: bf:TapeConfig
 Class: bf:Temporal
 
     Annotations: 
-        skos:definition "Chronological period.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Temporal concept",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Chronological period."
     
     
 Class: bf:Text
@@ -4659,25 +4663,25 @@ Class: bf:Title
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
+        dcterms:modified "2017-02-03 (Definition changed)",
         rdfs:label "Title entity",
-        skos:definition "Title information relating to a resource: work title, preferred title, instance title, transcribed title, translated title, variant form of title, etc.",
-        dcterms:modified "2017-02-03 (Definition changed)"
+        skos:definition "Title information relating to a resource: work title, preferred title, instance title, transcribed title, translated title, variant form of title, etc."
     
     
 Class: bf:Topic
 
     Annotations: 
-        skos:definition "Concept or area of knowledge.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Topic"
+        rdfs:label "Topic",
+        skos:definition "Concept or area of knowledge."
     
     
 Class: bf:TrackConfig
 
     Annotations: 
-        skos:definition "Configuration of the audio track on a sound-track film, e.g., center track, edge track.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Track configuration",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Configuration of the audio track on a sound-track film, e.g., center track, edge track."
     
     SubClassOf: 
         bf:SoundCharacteristic
@@ -4686,17 +4690,17 @@ Class: bf:TrackConfig
 Class: bf:Unit
 
     Annotations: 
-        skos:definition "Units in which a value is expressed.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Unit"
+        rdfs:label "Unit",
+        skos:definition "Units in which a value is expressed."
     
     
 Class: bf:Upc
 
     Annotations: 
-        skos:definition "Universal Product Code.",
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "UPC"
+        rdfs:label "UPC",
+        skos:definition "Universal Product Code."
     
     SubClassOf: 
         bf:Identifier
@@ -4705,9 +4709,9 @@ Class: bf:Upc
 Class: bf:Urn
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "URN",
-        skos:definition "Uniform Resource Number.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Uniform Resource Number."
     
     SubClassOf: 
         bf:Identifier
@@ -4716,8 +4720,8 @@ Class: bf:Urn
 Class: bf:UsageAndAccessPolicy
 
     Annotations: 
-        rdfs:label "Use and access conditions",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Use and access conditions",
         skos:definition "General statement of allowances and restrictions on access to a resource, including retention, reproduction, access, and lending."
     
     
@@ -4725,8 +4729,8 @@ Class: bf:UsePolicy
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        skos:definition "Usage limitations placed on a resource with respect to reproduction, publication, exhibition, etc..",
-        rdfs:label "Use policy"
+        rdfs:label "Use policy",
+        skos:definition "Usage limitations placed on a resource with respect to reproduction, publication, exhibition, etc.."
     
     SubClassOf: 
         bf:UsageAndAccessPolicy
@@ -4735,9 +4739,9 @@ Class: bf:UsePolicy
 Class: bf:VariantTitle
 
     Annotations: 
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Title variation",
-        skos:definition "Title associated with the resource that is different from the Work or Instance title.",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Title associated with the resource that is different from the Work or Instance title."
     
     SubClassOf: 
         bf:Title
@@ -4746,17 +4750,17 @@ Class: bf:VariantTitle
 Class: bf:VideoCharacteristic
 
     Annotations: 
-        rdfs:label "Video characteristic",
         dcterms:modified "2016-04-21 (New)",
+        rdfs:label "Video characteristic",
         skos:definition "Technical specification relating to the encoding of video images in a resource."
     
     
 Class: bf:VideoFormat
 
     Annotations: 
-        skos:definition "Standard, etc., used to encode the analog video content of a resource, e.g., Beta, 8mm.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Video format",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Standard, etc., used to encode the analog video content of a resource, e.g., Beta, 8mm."
     
     SubClassOf: 
         bf:VideoCharacteristic
@@ -4765,10 +4769,10 @@ Class: bf:VideoFormat
 Class: bf:VideoRecordingNumber
 
     Annotations: 
-        skos:definition "Number assigned by a publisher to a video recording.",
-        rdfs:label "Video recording number",
+        dcterms:modified "2016-04-21 (New)",
         dcterms:modified "2017-02-03 (Corrected case in class name)",
-        dcterms:modified "2016-04-21 (New)"
+        rdfs:label "Video recording number",
+        skos:definition "Number assigned by a publisher to a video recording."
     
     SubClassOf: 
         bf:Identifier
@@ -4777,17 +4781,17 @@ Class: bf:VideoRecordingNumber
 Class: bf:Work
 
     Annotations: 
-        skos:definition "Resource reflecting a conceptual essence of a cataloging resource.",
+        dcterms:modified "2016-04-21 (New)",
         rdfs:label "Work",
-        dcterms:modified "2016-04-21 (New)"
+        skos:definition "Resource reflecting a conceptual essence of a cataloging resource."
     
     
 Class: bf:WorkTitle
 
     Annotations: 
-        rdfs:label "Work title",
-        dcterms:modified "2017-02-03 (removed)",
         dcterms:modified "2016-04-21 (New)",
+        dcterms:modified "2017-02-03 (removed)",
+        rdfs:label "Work title",
         skos:definition "Title or form of title chosen to identify the work, such as a preferred title, preferred title with additions, uniform title, etc."
     
     SubClassOf: 

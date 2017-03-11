@@ -26,7 +26,7 @@ class ValidateTask extends AbstractTask {
         if (inputs.incremental) {
             boolean changed=false
             inputs.outOfDate({
-                logger.debug it.properties
+                logger.debug "{}",it.properties
                 changed = changed || it.added || it.modified || it.removed
             })
             if(!changed) {

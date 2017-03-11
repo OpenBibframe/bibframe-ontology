@@ -4,12 +4,13 @@ plugins {
 }
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
     compile 'org.slf4j:slf4j-api:1.7.21'
     testCompile 'junit:junit:4.12'
-    compile 'net.sourceforge.owlapi:owlapi-osgidistribution:5.0.5'
+    compile 'net.sourceforge.owlapi:owlapi-osgidistribution:[5.0.5,5.1)'
     compile gradleApi()
     compile localGroovy()
     testRuntimeOnly 'org.slf4j:slf4j-simple:1.7.21'
