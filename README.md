@@ -4,6 +4,8 @@ Open Bibframe: A github repository for open review of the LC Bibframe Ontology
 Current status
 --------------
 
+New domain and range work: [see commit](https://github.com/OpenBibframe/bibframe-ontology/commit/5c126cb91101df4bbef0c9c19f1e5f7945a262ac?diff=split) 
+
 ###Errors fixed so far:
 
 1. Use of incorect term owl:SymmetricalProperty replaced by owl:SymmetricProperty
@@ -12,14 +14,19 @@ Current status
 4. Declaration for foaf:Agent added.
 5. All uses of rdfs:Resource changed to owl:Thing.
 6. Typo of bf:ContentAccessability instead of bf:ContentAccessibility fixed
+7. Added two defined classes for (Work or Instance), and for (Work or Instance or Item)
+8. Most properties now have a Domain and Range
+9. Many data properties have more specific data types than rdfs:Literal. rdfs:Literal has been left in as a marker. 
+10. Comments have been added as markers for problems noted on a first pass.  
 
 ###Known OWL issues
 1. Some places where rdfs:Resource was being used should probably be replaced by a data property using xsd:anyUri.
-2. Many properties lack domains or ranges. Sometimes the domain or range is given in a comment, instead of as an axiom.
+2. Some properties lack domains or ranges. Sometimes the domain or range is given in a comment, instead of as an axiom.
+3. Many data properties could object properties with ranges that have instances instead of textual values. 
 
 ##Syntactically Valid File
 A fixed version of the original rdf/xml  ontology file is currently located at
- [bibframe.rdf.xml](https://github.com/sesuncedu/bibframe-ontology/blob/master/ontology/src/main/resources/bibframe.rdf.xml)
+ [bibframe.rdf.xml](ontology/src/main/resources/bibframe.rdf.xml)
 This file is now legal OWL.
 
 ##Renderings
