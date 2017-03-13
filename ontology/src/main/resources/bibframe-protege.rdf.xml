@@ -231,7 +231,7 @@
         <rdfs:range rdf:resource="&bf;Agent"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:comment>Used with Unspecified</rdfs:comment>
-        <rdfs:comment>What *precisely* is an element of description? </rdfs:comment>
+        <rdfs:comment>What *precisely* is an element of description? (SES)</rdfs:comment>
         <rdfs:label>Associated agent</rdfs:label>
         <skos:definition>Entity associated with a resource or element of description, such as the name of the entity responsible for the content or of the publication, printing, distribution, issue, release or production of a resource.</skos:definition>
     </owl:ObjectProperty>
@@ -688,12 +688,12 @@
     
 
 
-    <!-- http://id.loc.gov/ontologies/bibframe/enumerationAndChronology -->
+    <!-- http://id.loc.gov/ontologies/bibframe/enumerationOrChronology -->
 
 
-    <owl:ObjectProperty rdf:about="&bf;enumerationAndChronology">
+    <owl:ObjectProperty rdf:about="&bf;enumerationOrChronology">
         <rdfs:domain rdf:resource="&bf;Item"/>
-        <rdfs:range rdf:resource="&bf;EnumerationAndChronology"/>
+        <rdfs:range rdf:resource="&bf;EnumerationOrChronology"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:label>Numbering or other enumeration and dates associated with issues or items held.</rdfs:label>
         <skos:definition>Numbering and dates of issues or items held.</skos:definition>
@@ -2366,7 +2366,7 @@
         <rdfs:domain rdf:resource="&bf;Cartographic"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-        <rdfs:comment>Sounds like this could be an object property with a class with two values?</rdfs:comment>
+        <rdfs:comment>Sounds like this could be an object property with a class with two values? (SES)</rdfs:comment>
         <rdfs:label>Cartographic equinox</rdfs:label>
         <skos:definition>One of two points of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0 degrees.</skos:definition>
     </owl:DatatypeProperty>
@@ -3204,7 +3204,6 @@
 
 
     <owl:Class rdf:about="&bf;Chronology">
-        <rdfs:subClassOf rdf:resource="&bf;EnumerationAndChronology"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:label>Chronology</rdfs:label>
         <skos:definition>Dates associated with issues or items held.</skos:definition>
@@ -3544,7 +3543,6 @@
 
 
     <owl:Class rdf:about="&bf;Enumeration">
-        <rdfs:subClassOf rdf:resource="&bf;EnumerationAndChronology"/>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:label>Enumeration</rdfs:label>
         <skos:definition>Numbering or other enumeration associated with issues or items held.</skos:definition>
@@ -3552,12 +3550,16 @@
     
 
 
-    <!-- http://id.loc.gov/ontologies/bibframe/EnumerationAndChronology -->
+    <!-- http://id.loc.gov/ontologies/bibframe/EnumerationOrChronology -->
 
 
-    <owl:Class rdf:about="&bf;EnumerationAndChronology">
+    <owl:Class rdf:about="&bf;EnumerationOrChronology">
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="&bf;Chronology"/>
+            <rdf:Description rdf:about="&bf;Enumeration"/>
+        </owl:disjointUnionOf>
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-        <rdfs:label>Enumeration and chronology</rdfs:label>
+        <rdfs:label>Enumeration or chronology</rdfs:label>
         <skos:definition>Numbering or other enumeration and dates associated with issues or items held.</skos:definition>
     </owl:Class>
     

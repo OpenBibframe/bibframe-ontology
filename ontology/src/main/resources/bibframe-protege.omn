@@ -639,7 +639,7 @@ ObjectProperty: bf:ensemble
         bf:MusicEnsemble
     
     
-ObjectProperty: bf:enumerationAndChronology
+ObjectProperty: bf:enumerationOrChronology
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
@@ -650,7 +650,7 @@ ObjectProperty: bf:enumerationAndChronology
         bf:Item
     
     Range: 
-        bf:EnumerationAndChronology
+        bf:EnumerationOrChronology
     
     
 ObjectProperty: bf:eventContent
@@ -3343,9 +3343,6 @@ Class: bf:Chronology
         rdfs:label "Chronology",
         skos:definition "Dates associated with issues or items held."
     
-    SubClassOf: 
-        bf:EnumerationAndChronology
-    
     
 Class: bf:Classification
 
@@ -3632,16 +3629,16 @@ Class: bf:Enumeration
         rdfs:label "Enumeration",
         skos:definition "Numbering or other enumeration associated with issues or items held."
     
-    SubClassOf: 
-        bf:EnumerationAndChronology
     
-    
-Class: bf:EnumerationAndChronology
+Class: bf:EnumerationOrChronology
 
     Annotations: 
         dcterms:modified "2016-04-21 (New)",
-        rdfs:label "Enumeration and chronology",
+        rdfs:label "Enumeration or chronology",
         skos:definition "Numbering or other enumeration and dates associated with issues or items held."
+    
+    DisjointUnionOf: 
+        bf:Chronology, bf:Enumeration
     
     
 Class: bf:Event

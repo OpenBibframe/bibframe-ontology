@@ -136,7 +136,7 @@ bf:agent rdf:type owl:ObjectProperty ;
          rdfs:range bf:Agent ;
          dcterms:modified "2016-04-21 (New)" ;
          rdfs:comment "Used with Unspecified" ,
-                      "What *precisely* is an element of description? " ;
+                      "What *precisely* is an element of description? (SES)" ;
          rdfs:label "Associated agent" ;
          skos:definition "Entity associated with a resource or element of description, such as the name of the entity responsible for the content or of the publication, printing, distribution, issue, release or production of a resource." .
 
@@ -463,13 +463,13 @@ bf:ensemble rdf:type owl:ObjectProperty ;
             skos:definition "Ensemble for which a musical work is appropriate." .
 
 
-###  http://id.loc.gov/ontologies/bibframe/enumerationAndChronology
-bf:enumerationAndChronology rdf:type owl:ObjectProperty ;
-                            rdfs:domain bf:Item ;
-                            rdfs:range bf:EnumerationAndChronology ;
-                            dcterms:modified "2016-04-21 (New)" ;
-                            rdfs:label "Numbering or other enumeration and dates associated with issues or items held." ;
-                            skos:definition "Numbering and dates of issues or items held." .
+###  http://id.loc.gov/ontologies/bibframe/enumerationOrChronology
+bf:enumerationOrChronology rdf:type owl:ObjectProperty ;
+                           rdfs:domain bf:Item ;
+                           rdfs:range bf:EnumerationOrChronology ;
+                           dcterms:modified "2016-04-21 (New)" ;
+                           rdfs:label "Numbering or other enumeration and dates associated with issues or items held." ;
+                           skos:definition "Numbering and dates of issues or items held." .
 
 
 ###  http://id.loc.gov/ontologies/bibframe/eventContent
@@ -1671,7 +1671,7 @@ bf:equinox rdf:type owl:DatatypeProperty ;
            rdfs:domain bf:Cartographic ;
            rdfs:range rdfs:Literal ;
            dcterms:modified "2016-04-21 (New)" ;
-           rdfs:comment "Sounds like this could be an object property with a class with two values?" ;
+           rdfs:comment "Sounds like this could be an object property with a class with two values? (SES)" ;
            rdfs:label "Cartographic equinox" ;
            skos:definition "One of two points of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0 degrees." .
 
@@ -2241,7 +2241,6 @@ bf:Cartography rdf:type owl:Class ;
 
 ###  http://id.loc.gov/ontologies/bibframe/Chronology
 bf:Chronology rdf:type owl:Class ;
-              rdfs:subClassOf bf:EnumerationAndChronology ;
               dcterms:modified "2016-04-21 (New)" ;
               rdfs:label "Chronology" ;
               skos:definition "Dates associated with issues or items held." .
@@ -2465,17 +2464,19 @@ bf:EncodingFormat rdf:type owl:Class ;
 
 ###  http://id.loc.gov/ontologies/bibframe/Enumeration
 bf:Enumeration rdf:type owl:Class ;
-               rdfs:subClassOf bf:EnumerationAndChronology ;
                dcterms:modified "2016-04-21 (New)" ;
                rdfs:label "Enumeration" ;
                skos:definition "Numbering or other enumeration associated with issues or items held." .
 
 
-###  http://id.loc.gov/ontologies/bibframe/EnumerationAndChronology
-bf:EnumerationAndChronology rdf:type owl:Class ;
-                            dcterms:modified "2016-04-21 (New)" ;
-                            rdfs:label "Enumeration and chronology" ;
-                            skos:definition "Numbering or other enumeration and dates associated with issues or items held." .
+###  http://id.loc.gov/ontologies/bibframe/EnumerationOrChronology
+bf:EnumerationOrChronology rdf:type owl:Class ;
+                           owl:disjointUnionOf ( bf:Chronology
+                                                 bf:Enumeration
+                                               ) ;
+                           dcterms:modified "2016-04-21 (New)" ;
+                           rdfs:label "Enumeration or chronology" ;
+                           skos:definition "Numbering or other enumeration and dates associated with issues or items held." .
 
 
 ###  http://id.loc.gov/ontologies/bibframe/Event
