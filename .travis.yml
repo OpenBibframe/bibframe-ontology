@@ -1,6 +1,8 @@
 dist: trusty
 sudo: false
 
+install: /bin/true
+
 script: ./gradlew build 
 
 before_cache:
