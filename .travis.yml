@@ -2,6 +2,18 @@ dist: trusty
 sudo: false
 install: "/bin/true"
 script: "./gradlew build"
+env:
+  global:
+    secure: "ON/0x1MtHG+GC5cWr8DYXW0P5PJ0Vg8k0qMtjZUvrrxYOvv3YG//ZvtzIAG0JbelyxhG1Ja4K8EZPoNq7BdrDM0co4W5/13MpvmOW+bgA4kV3PaE6cH0aA4m231MuZYdyJ0f//e1mEVhE2o7M9CWgY70keVo7fNtstgQ3vgZWggPiQxFwf4rY+iNv0alfQ5q8qdEjcAGI1gHOs9rlG0Nv+QPNgU/Ipevr1PjAjcckcFN7aAnnmWgF360capWNpd8amsQT8dB5QPNyOM1gOvA93E4vk9SEATLRaFaujujsJpXll3qJnm5qQbpYURUlKuPBOZe681nGYqEP9zO4FW5FZ6Nrp5aynW8SYwObOOrS/xn/oXD6KxWUaAiXLqTqz6aBfKgT8NN5+KAb0MWhYJhlcebI2aeF0TO55wS8N4sXrpgAsOot+CJTO0YY5QEEMxQwnVHe/7512O9BS8zwBhUHuIuPTVHbLDQViQb7JXzNkpeMZ3yCMC3IAAEfiAUWscnnpphNBpRpXreoOKrEfNBq3E62DpMcmCEKGf8h0UByrRSGcWk7XNiQeoIcgKgNmNvCScPsP1oXhqg4+jliWg8wG7RSRbAw+3T8ljBh0xtL9uOP2HV4enslikJObpjnToKh4qo5CF/Vkl3s7UijTaRp3in0sipOiqlzpRTJuT1oLY="
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: ontology/build
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
+
 before_cache:
 - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
 - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
