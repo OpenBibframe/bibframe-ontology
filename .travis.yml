@@ -1,18 +1,17 @@
 dist: trusty
 sudo: false
-
-install: /bin/true
-
-script: ./gradlew build
-
+install: "/bin/true"
+script: "./gradlew build"
 before_cache:
-  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 cache:
   directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
-
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
 language: java
 jdk:
-  - oraclejdk8
+- oraclejdk8
+notifications:
+  slack:
+    secure: ezY3Q8llHTfjeyIyDNJWYRDVRBVNgbiHtgB/PLh5a1SXCrfTdoCHMaVCYLXJVoGipf+KkHadxpc9nueqj96G2opQYWDCHmxZoIQshgdOGhT+Bd4qqPIQaTEeMQ4Y2bDMKXPAz97/Y1AduTlhPX6OWGXVnJnv/vexD0sCkhu+iGdKto5Bq7dYa2jtGoS+keQfl8/E79CMcSAkNW4IMW8gPtRv5/8qvU3cuok0jPQ8nC67Uye5VQQKrWc6+8t87dJIs1IxVYeaLMDVzLTAxoWGZBuy9tcF+tMizmnaaHk+K/ywsqs6iwFL2KOQovqXQT08G3cbJ78k3dQJd5uPaFip46UKiAc1e7G1V0+qmkU6qp6aCn+TdauhpWzVKJABSlSvgRj7zqy44vEBUXe8iqI74K9G6HylBDNLr6dml2XvG6hKSlxORI2OG6DMyacHzBtj576AfgfYynu4OEyOc/U4zmfQHxHuSeOKT+qOjGstjRMt5zIAUyU7s4Sj4u85mtyq1TTIEvLklqQH03NiFlNui0U3Z29jPo8PI+NVtOUg5HCctdwQxVRvXsDibGnyFC+5jyVW3yVOkPHbLT+v1VbZPBinuYsml6OAmNO8WB/98ix7qIxI5dwW82LD8QSox99+bKttMOxCkzca9KfzOTS64NsZAjKw/GWvFP2J+0xF12c=
