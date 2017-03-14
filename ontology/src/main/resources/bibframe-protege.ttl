@@ -11,9 +11,9 @@
 @base <http://id.loc.gov/ontologies/bibframe/> .
 
 <http://id.loc.gov/ontologies/bibframe/> rdf:type owl:Ontology ;
-                                          dcterms:modified "2017-03-06T16:29:26.076-05:00" ;
+                                          dcterms:modified "2017-03-10T12:04:35.059-05:00" ;
                                           rdfs:label "BIBFRAME vocabulary" ;
-                                          owl:versionInfo "2017-03-06T16:29:26.076-05:00" .
+                                          owl:versionInfo "2017-03-10T12:04:35.059-05:00" .
 
 #################################################################
 #    Annotation properties
@@ -177,16 +177,6 @@ bf:assigner rdf:type owl:ObjectProperty ;
             dcterms:modified "2016-04-21 (New)" ;
             rdfs:label "Assigner" ;
             skos:definition "Entity that assigned the metadata, such as the entity that assigned a classification number, entity that assigned a name, entity that assigned an identifier." .
-
-
-###  http://id.loc.gov/ontologies/bibframe/barcode
-bf:barcode rdf:type owl:ObjectProperty ;
-           rdfs:domain bf:Item ;
-           rdfs:range bf:Barcode ;
-           dcterms:modified "2016-04-21 (New)" ,
-                            "2017-02-03 (Removed as property, added as Class)" ;
-           rdfs:label "Barcode" ;
-           skos:definition "Optical machine-readable representation of data relating to the item, to which it is attached." .
 
 
 ###  http://id.loc.gov/ontologies/bibframe/baseMaterial
@@ -2623,15 +2613,6 @@ bf:Instance rdf:type owl:Class ;
             skos:definition "Resource reflecting an individual, material embodiment of a Work." .
 
 
-###  http://id.loc.gov/ontologies/bibframe/InstanceTitle
-bf:InstanceTitle rdf:type owl:Class ;
-                 rdfs:subClassOf bf:Title ;
-                 dcterms:modified "2016-04-21 (New)" ,
-                                  "2017-02-03 (removed)" ;
-                 rdfs:label "Instance title" ;
-                 skos:definition "Title chosen as the name of an Instance, sometimes called \"title proper\" and often transcribed from the instance." .
-
-
 ###  http://id.loc.gov/ontologies/bibframe/IntendedAudience
 bf:IntendedAudience rdf:type owl:Class ;
                     dcterms:modified "2016-04-21 (New)" ;
@@ -3518,15 +3499,6 @@ bf:WorkOrInstanceOrItem rdf:type owl:Class ;
                                                             bf:WorkOrInstance
                                                           )
                                             ] .
-
-
-###  http://id.loc.gov/ontologies/bibframe/WorkTitle
-bf:WorkTitle rdf:type owl:Class ;
-             rdfs:subClassOf bf:Title ;
-             dcterms:modified "2016-04-21 (New)" ,
-                              "2017-02-03 (removed)" ;
-             rdfs:label "Work title" ;
-             skos:definition "Title or form of title chosen to identify the work, such as a preferred title, preferred title with additions, uniform title, etc." .
 
 
 ###  http://www.w3.org/2002/07/owl#Thing

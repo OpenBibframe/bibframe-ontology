@@ -11,9 +11,9 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
 Ontology(<http://id.loc.gov/ontologies/bibframe/>
-Annotation(dcterms:modified "2017-03-06T16:29:26.076-05:00")
+Annotation(dcterms:modified "2017-03-10T12:04:35.059-05:00")
 Annotation(rdfs:label "BIBFRAME vocabulary")
-Annotation(owl:versionInfo "2017-03-06T16:29:26.076-05:00")
+Annotation(owl:versionInfo "2017-03-10T12:04:35.059-05:00")
 
 Declaration(Class(bf:AbbreviatedTitle))
 Declaration(Class(bf:AccessPolicy))
@@ -88,7 +88,6 @@ Declaration(Class(bf:Identifier))
 Declaration(Class(bf:Illustration))
 Declaration(Class(bf:ImmediateAcquisition))
 Declaration(Class(bf:Instance))
-Declaration(Class(bf:InstanceTitle))
 Declaration(Class(bf:IntendedAudience))
 Declaration(Class(bf:Isan))
 Declaration(Class(bf:Isbn))
@@ -204,7 +203,6 @@ Declaration(Class(bf:VideoRecordingNumber))
 Declaration(Class(bf:Work))
 Declaration(Class(bf:WorkOrInstance))
 Declaration(Class(bf:WorkOrInstanceOrItem))
-Declaration(Class(bf:WorkTitle))
 Declaration(Class(owl:Thing))
 Declaration(Class(skos:Concept))
 Declaration(Class(<http://xmlns.com/foaf/0.1/Agent>))
@@ -220,7 +218,6 @@ Declaration(ObjectProperty(bf:appliedMaterial))
 Declaration(ObjectProperty(bf:arrangement))
 Declaration(ObjectProperty(bf:aspectRatio))
 Declaration(ObjectProperty(bf:assigner))
-Declaration(ObjectProperty(bf:barcode))
 Declaration(ObjectProperty(bf:baseMaterial))
 Declaration(ObjectProperty(bf:bookFormat))
 Declaration(ObjectProperty(bf:capture))
@@ -523,15 +520,6 @@ AnnotationAssertion(rdfs:label bf:assigner "Assigner")
 AnnotationAssertion(skos:definition bf:assigner "Entity that assigned the metadata, such as the entity that assigned a classification number, entity that assigned a name, entity that assigned an identifier.")
 ObjectPropertyDomain(bf:assigner bf:AdminMetadata)
 ObjectPropertyRange(bf:assigner bf:Agent)
-
-# Object Property: bf:barcode (Barcode)
-
-AnnotationAssertion(dcterms:modified bf:barcode "2016-04-21 (New)")
-AnnotationAssertion(dcterms:modified bf:barcode "2017-02-03 (Removed as property, added as Class)")
-AnnotationAssertion(rdfs:label bf:barcode "Barcode")
-AnnotationAssertion(skos:definition bf:barcode "Optical machine-readable representation of data relating to the item, to which it is attached.")
-ObjectPropertyDomain(bf:barcode bf:Item)
-ObjectPropertyRange(bf:barcode bf:Barcode)
 
 # Object Property: bf:baseMaterial (Base material)
 
@@ -2711,14 +2699,6 @@ AnnotationAssertion(dcterms:modified bf:Instance "2016-04-21 (New)")
 AnnotationAssertion(rdfs:label bf:Instance "Instance")
 AnnotationAssertion(skos:definition bf:Instance "Resource reflecting an individual, material embodiment of a Work.")
 
-# Class: bf:InstanceTitle (Instance title)
-
-AnnotationAssertion(dcterms:modified bf:InstanceTitle "2016-04-21 (New)")
-AnnotationAssertion(dcterms:modified bf:InstanceTitle "2017-02-03 (removed)")
-AnnotationAssertion(rdfs:label bf:InstanceTitle "Instance title")
-AnnotationAssertion(skos:definition bf:InstanceTitle "Title chosen as the name of an Instance, sometimes called \"title proper\" and often transcribed from the instance.")
-SubClassOf(bf:InstanceTitle bf:Title)
-
 # Class: bf:IntendedAudience (Intended audience information)
 
 AnnotationAssertion(dcterms:modified bf:IntendedAudience "2016-04-21 (New)")
@@ -3483,14 +3463,6 @@ EquivalentClasses(bf:WorkOrInstance ObjectUnionOf(bf:Instance bf:Work))
 # Class: bf:WorkOrInstanceOrItem (bf:WorkOrInstanceOrItem)
 
 EquivalentClasses(bf:WorkOrInstanceOrItem ObjectUnionOf(bf:Item bf:WorkOrInstance))
-
-# Class: bf:WorkTitle (Work title)
-
-AnnotationAssertion(dcterms:modified bf:WorkTitle "2016-04-21 (New)")
-AnnotationAssertion(dcterms:modified bf:WorkTitle "2017-02-03 (removed)")
-AnnotationAssertion(rdfs:label bf:WorkTitle "Work title")
-AnnotationAssertion(skos:definition bf:WorkTitle "Title or form of title chosen to identify the work, such as a preferred title, preferred title with additions, uniform title, etc.")
-SubClassOf(bf:WorkTitle bf:Title)
 
 
 )

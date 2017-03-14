@@ -26,9 +26,9 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://id.loc.gov/ontologies/bibframe/">
-        <dcterms:modified>2017-03-06T16:29:26.076-05:00</dcterms:modified>
+        <dcterms:modified>2017-03-10T12:04:35.059-05:00</dcterms:modified>
         <rdfs:label>BIBFRAME vocabulary</rdfs:label>
-        <owl:versionInfo>2017-03-06T16:29:26.076-05:00</owl:versionInfo>
+        <owl:versionInfo>2017-03-10T12:04:35.059-05:00</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -288,20 +288,6 @@
         <dcterms:modified>2016-04-21 (New)</dcterms:modified>
         <rdfs:label>Assigner</rdfs:label>
         <skos:definition>Entity that assigned the metadata, such as the entity that assigned a classification number, entity that assigned a name, entity that assigned an identifier.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://id.loc.gov/ontologies/bibframe/barcode -->
-
-
-    <owl:ObjectProperty rdf:about="&bf;barcode">
-        <rdfs:domain rdf:resource="&bf;Item"/>
-        <rdfs:range rdf:resource="&bf;Barcode"/>
-        <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-        <dcterms:modified>2017-02-03 (Removed as property, added as Class)</dcterms:modified>
-        <rdfs:label>Barcode</rdfs:label>
-        <skos:definition>Optical machine-readable representation of data relating to the item, to which it is attached.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -3785,19 +3771,6 @@
     
 
 
-    <!-- http://id.loc.gov/ontologies/bibframe/InstanceTitle -->
-
-
-    <owl:Class rdf:about="&bf;InstanceTitle">
-        <rdfs:subClassOf rdf:resource="&bf;Title"/>
-        <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-        <dcterms:modified>2017-02-03 (removed)</dcterms:modified>
-        <rdfs:label>Instance title</rdfs:label>
-        <skos:definition>Title chosen as the name of an Instance, sometimes called &quot;title proper&quot; and often transcribed from the instance.</skos:definition>
-    </owl:Class>
-    
-
-
     <!-- http://id.loc.gov/ontologies/bibframe/IntendedAudience -->
 
 
@@ -5148,19 +5121,6 @@
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-    </owl:Class>
-    
-
-
-    <!-- http://id.loc.gov/ontologies/bibframe/WorkTitle -->
-
-
-    <owl:Class rdf:about="&bf;WorkTitle">
-        <rdfs:subClassOf rdf:resource="&bf;Title"/>
-        <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-        <dcterms:modified>2017-02-03 (removed)</dcterms:modified>
-        <rdfs:label>Work title</rdfs:label>
-        <skos:definition>Title or form of title chosen to identify the work, such as a preferred title, preferred title with additions, uniform title, etc.</skos:definition>
     </owl:Class>
     
 
