@@ -14,9 +14,9 @@ Ontology: <http://id.loc.gov/ontologies/bibframe/>
 
 
 Annotations: 
-    dcterms:modified "2017-03-06T16:29:26.076-05:00",
+    dcterms:modified "2017-03-10T12:04:35.059-05:00",
     rdfs:label "BIBFRAME vocabulary",
-    owl:versionInfo "2017-03-06T16:29:26.076-05:00"
+    owl:versionInfo "2017-03-10T12:04:35.059-05:00"
 
 AnnotationProperty: dcterms:modified
 
@@ -212,21 +212,6 @@ ObjectProperty: bf:assigner
     
     Range: 
         bf:Agent
-    
-    
-ObjectProperty: bf:barcode
-
-    Annotations: 
-        dcterms:modified "2016-04-21 (New)",
-        dcterms:modified "2017-02-03 (Removed as property, added as Class)",
-        rdfs:label "Barcode",
-        skos:definition "Optical machine-readable representation of data relating to the item, to which it is attached."
-    
-    Domain: 
-        bf:Item
-    
-    Range: 
-        bf:Barcode
     
     
 ObjectProperty: bf:baseMaterial
@@ -3820,18 +3805,6 @@ Class: bf:Instance
         skos:definition "Resource reflecting an individual, material embodiment of a Work."
     
     
-Class: bf:InstanceTitle
-
-    Annotations: 
-        dcterms:modified "2016-04-21 (New)",
-        dcterms:modified "2017-02-03 (removed)",
-        rdfs:label "Instance title",
-        skos:definition "Title chosen as the name of an Instance, sometimes called \"title proper\" and often transcribed from the instance."
-    
-    SubClassOf: 
-        bf:Title
-    
-    
 Class: bf:IntendedAudience
 
     Annotations: 
@@ -4971,18 +4944,6 @@ Class: bf:WorkOrInstanceOrItem
 
     EquivalentTo: 
         bf:Item or bf:WorkOrInstance
-    
-    
-Class: bf:WorkTitle
-
-    Annotations: 
-        dcterms:modified "2016-04-21 (New)",
-        dcterms:modified "2017-02-03 (removed)",
-        rdfs:label "Work title",
-        skos:definition "Title or form of title chosen to identify the work, such as a preferred title, preferred title with additions, uniform title, etc."
-    
-    SubClassOf: 
-        bf:Title
     
     
 Class: owl:Thing
