@@ -6,9 +6,9 @@
          xmlns:skos="http://www.w3.org/2004/02/skos/core#"
          xmlns:dcterms="http://purl.org/dc/terms/">
   <owl:Ontology rdf:about="">
-    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-03-06T16:29:26.076-05:00</owl:versionInfo>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-03-10T12:04:35.059-05:00</owl:versionInfo>
     <rdfs:label>BIBFRAME vocabulary</rdfs:label>
-    <dcterms:modified>2017-03-06T16:29:26.076-05:00</dcterms:modified>
+    <dcterms:modified>2017-03-10T12:04:35.059-05:00</dcterms:modified>
   </owl:Ontology>
 
   <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
@@ -250,20 +250,6 @@
     <skos:definition>Title information relating to a resource: work title, preferred title, instance title, transcribed title, translated title, variant form of title, etc.</skos:definition>
     <dcterms:modified>2016-04-21 (New)</dcterms:modified>
     <dcterms:modified>2017-02-03 (Definition changed)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/WorkTitle">
-    <rdfs:label>Work title</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
-    <skos:definition>Title or form of title chosen to identify the work, such as a preferred title, preferred title with additions, uniform title, etc.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-    <dcterms:modified>2017-02-03 (removed)</dcterms:modified>
-  </owl:Class>
-  <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/InstanceTitle">
-    <rdfs:label>Instance title</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://id.loc.gov/ontologies/bibframe/Title"/>
-    <skos:definition>Title chosen as the name of an Instance, sometimes called "title proper" and often transcribed from the instance.</skos:definition>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-    <dcterms:modified>2017-02-03 (removed)</dcterms:modified>
   </owl:Class>
   <owl:Class rdf:about="http://id.loc.gov/ontologies/bibframe/VariantTitle">
     <rdfs:label>Title variation</rdfs:label>
@@ -1999,14 +1985,6 @@
     <skos:definition>Electronic location from which the resource is available.</skos:definition>
     <rdfs:label>Electronic location</rdfs:label>
     <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/barcode">
-    <rdfs:domain rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
-    <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/Barcode"/>
-    <skos:definition>Optical machine-readable representation of data relating to the item, to which it is attached.</skos:definition>
-    <rdfs:label>Barcode</rdfs:label>
-    <dcterms:modified>2016-04-21 (New)</dcterms:modified>
-    <dcterms:modified>2017-02-03 (Removed as property, added as Class)</dcterms:modified>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://id.loc.gov/ontologies/bibframe/usageAndAccessPolicy">
     <rdfs:range rdf:resource="http://id.loc.gov/ontologies/bibframe/UsageAndAccessPolicy"/>
